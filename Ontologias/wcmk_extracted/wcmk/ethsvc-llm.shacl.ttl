@@ -1,0 +1,11 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arch: <https://example.org/eth2/arch#> .
+
+arch:ServiceRunShape a sh:NodeShape ;
+  sh:targetClass arch:ServiceRun ;
+  sh:property [ sh:path arch:serviceRunId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:serviceId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:modelId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:promptId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:reviewRequirement ; sh:minCount 1 ; sh:datatype xsd:string ] .

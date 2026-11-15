@@ -1,0 +1,111 @@
+{
+  "n_cases": 20,
+  "mean_decision_flips": 0.35,
+  "max_decision_flips": 2,
+  "mean_loosening_steps": 0.15,
+  "trajectories": [
+    {
+      "case_id": "ETHCASE-0000",
+      "decision_sequence": [
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      "flips": 0,
+      "loosening_steps": 0,
+      "adequacy_first": 0.6064,
+      "adequacy_last": 0.3931
+    },
+    {
+      "case_id": "ETHCASE-0001",
+      "decision_sequence": [
+        "REVIEW_REQUIRED",
+        "REVIEW_REQUIRED",
+        "ALLOW",
+        "ALLOW",
+        "ALLOW",
+        "REVIEW_REQUIRED",
+        "REVIEW_REQUIRED",
+        "REVIEW_REQUIRED"
+      ],
+      "flips": 2,
+      "loosening_steps": 1,
+      "adequacy_first": 0.7714,
+      "adequacy_last": 0.6705
+    },
+    {
+      "case_id": "ETHCASE-0002",
+      "decision_sequence": [
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      "flips": 0,
+      "loosening_steps": 0,
+      "adequacy_first": 0.3181,
+      "adequacy_last": 0.3191
+    },
+    {
+      "case_id": "ETHCASE-0003",
+      "decision_sequence": [
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      "flips": 0,
+      "loosening_steps": 0,
+      "adequacy_first": 0.2864,
+      "adequacy_last": 0.231
+    },
+    {
+      "case_id": "ETHCASE-0004",
+      "decision_sequence": [
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      "flips": 0,
+      "loosening_steps": 0,
+      "adequacy_first": 0.1843,
+      "adequacy_last": 0.2095
+    },
+    {
+      "case_id": "ETHCASE-0005",
+      "decision_sequence": [
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      "flips": 0,
+      "loosening_steps": 0,
+      "adequacy_first": 0.5973,
+      "adequacy_last": 0.3708
+    }
+  ],
+  "note": "drift is synthetic: K improves, C degrades; the point is whether the ladder oscillates."
+}

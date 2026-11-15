@@ -1,0 +1,93 @@
+@prefix ex: <https://ethwcmk.org/resource/examples/bridge-derived-invalid/> .
+@prefix bwd: <https://ethwcmk.org/ontology/bridge-wcmkplus-derived#> .
+@prefix bridge: <https://ethwcmk.org/ontology/bridge#> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:case_primary a eth:EthicalCase ; eth:hasNormalizedRiskScore "0.78"^^xsd:decimal .
+ex:case_other a eth:EthicalCase ; eth:hasNormalizedRiskScore "0.20"^^xsd:decimal .
+
+ex:profile_bad a wcmkf:FacetizedAgencyProfile ;
+    wcmkf:hasAssessment ex:ass_ValueAlignment ;
+    wcmkf:hasAssessment ex:ass_Controllability .
+
+ex:ass_ValueAlignment a wcmkf:FacetAssessment ; wcmkf:assessesFacet wcmkf:ValueAlignment ; wcmkf:hasNormalizedScore "0.70"^^xsd:decimal ; wcmkf:hasConfidence "0.90"^^xsd:decimal .
+ex:ass_Controllability a wcmkf:FacetAssessment ; wcmkf:assessesFacet wcmkf:Controllability ; wcmkf:hasNormalizedScore "0.65"^^xsd:decimal ; wcmkf:hasConfidence "0.88"^^xsd:decimal .
+ex:ass_External a wcmkf:FacetAssessment ; wcmkf:assessesFacet wcmkf:NormativeKnowledge ; wcmkf:hasNormalizedScore "0.60"^^xsd:decimal ; wcmkf:hasConfidence "0.50"^^xsd:decimal .
+
+ex:req_profile_bad a efr:CaseRequirementProfile ;
+    efr:derivedFromCase ex:case_other ;
+    efr:usesSeverityBand efr:SEVERITY_HIGH ;
+    efr:usesPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:usesAggregationProfile efr:BalancedRequirementAggregation ;
+    efr:requirementCoverage "0.40"^^xsd:decimal ;
+    efr:derivedRequirementCount "2"^^xsd:integer ;
+    efr:hasDerivedRequirement ex:req_ValueAlignment ;
+    efr:hasDerivedRequirement ex:req_Controllability .
+
+ex:req_ValueAlignment a efr:DerivedFacetRequirement ; wcmkf:requiresFacet wcmkf:ValueAlignment ; wcmkf:minimumRequiredLevel "0.75"^^xsd:decimal ; efr:priorityTier efr:PRIORITY_CORE .
+ex:req_Controllability a efr:DerivedFacetRequirement ; wcmkf:requiresFacet wcmkf:Controllability ; wcmkf:minimumRequiredLevel "0.80"^^xsd:decimal ; efr:priorityTier efr:PRIORITY_CRITICAL .
+ex:req_External a efr:DerivedFacetRequirement ; wcmkf:requiresFacet wcmkf:NormativeKnowledge ; wcmkf:minimumRequiredLevel "0.90"^^xsd:decimal ; efr:priorityTier efr:PRIORITY_CRITICAL .
+
+ex:confrontation_bad a bwd:DerivedBridgeConfrontation ;
+    bridge:confrontsCase ex:case_primary ;
+    bridge:confrontsProfile ex:profile_bad ;
+    bwd:consumesRequirementProfile ex:req_profile_bad ;
+    bridge:hasFacetComparison ex:cmp_bad_1 ;
+    bridge:hasFacetComparison ex:cmp_bad_2 ;
+    bridge:hasAggregateOutcome ex:outcome_bad ;
+    bridge:derivedRcNorm "0.78"^^xsd:decimal ;
+    bridge:derivedAgencyAdequacy "0.61"^^xsd:decimal ;
+    bwd:derivedAaStar "0.55"^^xsd:decimal ;
+    bwd:derivedDeficitScore "0.45"^^xsd:decimal ;
+    bridge:derivedResidualRisk "1.20"^^xsd:decimal ;
+    bridge:decisionRegion "high_risk_guarded" ;
+    bridge:recommendedAction "OPEN" .
+
+ex:outcome_bad a bwd:BridgeDerivedOutcome ;
+    bwd:outcomeOfConfrontation ex:confrontation_bad ;
+    bridge:coverageAdequacy "0.60"^^xsd:decimal ;
+    bridge:aggregateDeficit "0.45"^^xsd:decimal ;
+    bridge:criticalDeficitCount "1"^^xsd:integer ;
+    bridge:requiresGuardrail true ;
+    bwd:requirementCoverageScore "1.20"^^xsd:decimal ;
+    bwd:comparisonCoverageScore "0.25"^^xsd:decimal ;
+    bwd:coveragePenalty "0.10"^^xsd:decimal ;
+    bwd:comparedFacetCount "-2"^^xsd:integer ;
+    bwd:blockingFacetCount "1"^^xsd:integer .
+
+ex:def_bad_1 a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:NormativeKnowledge ;
+    wcmkf:observedLevel "0.60"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.90"^^xsd:decimal ;
+    wcmkf:deficitValue "0.30"^^xsd:decimal .
+
+ex:cmp_bad_1 a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_bad ;
+    bridge:comparisonForFacet wcmkf:ValueAlignment ;
+    bwd:comparesDerivedRequirement ex:req_External ;
+    bridge:usesAssessment ex:ass_External ;
+    bridge:producesDeficit ex:def_bad_1 ;
+    bridge:localWeight "1.20"^^xsd:decimal ;
+    bridge:comparisonStatus "critical" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet true .
+
+ex:def_bad_2 a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:Controllability ;
+    wcmkf:observedLevel "0.65"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.80"^^xsd:decimal ;
+    wcmkf:deficitValue "0.05"^^xsd:decimal .
+
+ex:cmp_bad_2 a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_bad ;
+    bridge:comparisonForFacet wcmkf:Controllability ;
+    bwd:comparesDerivedRequirement ex:req_Controllability ;
+    bridge:usesAssessment ex:ass_Controllability ;
+    bridge:producesDeficit ex:def_bad_2 ;
+    bridge:localWeight "0.85"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "urgent" ;
+    bridge:isBlockingFacet false .

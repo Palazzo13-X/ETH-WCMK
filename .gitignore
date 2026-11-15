@@ -1,0 +1,43 @@
+# caches and intermediates
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache_validation/
+.playwright-mcp/
+_analysis/_scratch*
+*.bak
+*.tmp
+venv/
+.venv/
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+# derived document scaffolding: the .docx source is committed, its unzipped XML
+# and the page crops used during analysis are not
+_analysis/docx_v9/
+_analysis/crops/
+_analysis/pages/
+_analysis/media/
+
+# corpora from rounds r4+ are published as compressed release assets and
+# verified by checksum. They are deterministic (seeded generators), so keeping
+# them in git only bloats history. To untrack what is already committed, run:
+#   scripts/untrack_big_files.sh --dry-run
+# Exception (owner decision, 2026-11-15): the frozen rounds r2 and r3 stay in
+# the repository so the v3/v4 corpora can be cloned, not only downloaded.
+Evaluacoes/**/corpus_*_confrontations.jsonl
+Evaluacoes/**/corpus_*_gold.jsonl
+!Evaluacoes/r2/corpus_v3_confrontations.jsonl
+!Evaluacoes/r2/corpus_v3_gold.jsonl
+!Evaluacoes/r3/corpus_v4_confrontations.jsonl
+!Evaluacoes/r3/corpus_v4_gold.jsonl
+Ontologias/**/instances.ttl
+
+# release assets produced by scripts/build_release_assets.py
+release_assets/
+Evaluacoes/**/B20_variant_eval_full.json
+
+# unrelated document kept locally, not part of the ETH-WCMK artefacts
+DS_Beyond_Datasets_v2.docx

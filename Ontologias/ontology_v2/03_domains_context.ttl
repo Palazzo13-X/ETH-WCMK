@@ -1,0 +1,121 @@
+@prefix domain: <https://ethwcmk.org/ontology/domain/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+domain:DS a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Digital security"@en ;
+    eth:domainCode "DS" .
+
+domain:ED a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Education"@en ;
+    eth:domainCode "ED" .
+
+domain:FI a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Finance"@en ;
+    eth:domainCode "FI" .
+
+domain:GP a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Public governance"@en ;
+    eth:domainCode "GP" .
+
+domain:IC a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Critical infrastructure"@en ;
+    eth:domainCode "IC" .
+
+domain:IM a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Information and media"@en ;
+    eth:domainCode "IM" .
+
+domain:JS a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Justice and security"@en ;
+    eth:domainCode "JS" .
+
+domain:MA a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Environment and energy"@en ;
+    eth:domainCode "MA" .
+
+domain:PD a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Privacy and data"@en ;
+    eth:domainCode "PD" .
+
+domain:RS a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Research and science"@en ;
+    eth:domainCode "RS" .
+
+domain:SA a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Health"@en ;
+    eth:domainCode "SA" .
+
+domain:TB a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Labour"@en ;
+    eth:domainCode "TB" .
+
+domain:TS a owl:NamedIndividual,
+        eth:Domain ;
+    rdfs:label "Transport and mobility"@en ;
+    eth:domainCode "TS" .
+
+<https://ethwcmk.org/ontology/prudential/elevated> a owl:NamedIndividual,
+        eth:PrudentialMode ;
+    rdfs:label "elevated"@en ;
+    eth:prudentialValue 0.05 .
+
+<https://ethwcmk.org/ontology/prudential/maximum> a owl:NamedIndividual,
+        eth:PrudentialMode ;
+    rdfs:label "maximum"@en ;
+    eth:prudentialValue 0.1 .
+
+<https://ethwcmk.org/ontology/prudential/standard> a owl:NamedIndividual,
+        eth:PrudentialMode ;
+    rdfs:label "standard"@en ;
+    eth:prudentialValue 0.0 .
+
+<https://ethwcmk.org/ontology/reversibility/irreversible> a owl:NamedIndividual,
+        eth:ReversibilityGrade ;
+    rdfs:label "irreversible"@en ;
+    eth:irreversibilityValue 1.0 .
+
+<https://ethwcmk.org/ontology/reversibility/partially_irreversible> a owl:NamedIndividual,
+        eth:ReversibilityGrade ;
+    rdfs:label "partially_irreversible"@en ;
+    eth:irreversibilityValue 0.5 .
+
+<https://ethwcmk.org/ontology/reversibility/reversible> a owl:NamedIndividual,
+        eth:ReversibilityGrade ;
+    rdfs:label "reversible"@en ;
+    eth:irreversibilityValue 0.0 .
+
+<https://ethwcmk.org/ontology/severity/critical> a owl:NamedIndividual,
+        eth:SeverityBand ;
+    rdfs:label "critical"@en ;
+    eth:severityValue 1.0 .
+
+<https://ethwcmk.org/ontology/severity/high> a owl:NamedIndividual,
+        eth:SeverityBand ;
+    rdfs:label "high"@en ;
+    eth:severityValue 0.75 .
+
+<https://ethwcmk.org/ontology/severity/low> a owl:NamedIndividual,
+        eth:SeverityBand ;
+    rdfs:label "low"@en ;
+    eth:severityValue 0.25 .
+
+<https://ethwcmk.org/ontology/severity/medium> a owl:NamedIndividual,
+        eth:SeverityBand ;
+    rdfs:label "medium"@en ;
+    eth:severityValue 0.5 .
+

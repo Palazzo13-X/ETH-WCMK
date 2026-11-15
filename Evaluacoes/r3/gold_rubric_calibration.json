@@ -1,0 +1,41 @@
+{
+  "params": {
+    "K_prohibit_crit": 0.45,
+    "K_guard_gap": 0.3,
+    "K_crit": 0.4,
+    "K_allow": 0.1,
+    "A_guard_gap": 0.4,
+    "A_stakes": 0.7,
+    "A_crit_gap": 0.5,
+    "A_crit_count": 2,
+    "B_b0": 0.08,
+    "B_b1": 0.2,
+    "B_r0": 0.5,
+    "B_r1": 0.2,
+    "B_trivial": 0.02,
+    "C_m1": 0.25,
+    "C_c7": 0.4,
+    "C_m7": 0.55,
+    "C_m2": 0.25,
+    "C_prohibit": 2,
+    "C_allow": 0.03
+  },
+  "mean_pairwise_kappa": 0.8387,
+  "design_intent_agreement": 0.8079,
+  "unanimous_panel_share": 0.84,
+  "mean_panel_spread": 0.16,
+  "kappa_AB": 0.8109,
+  "kappa_AC": 0.7748,
+  "kappa_BC": 0.9303,
+  "consensus_distribution": {
+    "ABSTAIN": 0,
+    "PROHIBIT": 251,
+    "REVIEW_REQUIRED": 652,
+    "ALLOW_WITH_GUARDS": 146,
+    "ALLOW": 151
+  },
+  "objective": 0.7039,
+  "grid_size": 1769472,
+  "vectorised_vs_reference_mismatches": "0/300",
+  "method": "grid search over the lens thresholds; the shared kernel is fixed (worst critical shortfall, guard breaches, mean shortfall, stake level)"
+}

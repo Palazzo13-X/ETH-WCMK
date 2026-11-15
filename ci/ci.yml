@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  invariants:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: Formal core invariants (I1–I44)
+        run: python -m pytest _analysis/formal_core/tests -q
+      - name: Repository hygiene (sizes, tiers, missing docs)
+        run: python scripts/audit_repo.py
+      - name: Data manifest is well-formed (corpora live in releases)
+        run: python scripts/make_data_manifest.py --check --skip-missing
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          for f in README.md LICENSE NOTICE CITATION.cff CONTRIBUTING.md \
+                   CODE_OF_CONDUCT.md SECURITY.md CHANGELOG.md Makefile pyproject.toml; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+          done
+          echo "documentation layer complete"

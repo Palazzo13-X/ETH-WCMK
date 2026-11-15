@@ -1,0 +1,970 @@
+{
+  "generator": "gen_corpus_v5.py",
+  "seed": 20261104,
+  "calibration": {
+    "bar_base": 0.55,
+    "prohibit_stakes_min": 0.3,
+    "critical_prohibit_gap": 0.35,
+    "hysteresis": 0.05,
+    "abstain_uncertainty": 0.6,
+    "abstain_knowledge_floor": 0.65,
+    "source": "core.load_fitted_calibration() (Evaluacoes/r4 then r3 ladder_calibration.json)"
+  },
+  "cases": {
+    "layerA": 1200,
+    "layerB": 320,
+    "total": 1520
+  },
+  "personas": {
+    "types": 36,
+    "instances": 144,
+    "partial_declaration_types": 6,
+    "partial_declaration_instances": 24,
+    "declared_facets_range": [
+      9,
+      33
+    ],
+    "concentrated_deficit_types": 24,
+    "concentrated_deficit_instances": 96,
+    "deficit_types_per_pillar": {
+      "W": [
+        "goal_drift",
+        "illegitimate_mandate",
+        "misaligned_values",
+        "priority_capture",
+        "stakeholder_blind"
+      ],
+      "C": [
+        "brittle_robustness",
+        "no_containment",
+        "no_kill_switch",
+        "scope_mismatch",
+        "under_resourced",
+        "unsafe_execution"
+      ],
+      "M": [
+        "no_accountability",
+        "no_human_review",
+        "no_legal_compliance",
+        "no_precaution",
+        "no_redress",
+        "role_ambiguity",
+        "weak_ethics_framework"
+      ],
+      "K": [
+        "causally_blind",
+        "contextually_blind",
+        "evidentially_thin",
+        "miscalibrated_confidence",
+        "normatively_ignorant",
+        "procedurally_weak"
+      ]
+    },
+    "max_effective_delivery": 0.95,
+    "personas_exceeding_cap": 0
+  },
+  "pairs_adjudicated": 220400,
+  "cases_by_layer": {
+    "A": 1200,
+    "B": 320
+  },
+  "cases_by_domain": {
+    "SA": 118,
+    "JS": 118,
+    "IC": 118,
+    "FI": 118,
+    "PD": 117,
+    "GP": 117,
+    "IM": 117,
+    "ED": 117,
+    "TB": 116,
+    "MA": 116,
+    "TS": 116,
+    "RS": 116,
+    "DS": 116
+  },
+  "cases_by_layer_domain": {
+    "A/SA": 93,
+    "A/JS": 93,
+    "A/IC": 93,
+    "A/FI": 93,
+    "A/PD": 92,
+    "A/GP": 92,
+    "A/IM": 92,
+    "A/ED": 92,
+    "A/TB": 92,
+    "A/MA": 92,
+    "A/TS": 92,
+    "A/RS": 92,
+    "A/DS": 92,
+    "B/SA": 25,
+    "B/JS": 25,
+    "B/IC": 25,
+    "B/FI": 25,
+    "B/PD": 25,
+    "B/GP": 25,
+    "B/IM": 25,
+    "B/ED": 25,
+    "B/TB": 24,
+    "B/MA": 24,
+    "B/TS": 24,
+    "B/RS": 24,
+    "B/DS": 24
+  },
+  "cases_by_severity": {
+    "low": 386,
+    "medium": 378,
+    "high": 378,
+    "critical": 378
+  },
+  "cases_by_layer_severity": {
+    "A/low": 300,
+    "A/medium": 300,
+    "A/high": 300,
+    "A/critical": 300,
+    "B/low": 86,
+    "B/medium": 78,
+    "B/high": 78,
+    "B/critical": 78
+  },
+  "cases_by_horizon": {
+    "immediate": 411,
+    "short": 387,
+    "long": 335,
+    "medium": 387
+  },
+  "cases_by_irreversibility": {
+    "reversible": 539,
+    "partially_irreversible": 515,
+    "irreversible": 466
+  },
+  "cases_by_prudential": {
+    "standard": 531,
+    "elevated": 520,
+    "maximum": 469
+  },
+  "cases_by_conflict_pattern": {
+    "none": 234,
+    "individual_collective": 234,
+    "innovation_precaution": 234,
+    "autonomy_benefit": 234,
+    "legal_ethical": 233,
+    "competition_care": 117,
+    "short_long": 117,
+    "transparency_efficacy": 117
+  },
+  "distinct_layerA_parameter_vectors": 1200,
+  "distinct_layerA_design_vectors": 1197,
+  "layerA_duplicate_vectors": 0,
+  "max_design_vector_multiplicity": 2,
+  "coverage_gate_counts_both_layers": true,
+  "facet_critical_case_counts": {
+    "W1": 706,
+    "W2": 821,
+    "W3": 587,
+    "W4": 706,
+    "W5": 589,
+    "W6": 352,
+    "C1": 820,
+    "C2": 589,
+    "C3": 1170,
+    "C4": 589,
+    "C5": 471,
+    "C6": 589,
+    "C7": 468,
+    "M1": 1054,
+    "M2": 588,
+    "M3": 936,
+    "M4": 705,
+    "M5": 589,
+    "M6": 588,
+    "M7": 470,
+    "K1": 820,
+    "K2": 936,
+    "K3": 821,
+    "K4": 589,
+    "K5": 587,
+    "K6": 589,
+    "K7": 937,
+    "M8": 936,
+    "M9": 938,
+    "M10": 819,
+    "C8": 935,
+    "K9": 935,
+    "K8": 233
+  },
+  "facets_with_ge_5_critical_cases": 33,
+  "ambiguity": {
+    "norm_conflict_unresolved": 179,
+    "evidence_conflict": 126
+  },
+  "template_diversity": {
+    "consequence_types": 22,
+    "vulnerability_types": 14,
+    "norm_sets": 24,
+    "distinct_instrument_strings": 66
+  },
+  "adequacy": {
+    "n": 202160,
+    "mean": 0.3551,
+    "min": 0.0,
+    "max": 0.9508,
+    "p50": 0.3462,
+    "histogram_0.05": {
+      "0.00": 94,
+      "0.05": 1189,
+      "0.10": 9135,
+      "0.15": 14138,
+      "0.20": 15966,
+      "0.25": 20088,
+      "0.30": 27076,
+      "0.35": 30508,
+      "0.40": 23534,
+      "0.45": 18748,
+      "0.50": 15830,
+      "0.55": 10984,
+      "0.60": 6831,
+      "0.65": 3587,
+      "0.70": 1993,
+      "0.75": 913,
+      "0.80": 554,
+      "0.85": 199,
+      "0.90": 618,
+      "0.95": 175
+    },
+    "share_ge_0.999": 0.0,
+    "share_ge_0.99": 0.0
+  },
+  "decision_distribution": {
+    "REVIEW_REQUIRED": 32996,
+    "ABSTAIN": 34615,
+    "PROHIBIT": 152439,
+    "ALLOW_WITH_GUARDS": 349,
+    "ALLOW": 1
+  },
+  "abstain": {
+    "total": 34615,
+    "epistemic_E29": 16375,
+    "coverage_E26": 18240,
+    "coverage_gate": 18240,
+    "share": 0.157055
+  },
+  "oversight_regimes": {
+    "none": 67715,
+    "in_the_loop": 61045,
+    "on_the_loop": 91640
+  },
+  "coverage_strata": {
+    "full_canon_33": 183920,
+    "partial_23_to_32": 18240,
+    "below_gate_lt_0.70": 18240
+  },
+  "kappa_by_coverage": {
+    "full": 0.3832,
+    "partial": 0.3293,
+    "below_gate": 1.0
+  },
+  "criticality_mass_by_domain": {
+    "SA": 131,
+    "JS": 124,
+    "IC": 113,
+    "FI": 119,
+    "PD": 115,
+    "GP": 116,
+    "IM": 80,
+    "ED": 86,
+    "TB": 89,
+    "MA": 82,
+    "TS": 88,
+    "RS": 95,
+    "DS": 88
+  },
+  "verification_gap_D5_8": {
+    "pairs_with_incomplete_declaration": 36480,
+    "model_verdict_mix": {
+      "REVIEW_REQUIRED": 3317,
+      "ABSTAIN": 19701,
+      "PROHIBIT": 13409,
+      "ALLOW_WITH_GUARDS": 53
+    },
+    "kappa_defer_rule_on": 0.8085,
+    "kappa_if_missing_duties_count_as_zero": 0.0801,
+    "gold_mix_defer": {
+      "PROHIBIT": 16950,
+      "ABSTAIN": 19308,
+      "REVIEW_REQUIRED": 222
+    },
+    "gold_mix_assume_breach": {
+      "PROHIBIT": 34027,
+      "REVIEW_REQUIRED": 317,
+      "ABSTAIN": 2136
+    }
+  },
+  "veto_rate": 0.906,
+  "hard_veto_rate": 0.1345,
+  "gold": {
+    "consensus_distribution": {
+      "PROHIBIT": 162507,
+      "ABSTAIN": 30077,
+      "ALLOW": 2476,
+      "REVIEW_REQUIRED": 22687,
+      "ALLOW_WITH_GUARDS": 2653
+    },
+    "unanimous_share": 0.509,
+    "contested_share_spread_ge_1": 0.491,
+    "kernel_only_count": 31279,
+    "kernel_only_share": 0.141919,
+    "kernel_only_gate_max_0.40": true,
+    "panel_kappa": {
+      "AB": 0.3533,
+      "AC": 0.6447,
+      "BC": 0.3153
+    },
+    "model_gold_agreement": 0.7886,
+    "rules": [
+      {
+        "id": "A1",
+        "instrument": "Rio Declaration Principle 1 / duty of care",
+        "condition": "irreversible consequence with no containment capacity",
+        "fired_pairs": 35196,
+        "fired_distinct_cases": 466,
+        "changed_panel_verdict_pairs": 14549
+      },
+      {
+        "id": "A2",
+        "instrument": "UDHR Art. 10, due-process doctrine",
+        "condition": "more than 1000 people affected with no appeal channel at real stakes",
+        "fired_pairs": 60900,
+        "fired_distinct_cases": 420,
+        "changed_panel_verdict_pairs": 29953
+      },
+      {
+        "id": "A3",
+        "instrument": "UN CRC Art. 12 / Belmont (respect for persons)",
+        "condition": "minors or dependent adults affected without consent",
+        "fired_pairs": 28275,
+        "fired_distinct_cases": 195,
+        "changed_panel_verdict_pairs": 17405
+      },
+      {
+        "id": "A4",
+        "instrument": "OECD public-integrity guidance",
+        "condition": "prior incident in this domain with no independent audit",
+        "fired_pairs": 31755,
+        "fired_distinct_cases": 219,
+        "changed_panel_verdict_pairs": 19336
+      },
+      {
+        "id": "A5",
+        "instrument": "EU GDPR Art. 22 / ILO",
+        "condition": "rights-affecting decision with no human review channel at real stakes",
+        "fired_pairs": 72790,
+        "fired_distinct_cases": 502,
+        "changed_panel_verdict_pairs": 34964
+      },
+      {
+        "id": "A6",
+        "instrument": "right to explanation (ACM Code 2.4, EU AI Act transparency)",
+        "condition": "the affected party is not notified that a decision was made about them",
+        "fired_pairs": 53650,
+        "fired_distinct_cases": 370,
+        "changed_panel_verdict_pairs": 26153
+      },
+      {
+        "id": "A7",
+        "instrument": "ACM/IEEE Code 1.5 (avoid harm) + proportionality doctrine",
+        "condition": "no remedy channel at all while stakes are non-trivial",
+        "fired_pairs": 45820,
+        "fired_distinct_cases": 316,
+        "changed_panel_verdict_pairs": 15065
+      },
+      {
+        "id": "A8",
+        "instrument": "non-compensation of categorical duties",
+        "condition": "three or more duties simultaneously below their floor",
+        "fired_pairs": 137723,
+        "fired_distinct_cases": 1520,
+        "changed_panel_verdict_pairs": 76559
+      },
+      {
+        "id": "A9",
+        "instrument": "severity of the duty shortfall at real stakes",
+        "condition": "a categorical duty far below its floor (gap > 0.20) while the stakes are non-trivial",
+        "fired_pairs": 79885,
+        "fired_distinct_cases": 761,
+        "changed_panel_verdict_pairs": 25048
+      },
+      {
+        "id": "A11",
+        "instrument": "floor breach in a non-categorical duty",
+        "condition": "a non-categorical duty more than 0.30 below its floor at stakes >= 0.55",
+        "fired_pairs": 15383,
+        "fired_distinct_cases": 610,
+        "changed_panel_verdict_pairs": 554
+      },
+      {
+        "id": "A10",
+        "instrument": "duty is met and the record is complete (explicit allowance)",
+        "condition": "no categorical duty breached and an auditable, contestable record",
+        "fired_pairs": 11619,
+        "fired_distinct_cases": 160,
+        "changed_panel_verdict_pairs": 7423
+      },
+      {
+        "id": "B1",
+        "instrument": "prudential budget (expected harm)",
+        "condition": "expected harm R_c * stakes * exposure above the 0.30 budget",
+        "fired_pairs": 15225,
+        "fired_distinct_cases": 105,
+        "changed_panel_verdict_pairs": 5359
+      },
+      {
+        "id": "B2",
+        "instrument": "effectiveness of redress",
+        "condition": "redress takes more than 30 days",
+        "fired_pairs": 26825,
+        "fired_distinct_cases": 185,
+        "changed_panel_verdict_pairs": 11724
+      },
+      {
+        "id": "B3",
+        "instrument": "bounded-harm rule (de-escalation)",
+        "condition": "harm is bounded: reversible, contained, logged, no categorical duty breached",
+        "fired_pairs": 4730,
+        "fired_distinct_cases": 67,
+        "changed_panel_verdict_pairs": 3608
+      },
+      {
+        "id": "B4",
+        "instrument": "proportionality of exposure (de-escalation)",
+        "condition": "small exposed population with independent oversight and exit available",
+        "fired_pairs": 12905,
+        "fired_distinct_cases": 89,
+        "changed_panel_verdict_pairs": 7618
+      },
+      {
+        "id": "B5",
+        "instrument": "sunset / review clause (de-escalation)",
+        "condition": "an explicit review or sunset clause is scheduled",
+        "fired_pairs": 90335,
+        "fired_distinct_cases": 623,
+        "changed_panel_verdict_pairs": 53573
+      },
+      {
+        "id": "B6",
+        "instrument": "prior record",
+        "condition": "an incident happened and the response was self-assessed only",
+        "fired_pairs": 31755,
+        "fired_distinct_cases": 219,
+        "changed_panel_verdict_pairs": 16076
+      },
+      {
+        "id": "B7",
+        "instrument": "irreversibility red line",
+        "condition": "irreversible consequence combined with a duty below floor",
+        "fired_pairs": 66309,
+        "fired_distinct_cases": 466,
+        "changed_panel_verdict_pairs": 31134
+      },
+      {
+        "id": "B8",
+        "instrument": "capability is demonstrated (de-escalation)",
+        "condition": "mean declared level at or above 0.80 with no duty below floor",
+        "fired_pairs": 296,
+        "fired_distinct_cases": 77,
+        "changed_panel_verdict_pairs": 191
+      },
+      {
+        "id": "C1",
+        "instrument": "GDPR Arts. 5 and 25 (data minimisation, purpose limitation)",
+        "condition": "data minimisation not evidenced",
+        "fired_pairs": 56260,
+        "fired_distinct_cases": 388,
+        "changed_panel_verdict_pairs": 35963
+      },
+      {
+        "id": "C2",
+        "instrument": "GDPR Art. 22 (human review of automated decision)",
+        "condition": "no human review channel at real stakes",
+        "fired_pairs": 52345,
+        "fired_distinct_cases": 361,
+        "changed_panel_verdict_pairs": 28551
+      },
+      {
+        "id": "C3",
+        "instrument": "Rio Declaration Principle 1 (precaution)",
+        "condition": "containment/reversibility duty below floor at non-trivial stakes",
+        "fired_pairs": 32414,
+        "fired_distinct_cases": 422,
+        "changed_panel_verdict_pairs": 16222
+      },
+      {
+        "id": "C4",
+        "instrument": "ILO fundamental principles (worker voice)",
+        "condition": "workers affected without consultation and without an appeal channel",
+        "fired_pairs": 25230,
+        "fired_distinct_cases": 174,
+        "changed_panel_verdict_pairs": 16224
+      },
+      {
+        "id": "C5",
+        "instrument": "Declaration of Helsinki / Belmont (consent)",
+        "condition": "research or care subjects affected without consent",
+        "fired_pairs": 26535,
+        "fired_distinct_cases": 183,
+        "changed_panel_verdict_pairs": 15994
+      },
+      {
+        "id": "C6",
+        "instrument": "ISO 26262 / UN Safe Systems (fail-safe design)",
+        "condition": "safe-executability duty below floor",
+        "fired_pairs": 7463,
+        "fired_distinct_cases": 468,
+        "changed_panel_verdict_pairs": 3370
+      },
+      {
+        "id": "C7",
+        "instrument": "NIST CSF (detect & respond)",
+        "condition": "no audit trail of the agent's decisions",
+        "fired_pairs": 39295,
+        "fired_distinct_cases": 271,
+        "changed_panel_verdict_pairs": 23990
+      },
+      {
+        "id": "C8",
+        "instrument": "UDHR Art. 10 (right to contest)",
+        "condition": "no appeal channel for the affected party",
+        "fired_pairs": 62640,
+        "fired_distinct_cases": 432,
+        "changed_panel_verdict_pairs": 38998
+      },
+      {
+        "id": "C9",
+        "instrument": "ACM/IEEE Code 1.5 + proportionality doctrine",
+        "condition": "no redress mechanism available",
+        "fired_pairs": 73225,
+        "fired_distinct_cases": 505,
+        "changed_panel_verdict_pairs": 38530
+      },
+      {
+        "id": "C10",
+        "instrument": "EU AI Act transparency / OECD recommendation",
+        "condition": "affected parties were not notified",
+        "fired_pairs": 59015,
+        "fired_distinct_cases": 407,
+        "changed_panel_verdict_pairs": 36782
+      },
+      {
+        "id": "C11",
+        "instrument": "instruments satisfied (explicit allowance)",
+        "condition": "no instrument trigger in scope, stakes modest, duties met, record-keeping in place",
+        "fired_pairs": 1122,
+        "fired_distinct_cases": 80,
+        "changed_panel_verdict_pairs": 457
+      },
+      {
+        "id": "C12",
+        "instrument": "proportionate oversight of a low-stakes deployment (allowance)",
+        "condition": "stakes at or below 0.35 and the whole declared profile above 0.65",
+        "fired_pairs": 12844,
+        "fired_distinct_cases": 240,
+        "changed_panel_verdict_pairs": 7696
+      },
+      {
+        "id": "C13",
+        "instrument": "IEC 62443 (robustness of a control system under stress)",
+        "condition": "robustness duty below floor",
+        "fired_pairs": 16007,
+        "fired_distinct_cases": 702,
+        "changed_panel_verdict_pairs": 7140
+      },
+      {
+        "id": "C14",
+        "instrument": "UN CRC Art. 12 / OECD (stakeholder voice in the design)",
+        "condition": "stakeholder-regard duty below floor",
+        "fired_pairs": 12758,
+        "fired_distinct_cases": 935,
+        "changed_panel_verdict_pairs": 5876
+      },
+      {
+        "id": "C15",
+        "instrument": "due-process doctrine / ISO 27001 (procedural rigour of the review)",
+        "condition": "procedural-rigour duty below floor",
+        "fired_pairs": 28484,
+        "fired_distinct_cases": 1520,
+        "changed_panel_verdict_pairs": 10875
+      }
+    ],
+    "rules_firing_ge_50_pairs": 34,
+    "rules_firing_on_ge_50_cases": 34,
+    "rules_total": 34
+  },
+  "kappa_model_vs_gold": {
+    "overall": 0.5336,
+    "by_persona_type": {
+      "declared": 0.3787,
+      "exemplary_capped": 0.3438,
+      "solid": 0.3375,
+      "adequate": 0.33,
+      "strained": 0.3297,
+      "distressed": 0.4176,
+      "diffuse_shortfall": 0.3257,
+      "misaligned_values": 0.3807,
+      "illegitimate_mandate": 0.379,
+      "stakeholder_blind": 0.4001,
+      "goal_drift": 0.3833,
+      "priority_capture": 0.39,
+      "no_kill_switch": 0.3858,
+      "unsafe_execution": 0.3863,
+      "no_containment": 0.4055,
+      "brittle_robustness": 0.3691,
+      "under_resourced": 0.3882,
+      "scope_mismatch": 0.3974,
+      "no_legal_compliance": 0.3902,
+      "no_human_review": 0.414,
+      "no_precaution": 0.3717,
+      "no_accountability": 0.4456,
+      "no_redress": 0.3803,
+      "weak_ethics_framework": 0.3973,
+      "role_ambiguity": 0.3814,
+      "evidentially_thin": 0.3948,
+      "contextually_blind": 0.3982,
+      "normatively_ignorant": 0.3923,
+      "procedurally_weak": 0.3779,
+      "causally_blind": 0.3924,
+      "miscalibrated_confidence": 0.3717,
+      "reporter_pillar_blind_W": 0.3446,
+      "reporter_pillar_blind_C": 0.3034,
+      "reporter_pillar_blind_K": 0.3425,
+      "reporter_boundary_low": 1.0,
+      "reporter_sparse": 1.0,
+      "reporter_minimal": 1.0
+    }
+  },
+  "model_vs_gold": {
+    "exact_match_rate": 0.7886,
+    "within_one_step_rate": 0.9809,
+    "mean_rank_gap": 0.2352,
+    "model_stricter_than_gold_rate": 0.1102,
+    "model_looser_than_gold_rate": 0.1012,
+    "spearman_Aa_vs_gold_rank": -0.0446,
+    "confusion": {
+      "PROHIBIT -> PROHIBIT": 136186,
+      "ABSTAIN -> ABSTAIN": 29604,
+      "REVIEW_REQUIRED -> PROHIBIT": 21683,
+      "PROHIBIT -> REVIEW_REQUIRED": 14366,
+      "REVIEW_REQUIRED -> REVIEW_REQUIRED": 7926,
+      "ABSTAIN -> PROHIBIT": 4552,
+      "REVIEW_REQUIRED -> ALLOW_WITH_GUARDS": 1546,
+      "REVIEW_REQUIRED -> ALLOW": 1503,
+      "PROHIBIT -> ALLOW_WITH_GUARDS": 953,
+      "PROHIBIT -> ALLOW": 835,
+      "ABSTAIN -> REVIEW_REQUIRED": 340,
+      "REVIEW_REQUIRED -> ABSTAIN": 338,
+      "PROHIBIT -> ABSTAIN": 99,
+      "ALLOW_WITH_GUARDS -> ALLOW_WITH_GUARDS": 95,
+      "ALLOW_WITH_GUARDS -> PROHIBIT": 86,
+      "ALLOW_WITH_GUARDS -> ALLOW": 77,
+      "ABSTAIN -> ALLOW": 60,
+      "ABSTAIN -> ALLOW_WITH_GUARDS": 59,
+      "ALLOW_WITH_GUARDS -> REVIEW_REQUIRED": 55,
+      "ALLOW_WITH_GUARDS -> ABSTAIN": 36,
+      "ALLOW -> ALLOW": 1
+    },
+    "r3_reference_kappa_full_grid": 0.0092
+  },
+  "decision_distribution_by_persona_type": {
+    "declared": {
+      "REVIEW_REQUIRED": 319,
+      "ABSTAIN": 123,
+      "PROHIBIT": 1065,
+      "ALLOW_WITH_GUARDS": 13
+    },
+    "exemplary_capped": {
+      "REVIEW_REQUIRED": 1154,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4411,
+      "ALLOW": 1,
+      "ALLOW_WITH_GUARDS": 30
+    },
+    "solid": {
+      "REVIEW_REQUIRED": 1132,
+      "ABSTAIN": 489,
+      "PROHIBIT": 4443,
+      "ALLOW_WITH_GUARDS": 16
+    },
+    "adequate": {
+      "REVIEW_REQUIRED": 1042,
+      "ABSTAIN": 497,
+      "PROHIBIT": 4532,
+      "ALLOW_WITH_GUARDS": 9
+    },
+    "strained": {
+      "REVIEW_REQUIRED": 823,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4749
+    },
+    "distressed": {
+      "REVIEW_REQUIRED": 676,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4896
+    },
+    "diffuse_shortfall": {
+      "REVIEW_REQUIRED": 991,
+      "ABSTAIN": 501,
+      "PROHIBIT": 4586,
+      "ALLOW_WITH_GUARDS": 2
+    },
+    "misaligned_values": {
+      "REVIEW_REQUIRED": 769,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4827
+    },
+    "illegitimate_mandate": {
+      "REVIEW_REQUIRED": 782,
+      "ABSTAIN": 483,
+      "PROHIBIT": 4815
+    },
+    "stakeholder_blind": {
+      "REVIEW_REQUIRED": 1118,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4461,
+      "ALLOW_WITH_GUARDS": 17
+    },
+    "goal_drift": {
+      "REVIEW_REQUIRED": 1108,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4470,
+      "ALLOW_WITH_GUARDS": 18
+    },
+    "priority_capture": {
+      "REVIEW_REQUIRED": 1117,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4466,
+      "ALLOW_WITH_GUARDS": 13
+    },
+    "no_kill_switch": {
+      "REVIEW_REQUIRED": 672,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4900
+    },
+    "unsafe_execution": {
+      "REVIEW_REQUIRED": 672,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4900
+    },
+    "no_containment": {
+      "REVIEW_REQUIRED": 672,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4900
+    },
+    "brittle_robustness": {
+      "REVIEW_REQUIRED": 1147,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4426,
+      "ALLOW_WITH_GUARDS": 21
+    },
+    "under_resourced": {
+      "REVIEW_REQUIRED": 1159,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4413,
+      "ALLOW_WITH_GUARDS": 22
+    },
+    "scope_mismatch": {
+      "REVIEW_REQUIRED": 1164,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4418,
+      "ALLOW_WITH_GUARDS": 14
+    },
+    "no_legal_compliance": {
+      "REVIEW_REQUIRED": 748,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4824
+    },
+    "no_human_review": {
+      "REVIEW_REQUIRED": 1161,
+      "ABSTAIN": 485,
+      "PROHIBIT": 4415,
+      "ALLOW_WITH_GUARDS": 19
+    },
+    "no_precaution": {
+      "REVIEW_REQUIRED": 672,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4900
+    },
+    "no_accountability": {
+      "REVIEW_REQUIRED": 1155,
+      "ABSTAIN": 483,
+      "PROHIBIT": 4429,
+      "ALLOW_WITH_GUARDS": 13
+    },
+    "no_redress": {
+      "REVIEW_REQUIRED": 672,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4900
+    },
+    "weak_ethics_framework": {
+      "REVIEW_REQUIRED": 1160,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4425,
+      "ALLOW_WITH_GUARDS": 9
+    },
+    "role_ambiguity": {
+      "REVIEW_REQUIRED": 1155,
+      "ABSTAIN": 484,
+      "PROHIBIT": 4423,
+      "ALLOW_WITH_GUARDS": 18
+    },
+    "evidentially_thin": {
+      "REVIEW_REQUIRED": 1161,
+      "ABSTAIN": 491,
+      "PROHIBIT": 4421,
+      "ALLOW_WITH_GUARDS": 7
+    },
+    "contextually_blind": {
+      "REVIEW_REQUIRED": 1156,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4430,
+      "ALLOW_WITH_GUARDS": 8
+    },
+    "normatively_ignorant": {
+      "REVIEW_REQUIRED": 1174,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4412,
+      "ALLOW_WITH_GUARDS": 8
+    },
+    "procedurally_weak": {
+      "REVIEW_REQUIRED": 1150,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4424,
+      "ALLOW_WITH_GUARDS": 20
+    },
+    "causally_blind": {
+      "REVIEW_REQUIRED": 1126,
+      "ABSTAIN": 486,
+      "PROHIBIT": 4449,
+      "ALLOW_WITH_GUARDS": 19
+    },
+    "miscalibrated_confidence": {
+      "REVIEW_REQUIRED": 672,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4900
+    },
+    "reporter_pillar_blind_W": {
+      "REVIEW_REQUIRED": 1032,
+      "ABSTAIN": 497,
+      "PROHIBIT": 4542,
+      "ALLOW_WITH_GUARDS": 9
+    },
+    "reporter_pillar_blind_C": {
+      "REVIEW_REQUIRED": 1273,
+      "ABSTAIN": 469,
+      "PROHIBIT": 4310,
+      "ALLOW_WITH_GUARDS": 28
+    },
+    "reporter_pillar_blind_K": {
+      "REVIEW_REQUIRED": 1012,
+      "ABSTAIN": 495,
+      "PROHIBIT": 4557,
+      "ALLOW_WITH_GUARDS": 16
+    },
+    "reporter_boundary_low": {
+      "ABSTAIN": 6080
+    },
+    "reporter_sparse": {
+      "ABSTAIN": 6080
+    },
+    "reporter_minimal": {
+      "ABSTAIN": 6080
+    }
+  },
+  "audit_sample": {
+    "rows": 120,
+    "stratified_by": "decision class x domain",
+    "decision_composition": {
+      "ABSTAIN": 24,
+      "ALLOW": 2,
+      "ALLOW_WITH_GUARDS": 26,
+      "PROHIBIT": 24,
+      "REVIEW_REQUIRED": 44
+    },
+    "domain_composition": {
+      "DS": 8,
+      "ED": 10,
+      "FI": 10,
+      "GP": 10,
+      "IC": 10,
+      "IM": 10,
+      "JS": 10,
+      "MA": 10,
+      "PD": 10,
+      "RS": 8,
+      "SA": 10,
+      "TB": 10,
+      "TS": 4
+    },
+    "adjudication_status": "UNADJUDICATED - no human raters; not ground truth",
+    "empty_rater_cells": 360
+  },
+  "baseline_r3": {
+    "layerA_cases": 1200,
+    "layerA_distinct_design_vectors": 840,
+    "layerA_duplicate_design_vectors": 360,
+    "layerA_severity_counts": {
+      "high": 396,
+      "critical": 395,
+      "medium": 409
+    },
+    "persona_types_r3": [
+      "capacity_poor",
+      "epistemically_thin",
+      "exemplary",
+      "guard_fragile",
+      "norm_light",
+      "recoverable_failure",
+      "solid",
+      "well_governed_under_resourced"
+    ],
+    "persona_types_with_factor_ge_1": [
+      "capacity_poor",
+      "epistemically_thin",
+      "exemplary",
+      "guard_fragile",
+      "norm_light",
+      "solid",
+      "well_governed_under_resourced"
+    ],
+    "max_factor_by_persona_type_r3": {
+      "exemplary": 1.2,
+      "solid": 1.05,
+      "well_governed_under_resourced": 1.05,
+      "norm_light": 1.0,
+      "epistemically_thin": 1.0,
+      "capacity_poor": 1.0,
+      "guard_fragile": 1.1,
+      "recoverable_failure": 0.7
+    },
+    "confrontations": 74480,
+    "share_adequacy_ge_0.999": 0.206257,
+    "decision_distribution": {
+      "PROHIBIT": 44906,
+      "ALLOW_WITH_GUARDS": 11254,
+      "REVIEW_REQUIRED": 11691,
+      "ALLOW": 6629
+    },
+    "abstain_count": 0,
+    "human_anchor_rows": 60,
+    "human_anchor_empty_rater_cells": 180
+  },
+  "gates": {
+    "a_no_duplicate_layerA_parameter_vectors": true,
+    "b_share_adequacy_ge_0.999_below_0.05": true,
+    "c_concentrated_deficit_persona_type_per_pillar": true,
+    "d_at_least_15_rules_firing_on_50_plus_cases": true,
+    "e_abstain_fires_on_some_cases": true,
+    "f_all_artefacts_written_to_r4": true,
+    "gold_kernel_only_share_below_0.40": true,
+    "severity_low_used_in_layerA": true,
+    "all_13_domains_covered": true
+  }
+}

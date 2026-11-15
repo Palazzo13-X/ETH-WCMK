@@ -1,0 +1,33 @@
+@prefix cal: <https://ethwcmk.org/ontology/calibration/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cal:v10 a owl:NamedIndividual,
+        eth:Calibration ;
+    rdfs:comment "gamma+eta+omega+rho+delta = 0.35, equal to the declared penalty budget; lambda sums to 1; edge weights sum to 1; face weights sum to 1."@en ;
+    eth:barBase 0.5 ;
+    eth:barIrreversibility 0.05 ;
+    eth:barPrudential 0.02 ;
+    eth:barSeverity 0.2 ;
+    eth:delta 0.05 ;
+    eth:edgeWeight 0.16666666666666666 ;
+    eth:eta 0.05 ;
+    eth:faceWeight 0.25 ;
+    eth:gamma 0.12 ;
+    eth:guardsMargin 0.15 ;
+    eth:hardVetoDelta 0.15 ;
+    eth:lambdaCan 0.25 ;
+    eth:lambdaKnow 0.2 ;
+    eth:lambdaMust 0.25 ;
+    eth:lambdaWant 0.3 ;
+    eth:omega 0.03 ;
+    eth:penaltyBudget 0.35 ;
+    eth:prohibitMargin 0.2 ;
+    eth:rho 0.1 ;
+    eth:vetoThresholdCan 0.6 ;
+    eth:vetoThresholdKnow 0.65 ;
+    eth:vetoThresholdMust 0.6 ;
+    eth:vetoThresholdWant 0.65 .
+

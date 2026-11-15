@@ -1,0 +1,37 @@
+# Normalise line endings so the repo is diff-clean on any platform.
+* text=auto
+*.py     text eol=lf
+*.ttl    text eol=lf
+*.md     text eol=lf
+*.json   text eol=lf
+*.jsonl  text eol=lf
+*.csv    text eol=lf
+*.mathml text eol=lf
+*.yml    text eol=lf
+*.cff    text eol=lf
+
+# Binary types
+*.docx binary
+*.pdf  binary
+*.png  binary
+*.zip  binary
+*.gz   binary
+
+# Language statistics: the formal core is Python. RDF/JSON artefacts are data,
+# not source, so they should not dominate the language bar.
+*.ttl    linguist-language=Python
+*.jsonl  linguist-detectable=false
+*.mathml linguist-detectable=false
+Ontologias/** linguist-documentation
+paper/** linguist-documentation
+docs/** linguist-documentation
+Evaluacoes/** linguist-documentation
+*.json linguist-documentation
+
+# Optional: enable Git LFS for anything between 5 MB and 100 MB. Run
+#   git lfs install
+# before committing these; the multi-hundred-MB corpora are published as
+# release assets instead (see data/CORPUS_MANIFEST.sha256).
+# *.ttl   filter=git-lfs
+# *.docx  filter=git-lfs
+# *.pdf   filter=git-lfs

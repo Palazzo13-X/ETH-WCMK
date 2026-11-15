@@ -1,0 +1,13 @@
+{
+  "pairs": 183920,
+  "kappa_fitted_holdout": 0.4834,
+  "kappa_fitted_in_sample": 0.4618,
+  "kappa_default_holdout": 0.2025,
+  "transfer_gap": -0.0215,
+  "fitted_vs_default_on_holdout": 0.2809,
+  "layerB_transfer": {
+    "kappa_fitted": 0.6617,
+    "kappa_default": 0.3745
+  },
+  "domains_where_default_beats_fitted": []
+}

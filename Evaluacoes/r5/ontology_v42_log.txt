@@ -1,0 +1,49 @@
+{
+  "generator": "_analysis/ontology/gen_ontology_v5.py",
+  "version": "4.2.0",
+  "corpus_source": "Evaluacoes/r5/corpus_v7_*",
+  "facets_in_registry": 33,
+  "files": {
+    "01_core.ttl": 64095,
+    "02_facets.ttl": 65549,
+    "03_deontic.ttl": 151822,
+    "04_agency.ttl": 10389,
+    "05_dynamics.ttl": 5893,
+    "06_calibration.ttl": 6869,
+    "07_grounding.ttl": 3258,
+    "shapes/ontology_shapes.ttl": 26832,
+    "shapes/ontology_shapes_v6.ttl": 5990,
+    "fixtures/invalid_examples.ttl": 127963,
+    "fixtures/invalid_examples_v6.ttl": 5775
+  },
+  "instances_triples": 1919283,
+  "counts": {
+    "cases": 1520,
+    "profiles": 5150,
+    "confrontations": 3755,
+    "chains": 1520,
+    "agents": 6224,
+    "stakeholders": 960,
+    "consequences": 320,
+    "evidence": 320,
+    "vulnerabilities": 0,
+    "requirements": 50160,
+    "observations": 169950,
+    "grounded_facts": 21280,
+    "guard_failure_records": 16475
+  },
+  "norm_conflicts": 88,
+  "decision_distribution": {
+    "REVIEW_REQUIRED": 32996,
+    "ABSTAIN": 34615,
+    "PROHIBIT": 152439,
+    "ALLOW_WITH_GUARDS": 349,
+    "ALLOW": 1
+  },
+  "layers": {
+    "cases_A": 1200,
+    "cases_B": 320
+  },
+  "registry_check": [],
+  "seconds": 20.6
+}

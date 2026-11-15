@@ -1,0 +1,461 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix shapes: <https://ethwcmk.org/shapes/wcmk-facets#> .
+
+<https://ethwcmk.org/shapes/wcmk-facets>
+    a owl:Ontology ;
+    rdfs:label "WCMK Facets SHACL Shapes (Draft v0.1)"@en , "Shapes SHACL de Facetas WCMK (rascunho v0.1)"@pt-BR ;
+    rdfs:comment "First SHACL validation layer for the WCMK rich facet extension. It focuses on structural integrity, bounded scores, minimal profile completeness and selected non-compensatory guards."@en ,
+                 "Primeira camada de validação SHACL para a extensão facetada rica do WCMK. Ela se concentra em integridade estrutural, escores limitados, completude mínima de perfil e guardas não compensatórios selecionados."@pt-BR ;
+    owl:imports <https://ethwcmk.org/ontology/wcmk-facets> .
+
+#################################################################
+# Reusable reference shapes
+#################################################################
+
+shapes:FacetReferenceShape
+    a sh:NodeShape ;
+    rdfs:label "Facet reference shape"@en , "Shape de referência de faceta"@pt-BR ;
+    sh:property [
+        sh:path wcmkf:projectsToCoreVertex ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A facet reference must project to exactly one WCMK core vertex."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:hasAggregationPolicy ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A facet reference should declare exactly one recommended aggregation policy."@en
+    ] ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:message "A facet reference should have at least one preferred label."@en
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:message "A facet reference should have at least one definition."@en
+    ] .
+
+shapes:DecimalUnitIntervalPropertyShape
+    a sh:PropertyShape ;
+    rdfs:label "Unit interval decimal shape"@en , "Shape decimal em intervalo unitário"@pt-BR ;
+    sh:datatype xsd:decimal ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 1 ;
+    sh:message "Value must be a decimal in the closed interval [0,1]."@en .
+
+#################################################################
+# Schema-level facet definition shapes
+#################################################################
+
+shapes:FacetDefinitionShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf wcmkf:projectsToCoreVertex ;
+    rdfs:label "Facet definition shape"@en , "Shape de definição de faceta"@pt-BR ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:hasValue owl:Class ;
+        sh:message "Each facet definition node should also be declared as an owl:Class."@en
+    ] ;
+    sh:property [
+        sh:path rdfs:subClassOf ;
+        sh:minCount 1 ;
+        sh:message "Each facet definition should indicate its parent facet class."@en
+    ] ;
+    sh:node shapes:FacetReferenceShape .
+
+shapes:WantFacetDefinitionShape
+    a sh:NodeShape ;
+    sh:targetNode wcmkf:GoalOrientation, wcmkf:ValueAlignment, wcmkf:StakeholderRegard,
+                  wcmkf:PriorityDiscipline, wcmkf:IntentionalStability ;
+    rdfs:label "Want facet definition shape"@en , "Shape de definição de facetas Want"@pt-BR ;
+    sh:property [
+        sh:path rdfs:subClassOf ;
+        sh:hasValue wcmkf:WantFacet ;
+        sh:message "Want facet definitions must be subclasses of wcmkf:WantFacet."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:projectsToCoreVertex ;
+        sh:hasValue wcmkf:WantVertex ;
+        sh:message "Want facet definitions must project to wcmkf:WantVertex."@en
+    ] .
+
+shapes:CanFacetDefinitionShape
+    a sh:NodeShape ;
+    sh:targetNode wcmkf:FunctionalCapability, wcmkf:Robustness, wcmkf:Controllability,
+                  wcmkf:ScopeAdequacy, wcmkf:ResourceSufficiency, wcmkf:SafeExecutability ;
+    rdfs:label "Can facet definition shape"@en , "Shape de definição de facetas Can"@pt-BR ;
+    sh:property [
+        sh:path rdfs:subClassOf ;
+        sh:hasValue wcmkf:CanFacet ;
+        sh:message "Can facet definitions must be subclasses of wcmkf:CanFacet."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:projectsToCoreVertex ;
+        sh:hasValue wcmkf:CanVertex ;
+        sh:message "Can facet definitions must project to wcmkf:CanVertex."@en
+    ] .
+
+shapes:MustFacetDefinitionShape
+    a sh:NodeShape ;
+    sh:targetNode wcmkf:LegalObligation, wcmkf:InstitutionalPolicyObligation,
+                  wcmkf:EthicalPrincipleObligation, wcmkf:PrudentialObligation,
+                  wcmkf:RoleObligation, wcmkf:AccountabilityObligation ;
+    rdfs:label "Must facet definition shape"@en , "Shape de definição de facetas Must"@pt-BR ;
+    sh:property [
+        sh:path rdfs:subClassOf ;
+        sh:hasValue wcmkf:MustFacet ;
+        sh:message "Must facet definitions must be subclasses of wcmkf:MustFacet."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:projectsToCoreVertex ;
+        sh:hasValue wcmkf:MustVertex ;
+        sh:message "Must facet definitions must project to wcmkf:MustVertex."@en
+    ] .
+
+shapes:KnowFacetDefinitionShape
+    a sh:NodeShape ;
+    sh:targetNode wcmkf:EvidentialKnowledge, wcmkf:ContextualKnowledge, wcmkf:NormativeKnowledge,
+                  wcmkf:ProceduralKnowledge, wcmkf:CausalKnowledge,
+                  wcmkf:UncertaintyAwareness, wcmkf:ProvenanceAwareness ;
+    rdfs:label "Know facet definition shape"@en , "Shape de definição de facetas Know"@pt-BR ;
+    sh:property [
+        sh:path rdfs:subClassOf ;
+        sh:hasValue wcmkf:KnowFacet ;
+        sh:message "Know facet definitions must be subclasses of wcmkf:KnowFacet."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:projectsToCoreVertex ;
+        sh:hasValue wcmkf:KnowVertex ;
+        sh:message "Know facet definitions must project to wcmkf:KnowVertex."@en
+    ] .
+
+#################################################################
+# Aggregation policy shape
+#################################################################
+
+shapes:AggregationPolicyShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:AggregationPolicy ;
+    rdfs:label "Aggregation policy shape"@en , "Shape de política de agregação"@pt-BR ;
+    sh:property [
+        sh:path wcmkf:aggregationMode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "weighted_mean" "guarded_weighted_mean" "threshold_override" "soft_min" "uncertainty_penalized_mean" ) ;
+        sh:message "Aggregation mode must be one of the currently admitted draft modes."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:allowsCompensation ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:message "Each aggregation policy must state whether compensation is allowed."@en
+    ] .
+
+#################################################################
+# Assessment, requirement and deficit shapes
+#################################################################
+
+shapes:FacetAssessmentShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:FacetAssessment ;
+    rdfs:label "Facet assessment shape"@en , "Shape de avaliação de faceta"@pt-BR ;
+    sh:property [
+        sh:path wcmkf:assessesFacet ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:node shapes:FacetReferenceShape ;
+        sh:message "Each facet assessment must point to exactly one valid facet definition resource."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:hasNormalizedScore ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Facet assessment score must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:hasConfidence ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Confidence, when present, must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:usesCalibrationArtifact ;
+        sh:nodeKind sh:IRI ;
+        sh:class wcmkf:CalibrationArtifact ;
+        sh:message "Calibration artifact links must point to resources typed as wcmkf:CalibrationArtifact."@en
+    ] ;
+    sh:property [
+        sh:path prov:wasDerivedFrom ;
+        sh:nodeKind sh:IRI ;
+        sh:message "Provenance links should use IRI resources."@en
+    ] .
+
+shapes:FacetRequirementShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:FacetRequirement ;
+    rdfs:label "Facet requirement shape"@en , "Shape de requisito de faceta"@pt-BR ;
+    sh:property [
+        sh:path wcmkf:requiresFacet ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:node shapes:FacetReferenceShape ;
+        sh:message "Each facet requirement must point to exactly one valid facet definition resource."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:minimumRequiredLevel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Minimum required level must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:hasWeight ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Requirement weight, when present, must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:criticalityLevel ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "critical" "high" "medium" "low" ) ;
+        sh:message "Criticality level, when present, must be one of: critical, high, medium, low."@en
+    ] .
+
+shapes:FacetDeficitShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:FacetDeficit ;
+    rdfs:label "Facet deficit shape"@en , "Shape de déficit de faceta"@pt-BR ;
+    sh:property [
+        sh:path wcmkf:concernsFacet ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:node shapes:FacetReferenceShape ;
+        sh:message "Each facet deficit must concern exactly one valid facet definition resource."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:observedLevel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Observed level must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:requiredLevel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Required level must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:deficitValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 1 ;
+        sh:message "Deficit value must be a decimal in [0,1]."@en
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Deficit value must equal max(0, requiredLevel - observedLevel)."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this wcmkf:observedLevel ?obs ;
+                      wcmkf:requiredLevel ?req ;
+                      wcmkf:deficitValue ?d .
+                BIND(xsd:decimal(?obs) AS ?o)
+                BIND(xsd:decimal(?req) AS ?r)
+                BIND(xsd:decimal(?d) AS ?dv)
+                BIND(IF((?r - ?o) > 0, (?r - ?o), 0.0) AS ?expected)
+                FILTER (ABS(?dv - ?expected) > 0.000001)
+            }
+        """
+    ] .
+
+#################################################################
+# Facetized agency profile completeness shapes
+#################################################################
+
+shapes:FacetizedAgencyProfileShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:FacetizedAgencyProfile ;
+    rdfs:label "Facetized agency profile shape"@en , "Shape de perfil facetado de agência"@pt-BR ;
+    sh:property [
+        sh:path wcmkf:hasAssessment ;
+        sh:minCount 24 ;
+        sh:message "A facetized agency profile should have at least 24 facet assessments in the rich draft model."@en
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A facetized agency profile must include at least 5 assessments whose assessed facets belong to the Want family."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                {
+                    SELECT $this (COUNT(DISTINCT ?a) AS ?n)
+                    WHERE {
+                        $this wcmkf:hasAssessment ?a .
+                        ?a wcmkf:assessesFacet ?facet .
+                        ?facet rdfs:subClassOf* wcmkf:WantFacet .
+                    }
+                    GROUP BY $this
+                    HAVING (?n < 5)
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A facetized agency profile must include at least 6 assessments whose assessed facets belong to the Can family."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                {
+                    SELECT $this (COUNT(DISTINCT ?a) AS ?n)
+                    WHERE {
+                        $this wcmkf:hasAssessment ?a .
+                        ?a wcmkf:assessesFacet ?facet .
+                        ?facet rdfs:subClassOf* wcmkf:CanFacet .
+                    }
+                    GROUP BY $this
+                    HAVING (?n < 6)
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A facetized agency profile must include at least 6 assessments whose assessed facets belong to the Must family."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                {
+                    SELECT $this (COUNT(DISTINCT ?a) AS ?n)
+                    WHERE {
+                        $this wcmkf:hasAssessment ?a .
+                        ?a wcmkf:assessesFacet ?facet .
+                        ?facet rdfs:subClassOf* wcmkf:MustFacet .
+                    }
+                    GROUP BY $this
+                    HAVING (?n < 6)
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A facetized agency profile must include at least 7 assessments whose assessed facets belong to the Know family."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                {
+                    SELECT $this (COUNT(DISTINCT ?a) AS ?n)
+                    WHERE {
+                        $this wcmkf:hasAssessment ?a .
+                        ?a wcmkf:assessesFacet ?facet .
+                        ?facet rdfs:subClassOf* wcmkf:KnowFacet .
+                    }
+                    GROUP BY $this
+                    HAVING (?n < 7)
+                }
+            }
+        """
+    ] ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A facetized agency profile should not assess the same facet more than once unless a versioned assessment strategy is adopted explicitly."@en ;
+        sh:select """
+            SELECT DISTINCT $this
+            WHERE {
+                $this wcmkf:hasAssessment ?a1, ?a2 .
+                FILTER (?a1 != ?a2)
+                ?a1 wcmkf:assessesFacet ?facet .
+                ?a2 wcmkf:assessesFacet ?facet .
+            }
+        """
+    ] .
+
+#################################################################
+# Domain profile shape
+#################################################################
+
+shapes:DomainProfileShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:DomainProfile ;
+    rdfs:label "Domain profile shape"@en , "Shape de perfil de domínio"@pt-BR ;
+    sh:property [
+        sh:path [ sh:inversePath wcmkf:isCriticalInDomain ] ;
+        sh:minCount 1 ;
+        sh:message "A domain profile should be referenced by at least one critical facet via inverse wcmkf:isCriticalInDomain."@en
+    ] .
+
+#################################################################
+# Selected guard shapes (warnings)
+#################################################################
+
+shapes:CriticalLowScoreWarningShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:FacetAssessment ;
+    sh:severity sh:Warning ;
+    rdfs:label "Critical low score warning shape"@en , "Shape de aviso para escore crítico baixo"@pt-BR ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Very low scores on LegalObligation, PrudentialObligation or UncertaintyAwareness should be reviewed because they are weakly compensable in the current draft semantics."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this wcmkf:assessesFacet ?facet ;
+                      wcmkf:hasNormalizedScore ?score .
+                FILTER (?facet IN (wcmkf:LegalObligation, wcmkf:PrudentialObligation, wcmkf:UncertaintyAwareness))
+                FILTER (xsd:decimal(?score) < 0.20)
+            }
+        """
+    ] .
+
+shapes:UnsafeExecutabilityWarningShape
+    a sh:NodeShape ;
+    sh:targetClass wcmkf:FacetAssessment ;
+    sh:severity sh:Warning ;
+    rdfs:label "Unsafe executability warning shape"@en , "Shape de aviso para executabilidade insegura"@pt-BR ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Low SafeExecutability should be reviewed before downstream aggregation, especially in high-risk domains."@en ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this wcmkf:assessesFacet wcmkf:SafeExecutability ;
+                      wcmkf:hasNormalizedScore ?score .
+                FILTER (xsd:decimal(?score) < 0.20)
+            }
+        """
+    ] .

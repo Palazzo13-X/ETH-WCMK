@@ -1,0 +1,44 @@
+pairs=183920 train=127776 test=56144
+baseline kappa: train=0.3792 test=0.3998 dist={'REVIEW_REQUIRED': 20153, 'ABSTAIN': 10655, 'PROHIBIT': 96736, 'ALLOW': 1, 'ALLOW_WITH_GUARDS': 231}
+fitted kappa: train=0.4677 test=0.4789 dist={'PROHIBIT': 103452, 'REVIEW_REQUIRED': 12687, 'ALLOW_WITH_GUARDS': 893, 'ABSTAIN': 10655, 'ALLOW': 89}
+structural variants: {"base": {"train_kappa": 0.4677, "test_kappa": 0.4789, "verdict_flips_vs_base_train": 0, "verdict_flips_vs_base_test": 0}, "veto_needs_material": {"train_kappa": 0.4677, "test_kappa": 0.4789, "verdict_flips_vs_base_train": 0, "verdict_flips_vs_base_test": 0}, "stakes_band": {"train_kappa": 0.4676, "test_kappa": 0.4788, "verdict_flips_vs_base_train": 65, "verdict_flips_vs_base_test": 4}}
+{
+  "baseline_kappa": {
+    "train": 0.37917678412512207,
+    "test": 0.39979746487392676
+  },
+  "fitted_kappa": {
+    "train": 0.46772235837460463,
+    "test": 0.4789150301075435
+  },
+  "clause_attribution": {
+    "abstention_E29": 10655,
+    "prohibit_hard": 26155,
+    "prohibit_bar_route": 82247,
+    "prohibit_ratio_route": 29278,
+    "review_baa_below_bar": 10397,
+    "review_veto_clause": 503,
+    "review_ratio_clause": 1787,
+    "total_review": 12687
+  },
+  "structural_variants": {
+    "base": {
+      "train_kappa": 0.4677,
+      "test_kappa": 0.4789,
+      "verdict_flips_vs_base_train": 0,
+      "verdict_flips_vs_base_test": 0
+    },
+    "veto_needs_material": {
+      "train_kappa": 0.4677,
+      "test_kappa": 0.4789,
+      "verdict_flips_vs_base_train": 0,
+      "verdict_flips_vs_base_test": 0
+    },
+    "stakes_band": {
+      "train_kappa": 0.4676,
+      "test_kappa": 0.4788,
+      "verdict_flips_vs_base_train": 65,
+      "verdict_flips_vs_base_test": 4
+    }
+  }
+}

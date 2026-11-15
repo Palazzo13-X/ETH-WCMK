@@ -1,0 +1,41 @@
+ETH-WCMK_Retomada
+
+Estamos trabalhando em um modelo semântico para avaliar a qualidade ética de agentes artificiais. O último draft de um paper descrevendo o modelo encontra-se em ~Strata/Shared, assim como ontologias e outros documentos relevantes para este projeto. Estávamos executando o Plano quando houve uma interrupção. Muito trabalho já foi desenvolvido em chats anteriores. Vamos considerá-los para continuidade sem retrabalho. Verifique os gates vencidos e emita um breve relatório antes de continuar.
+
+O modelo se baseia fundamentalmente em quatro métricas interdependentes associadas aos quatro seguintes pilares, assumidos como minimamente necessários e suficientes para representar a agência ética de agentes autônomos:
+
+1. Intenção: representa os objetivos gerais do agente, com base na sua programação e representa a motivação, o resultado esperado e o desejo formalizado de seus stakeholders. (keyword: want/querer). 
+
+2. Recursos: representa a totalidade dos assets e ferramentas que o agente dispõe para a realização de seus objetivos e sua capacidade para utilizá-los. (keyword: can/poder).
+
+3. Obrigação: representa a carga ética deontológica do agente - a moral, as leis e os princípios éticos fundamentais. (keyword: must/dever).
+
+4. Conhecimento: representa não apenas o que o agente "sabe", mas sua capacidade de avaliar consequências de sua ação e raciocinar metacognitivamente sobre o próprio conhecimento: o que sabe, o que não sabe e o que é possível aprender. (keyword: know/saber) 
+
+Fica patente que cada um desses pilares interage com todos os demais. Para representar essa interrelação utilizou-se o figura geométrica de um tetraedro regular (3-simplex) onde cada pilar do modelo ocupa um vértice e as relações entre eles se refletem nas arestas, nas faces e no volume interno do tetraedro.
+
+Abaixo dessa primeira camada do modelo introduziu-se outra, com facetas cujas medidas influem na formação dos valores dos pilares.  
+
+Queremos agora:
+
+1. Avaliar criticamente a proposta do modelo indicando possíveis refinamentos.
+
+2. Revisar a matemática envolvida e sua adequação para a representação do modelo.
+
+3. Revisar em detalhe a proposta de 24 facetas previstas no texto, visando refinar as combinações e permitir seu eventual compartilhamento entre os pilares, com pesos distintos.
+
+4. Revisar a ontologia final subjacente aplicando as validações formais para garantir sua coerência. 
+
+5. Desenvolver um corpus robusto de casos éticos sintéticos com que uma IA autônoma pode se deparar (ethcase), cobrindo domínios sensíveis como saúde, educação, meio ambiente, segurança digital, etc.  
+
+6. Desenvolver e aplicar baterias de testes confrontando diferentes configurações ethcase x wcmk 
+
+7. Reformular o paper em uma nova versão, sem perder conteúdo válido e incorporando os resultados encontradas nesta nova rodada.
+
+Sua tarefa agora é dar sequência a esta atividade, que foi interrompida, sem retrabalho. 
+
+Vamos adotar a seguinte política:
+
+1. Use as permissões concedidas nas configurações. 
+2. A cada hora cheia emitir um breve relato do realizado, em realização e por realizar com estimativa de tempo.
+

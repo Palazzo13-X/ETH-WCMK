@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mrow><mi>Δ</mi></mrow><mrow><mi>f</mi></mrow></msub><mo>=</mo><mo>max</mo><mrow><mo>{</mo><mn>0</mn><mo>,</mo><msub><mrow><mi>r</mi></mrow><mrow><mi>f</mi></mrow></msub><mo>−</mo><mi>tilde</mi><msub><mrow><mi>x</mi></mrow><mrow><mi>f</mi></mrow></msub><mo>}</mo></mrow><mo>,</mo><mi>  </mi><msub><mrow><mi>c</mi></mrow><mrow><mi>f</mi></mrow></msub><mi>∈</mi><mo>{</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>}</mo></math>

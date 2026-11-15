@@ -1,0 +1,34 @@
+code,label,betaW,betaC,betaM,betaK,pillars,policy,guard,guard_min,source,observable,criticality,SA,JS,IC,FI,PD,GP,IM,ED,TB,MA,TS,RS,DS
+W1,Goal orientation,0.8,0.2,0.0,0.0,2,weighted_mean,False,0.0,catalog,divergence between stated objective and deployed objective,4|4|4|4|2|4|2|4|2|2|2|3|2,4,4,4,4,2,4,2,4,2,2,2,3,2
+W2,Value alignment,0.7,0.0,0.3,0.0,2,guarded_weighted_mean,True,0.55,catalog,declared values vs. observed outcome distribution (fairness metrics),4|4|4|3|4|4|4|3|4|2|2|2|2,4,4,4,3,4,4,4,3,4,2,2,2,2
+W3,Stakeholder regard,0.6,0.0,0.4,0.0,2,guarded_weighted_mean,False,0.0,catalog,stakeholder map coverage and complaint channels,4|4|3|3|4|4|4|3|3|2|2|2|2,4,4,3,3,4,4,4,3,3,2,2,2,2
+W4,Priority discipline,0.7,0.3,0.0,0.0,2,guarded_weighted_mean,False,0.0,catalog,ranked objective hierarchy and trade-off logs,4|4|4|4|4|3|2|4|2|2|2|2|2,4,4,4,4,4,3,2,4,2,2,2,2,2
+W5,Intentional stability,0.6,0.2,0.2,0.0,3,weighted_mean,False,0.0,catalog,objective drift across runs and time windows,4|4|4|4|4|3|2|3|2|2|2|2|2,4,4,4,4,4,3,2,3,2,2,2,2,2
+W6,Want legitimacy,0.6,0.0,0.4,0.0,2,guarded_weighted_mean,True,0.5,new,mandate provenance: who authorised the goal and with what scope,4|3|3|3|2|4|2|4|2|2|2|3|2,4,3,3,3,2,4,2,4,2,2,2,3,2
+C1,Functional capability,0.0,1.0,0.0,0.0,1,weighted_mean,False,0.0,catalog,task success rate against benchmark,4|4|4|4|2|2|2|2|2|4|4|2|4,4,4,4,4,2,2,2,2,2,4,4,2,4
+C2,Robustness,0.0,0.8,0.2,0.0,2,guarded_weighted_mean,False,0.0,catalog,performance degradation under distribution shift or adversarial input,4|4|4|4|2|2|4|2|2|2|3|2|3,4,4,4,4,2,2,4,2,2,2,3,2,3
+C3,Controllability,0.0,0.6,0.2,0.2,3,threshold_override,True,0.55,catalog,existence and latency of stop / hand-off mechanisms,4|4|4|4|4|4|2|2|4|4|4|2|4,4,4,4,4,4,4,2,2,4,4,4,2,4
+C4,Scope adequacy,0.0,0.7,0.3,0.0,2,guarded_weighted_mean,False,0.0,catalog,fit between declared scope and observed use,4|4|4|4|4|2|2|2|2|2|3|2|3,4,4,4,4,4,2,2,2,2,2,3,2,3
+C5,Resource sufficiency,0.0,0.8,0.2,0.0,2,weighted_mean,False,0.0,catalog,compute / data / staffing budget vs. task demand,4|3|4|4|2|4|2|2|2|2|3|2|3,4,3,4,4,2,4,2,2,2,2,3,2,3
+C6,Safe executability,0.0,0.5,0.3,0.2,3,threshold_override,True,0.6,catalog,incident rate under production conditions,4|4|4|4|4|2|2|2|2|2|3|2|3,4,4,4,4,4,2,2,2,2,2,3,2,3
+C7,Containment and reversibility capacity,0.0,0.6,0.2,0.2,3,threshold_override,True,0.45,new,"rollback, quarantine and mitigation procedures actually exercised",4|3|4|3|2|2|2|2|2|3|4|2|4,4,3,4,3,2,2,2,2,2,3,4,2,4
+M1,Legal obligation,0.0,0.0,0.8,0.2,2,threshold_override,True,0.6,catalog,mapped applicable statutes and compliance evidence,4|4|4|4|4|4|2|2|4|2|4|3|4,4,4,4,4,4,4,2,2,4,2,4,3,4
+M2,Institutional policy obligation,0.0,0.2,0.6,0.2,3,guarded_weighted_mean,False,0.0,catalog,policy coverage of the deployment context,4|3|4|4|4|4|2|2|2|2|2|3|2,4,3,4,4,4,4,2,2,2,2,2,3,2
+M3,Ethical principle obligation,0.2,0.0,0.6,0.2,3,guarded_weighted_mean,False,0.0,catalog,principles enumerated and mapped to design decisions,4|4|2|3|4|4|4|4|4|2|2|4|2,4,4,2,3,4,4,4,4,4,2,2,4,2
+M4,Prudential obligation,0.0,0.2,0.6,0.2,3,threshold_override,True,0.55,catalog,precaution measures proportionate to irreversibility,4|4|4|4|4|3|2|2|2|4|2|3|2,4,4,4,4,4,3,2,2,2,4,2,3,2
+M5,Role obligation,0.2,0.2,0.6,0.0,3,guarded_weighted_mean,False,0.0,catalog,role/duty specification of the acting agent,4|4|4|4|3|4|2|2|3|2|2|3|2,4,4,4,4,3,4,2,2,3,2,2,3,2
+M6,Accountability obligation,0.3,0.0,0.5,0.2,3,guarded_weighted_mean,False,0.0,catalog,"traceability, audit trail and responsible-party assignment",4|4|2|4|4|4|2|2|2|2|2|3|2,4,4,2,4,4,4,2,2,2,2,2,3,2
+M7,Proportionality and redress,0.0,0.2,0.6,0.2,3,guarded_weighted_mean,True,0.5,new,benefit/harm proportionality assessment and remedy availability,4|4|2|3|4|4|2|3|3|2|2|3|2,4,4,2,3,4,4,2,3,3,2,2,3,2
+K1,Evidential knowledge,0.0,0.2,0.2,0.6,3,weighted_mean,False,0.0,catalog,"quality, freshness and representativeness of the evidence base",4|4|3|4|4|4|2|2|2|3|4|4|2,4,4,3,4,4,4,2,2,2,3,4,4,2
+K2,Contextual knowledge,0.0,0.2,0.2,0.6,3,guarded_weighted_mean,False,0.0,catalog,local and domain factors captured in the model of the situation,4|4|4|2|4|4|2|2|4|3|2|4|4,4,4,4,2,4,4,2,2,4,3,2,4,4
+K3,Normative knowledge,0.0,0.2,0.4,0.4,3,guarded_weighted_mean,False,0.0,catalog,norms correctly retrieved and correctly applied,4|4|2|4|4|4|2|4|2|2|2|4|2,4,4,2,4,4,4,2,4,2,2,2,4,2
+K4,Procedural knowledge,0.0,0.4,0.2,0.4,3,weighted_mean,False,0.0,catalog,documented procedures followed in operation,4|4|4|4|2|4|2|2|2|2|3|2|3,4,4,4,4,2,4,2,2,2,2,3,2,3
+K5,Causal knowledge,0.2,0.2,0.0,0.6,3,weighted_mean,False,0.0,catalog,validated causal/counterfactual understanding of outcomes,4|4|4|2|3|4|2|2|2|4|2|3|2,4,4,4,2,3,4,2,2,2,4,2,3,2
+K6,Uncertainty awareness,0.0,0.2,0.3,0.5,3,uncertainty_penalized_mean,True,0.5,catalog,calibration of reported confidence against realized error,4|4|4|4|4|2|2|2|2|3|2|3|2,4,4,4,4,4,2,2,2,2,3,2,3,2
+K7,Provenance awareness,0.0,0.2,0.3,0.5,3,guarded_weighted_mean,False,0.0,catalog,"source lineage of data, claims and decisions",4|4|3|4|4|4|4|2|2|3|2|4|4,4,4,3,4,4,4,4,2,2,3,2,4,4
+K8,Learnability,0.15,0.35,0.0,0.5,3,uncertainty_penalized_mean,False,0.0,new,feedback loop that measurably improves performance or safety,3|3|3|2|3|3|2|4|2|3|2|4|3,3,3,3,2,3,3,2,4,2,3,2,4,3
+M8,Transparency and notice,0.0,0.2,0.5,0.3,3,guarded_weighted_mean,True,0.5,new,affected parties are informed that a decision was made about them and can see its logic,4|3|2|4|4|4|4|4|4|2|4|3|2,4,3,2,4,4,4,4,4,4,2,4,3,2
+M9,Human review channel,0.0,0.3,0.7,0.0,2,guarded_weighted_mean,True,0.5,new,"an accessible, exercised human review or appeal route exists before harm crystallises",4|4|4|4|4|4|2|2|4|2|4|3|2,4,4,4,4,4,4,2,2,4,2,4,3,2
+M10,Consent and participation,0.4,0.0,0.6,0.0,2,guarded_weighted_mean,True,0.5,new,informed consent or documented participation of the affected parties,4|4|2|3|4|4|2|4|4|2|2|4|2,4,4,2,3,4,4,2,4,4,2,2,4,2
+C8,Data minimisation and purpose limitation,0.0,0.5,0.5,0.0,2,guarded_weighted_mean,False,0.0,new,fields collected are limited to those necessary for the declared purpose,4|3|3|4|4|4|4|2|4|2|3|4|4,4,3,3,4,4,4,4,2,4,2,3,4,4
+K9,Periodic review and sunset,0.0,0.0,0.4,0.6,2,weighted_mean,False,0.0,new,"a scheduled review, expiry or sunset clause in the deployment contract",4|3|4|4|3|4|2|2|4|4|4|3|4,4,3,4,4,3,4,2,2,4,4,4,3,4

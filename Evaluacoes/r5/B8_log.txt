@@ -1,0 +1,126 @@
+{
+  "total_probes": 2064,
+  "passed": 2064,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "assertions_total": 7815,
+  "assertions_passed": 7815,
+  "by_family": {
+    "non_compensation": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "critical_deficit": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "monotonicity": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "abstention": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "hysteresis": {
+      "n": 165,
+      "pass": 165,
+      "fail": 0
+    }
+  },
+  "by_assertion_type": {
+    "pillar_cap": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "cap_active": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "gap_removed": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "no_allow": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "hard_veto": {
+      "n": 384,
+      "pass": 384,
+      "fail": 0
+    },
+    "base_perfect": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "deficit_lowers_adequacy": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "stakes_weighted": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "risk_not_lowered": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "adequacy_nondecreasing": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "risk_nonincreasing": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "no_stricter_verdict": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "abstention_fires": {
+      "n": 66,
+      "pass": 66,
+      "fail": 0
+    },
+    "no_spurious_abstention": {
+      "n": 66,
+      "pass": 66,
+      "fail": 0
+    },
+    "natural_verdict": {
+      "n": 165,
+      "pass": 165,
+      "fail": 0
+    },
+    "hysteresis": {
+      "n": 165,
+      "pass": 165,
+      "fail": 0
+    }
+  },
+  "decision_distribution": {
+    "PROHIBIT": 915,
+    "REVIEW_REQUIRED": 892,
+    "ALLOW_WITH_GUARDS": 126,
+    "ABSTAIN": 66,
+    "ALLOW": 65
+  }
+}
+failures: 0
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r5/B8_probes_reverified_v13.json probes: 2064

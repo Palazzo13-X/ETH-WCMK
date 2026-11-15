@@ -1,0 +1,47 @@
+{
+  "sample": 20436,
+  "calibration": "fitted B5 v12",
+  "noise": {
+    "sigma_0.02": {
+      "pairs": 20436,
+      "verdict_flip_rate": 0.0132,
+      "became_more_permissive_rate": 0.0022,
+      "became_more_restrictive_rate": 0.011,
+      "mean_abs_aa_shift": 0.014,
+      "mean_aa_shift": -0.009,
+      "mean_adequacy": 0.2795,
+      "kappa_vs_panel": 0.4651
+    },
+    "sigma_0.05": {
+      "pairs": 20436,
+      "verdict_flip_rate": 0.0306,
+      "became_more_permissive_rate": 0.004,
+      "became_more_restrictive_rate": 0.0266,
+      "mean_abs_aa_shift": 0.0358,
+      "mean_aa_shift": -0.0272,
+      "mean_adequacy": 0.2613,
+      "kappa_vs_panel": 0.4532
+    },
+    "sigma_0.1": {
+      "pairs": 20436,
+      "verdict_flip_rate": 0.0573,
+      "became_more_permissive_rate": 0.0058,
+      "became_more_restrictive_rate": 0.0514,
+      "mean_abs_aa_shift": 0.0727,
+      "mean_aa_shift": -0.0633,
+      "mean_adequacy": 0.2253,
+      "kappa_vs_panel": 0.4322
+    },
+    "sigma_0.2": {
+      "pairs": 20436,
+      "verdict_flip_rate": 0.0856,
+      "became_more_permissive_rate": 0.0041,
+      "became_more_restrictive_rate": 0.0815,
+      "mean_abs_aa_shift": 0.1367,
+      "mean_aa_shift": -0.1307,
+      "mean_adequacy": 0.1578,
+      "kappa_vs_panel": 0.3934
+    }
+  },
+  "reading": "kappa and verdict stability decay with observation noise. The test is whether degraded observations ever make the model MORE permissive: the guard cap and the pessimistic band should make that rare."
+}

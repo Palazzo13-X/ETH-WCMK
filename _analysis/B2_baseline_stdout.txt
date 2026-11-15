@@ -1,0 +1,222 @@
+arquivos analisados: 24 | pares validados: 184
+
+=== METADADOS ===
+Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl              triples=   37 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl             triples=   87 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl triples=   95 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl triples=  648 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl                     triples=  161 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl                triples=   27 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl                    triples=   22 nodeShapes=  1 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl                          triples=   47 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl               triples=   18 nodeShapes=  1 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl                     triples=   25 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl                   triples=  311 nodeShapes= 14 propShapes=  1 sparql=  8 rules= 0  [!] PropertyShape sem sh:path: https://ethwcmk.org/shapes/wcmk-facets#DecimalUnitIntervalPropertyShape
+Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl                         triples=  541 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl                 triples=   10 nodeShapes=  1 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl                       triples=   14 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl                  triples=   10 nodeShapes=  1 propShapes=  0 sparql=  0 rules= 0
+Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl                        triples=   21 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl                triples=   10 nodeShapes=  1 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-analysis.ttl                      triples=   37 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl                    triples=   14 nodeShapes=  1 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-core.ttl                          triples=   52 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl triples=   34 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl triples=   45 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl      triples=  149 nodeShapes=  3 propShapes=  0 sparql=  0 rules= 0
+Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl            triples=  292 nodeShapes=  0 propShapes=  0 sparql=  0 rules= 0
+
+=== CONFORMANCE ===
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+ERRO  Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl: ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.
+For reference, see https://www.w3.org/TR/shacl/#property-shapes
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-analysis.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-core.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl total=0 violations=0 warnings=0 infos=0
+OK    Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl x Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl total=0 violations=0 warnings=0 infos=0
+
+relatorio completo: B2_shacl_results_baseline.json

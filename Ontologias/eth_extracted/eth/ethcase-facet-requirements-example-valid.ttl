@@ -1,0 +1,53 @@
+@prefix ex: <https://ethwcmk.org/resource/examples/efr/> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:case_health_01 a eth:EthicalCase ;
+    eth:hasDomain efr:health_domain ;
+    eth:hasNormalizedRiskScore "0.81"^^xsd:decimal ;
+    eth:hasPrudentialFlag true ;
+    eth:hasHumanImpact "high" ;
+    eth:hasIrreversibility "high" ;
+    eth:hasDataSensitivity "sensitive" .
+
+ex:case_req_profile_health_01 a efr:CaseRequirementProfile ;
+    efr:derivedFromCase ex:case_health_01 ;
+    efr:usesDomainProfile wcmkf:HealthDomainProfile ;
+    efr:usesSeverityBand efr:SEVERITY_HIGH ;
+    efr:usesPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:usesAggregationProfile efr:ConservativeRequirementAggregation ;
+    efr:requirementCoverage "0.75"^^xsd:decimal ;
+    efr:derivedRequirementCount 3 ;
+    efr:hasDerivedRequirement ex:req_health_prudential, ex:req_health_normative, ex:req_health_control .
+
+ex:req_health_prudential a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:PrudentialObligation ;
+    efr:derivedByRule efr:HealthPrudentialObligationRule ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    wcmkf:minimumRequiredLevel "0.82"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.72"^^xsd:decimal ;
+    efr:prudentialDelta "0.10"^^xsd:decimal ;
+    efr:derivedWeight "0.95"^^xsd:decimal ;
+    wcmkf:criticalityLevel "critical" .
+
+ex:req_health_normative a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:NormativeKnowledge ;
+    efr:derivedByRule efr:HealthNormativeKnowledgeRule ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    wcmkf:minimumRequiredLevel "0.74"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.68"^^xsd:decimal ;
+    efr:prudentialDelta "0.06"^^xsd:decimal ;
+    efr:derivedWeight "0.90"^^xsd:decimal ;
+    wcmkf:criticalityLevel "high" .
+
+ex:req_health_control a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:Controllability ;
+    efr:derivedByRule efr:HealthControllabilityRule ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    wcmkf:minimumRequiredLevel "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.70"^^xsd:decimal ;
+    efr:prudentialDelta "0.10"^^xsd:decimal ;
+    efr:derivedWeight "0.92"^^xsd:decimal ;
+    wcmkf:criticalityLevel "critical" .

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>u</mi><mo>=</mo><msub><mrow><mi>U</mi></mrow><mrow><mi>E</mi></mrow></msub><mfrac><mrow><msub><mrow><mi>d</mi></mrow><mrow><mi>K</mi></mrow></msub></mrow><mrow><mo>max</mo><mrow><mo>{</mo><msub><mrow><mi>q</mi></mrow><mrow><mi>K</mi></mrow></msub><mo>,</mo><mi>ε</mi><mo>}</mo></mrow></mrow></mfrac></math>

@@ -1,0 +1,8 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arch: <https://example.org/eth2/arch#> .
+
+arch:WcmkProfileShape a sh:NodeShape ;
+  sh:targetClass arch:WCMKProfile ;
+  sh:property [ sh:path arch:profileId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:label ; sh:minCount 1 ; sh:datatype xsd:string ] .

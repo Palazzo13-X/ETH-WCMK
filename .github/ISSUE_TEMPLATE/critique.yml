@@ -1,0 +1,40 @@
+---
+name: Model or rubric critique
+description: A substantive objection to the model, the ontology or the ground truth
+title: "[critique] "
+labels: ["critique"]
+body:
+  - type: markdown
+    value: |
+      Normative and structural critique is welcome and is the main input this
+      project takes from outside. Please target the artefact, not the authors.
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Which layer is the objection about?
+      options:
+        - Arithmetic core (invariants I1–I44)
+        - Facet registry / weights
+        - Ontology / SHACL shapes
+        - Ground-truth rubric or panels
+        - Corpus design
+        - Geometry / relation lattice
+    required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim
+      placeholder: "The hierarchy S2 ≥ S3 ≥ S4 holds by construction, so it cannot be falsified by the corpus."
+    required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or counterexample
+      description: A case, a test, or a derivation. If you have a runnable counterexample, paste it.
+      render: text
+    required: true
+  - type: textarea
+    id: consequence
+    attributes:
+      label: What would change if the objection is accepted?
+      placeholder: "Which published number would change, and by how much?"

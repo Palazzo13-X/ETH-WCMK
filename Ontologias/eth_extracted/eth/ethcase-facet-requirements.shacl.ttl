@@ -1,0 +1,193 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+
+#################################################################
+# Case requirement profile shapes
+#################################################################
+
+efr:CaseRequirementProfileShape a sh:NodeShape ;
+    sh:targetClass efr:CaseRequirementProfile ;
+    sh:property [
+        sh:path efr:derivedFromCase ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class eth:EthicalCase ;
+        sh:message "CaseRequirementProfile must point to exactly one EthicalCase."@en
+    ] ;
+    sh:property [
+        sh:path efr:usesDomainProfile ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class wcmkf:DomainProfile ;
+        sh:message "CaseRequirementProfile must use exactly one domain profile."@en
+    ] ;
+    sh:property [
+        sh:path efr:usesSeverityBand ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class efr:SeverityBand ;
+        sh:message "CaseRequirementProfile must declare exactly one severity band."@en
+    ] ;
+    sh:property [
+        sh:path efr:usesPrudentialMode ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class efr:PrudentialMode ;
+        sh:message "CaseRequirementProfile must declare exactly one prudential mode."@en
+    ] ;
+    sh:property [
+        sh:path efr:usesAggregationProfile ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class efr:RequirementAggregationProfile ;
+        sh:message "CaseRequirementProfile must declare exactly one aggregation profile."@en
+    ] ;
+    sh:property [
+        sh:path efr:hasDerivedRequirement ;
+        sh:minCount 1 ;
+        sh:class efr:DerivedFacetRequirement ;
+        sh:message "CaseRequirementProfile must have at least one derived facet requirement."@en
+    ] ;
+    sh:property [
+        sh:path efr:requirementCoverage ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "requirementCoverage must be a decimal in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path efr:derivedRequirementCount ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:integer ; sh:minInclusive 1 ;
+        sh:message "derivedRequirementCount must be an integer >= 1."@en
+    ] ;
+    sh:sparql [
+        sh:message "derivedRequirementCount must equal the number of hasDerivedRequirement links."@en ;
+        sh:select """
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#>
+PREFIX efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#>
+            SELECT $this WHERE {
+              $this efr:derivedRequirementCount ?declared .
+              {
+                SELECT $this (COUNT(?req) AS ?actual)
+                WHERE { $this efr:hasDerivedRequirement ?req . }
+                GROUP BY $this
+              }
+              FILTER(xsd:integer(?declared) != xsd:integer(?actual))
+            }
+        """
+    ] .
+
+#################################################################
+# Derived requirement shapes
+#################################################################
+
+efr:DerivedFacetRequirementShape a sh:NodeShape ;
+    sh:targetClass efr:DerivedFacetRequirement ;
+    sh:property [
+        sh:path wcmkf:requiresFacet ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class wcmkf:Facet ;
+        sh:message "DerivedFacetRequirement must target exactly one facet."@en
+    ] ;
+    sh:property [
+        sh:path efr:derivedByRule ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class efr:RequirementDerivationRule ;
+        sh:message "DerivedFacetRequirement must point to exactly one derivation rule."@en
+    ] ;
+    sh:property [
+        sh:path efr:priorityTier ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class efr:PriorityTier ;
+        sh:message "DerivedFacetRequirement must declare exactly one priority tier."@en
+    ] ;
+    sh:property [
+        sh:path wcmkf:minimumRequiredLevel ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "minimumRequiredLevel must be in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path efr:baseRequiredLevel ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "baseRequiredLevel must be in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path efr:derivedWeight ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "derivedWeight must be in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path efr:prudentialDelta ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 0.5 ;
+        sh:message "prudentialDelta must be in [0,0.5]."@en
+    ] ;
+    sh:sparql [
+        sh:message "minimumRequiredLevel should be at least baseRequiredLevel and no more than baseRequiredLevel + prudentialDelta + 0.15."@en ;
+        sh:select """
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#>
+PREFIX efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#>
+            SELECT $this WHERE {
+              $this wcmkf:minimumRequiredLevel ?m ;
+                    efr:baseRequiredLevel ?b ;
+                    efr:prudentialDelta ?d .
+              FILTER( xsd:decimal(?m) < xsd:decimal(?b) || xsd:decimal(?m) > (xsd:decimal(?b) + xsd:decimal(?d) + 0.15) )
+            }
+        """
+    ] ;
+    sh:sparql [
+        sh:message "The rule target facet must match the requirement facet."@en ;
+        sh:select """
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#>
+PREFIX efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#>
+            SELECT $this WHERE {
+              $this wcmkf:requiresFacet ?f ;
+                    efr:derivedByRule ?r .
+              ?r efr:targetsFacet ?rf .
+              FILTER(?f != ?rf)
+            }
+        """
+    ] .
+
+#################################################################
+# Derivation rule shapes
+#################################################################
+
+efr:RequirementDerivationRuleShape a sh:NodeShape ;
+    sh:targetClass efr:RequirementDerivationRule ;
+    sh:property [
+        sh:path efr:targetsFacet ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class wcmkf:Facet ;
+        sh:message "RequirementDerivationRule must target exactly one facet."@en
+    ] ;
+    sh:property [
+        sh:path efr:applicableToDomain ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class wcmkf:DomainProfile ;
+        sh:message "RequirementDerivationRule must declare exactly one domain profile."@en
+    ] ;
+    sh:property [
+        sh:path efr:recommendedPrudentialMode ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:class efr:PrudentialMode ;
+        sh:message "RequirementDerivationRule must declare exactly one prudential mode."@en
+    ] ;
+    sh:property [
+        sh:path efr:severityFloor ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "severityFloor must be in [0,1]."@en
+    ] ;
+    sh:property [
+        sh:path efr:domainBaseWeight ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:datatype xsd:decimal ; sh:minInclusive 0 ; sh:maxInclusive 1 ;
+        sh:message "domainBaseWeight must be in [0,1]."@en
+    ] .

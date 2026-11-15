@@ -1,0 +1,480 @@
+{
+  "version": "2.0",
+  "pillars": [
+    "W",
+    "C",
+    "M",
+    "K"
+  ],
+  "facets": [
+    {
+      "code": "W1",
+      "label_pt": "Orientação de fins",
+      "label_en": "Goal orientation",
+      "pillar": "W",
+      "beta": {
+        "W": 0.7,
+        "C": 0.2,
+        "M": 0.05,
+        "K": 0.05
+      },
+      "kind": "teleological",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "A goal the agent cannot state cannot be pursued; ties to capability for feasibility."
+    },
+    {
+      "code": "W2",
+      "label_pt": "Alinhamento de valores",
+      "label_en": "Value alignment",
+      "pillar": "W",
+      "beta": {
+        "W": 0.6,
+        "C": 0.1,
+        "M": 0.2,
+        "K": 0.1
+      },
+      "kind": "teleological",
+      "guarded": true,
+      "theta": 0.15,
+      "rationale": "Misaligned goals are an obligation problem as well as an intention problem."
+    },
+    {
+      "code": "W3",
+      "label_pt": "Consideração de stakeholders",
+      "label_en": "Stakeholder regard",
+      "pillar": "W",
+      "beta": {
+        "W": 0.55,
+        "C": 0.15,
+        "M": 0.2,
+        "K": 0.1
+      },
+      "kind": "relational",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Whose ends count; requires knowledge of who is affected."
+    },
+    {
+      "code": "W4",
+      "label_pt": "Disciplina de prioridades",
+      "label_en": "Priority discipline",
+      "pillar": "W",
+      "beta": {
+        "W": 0.6,
+        "C": 0.25,
+        "M": 0.1,
+        "K": 0.05
+      },
+      "kind": "teleological",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Trade-off arbitration among competing goals."
+    },
+    {
+      "code": "W5",
+      "label_pt": "Estabilidade intencional",
+      "label_en": "Intentional stability",
+      "pillar": "W",
+      "beta": {
+        "W": 0.7,
+        "C": 0.2,
+        "M": 0.05,
+        "K": 0.05
+      },
+      "kind": "temporal",
+      "guarded": false,
+      "theta": 0.2,
+      "rationale": "Goal drift over time; needs monitoring capability."
+    },
+    {
+      "code": "W6",
+      "label_pt": "Legitimidade da intenção",
+      "label_en": "Legitimacy of intention",
+      "pillar": "W",
+      "beta": {
+        "W": 0.5,
+        "C": 0.1,
+        "M": 0.3,
+        "K": 0.1
+      },
+      "kind": "normative",
+      "guarded": true,
+      "theta": 0.15,
+      "rationale": "NEW: an intention can be coherent and still illegitimate (usurped mandate). Separates 'wanting well' from 'having the right to want it'."
+    },
+    {
+      "code": "C1",
+      "label_pt": "Capacidade funcional",
+      "label_en": "Functional capability",
+      "pillar": "C",
+      "beta": {
+        "W": 0.15,
+        "C": 0.7,
+        "M": 0.1,
+        "K": 0.05
+      },
+      "kind": "capability",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Can the action be performed at all."
+    },
+    {
+      "code": "C2",
+      "label_pt": "Robustez",
+      "label_en": "Robustness",
+      "pillar": "C",
+      "beta": {
+        "W": 0.1,
+        "C": 0.65,
+        "M": 0.15,
+        "K": 0.1
+      },
+      "kind": "reliability",
+      "guarded": true,
+      "theta": 0.2,
+      "rationale": "Performance under distribution shift and adversarial stress."
+    },
+    {
+      "code": "C3",
+      "label_pt": "Controlabilidade",
+      "label_en": "Controllability",
+      "pillar": "C",
+      "beta": {
+        "W": 0.15,
+        "C": 0.55,
+        "M": 0.2,
+        "K": 0.1
+      },
+      "kind": "governance",
+      "guarded": true,
+      "theta": 0.15,
+      "rationale": "Intervention, rollback, human override."
+    },
+    {
+      "code": "C4",
+      "label_pt": "Adequação de escopo",
+      "label_en": "Scope adequacy",
+      "pillar": "C",
+      "beta": {
+        "W": 0.2,
+        "C": 0.6,
+        "M": 0.15,
+        "K": 0.05
+      },
+      "kind": "boundary",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Fit between declared scope and actual deployment."
+    },
+    {
+      "code": "C5",
+      "label_pt": "Suficiência de recursos",
+      "label_en": "Resource sufficiency",
+      "pillar": "C",
+      "beta": {
+        "W": 0.15,
+        "C": 0.7,
+        "M": 0.1,
+        "K": 0.05
+      },
+      "kind": "material",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Compute, data, staffing, time."
+    },
+    {
+      "code": "C6",
+      "label_pt": "Exequibilidade segura",
+      "label_en": "Safe executability",
+      "pillar": "C",
+      "beta": {
+        "W": 0.1,
+        "C": 0.55,
+        "M": 0.25,
+        "K": 0.1
+      },
+      "kind": "safety",
+      "guarded": true,
+      "theta": 0.2,
+      "rationale": "Can it be executed without foreseeable harm."
+    },
+    {
+      "code": "M1",
+      "label_pt": "Obrigação legal",
+      "label_en": "Legal obligation",
+      "pillar": "M",
+      "beta": {
+        "W": 0.05,
+        "C": 0.1,
+        "M": 0.75,
+        "K": 0.1
+      },
+      "kind": "deontic",
+      "guarded": true,
+      "theta": 0.2,
+      "rationale": "Hard statutory constraints; non-negotiable."
+    },
+    {
+      "code": "M2",
+      "label_pt": "Obrigação institucional",
+      "label_en": "Institutional policy obligation",
+      "pillar": "M",
+      "beta": {
+        "W": 0.05,
+        "C": 0.1,
+        "M": 0.7,
+        "K": 0.15
+      },
+      "kind": "deontic",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Organizational mandates and internal policy."
+    },
+    {
+      "code": "M3",
+      "label_pt": "Obrigação de princípio",
+      "label_en": "Ethical principle obligation",
+      "pillar": "M",
+      "beta": {
+        "W": 0.15,
+        "C": 0.1,
+        "M": 0.6,
+        "K": 0.15
+      },
+      "kind": "deontic",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Non-codified normative expectations."
+    },
+    {
+      "code": "M4",
+      "label_pt": "Obrigação de prestação de contas",
+      "label_en": "Accountability obligation",
+      "pillar": "M",
+      "beta": {
+        "W": 0.1,
+        "C": 0.2,
+        "M": 0.55,
+        "K": 0.15
+      },
+      "kind": "relational",
+      "guarded": true,
+      "theta": 0.15,
+      "rationale": "Answerability to affected parties."
+    },
+    {
+      "code": "M5",
+      "label_pt": "Obrigação de papel",
+      "label_en": "Role obligation",
+      "pillar": "M",
+      "beta": {
+        "W": 0.15,
+        "C": 0.15,
+        "M": 0.55,
+        "K": 0.15
+      },
+      "kind": "relational",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Duties arising from the role the agent occupies."
+    },
+    {
+      "code": "M6",
+      "label_pt": "Obrigação prudencial",
+      "label_en": "Prudential obligation",
+      "pillar": "M",
+      "beta": {
+        "W": 0.1,
+        "C": 0.2,
+        "M": 0.5,
+        "K": 0.2
+      },
+      "kind": "precautionary",
+      "guarded": true,
+      "theta": 0.15,
+      "rationale": "Duty of care under uncertainty; bridges to Know."
+    },
+    {
+      "code": "K1",
+      "label_pt": "Conhecimento normativo",
+      "label_en": "Normative knowledge",
+      "pillar": "K",
+      "beta": {
+        "W": 0.1,
+        "C": 0.1,
+        "M": 0.3,
+        "K": 0.5
+      },
+      "kind": "epistemic",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Knowing which norms apply and how they conflict."
+    },
+    {
+      "code": "K2",
+      "label_pt": "Conhecimento causal",
+      "label_en": "Causal knowledge",
+      "pillar": "K",
+      "beta": {
+        "W": 0.15,
+        "C": 0.2,
+        "M": 0.15,
+        "K": 0.5
+      },
+      "kind": "epistemic",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Model of consequences; prerequisite for prudent action."
+    },
+    {
+      "code": "K3",
+      "label_pt": "Conhecimento contextual",
+      "label_en": "Contextual knowledge",
+      "pillar": "K",
+      "beta": {
+        "W": 0.2,
+        "C": 0.15,
+        "M": 0.15,
+        "K": 0.5
+      },
+      "kind": "epistemic",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Local, situated, contingent information."
+    },
+    {
+      "code": "K4",
+      "label_pt": "Conhecimento evidencial",
+      "label_en": "Evidential knowledge",
+      "pillar": "K",
+      "beta": {
+        "W": 0.1,
+        "C": 0.2,
+        "M": 0.2,
+        "K": 0.5
+      },
+      "kind": "epistemic",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Quality, currency and coverage of the evidence base."
+    },
+    {
+      "code": "K5",
+      "label_pt": "Conhecimento procedimental",
+      "label_en": "Procedural knowledge",
+      "pillar": "K",
+      "beta": {
+        "W": 0.1,
+        "C": 0.3,
+        "M": 0.2,
+        "K": 0.4
+      },
+      "kind": "operational",
+      "guarded": false,
+      "theta": 0.15,
+      "rationale": "Knowing how to act correctly, including escalation."
+    },
+    {
+      "code": "K6",
+      "label_pt": "Awareness de provenance",
+      "label_en": "Provenance awareness",
+      "pillar": "K",
+      "beta": {
+        "W": 0.05,
+        "C": 0.2,
+        "M": 0.2,
+        "K": 0.55
+      },
+      "kind": "epistemic",
+      "guarded": true,
+      "theta": 0.2,
+      "rationale": "Source reliability and traceability of inputs."
+    },
+    {
+      "code": "K7",
+      "label_pt": "Awareness de incerteza",
+      "label_en": "Uncertainty awareness",
+      "pillar": "K",
+      "beta": {
+        "W": 0.1,
+        "C": 0.15,
+        "M": 0.2,
+        "K": 0.55
+      },
+      "kind": "metacognitive",
+      "guarded": true,
+      "theta": 0.2,
+      "rationale": "Calibration of confidence; the pillar that feeds U_E."
+    },
+    {
+      "code": "K8",
+      "label_pt": "Capacidade de aprendizagem",
+      "label_en": "Learnability",
+      "pillar": "K",
+      "beta": {
+        "W": 0.1,
+        "C": 0.25,
+        "M": 0.2,
+        "K": 0.45
+      },
+      "kind": "metacognitive",
+      "guarded": true,
+      "theta": 0.2,
+      "rationale": "NEW: the ability to improve after error. Absorbs the duplicated K6/K4 overlap and makes the model diachronic."
+    }
+  ],
+  "counts_by_pillar": {
+    "W": 6,
+    "C": 6,
+    "M": 6,
+    "K": 8
+  },
+  "overlaps_resolved": [
+    {
+      "a": "C2 Robustez",
+      "b": "C6 Exequibilidade segura",
+      "resolution": "distinct: robustness = performance under stress, executability = harm under normal operation"
+    },
+    {
+      "a": "C4 Escopo",
+      "b": "C5 Recursos",
+      "resolution": "distinct: scope = boundary of the mandate, resources = means available"
+    },
+    {
+      "a": "M1 Legal",
+      "b": "M3 Princípio",
+      "resolution": "distinct: enforceable vs. non-enforceable; M1 is guarded, M3 is not"
+    },
+    {
+      "a": "M1 Legal",
+      "b": "M2 Institucional",
+      "resolution": "distinct: source of authority; keeps both for jurisdiction mapping"
+    },
+    {
+      "a": "K1 Normativo",
+      "b": "M1 Legal",
+      "resolution": "cross-pillar: K1 measures knowing the norm, M1 measures complying with it"
+    },
+    {
+      "a": "K6 Provenance",
+      "b": "K4 Evidencial",
+      "resolution": "K4 = quality of evidence, K6 = traceability of its origin"
+    },
+    {
+      "a": "W1 Fins",
+      "b": "W4 Prioridades",
+      "resolution": "W1 = what is sought, W4 = how competing aims are arbitrated"
+    },
+    {
+      "a": "W2 Valores",
+      "b": "M3 Princípio",
+      "resolution": "W2 = agent's own values, M3 = external normative expectation"
+    },
+    {
+      "a": "K7 Incerteza",
+      "b": "M6 Prudencial",
+      "resolution": "K7 = knowing you do not know, M6 = acting accordingly"
+    }
+  ]
+}

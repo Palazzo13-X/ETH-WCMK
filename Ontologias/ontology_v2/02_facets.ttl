@@ -1,0 +1,2131 @@
+@prefix domain: <https://ethwcmk.org/ontology/domain/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix facet: <https://ethwcmk.org/ontology/facet/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pillar: <https://ethwcmk.org/ontology/pillar/> .
+@prefix policy: <https://ethwcmk.org/ontology/policy/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+pillar:Can eth:contributedBy facet:C1,
+        facet:C2,
+        facet:C3,
+        facet:C4,
+        facet:C5,
+        facet:C6,
+        facet:K4,
+        facet:K8,
+        facet:W1,
+        facet:W4,
+        facet:W5 .
+
+pillar:Know eth:contributedBy facet:K1,
+        facet:K2,
+        facet:K3,
+        facet:K4,
+        facet:K5,
+        facet:K6,
+        facet:K7,
+        facet:K8,
+        facet:M4 .
+
+pillar:Must eth:contributedBy facet:C2,
+        facet:C3,
+        facet:C4,
+        facet:C6,
+        facet:K3,
+        facet:K6,
+        facet:K7,
+        facet:M1,
+        facet:M2,
+        facet:M3,
+        facet:M4,
+        facet:M5,
+        facet:M6,
+        facet:W2,
+        facet:W3,
+        facet:W6 .
+
+pillar:Want eth:contributedBy facet:K5,
+        facet:M6,
+        facet:W1,
+        facet:W2,
+        facet:W3,
+        facet:W4,
+        facet:W5,
+        facet:W6 .
+
+policy:uncertainty_penalized_mean a eth:AggregationPolicy ;
+    rdfs:label "uncertainty_penalized_mean"@en .
+
+policy:threshold_override a eth:AggregationPolicy ;
+    rdfs:label "threshold_override"@en .
+
+policy:weighted_mean a eth:AggregationPolicy ;
+    rdfs:label "weighted_mean"@en .
+
+policy:guarded_weighted_mean a eth:AggregationPolicy ;
+    rdfs:label "guarded_weighted_mean"@en .
+
+facet:C1 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Functional capability"@en ;
+    skos:prefLabel "Functional capability"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 1.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "C1" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:C5 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Resource sufficiency"@en ;
+    skos:prefLabel "Resource sufficiency"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 1.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "C5" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:K1 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Evidential knowledge"@en ;
+    skos:prefLabel "Evidential knowledge"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 1.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K1" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:K2 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Contextual knowledge"@en ;
+    skos:prefLabel "Contextual knowledge"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 1.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K2" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:M1 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Legal obligation"@en ;
+    skos:prefLabel "Legal obligation"@en ;
+    eth:aggregationPolicy policy:threshold_override ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 1.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "M1" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.6 ;
+    eth:hasGuard true ;
+    eth:source "catalog" .
+
+facet:M2 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Institutional policy obligation"@en ;
+    skos:prefLabel "Institutional policy obligation"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 1.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "M2" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:M3 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Ethical principle obligation"@en ;
+    skos:prefLabel "Ethical principle obligation"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 1.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "M3" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:M5 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Role obligation"@en ;
+    skos:prefLabel "Role obligation"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 1.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "M5" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:C2 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Robustness"@en ;
+    skos:prefLabel "Robustness"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.8 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.2 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "C2" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:C3 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Controllability"@en ;
+    skos:prefLabel "Controllability"@en ;
+    eth:aggregationPolicy policy:threshold_override ;
+    eth:betaCan 0.6 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.4 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "C3" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.55 ;
+    eth:hasGuard true ;
+    eth:source "catalog" .
+
+facet:C4 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Scope adequacy"@en ;
+    skos:prefLabel "Scope adequacy"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.7 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.3 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "C4" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:C6 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Safe executability"@en ;
+    skos:prefLabel "Safe executability"@en ;
+    eth:aggregationPolicy policy:threshold_override ;
+    eth:betaCan 0.5 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.5 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "C6" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.6 ;
+    eth:hasGuard true ;
+    eth:source "catalog" .
+
+facet:K3 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Normative knowledge"@en ;
+    skos:prefLabel "Normative knowledge"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.6 ;
+    eth:betaMust 0.4 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K3" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:K4 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Procedural knowledge"@en ;
+    skos:prefLabel "Procedural knowledge"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 0.2 ;
+    eth:betaKnow 0.8 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K4" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:K5 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Causal knowledge"@en ;
+    skos:prefLabel "Causal knowledge"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.7 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.3 ;
+    eth:facetCode "K5" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:K6 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Uncertainty awareness"@en ;
+    skos:prefLabel "Uncertainty awareness"@en ;
+    eth:aggregationPolicy policy:uncertainty_penalized_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.6 ;
+    eth:betaMust 0.4 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K6" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.5 ;
+    eth:hasGuard true ;
+    eth:source "catalog" .
+
+facet:K7 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Provenance awareness"@en ;
+    skos:prefLabel "Provenance awareness"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.5 ;
+    eth:betaMust 0.5 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K7" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:K8 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Learnability"@en ;
+    skos:prefLabel "Learnability"@en ;
+    eth:aggregationPolicy policy:uncertainty_penalized_mean ;
+    eth:betaCan 0.4 ;
+    eth:betaKnow 0.6 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "K8" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "new" .
+
+facet:M4 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Prudential obligation"@en ;
+    skos:prefLabel "Prudential obligation"@en ;
+    eth:aggregationPolicy policy:threshold_override ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.3 ;
+    eth:betaMust 0.7 ;
+    eth:betaWant 0.0 ;
+    eth:facetCode "M4" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.55 ;
+    eth:hasGuard true ;
+    eth:source "catalog" .
+
+facet:M6 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Accountability obligation"@en ;
+    skos:prefLabel "Accountability obligation"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.6 ;
+    eth:betaWant 0.4 ;
+    eth:facetCode "M6" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:W1 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Goal orientation"@en ;
+    skos:prefLabel "Goal orientation"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 0.2 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.8 ;
+    eth:facetCode "W1" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:W2 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Value alignment"@en ;
+    skos:prefLabel "Value alignment"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.3 ;
+    eth:betaWant 0.7 ;
+    eth:facetCode "W2" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.55 ;
+    eth:hasGuard true ;
+    eth:source "catalog" .
+
+facet:W3 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Stakeholder regard"@en ;
+    skos:prefLabel "Stakeholder regard"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.4 ;
+    eth:betaWant 0.6 ;
+    eth:facetCode "W3" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:W4 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Priority discipline"@en ;
+    skos:prefLabel "Priority discipline"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.3 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.7 ;
+    eth:facetCode "W4" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:W5 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Intentional stability"@en ;
+    skos:prefLabel "Intentional stability"@en ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 0.3 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.7 ;
+    eth:facetCode "W5" ;
+    eth:facetWeight 1.0 ;
+    eth:hasGuard false ;
+    eth:source "catalog" .
+
+facet:W6 a owl:NamedIndividual,
+        eth:Facet ;
+    rdfs:label "Want legitimacy"@en ;
+    skos:prefLabel "Want legitimacy"@en ;
+    eth:aggregationPolicy policy:guarded_weighted_mean ;
+    eth:betaCan 0.0 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.4 ;
+    eth:betaWant 0.6 ;
+    eth:facetCode "W6" ;
+    eth:facetWeight 1.0 ;
+    eth:guardMin 0.5 ;
+    eth:hasGuard true ;
+    eth:source "new" .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K8 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:JS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IC ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:C4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TB ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K7 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:ED ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 3 ;
+    eth:criticalityOfFacet facet:M5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:FI ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:MA ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:W4 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:SA ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C5 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:DS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:C1 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:PD ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:K6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:M3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:IM ;
+    eth:criticalityLevel 4 ;
+    eth:criticalityOfFacet facet:W3 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:TS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:K2 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:RS ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C6 .
+
+[] a eth:FacetDomainCriticality ;
+    eth:criticalityInDomain domain:GP ;
+    eth:criticalityLevel 2 ;
+    eth:criticalityOfFacet facet:C4 .
+

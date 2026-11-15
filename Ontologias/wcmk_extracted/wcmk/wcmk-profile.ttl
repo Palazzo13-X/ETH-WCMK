@@ -1,0 +1,18 @@
+@prefix : <https://eth2.local/ontology/wcmk-profile#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/wcmk-profile> a owl:Ontology ;
+    rdfs:label "WCMK Profile" ;
+    rdfs:comment "Promised or designed agency profile." .
+
+:WCMKProfile a owl:Class .
+:CapabilityStatement a owl:Class .
+:ConstraintStatement a owl:Class .
+
+:wantLevel a owl:DatatypeProperty ; rdfs:domain :WCMKProfile ; rdfs:range xsd:decimal .
+:canLevel a owl:DatatypeProperty ; rdfs:domain :WCMKProfile ; rdfs:range xsd:decimal .
+:mustLevel a owl:DatatypeProperty ; rdfs:domain :WCMKProfile ; rdfs:range xsd:decimal .
+:knowLevel a owl:DatatypeProperty ; rdfs:domain :WCMKProfile ; rdfs:range xsd:decimal .
+:profileLabel a owl:DatatypeProperty ; rdfs:domain :WCMKProfile ; rdfs:range xsd:string .

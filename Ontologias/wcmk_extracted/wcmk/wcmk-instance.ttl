@@ -1,0 +1,16 @@
+@prefix : <https://eth2.local/ontology/wcmk-instance#> .
+@prefix profile: <https://eth2.local/ontology/wcmk-profile#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/wcmk-instance> a owl:Ontology ;
+    rdfs:label "WCMK Instance" ;
+    rdfs:comment "Concrete runtime or deployment configuration of an agent." .
+
+:WCMKInstance a owl:Class .
+:RuntimeConfiguration a owl:Class .
+
+:implementsProfile a owl:ObjectProperty ; rdfs:domain :WCMKInstance ; rdfs:range profile:WCMKProfile .
+:runtimeVersion a owl:DatatypeProperty ; rdfs:domain :WCMKInstance ; rdfs:range xsd:string .
+:deploymentId a owl:DatatypeProperty ; rdfs:domain :WCMKInstance ; rdfs:range xsd:string .

@@ -1,0 +1,287 @@
+@prefix cal: <https://ethwcmk.org/ontology/calibration/> .
+@prefix decision: <https://ethwcmk.org/ontology/decision/> .
+@prefix domain: <https://ethwcmk.org/ontology/domain/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix facet: <https://ethwcmk.org/ontology/facet/> .
+@prefix pillar: <https://ethwcmk.org/ontology/pillar/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/confrontation/IC-0001-agent-114> a eth:Confrontation ;
+    eth:adequacy 0.6965 ;
+    eth:adequacyRaw 0.6965 ;
+    eth:assessedBy <https://ethwcmk.org/ontology/profile/agent-114> ;
+    eth:concernsCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:decisionOf decision:REVIEW_REQUIRED ;
+    eth:facetDeficit 0.25,
+        0.3,
+        0.4 ;
+    eth:levelCan 0.6503 ;
+    eth:levelKnow 0.6189 ;
+    eth:levelMust 0.4 ;
+    eth:levelWant 0.4 ;
+    eth:pillarDeficit 0.0872,
+        0.1459,
+        0.3594,
+        0.3984 ;
+    eth:residualRisk 0.377 ;
+    eth:riskFloor 0.1281 ;
+    eth:structuralTermInterior 0.2066 ;
+    eth:structuralTermPair 0.1521 ;
+    eth:structuralTermTriple 0.1019 ;
+    eth:usesCalibration cal:v10 .
+
+<https://ethwcmk.org/ontology/profile/agent-114> a eth:AgencyProfile ;
+    rdfs:label "Delegated grid-balancing agent (LLM-mediated)" ;
+    eth:completeness 1.0 ;
+    eth:hasFacetLevel [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:M2 ;
+            eth:observedLevel 0.75 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:W3 ;
+            eth:observedLevel 0.7 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K5 ;
+            eth:observedLevel 0.55 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K7 ;
+            eth:observedLevel 0.6 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:W6 ;
+            eth:observedLevel 0.4 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:M1 ;
+            eth:observedLevel 0.5 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:C4 ;
+            eth:observedLevel 0.68 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:W5 ;
+            eth:observedLevel 0.55 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:M4 ;
+            eth:observedLevel 0.6 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:C3 ;
+            eth:observedLevel 0.55 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K4 ;
+            eth:observedLevel 0.6 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:C2 ;
+            eth:observedLevel 0.72 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:W1 ;
+            eth:observedLevel 0.75 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:C6 ;
+            eth:observedLevel 0.7 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K1 ;
+            eth:observedLevel 0.8 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K8 ;
+            eth:observedLevel 0.35 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:C1 ;
+            eth:observedLevel 0.8 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:M5 ;
+            eth:observedLevel 0.65 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:M3 ;
+            eth:observedLevel 0.7 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:W2 ;
+            eth:observedLevel 0.6 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K6 ;
+            eth:observedLevel 0.55 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:C5 ;
+            eth:observedLevel 0.6 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K3 ;
+            eth:observedLevel 0.65 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:K2 ;
+            eth:observedLevel 0.7 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:M6 ;
+            eth:observedLevel 0.7 ],
+        [ a eth:FacetLevel ;
+            eth:confidence 0.85 ;
+            eth:levelOfFacet facet:W4 ;
+            eth:observedLevel 0.65 ] ;
+    eth:magnitude 2.0692 ;
+    eth:shapeCan 0.3143 ;
+    eth:shapeKnow 0.2991 ;
+    eth:shapeMust 0.1933 ;
+    eth:shapeWant 0.1933 .
+
+<https://ethwcmk.org/ontology/case/IC-0001> a eth:EthicalCase ;
+    rdfs:label "Grid-load balancing agent operating under market pressure" ;
+    eth:contextualRisk 0.82 ;
+    eth:criticalPillar pillar:Know,
+        pillar:Must ;
+    eth:epistemicUncertainty 0.3 ;
+    eth:hasDomain domain:IC ;
+    eth:hasPrudentialMode <https://ethwcmk.org/ontology/prudential/elevated> ;
+    eth:hasReversibility <https://ethwcmk.org/ontology/reversibility/partially_irreversible> ;
+    eth:hasSeverity <https://ethwcmk.org/ontology/severity/high> .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:M2 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.65 ;
+    eth:requiresFacet facet:K8 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.85 ;
+    eth:requiresFacet facet:M4 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.85 ;
+    eth:requiresFacet facet:M3 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:W1 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.7 ;
+    eth:requiresFacet facet:W3 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.75 ;
+    eth:requiresFacet facet:K3 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.6 ;
+    eth:requiresFacet facet:C5 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.65 ;
+    eth:requiresFacet facet:W5 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.85 ;
+    eth:requiresFacet facet:C1 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:C3 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.85 ;
+    eth:requiresFacet facet:K1 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.75 ;
+    eth:requiresFacet facet:W4 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.85 ;
+    eth:requiresFacet facet:W2 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.9 ;
+    eth:requiresFacet facet:M1 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.75 ;
+    eth:requiresFacet facet:M5 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.75 ;
+    eth:requiresFacet facet:C6 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:M6 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:K6 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:C2 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.7 ;
+    eth:requiresFacet facet:K7 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:W6 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.7 ;
+    eth:requiresFacet facet:C4 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.8 ;
+    eth:requiresFacet facet:K2 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.75 ;
+    eth:requiresFacet facet:K4 .
+
+[] a eth:FacetRequirement ;
+    eth:requirementForCase <https://ethwcmk.org/ontology/case/IC-0001> ;
+    eth:requirementValue 0.7 ;
+    eth:requiresFacet facet:K5 .
+

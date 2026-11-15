@@ -1,0 +1,255 @@
+{
+  "corpus": "corpus_v6",
+  "n_pairs": 183920,
+  "train_pairs": 127776,
+  "test_pairs": 56144,
+  "split": "by domain: train SA JS IC FI PD GP IM ED MA / test TB TS RS DS",
+  "gold_test_distribution": {
+    "PROHIBIT": 47521,
+    "ABSTAIN": 2904,
+    "REVIEW_REQUIRED": 4904,
+    "ALLOW": 328,
+    "ALLOW_WITH_GUARDS": 487
+  },
+  "results": [
+    {
+      "baseline": "model: v12 core + ladder fitted on TRAIN domains (B5, r4)",
+      "n_test": 56144,
+      "recompute_check": true,
+      "kappa": 0.4834,
+      "exact": 0.859,
+      "three_band_kappa": 0.2833,
+      "distribution": {
+        "ABSTAIN": 4047,
+        "PROHIBIT": 47535,
+        "REVIEW_REQUIRED": 4358,
+        "ALLOW_WITH_GUARDS": 165,
+        "ALLOW": 39
+      },
+      "entropy": 0.5511,
+      "note": "decision recomputed from the stored case spec, not from the stored row"
+    },
+    {
+      "baseline": "model: v12 core + frozen r3 ladder (the one the corpus was built with)",
+      "n_test": 56144,
+      "recompute_check": true,
+      "kappa": 0.3991,
+      "exact": 0.8081,
+      "three_band_kappa": 0.2119,
+      "distribution": {
+        "ABSTAIN": 4047,
+        "PROHIBIT": 44079,
+        "REVIEW_REQUIRED": 7917,
+        "ALLOW_WITH_GUARDS": 101
+      },
+      "entropy": 0.6671,
+      "note": "decision recomputed from the stored case spec, not from the stored row"
+    },
+    {
+      "baseline": "model: v12 core + declared (uncalibrated) ladder",
+      "n_test": 56144,
+      "recompute_check": true,
+      "kappa": 0.2025,
+      "exact": 0.548,
+      "three_band_kappa": 0.1034,
+      "distribution": {
+        "ABSTAIN": 4047,
+        "PROHIBIT": 25775,
+        "REVIEW_REQUIRED": 26297,
+        "ALLOW_WITH_GUARDS": 25
+      },
+      "entropy": 0.9057,
+      "note": "decision recomputed from the stored case spec, not from the stored row"
+    },
+    {
+      "baseline": "BL5 adequacy without the veto cap (ablation)",
+      "threshold_fit_train": 0.52,
+      "train_kappa": 0.1623,
+      "kappa": 0.1464,
+      "exact": 0.7465,
+      "three_band_kappa": 0.1907,
+      "distribution": {
+        "PROHIBIT": 46563,
+        "ALLOW": 9581
+      },
+      "entropy": 0.4569
+    },
+    {
+      "baseline": "BL6 adequacy without structural terms (ablation)",
+      "threshold_fit_train": 0.56,
+      "train_kappa": 0.1649,
+      "kappa": 0.1454,
+      "exact": 0.7319,
+      "three_band_kappa": 0.1875,
+      "distribution": {
+        "PROHIBIT": 45447,
+        "ALLOW": 10697
+      },
+      "entropy": 0.487
+    },
+    {
+      "baseline": "BL14 risk ratio only (no adequacy at all)",
+      "threshold_fit_train": 0.73,
+      "train_kappa": 0.1892,
+      "kappa": 0.141,
+      "exact": 0.7979,
+      "three_band_kappa": 0.1986,
+      "distribution": {
+        "PROHIBIT": 50691,
+        "ALLOW": 5453
+      },
+      "entropy": 0.3187
+    },
+    {
+      "baseline": "BL0 magnitude: mean pillar level vs bar",
+      "threshold_fit_train": 0.41,
+      "train_kappa": 0.1789,
+      "kappa": 0.1339,
+      "exact": 0.8082,
+      "three_band_kappa": 0.2007,
+      "distribution": {
+        "PROHIBIT": 51613,
+        "ALLOW": 4531
+      },
+      "entropy": 0.2805
+    },
+    {
+      "baseline": "BL4 worst critical-duty gap only",
+      "threshold_fit_train": 0.55,
+      "train_kappa": 0.0674,
+      "kappa": 0.1329,
+      "exact": 0.7921,
+      "three_band_kappa": 0.1666,
+      "distribution": {
+        "PROHIBIT": 50389,
+        "ALLOW": 5755
+      },
+      "entropy": 0.3306
+    },
+    {
+      "baseline": "BL1 weakest pillar vs bar",
+      "threshold_fit_train": 0.29,
+      "train_kappa": 0.1713,
+      "kappa": 0.1299,
+      "exact": 0.8076,
+      "three_band_kappa": 0.1976,
+      "distribution": {
+        "PROHIBIT": 51631,
+        "ALLOW": 4513
+      },
+      "entropy": 0.2797
+    },
+    {
+      "baseline": "BL10 M-pillar level only vs bar",
+      "threshold_fit_train": 0.29,
+      "train_kappa": 0.171,
+      "kappa": 0.129,
+      "exact": 0.8068,
+      "three_band_kappa": 0.1962,
+      "distribution": {
+        "PROHIBIT": 51585,
+        "ALLOW": 4559
+      },
+      "entropy": 0.2817
+    },
+    {
+      "baseline": "BL7 two-level model (prohibit / allow only)",
+      "threshold_fit_train": 0.41,
+      "train_kappa": 0.1372,
+      "kappa": 0.1223,
+      "exact": 0.69,
+      "three_band_kappa": 0.1604,
+      "distribution": {
+        "PROHIBIT": 42815,
+        "ALLOW": 13329
+      },
+      "entropy": 0.5481
+    },
+    {
+      "baseline": "BL3 worst duty gap (max over all facets)",
+      "threshold_fit_train": 0.49,
+      "train_kappa": 0.0807,
+      "kappa": 0.1217,
+      "exact": 0.8203,
+      "three_band_kappa": 0.1656,
+      "distribution": {
+        "PROHIBIT": 52736,
+        "ALLOW": 3408
+      },
+      "entropy": 0.2289
+    },
+    {
+      "baseline": "BL8 single pillar M only (deficit vs threshold)",
+      "threshold_fit_train": 0.47,
+      "train_kappa": 0.146,
+      "kappa": 0.115,
+      "exact": 0.7738,
+      "three_band_kappa": 0.1749,
+      "distribution": {
+        "PROHIBIT": 49331,
+        "ALLOW": 6813
+      },
+      "entropy": 0.3696
+    },
+    {
+      "baseline": "BL9 magnitude only: sum of levels vs bar",
+      "threshold_fit_train": 0.99,
+      "train_kappa": 0.0808,
+      "kappa": 0.066,
+      "exact": 0.5055,
+      "three_band_kappa": 0.0823,
+      "distribution": {
+        "PROHIBIT": 31039,
+        "ALLOW": 25105
+      },
+      "entropy": 0.6876
+    },
+    {
+      "baseline": "BL12 severity + irreversibility only",
+      "kappa": 0.0263,
+      "exact": 0.3113,
+      "three_band_kappa": 0.0273,
+      "distribution": {
+        "PROHIBIT": 18150,
+        "REVIEW_REQUIRED": 9922,
+        "ALLOW_WITH_GUARDS": 14036,
+        "ALLOW": 14036
+      },
+      "entropy": 1.3645
+    },
+    {
+      "baseline": "BL11 severity only (agent-blind)",
+      "kappa": 0.012,
+      "exact": 0.2463,
+      "three_band_kappa": 0.0176,
+      "distribution": {
+        "PROHIBIT": 14036,
+        "REVIEW_REQUIRED": 14036,
+        "ALLOW_WITH_GUARDS": 14036,
+        "ALLOW": 14036
+      },
+      "entropy": 1.3863
+    },
+    {
+      "baseline": "BL13 always REVIEW_REQUIRED",
+      "kappa": 0.0,
+      "exact": 0.0873,
+      "three_band_kappa": 0.0,
+      "distribution": {
+        "REVIEW_REQUIRED": 56144
+      },
+      "entropy": 0.0
+    },
+    {
+      "baseline": "BL2 fraction of unmet duties",
+      "error": "single class on train"
+    }
+  ],
+  "model_vs_best_baseline": {
+    "model_best": 0.4834,
+    "best_baseline": "BL5 adequacy without the veto cap (ablation)",
+    "best_baseline_kappa": 0.1464,
+    "margin": 0.337
+  },
+  "stored_model_kappa_test": 0.3992
+}

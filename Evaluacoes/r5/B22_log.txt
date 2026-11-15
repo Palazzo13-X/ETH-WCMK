@@ -1,0 +1,33 @@
+{
+  "battery": "B22",
+  "question": "does a declared level survive a fact that contradicts it?",
+  "n_pairs": 43210,
+  "n_pairs_with_contradiction": 42464,
+  "share_pairs_with_contradiction": 0.9827,
+  "caps_applied_total": 224097,
+  "mean_excess_over_cap": 0.3611,
+  "verdict_flips": {
+    "REVIEW_REQUIRED->PROHIBIT": 15153,
+    "PROHIBIT->PROHIBIT": 12772,
+    "ABSTAIN->ABSTAIN": 5826,
+    "REVIEW_REQUIRED->REVIEW_REQUIRED": 5582,
+    "ALLOW_WITH_GUARDS->PROHIBIT": 1620,
+    "REVIEW_REQUIRED->ABSTAIN": 906,
+    "ALLOW_WITH_GUARDS->REVIEW_REQUIRED": 567,
+    "PROHIBIT->ABSTAIN": 426,
+    "ALLOW_WITH_GUARDS->ABSTAIN": 212,
+    "ALLOW_WITH_GUARDS->ALLOW_WITH_GUARDS": 132,
+    "ALLOW->PROHIBIT": 5,
+    "ALLOW->REVIEW_REQUIRED": 5,
+    "ALLOW->ABSTAIN": 4
+  },
+  "n_verdict_flips": 18898,
+  "flip_share": 0.4374,
+  "mean_adequacy_with_E30": 0.3633,
+  "mean_adequacy_without_E30": 0.6481,
+  "kappa_with_E30": 0.5526,
+  "kappa_without_E30": 0.2463,
+  "delta_kappa_E30": 0.3062,
+  "runtime_seconds": 34.06
+}
+wrote Evaluacoes/r5/B22_fact_contradiction.json

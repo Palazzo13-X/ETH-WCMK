@@ -1,0 +1,206 @@
+{
+  "battery": "B17_coverage_abstain",
+  "purpose": "exercise the E26 coverage-abstention branch that never fires on the corpus",
+  "cases": 1520,
+  "probes": 13680,
+  "levels": [
+    1.0,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    0.7,
+    0.65,
+    0.6
+  ],
+  "coverage_floor_in_code": 0.7,
+  "per_level": {
+    "1.0": {
+      "verdicts": {
+        "REVIEW_REQUIRED": 334,
+        "PROHIBIT": 1045,
+        "ABSTAIN": 121,
+        "ALLOW_WITH_GUARDS": 19,
+        "ALLOW": 1
+      },
+      "abstain_count": 121,
+      "abstain_share": 0.0796,
+      "mean_adequacy_when_not_abstaining": 0.3756
+    },
+    "0.95": {
+      "verdicts": {
+        "REVIEW_REQUIRED": 606,
+        "ALLOW_WITH_GUARDS": 136,
+        "ALLOW": 19,
+        "PROHIBIT": 652,
+        "ABSTAIN": 107
+      },
+      "abstain_count": 107,
+      "abstain_share": 0.0704,
+      "mean_adequacy_when_not_abstaining": 0.5278
+    },
+    "0.9": {
+      "verdicts": {
+        "REVIEW_REQUIRED": 706,
+        "ALLOW_WITH_GUARDS": 214,
+        "ALLOW": 26,
+        "PROHIBIT": 473,
+        "ABSTAIN": 101
+      },
+      "abstain_count": 101,
+      "abstain_share": 0.0664,
+      "mean_adequacy_when_not_abstaining": 0.5926
+    },
+    "0.85": {
+      "verdicts": {
+        "REVIEW_REQUIRED": 792,
+        "ALLOW_WITH_GUARDS": 292,
+        "ALLOW": 37,
+        "PROHIBIT": 306,
+        "ABSTAIN": 93
+      },
+      "abstain_count": 93,
+      "abstain_share": 0.0612,
+      "mean_adequacy_when_not_abstaining": 0.6634
+    },
+    "0.8": {
+      "verdicts": {
+        "REVIEW_REQUIRED": 734,
+        "ALLOW_WITH_GUARDS": 376,
+        "ALLOW": 53,
+        "PROHIBIT": 272,
+        "ABSTAIN": 85
+      },
+      "abstain_count": 85,
+      "abstain_share": 0.0559,
+      "mean_adequacy_when_not_abstaining": 0.7037
+    },
+    "0.75": {
+      "verdicts": {
+        "REVIEW_REQUIRED": 666,
+        "ALLOW_WITH_GUARDS": 451,
+        "ALLOW": 64,
+        "PROHIBIT": 261,
+        "ABSTAIN": 78
+      },
+      "abstain_count": 78,
+      "abstain_share": 0.0513,
+      "mean_adequacy_when_not_abstaining": 0.7253
+    },
+    "0.7": {
+      "verdicts": {
+        "ABSTAIN": 1520
+      },
+      "abstain_count": 1520,
+      "abstain_share": 1.0,
+      "mean_adequacy_when_not_abstaining": null
+    },
+    "0.65": {
+      "verdicts": {
+        "ABSTAIN": 1520
+      },
+      "abstain_count": 1520,
+      "abstain_share": 1.0,
+      "mean_adequacy_when_not_abstaining": null
+    },
+    "0.6": {
+      "verdicts": {
+        "ABSTAIN": 1520
+      },
+      "abstain_count": 1520,
+      "abstain_share": 1.0,
+      "mean_adequacy_when_not_abstaining": null
+    }
+  },
+  "total_abstain_fires": 5145,
+  "anti_gaming_pair": {
+    "comparison": "same case, same persona: full declaration vs 8 weakest facets dropped",
+    "n_pairs": 1520,
+    "mean_adequacy_change": 0.3419,
+    "median_adequacy_change": 0.3491,
+    "max_adequacy_change": 0.8628,
+    "cases_that_become_admissible": 1345,
+    "note": "coverage floor is an anti-gaming device: omitting the weakest facets raises apparent adequacy"
+  },
+  "first_fire_by_level": {
+    "0.7": {
+      "case_id": "ETHCASE-A-0000",
+      "reason": "facet coverage 0.70 < 0.70",
+      "completeness": 0.696969696969697
+    },
+    "0.65": {
+      "case_id": "ETHCASE-A-0000",
+      "reason": "facet coverage 0.64 < 0.70",
+      "completeness": 0.6363636363636364
+    },
+    "0.6": {
+      "case_id": "ETHCASE-A-0000",
+      "reason": "facet coverage 0.61 < 0.70",
+      "completeness": 0.6060606060606061
+    }
+  },
+  "examples": [
+    {
+      "case_id": "ETHCASE-A-0000",
+      "domain": "SA",
+      "persona": "AGENT-declared",
+      "target_coverage": 0.7,
+      "facets_dropped": 10,
+      "reason": "facet coverage 0.70 < 0.70",
+      "completeness": 0.696969696969697,
+      "verdict_before_abstention": null
+    },
+    {
+      "case_id": "ETHCASE-A-0000",
+      "domain": "SA",
+      "persona": "AGENT-declared",
+      "target_coverage": 0.65,
+      "facets_dropped": 12,
+      "reason": "facet coverage 0.64 < 0.70",
+      "completeness": 0.6363636363636364,
+      "verdict_before_abstention": null
+    },
+    {
+      "case_id": "ETHCASE-A-0000",
+      "domain": "SA",
+      "persona": "AGENT-declared",
+      "target_coverage": 0.6,
+      "facets_dropped": 13,
+      "reason": "facet coverage 0.61 < 0.70",
+      "completeness": 0.6060606060606061,
+      "verdict_before_abstention": null
+    },
+    {
+      "case_id": "ETHCASE-A-0001",
+      "domain": "SA",
+      "persona": "AGENT-declared",
+      "target_coverage": 0.7,
+      "facets_dropped": 10,
+      "reason": "facet coverage 0.70 < 0.70",
+      "completeness": 0.696969696969697,
+      "verdict_before_abstention": null
+    },
+    {
+      "case_id": "ETHCASE-A-0001",
+      "domain": "SA",
+      "persona": "AGENT-declared",
+      "target_coverage": 0.65,
+      "facets_dropped": 12,
+      "reason": "facet coverage 0.64 < 0.70",
+      "completeness": 0.6363636363636364,
+      "verdict_before_abstention": null
+    },
+    {
+      "case_id": "ETHCASE-A-0001",
+      "domain": "SA",
+      "persona": "AGENT-declared",
+      "target_coverage": 0.6,
+      "facets_dropped": 13,
+      "reason": "facet coverage 0.61 < 0.70",
+      "completeness": 0.6060606060606061,
+      "verdict_before_abstention": null
+    }
+  ],
+  "runtime_seconds": 5.66
+}

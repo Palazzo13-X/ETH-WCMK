@@ -1,0 +1,124 @@
+@prefix : <https://ethwcmk.org/ontology/bridge-wcmkplus-derived#> .
+@prefix bwd: <https://ethwcmk.org/ontology/bridge-wcmkplus-derived#> .
+@prefix bridge: <https://ethwcmk.org/ontology/bridge#> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/bridge-wcmkplus-derived>
+    a owl:Ontology ;
+    rdfs:label "ETH-WCMK Bridge+ Derived Integration Ontology (Draft v0.4)"@en ,
+               "Ontologia de Integração Derivada do Bridge+ ETH-WCMK (rascunho v0.4)"@pt-BR ;
+    rdfs:comment "Extends the bridge layer so that one confrontation explicitly consumes one CaseRequirementProfile derived from ETHCASE and compares it to one facetized WCMK+ agency profile."@en ,
+                 "Estende a camada bridge para que uma confrontação consuma explicitamente um CaseRequirementProfile derivado do ETHCASE e o compare a um perfil facetado WCMK+."@pt-BR ;
+    owl:versionInfo "0.4-draft" ;
+    owl:imports <https://ethwcmk.org/ontology/bridge-wcmkplus> ,
+                <https://ethwcmk.org/ontology/ethcase-facet-requirements> ,
+                <https://ethwcmk.org/ontology/wcmk-facets> ,
+                prov: , skos: .
+
+#################################################################
+# Main classes
+#################################################################
+
+bwd:DerivedBridgeConfrontation a owl:Class ;
+    rdfs:subClassOf bridge:BridgeConfrontation ;
+    rdfs:label "Derived bridge confrontation"@en , "Confrontação bridge derivada"@pt-BR ;
+    rdfs:comment "A bridge confrontation that explicitly consumes a case-derived requirement profile."@en .
+
+bwd:BridgeRequirementComparison a owl:Class ;
+    rdfs:subClassOf bridge:FacetComparison ;
+    rdfs:label "Bridge requirement comparison"@en , "Comparação bridge de requisito"@pt-BR ;
+    rdfs:comment "Facet-level comparison grounded in one DerivedFacetRequirement and one FacetAssessment."@en .
+
+bwd:BridgeDerivedOutcome a owl:Class ;
+    rdfs:subClassOf bridge:AggregateOutcome ;
+    rdfs:label "Bridge derived outcome"@en , "Resultado derivado do bridge"@pt-BR ;
+    rdfs:comment "Aggregate outcome produced when one CaseRequirementProfile is confronted with one FacetizedAgencyProfile."@en .
+
+bwd:BridgeComputationPolicy a owl:Class ;
+    rdfs:subClassOf prov:Plan ;
+    rdfs:label "Bridge computation policy"@en , "Política de cálculo do bridge"@pt-BR ;
+    rdfs:comment "Captures how local deficits are aggregated into Aa*, Rr* and the decision region."@en .
+
+#################################################################
+# Object properties
+#################################################################
+
+bwd:consumesRequirementProfile a owl:ObjectProperty ;
+    rdfs:domain bwd:DerivedBridgeConfrontation ;
+    rdfs:range efr:CaseRequirementProfile ;
+    rdfs:label "consumes requirement profile"@en , "consome perfil de requisitos"@pt-BR .
+
+bwd:usesBridgeComputationPolicy a owl:ObjectProperty ;
+    rdfs:domain bwd:DerivedBridgeConfrontation ;
+    rdfs:range bwd:BridgeComputationPolicy ;
+    rdfs:label "uses bridge computation policy"@en , "usa política de cálculo do bridge"@pt-BR .
+
+bwd:forConfrontation a owl:ObjectProperty ;
+    rdfs:domain bwd:BridgeRequirementComparison ;
+    rdfs:range bwd:DerivedBridgeConfrontation ;
+    rdfs:label "for confrontation"@en , "para confrontação"@pt-BR .
+
+bwd:comparesDerivedRequirement a owl:ObjectProperty ;
+    rdfs:domain bwd:BridgeRequirementComparison ;
+    rdfs:range efr:DerivedFacetRequirement ;
+    rdfs:label "compares derived requirement"@en , "compara requisito derivado"@pt-BR .
+
+bwd:outcomeOfConfrontation a owl:ObjectProperty ;
+    rdfs:domain bwd:BridgeDerivedOutcome ;
+    rdfs:range bwd:DerivedBridgeConfrontation ;
+    rdfs:label "outcome of confrontation"@en , "resultado da confrontação"@pt-BR .
+
+#################################################################
+# Datatype properties
+#################################################################
+
+bwd:requirementCoverageScore a owl:DatatypeProperty ;
+    rdfs:domain bwd:BridgeDerivedOutcome ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "requirement coverage score"@en .
+
+bwd:comparisonCoverageScore a owl:DatatypeProperty ;
+    rdfs:domain bwd:BridgeDerivedOutcome ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "comparison coverage score"@en .
+
+bwd:coveragePenalty a owl:DatatypeProperty ;
+    rdfs:domain bwd:BridgeDerivedOutcome ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "coverage penalty"@en .
+
+bwd:comparedFacetCount a owl:DatatypeProperty ;
+    rdfs:domain bwd:BridgeDerivedOutcome ;
+    rdfs:range xsd:integer ;
+    rdfs:label "compared facet count"@en .
+
+bwd:blockingFacetCount a owl:DatatypeProperty ;
+    rdfs:domain bwd:BridgeDerivedOutcome ;
+    rdfs:range xsd:integer ;
+    rdfs:label "blocking facet count"@en .
+
+bwd:derivedAaStar a owl:DatatypeProperty ;
+    rdfs:domain bwd:DerivedBridgeConfrontation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "derived Aa star"@en .
+
+bwd:derivedDeficitScore a owl:DatatypeProperty ;
+    rdfs:domain bwd:DerivedBridgeConfrontation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "derived deficit score"@en .
+
+#################################################################
+# Illustrative computation policy
+#################################################################
+
+bwd:ConservativeBridgeComputation a bwd:BridgeComputationPolicy ;
+    rdfs:label "Conservative bridge computation"@en ;
+    rdfs:comment "Prioritizes prudential and normative deficits when deriving Aa* and the decision region."@en .

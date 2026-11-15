@@ -1,0 +1,73 @@
+{
+  "mean_outputs_at_canonical": {
+    "mean_adequacy": 0.37,
+    "mean_permissiveness": 1.25,
+    "abstention_rate": 0.0833,
+    "veto_rate": 1.0,
+    "hard_veto_rate": 0.0833,
+    "mean_residual_risk": 0.4347,
+    "mean_review_need": 0.2718
+  },
+  "ST_top_by_output": {
+    "mean_adequacy": [
+      "oversight_attenuation",
+      "mu_C",
+      "theta_base",
+      "salience_adaptation"
+    ],
+    "mean_permissiveness": [
+      "zeta",
+      "salience_adaptation",
+      "gamma",
+      "eta"
+    ],
+    "abstention_rate": [
+      "zeta",
+      "salience_adaptation",
+      "oversight_attenuation",
+      "gamma"
+    ],
+    "veto_rate": [
+      "zeta",
+      "salience_adaptation",
+      "oversight_attenuation",
+      "gamma"
+    ],
+    "hard_veto_rate": [
+      "zeta",
+      "salience_adaptation",
+      "coverage_gate",
+      "gamma"
+    ],
+    "mean_residual_risk": [
+      "zeta",
+      "salience_adaptation",
+      "oversight_attenuation",
+      "gamma"
+    ],
+    "mean_review_need": [
+      "oversight_attenuation",
+      "mu_C",
+      "theta_base",
+      "salience_adaptation"
+    ]
+  },
+  "zeta_ST": {
+    "mean_adequacy": 0.9887,
+    "mean_permissiveness": 1.0,
+    "abstention_rate": 1.0,
+    "veto_rate": 1.0,
+    "hard_veto_rate": 1.0,
+    "mean_residual_risk": 1.0,
+    "mean_review_need": 0.9972
+  },
+  "s_ST": {
+    "mean_adequacy": 0.9998,
+    "mean_permissiveness": 1.0,
+    "abstention_rate": 1.0,
+    "veto_rate": 1.0,
+    "hard_veto_rate": 1.0,
+    "mean_residual_risk": 1.0,
+    "mean_review_need": 0.9999
+  }
+}

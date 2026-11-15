@@ -1,0 +1,18 @@
+{
+  "bar_base": 0.55,
+  "bar_severity": 0.1,
+  "prohibit_margin": 0.25,
+  "guards_margin": 0.05,
+  "stakes_veto_min": 0.7,
+  "hard_veto_delta": 0.25,
+  "material_gap": 0.25,
+  "critical_prohibit_gap": 0.35,
+  "cap_base": 0.4,
+  "cap_stakes_gain": 0.4,
+  "ratio_prohibit": 0.7,
+  "ratio_review": 0.45,
+  "ratio_guards": 0.25,
+  "prohibit_stakes_min": 0.3,
+  "prohibit_needs_material": 0,
+  "veto_slack": 0.1
+}

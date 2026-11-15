@@ -1,0 +1,19 @@
+{
+  "models": [
+    "ornith-1.5:9b",
+    "gemma4:12b-it-q4_K_M"
+  ],
+  "cases": 40,
+  "calls": 240,
+  "json_validity_rate": 0.0,
+  "mean_optimism_bias_self_minus_auditor": null,
+  "mean_gap_self_minus_design": null,
+  "mean_gap_auditor_minus_design": null,
+  "guard_bypass_attempts": 0,
+  "decisions_by_frame": {
+    "SELF": {},
+    "AUDITOR": {},
+    "SELF_ADVERSARY": {}
+  },
+  "latency_mean_s": 120.11
+}

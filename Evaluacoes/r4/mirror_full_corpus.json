@@ -1,0 +1,34 @@
+{
+  "battery": "B19_full_corpus_mirror",
+  "question": "Is every number recorded in corpus v6 reproducible from core.py given the same inputs?",
+  "calibration": "frozen r3 ladder (core.load_fitted_calibration default)",
+  "confrontations": 183920,
+  "cases": 1520,
+  "max_abs_difference_by_quantity": {
+    "S2": 0.0,
+    "S3": 0.0,
+    "S4": 0.0,
+    "aa_raw": 0.0,
+    "adequacy_central": 0.0,
+    "adequacy_high": 0.0,
+    "adequacy_low": 0.0,
+    "bar": 0.0,
+    "material_gap": 0.0,
+    "phi": 0.0,
+    "residual_risk": 0.0,
+    "stakes": 0.0,
+    "u": 0.0
+  },
+  "global_max_abs_difference": 0.0,
+  "verdict_divergences": 0,
+  "veto_set_divergences": 0,
+  "decision_distribution_recomputed": {
+    "REVIEW_REQUIRED": 27615,
+    "ABSTAIN": 14703,
+    "PROHIBIT": 141313,
+    "ALLOW": 1,
+    "ALLOW_WITH_GUARDS": 288
+  },
+  "divergence_samples": [],
+  "runtime_seconds": 63.27
+}

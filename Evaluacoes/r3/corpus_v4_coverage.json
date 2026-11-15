@@ -1,0 +1,100 @@
+{
+  "layerA_cases": 1200,
+  "layerB_cases": 320,
+  "personas": 48,
+  "confrontations": 74480,
+  "facet_critical_case_counts": {
+    "W1": 561,
+    "W2": 656,
+    "W3": 462,
+    "W6": 279,
+    "C3": 926,
+    "C5": 377,
+    "M1": 837,
+    "M2": 467,
+    "M3": 738,
+    "M5": 470,
+    "M6": 459,
+    "M7": 371,
+    "K1": 645,
+    "K2": 747,
+    "K3": 642,
+    "K4": 470,
+    "K5": 471,
+    "K7": 732,
+    "W4": 557,
+    "W5": 466,
+    "C4": 466,
+    "C6": 466,
+    "M4": 555,
+    "K6": 466,
+    "K8": 183,
+    "C1": 649,
+    "C2": 467,
+    "C7": 379
+  },
+  "facets_with_ge_5_critical_cases": 28,
+  "domains": 13,
+  "conflict_patterns_per_domain": {
+    "SA": 8,
+    "JS": 8,
+    "IC": 8,
+    "FI": 8,
+    "PD": 8,
+    "GP": 8,
+    "IM": 8,
+    "ED": 8,
+    "TB": 8,
+    "MA": 8,
+    "TS": 8,
+    "RS": 8,
+    "DS": 8
+  },
+  "decision_distribution": {
+    "PROHIBIT": 44906,
+    "ALLOW_WITH_GUARDS": 11254,
+    "REVIEW_REQUIRED": 11691,
+    "ALLOW": 6629
+  },
+  "share_adequacy_1": 0.20625671321160044,
+  "share_within_0.05_of_bar": 0.033404940923737914,
+  "veto_rate": 0.5222610096670247,
+  "hard_veto_rate": 0.41495703544575724,
+  "mean_adequacy_layerA": 0.6245228928571429,
+  "gold_rubric": {
+    "kappa": {
+      "AB": 0.8048,
+      "AC": 0.7668,
+      "BC": 0.9263
+    },
+    "mean_pairwise_kappa": 0.8327,
+    "unanimous_panel_share": 0.8349,
+    "mean_panel_spread": 0.1651,
+    "clear_case_share_spread_0": 0.8349,
+    "normatively_contested_share_spread_1": 0.1651,
+    "design_intent_agreement": 0.8079,
+    "consensus_distribution": {
+      "REVIEW_REQUIRED": 840,
+      "PROHIBIT": 301,
+      "ALLOW_WITH_GUARDS": 188,
+      "ALLOW": 191
+    }
+  },
+  "design_intent_matches_gold": {
+    "PROHIBIT -> REVIEW_REQUIRED": 184,
+    "REVIEW_REQUIRED -> REVIEW_REQUIRED": 326,
+    "PROHIBIT -> PROHIBIT": 119,
+    "REVIEW_REQUIRED -> PROHIBIT": 131,
+    "ALLOW_WITH_GUARDS -> ALLOW_WITH_GUARDS": 144,
+    "ALLOW -> ALLOW": 151,
+    "ALLOW_WITH_GUARDS -> REVIEW_REQUIRED": 142,
+    "REVIEW_REQUIRED -> ALLOW_WITH_GUARDS": 1,
+    "ALLOW -> ALLOW_WITH_GUARDS": 1,
+    "ALLOW_WITH_GUARDS -> PROHIBIT": 1
+  },
+  "narrative_words": {
+    "min": 233,
+    "mean": 251.625,
+    "max": 270
+  }
+}

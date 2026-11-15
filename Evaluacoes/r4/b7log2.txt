@@ -1,0 +1,18 @@
+{
+  "model_best": 0.4834,
+  "best_baseline": "BL5 adequacy without the veto cap (ablation)",
+  "best_baseline_kappa": 0.1464,
+  "margin": 0.337
+}
+model: v12 core + ladder fitted on TRAIN domains (B5, r4)  kappa=0.4834 exact=0.859 3band=0.2833
+model: v12 core + frozen r3 ladder (the one the corpus was built with) kappa=0.3991 exact=0.8081 3band=0.2119
+model: v12 core + declared (uncalibrated) ladder           kappa=0.2025 exact=0.548 3band=0.1034
+BL5 adequacy without the veto cap (ablation)               kappa=0.1464 exact=0.7465 3band=0.1907
+BL6 adequacy without structural terms (ablation)           kappa=0.1454 exact=0.7319 3band=0.1875
+BL14 risk ratio only (no adequacy at all)                  kappa=0.141 exact=0.7979 3band=0.1986
+BL0 magnitude: mean pillar level vs bar                    kappa=0.1339 exact=0.8082 3band=0.2007
+BL4 worst critical-duty gap only                           kappa=0.1329 exact=0.7921 3band=0.1666
+BL1 weakest pillar vs bar                                  kappa=0.1299 exact=0.8076 3band=0.1976
+BL10 M-pillar level only vs bar                            kappa=0.129 exact=0.8068 3band=0.1962
+BL7 two-level model (prohibit / allow only)                kappa=0.1223 exact=0.69 3band=0.1604
+BL3 worst duty gap (max over all facets)                   kappa=0.1217 exact=0.8203 3band=0.1656

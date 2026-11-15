@@ -1,0 +1,4 @@
+-r ruff
+-r black
+-r mypy
+-r pre-commit

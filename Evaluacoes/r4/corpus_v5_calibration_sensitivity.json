@@ -1,0 +1,44 @@
+{
+  "note": "verdicts recomputed on the same (case, persona) pairs with two ladders; confidence fixed at the persona mean (approximation, stated in the report)",
+  "r3_fitted_parameters": {
+    "bar_base": 0.55,
+    "prohibit_margin": 0.25,
+    "ratio_prohibit": 0.7,
+    "ratio_review": 0.45,
+    "prohibit_stakes_min": 0.3,
+    "critical_prohibit_gap": 0.35,
+    "stakes_veto_min": 0.7
+  },
+  "r4_v12_fitted_parameters": {
+    "bar_base": 0.48000000000000015,
+    "prohibit_margin": 0.3915009663700773,
+    "ratio_prohibit": 0.6600000000000003,
+    "ratio_review": 0.5599999999999998,
+    "prohibit_stakes_min": 0.05,
+    "critical_prohibit_gap": 0.2958082011290823,
+    "stakes_veto_min": 0.7
+  },
+  "decision_distribution_r3_fit": {
+    "ALLOW_WITH_GUARDS": 11142,
+    "REVIEW_REQUIRED": 94620,
+    "ALLOW": 103,
+    "ABSTAIN": 9254,
+    "PROHIBIT": 67281
+  },
+  "decision_distribution_r4_v12_fit": {
+    "ALLOW": 12455,
+    "ALLOW_WITH_GUARDS": 11586,
+    "REVIEW_REQUIRED": 66646,
+    "PROHIBIT": 82459,
+    "ABSTAIN": 9254
+  },
+  "pairs": 182400,
+  "pairs_whose_verdict_changes": 42519,
+  "share_pairs_whose_verdict_changes": 0.2331,
+  "kappa_model_vs_gold_r3_fit": 0.1979,
+  "kappa_model_vs_gold_v12_fit": 0.2164,
+  "REVIEW_model_vs_PROHIBIT_gold_r3_fit": 54856,
+  "REVIEW_model_vs_PROHIBIT_gold_v12_fit": 38002,
+  "mean_adequacy_r3_fit": 0.6357,
+  "mean_adequacy_v12_fit": 0.6357
+}

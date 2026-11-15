@@ -1,0 +1,42 @@
+@prefix ex: <https://ethwcmk.org/resource/examples/efr/> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:case_privacy_01 a eth:EthicalCase ;
+    eth:hasDomain efr:privacy_data_domain ;
+    eth:hasNormalizedRiskScore "0.69"^^xsd:decimal ;
+    eth:hasPrudentialFlag true ;
+    eth:hasHumanImpact "medium" ;
+    eth:hasIrreversibility "medium" ;
+    eth:hasDataSensitivity "high" .
+
+ex:case_req_profile_privacy_01 a efr:CaseRequirementProfile ;
+    efr:derivedFromCase ex:case_privacy_01 ;
+    efr:usesDomainProfile wcmkf:PrivacyDataDomainProfile ;
+    efr:usesSeverityBand efr:SEVERITY_HIGH ;
+    efr:usesAggregationProfile efr:BalancedRequirementAggregation ;
+    efr:requirementCoverage "1.20"^^xsd:decimal ;
+    efr:derivedRequirementCount 1 ;
+    efr:hasDerivedRequirement ex:req_privacy_bad_1, ex:req_privacy_bad_2 .
+
+ex:req_privacy_bad_1 a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:StakeholderRegard ;
+    efr:derivedByRule efr:PrivacyNormativeKnowledgeRule ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    wcmkf:minimumRequiredLevel "1.10"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.63"^^xsd:decimal ;
+    efr:prudentialDelta "0.60"^^xsd:decimal ;
+    efr:derivedWeight "1.30"^^xsd:decimal ;
+    wcmkf:criticalityLevel "urgent" .
+
+ex:req_privacy_bad_2 a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:StakeholderRegard ;
+    efr:derivedByRule efr:PrivacyStakeholderRegardRule ;
+    efr:priorityTier efr:PRIORITY_SUPPORTING ;
+    wcmkf:minimumRequiredLevel "0.50"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.61"^^xsd:decimal ;
+    efr:prudentialDelta "0.05"^^xsd:decimal ;
+    efr:derivedWeight "0.82"^^xsd:decimal ;
+    wcmkf:criticalityLevel "medium" .

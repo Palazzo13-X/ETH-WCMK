@@ -1,0 +1,2114 @@
+{
+  "generator": "B2_shacl_runner_v2.py",
+  "pairsRun": 184,
+  "files": [
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "parse": {
+        "triples": 37,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "parse": {
+        "triples": 87,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "parse": {
+        "triples": 95,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "parse": {
+        "triples": 648,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "parse": {
+        "triples": 161,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "parse": {
+        "triples": 27,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "parse": {
+        "triples": 22,
+        "nodeShapes": 1,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "parse": {
+        "triples": 47,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "parse": {
+        "triples": 18,
+        "nodeShapes": 1,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "parse": {
+        "triples": 25,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "parse": {
+        "triples": 311,
+        "nodeShapes": 14,
+        "propertyShapes": 1,
+        "sparqlConstraints": 8,
+        "rules": 0,
+        "propertyShapesWithoutPath": [
+          "https://ethwcmk.org/shapes/wcmk-facets#DecimalUnitIntervalPropertyShape"
+        ]
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "parse": {
+        "triples": 541,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "parse": {
+        "triples": 10,
+        "nodeShapes": 1,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "parse": {
+        "triples": 14,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "parse": {
+        "triples": 10,
+        "nodeShapes": 1,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "parse": {
+        "triples": 21,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "parse": {
+        "triples": 10,
+        "nodeShapes": 1,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "parse": {
+        "triples": 37,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "parse": {
+        "triples": 14,
+        "nodeShapes": 1,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "parse": {
+        "triples": 52,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "parse": {
+        "triples": 34,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "parse": {
+        "triples": 45,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "parse": {
+        "triples": 149,
+        "nodeShapes": 3,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    },
+    {
+      "file": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "parse": {
+        "triples": 292,
+        "nodeShapes": 0,
+        "propertyShapes": 0,
+        "sparqlConstraints": 0,
+        "rules": 0,
+        "propertyShapesWithoutPath": []
+      }
+    }
+  ],
+  "runs": [
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-architecture-v2.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-derived.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/eth_wcmk_bridge_v0_9.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": "ShapeLoadError: A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+      "conformant": null,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-analysis.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-core.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/ethsvc-llm.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-analysis.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-core.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    },
+    {
+      "data": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "Ontologias/eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "error": null,
+      "conformant": true,
+      "violations": [],
+      "warnings": [],
+      "infos": [],
+      "total": 0
+    }
+  ]
+}

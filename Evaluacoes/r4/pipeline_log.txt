@@ -1,0 +1,863 @@
+
+=== B1_invariants ===
+..........................................................               [100%]
+58 passed in 48.21s
+
+
+=== B0_delta ===
+{
+  "generated_from": "Evaluacoes/r3 (frozen) + core.py v12",
+  "confrontations": 72960,
+  "calibration_used": {
+    "default": "Calibration(lam=(0.3, 0.25, 0.25, 0.2), alpha=(0.16666666666666666, 0.16666666666666666, 0.16666666666666666, 0.16666666666666666, 0.16666666666666666, 0.16666666666666666), beta_face=(0.25, 0.25, 0.25, 0.25), gamma=0.12, eta=0.05, omega=0.03, rho=0.1, delta=0.05, theta=(0.65, 0.6, 0.6, 0.65), hard_veto_delta=0.15, material_gap=0.25, critical_prohibit_gap=0.45, cap_base=0.5, cap_stakes_gain=0.5, prohibit_stakes_min=0.6, veto_slack=0.1, prohibit_needs_material=True, stakes_veto_min=0.55, total_penalty_budget=0.35, bar_base=0.5, bar_severity=0.2, bar_irreversibility=0.05, bar_prudential=0.02, bar_horizon=0.03, prohibit_margin=0.2, guards_margin=0.15, ratio_prohibit=0.65, ratio_review=0.4, ratio_guards=0.2, mu=(0.15, 0.4, 0.2, 0.25), hysteresis=0.05, abstain_uncertainty=0.6, abstain_knowledge_floor=0.65)",
+    "fitted_ladder": "Calibration(lam=(0.3, 0.25, 0.25, 0.2), alpha=(0.16666666666666666, 0.16666666666666666, 0.16666666666666666, 0.16666666666666666, 0.16666666666666666, 0.16666666666666666), beta_face=(0.25, 0.25, 0.25, 0.25), gamma=0.12, eta=0.05, omega=0.03, rho=0.1, delta=0.05, theta=(0.65, 0.6, 0.6, 0.65), hard_veto_delta=0.25, material_gap=0.25, critical_prohibit_gap=0.35, cap_base=0.4, cap_stakes_gain=0.4, prohibit_stakes_min=0.3, veto_slack=0.1, prohibit_needs_material=0, stakes_veto_min=0.7, total_penalty_budget=0.35, bar_base=0.55, bar_severity=0.1, bar_irreversibility=0.05, bar_prudential=0.02, bar_horizon=0.03, prohibit_margin=0.25, guards_margin=0.05, ratio_prohibit=0.7, ratio_review=0.45, ratio_guards=0.25, mu=(0.15, 0.4, 0.2, 0.25), hysteresis=0.05, abstain_uncertainty=0.6, abstain_knowledge_floor=0.65)"
+  },
+  "decision_distribution_v12_default": {
+    "ALLOW_WITH_GUARDS": 11035,
+    "REVIEW_REQUIRED": 30574,
+    "PROHIBIT": 30300,
+    "ALLOW": 1051
+  },
+  "decision_distribution_v12_fitted_ladder": {
+    "ALLOW": 2636,
+    "ALLOW_WITH_GUARDS": 13205,
+    "REVIEW_REQUIRED": 32701,
+    "PROHIBIT": 24418
+  },
+  "decision_flips_v11_to_v12": {
+    "PROHIBIT->REVIEW_REQUIRED": 20858,
+    "ALLOW->ALLOW_WITH_GUARDS": 4234,
+    "ALLOW_WITH_GUARDS->REVIEW_REQUIRED": 3366,
+    "REVIEW_REQUIRED->PROHIBIT": 1850,
+    "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 1192,
+    "PROHIBIT->ALLOW_WITH_GUARDS": 1153,
+    "ALLOW_WITH_GUARDS->PROHIBIT": 574,
+    "ALLOW_WITH_GUARDS->ALLOW": 468,
+    "ALLOW->REVIEW_REQUIRED": 99,
+    "REVIEW_RE
+
+
+=== B2_ontology_validation ===
+instance graph parsed: 257549 triples from instances_subset.ttl
+SHACL modules vs v4 shapes: conforms=True violations=0 (0.2 s)
+SHACL instances vs v4 shapes: conforms=True violations=0 (14.1 s)
+SHACL instances vs v6 shapes: conforms=True violations=0 (3.0 s)
+invalid fixtures invalid_examples.ttl (73 fixtures): 63/63 caught, 63 attributed to the intended shape
+invalid fixtures invalid_examples_v6.ttl (12 E30 fixtures): 13/13 caught, 13 attributed to the intended shape
+======================================================================
+GATE G4' verdict: PASS
+triples: modules 8394 instances 257549 total validated 265931
+instantiated confrontations: 403
+SHACL v4 shapes on instances: 0 violations; v6 shapes: 0 ; modules: 0
+invalid fixtures caught: 76 / 76 attributed to the intended shape: 76
+SPARQL checks: 33 (deontic: 15 ) all pass: True
+failed checks: ["chain links where the case's critical duty is retained at the delegating layer (E28 retention, reported not penalised)"]
+mirror global max abs diff: 1.5666357100485584e-12
+verdict mismatches: {'python_ladder_vs_rdf': 0, 'core_decide_vs_rdf': 0, 'python_ladder_vs_core_decide': 0}
+lattice slots: 15 by kind: {'vertex': 4, 'edge': 6, 'face': 4, 'cell': 1} sums to one: True
+registry mismatches: 0
+seconds: 73.4
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r4/ontology_v4_validation.json
+======================================================================
+
+
+=== B3_consensus_kappa ===
+{
+  "pairs": 183920,
+  "panel_unanimity": {
+    "majority": 84563,
+    "unanimous": 87134,
+    "contested": 12223
+  },
+  "strata": {
+    "majority": {
+      "n": 84563,
+      "share": 0.4598,
+      "kappa_5class": 0.1368,
+      "kappa_3band": 0.161,
+      "agreement": 0.6694,
+      "gold_marginal": {
+        "PROHIBIT": 64310,
+        "ALLOW": 1342,
+        "REVIEW_REQUIRED": 16449,
+        "ALLOW_WITH_GUARDS": 2462
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 18222,
+        "ABSTAIN": 2235,
+        "PROHIBIT": 63944,
+        "ALLOW_WITH_GUARDS": 162
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 51415,
+        "PROHIBIT->REVIEW_REQUIRED": 11060,
+        "REVIEW_REQUIRED->PROHIBIT": 10939,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 5120,
+        "ABSTAIN->PROHIBIT": 1939,
+        "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 1364,
+        "PROHIBIT->ALLOW_WITH_GUARDS": 984,
+        "REVIEW_REQUIRED->ALLOW": 799,
+        "PROHIBIT->ALLOW": 485,
+        "ABSTAIN->REVIEW_REQUIRED": 235,
+        "ALLOW_WITH_GUARDS->ALLOW_WITH_GUARDS": 75,
+        "ABSTAIN->ALLOW_WITH_GUARDS": 39
+      }
+    },
+    "unanimous": {
+      "n": 87134,
+      "share": 0.4738,
+      "kappa_5class": 0.6955,
+      "kappa_3band": 0.7016,
+      "agreement": 0.9043,
+      "gold_marginal": {
+        "ALLOW": 819,
+        "REVIEW_REQUIRED": 2957,
+        "PROHIBIT": 72498,
+        "ABSTAIN": 10769,
+        "ALLOW_WITH_GUARDS": 91
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 5068,
+        "ABSTAIN": 12190,
+        "PROHIBIT": 69786,
+        "ALLOW": 1,
+        "ALLOW_WITH_GUARDS": 89
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 67522,
+        "ABSTAIN->ABSTAIN": 10219,
+        "REVIEW_REQUIRED->PROHIBIT": 3098,
+        "ABSTAIN->PROHIBIT": 1876,
+        "PROHIBIT->REVIEW_REQUIRED": 1826,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 1040,
+        "REVIEW_REQUIRED->ALLOW": 567,
+        "REVIEW_REQUIRED->ABSTAIN": 315,
+        "PROHIBIT->ALLOW": 204,
+        "PROHIBIT->ABSTAIN": 202,
+        "ABSTAIN->REVIEW_REQUIRED": 88,
+        "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 48
+      }
+    },
+    "contested": {
+      "n": 12223,
+      "share": 0.0665,
+      "kappa_5class": 0.0547,
+      "kappa_3band": 0.0507,
+      "agreement": 0.6118,
+      "gold_marginal": {
+        "REVIEW_REQUIRED": 1424,
+        "PROHIBIT": 10799
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 4325,
+        "PROHIBIT": 7583,
+        "ALLOW_WITH_GUARDS": 
+
+
+=== B4_grounding_sweep ===
+{
+  "sample_personas": 30,
+  "cases": 1520,
+  "pairs": 45600,
+  "results": {
+    "0.0": {
+      "kappa_vs_panel_on_same_observations": 0.1568,
+      "kappa_vs_stored_panel": 0.0866,
+      "agreement_vs_panel_same_obs": 0.3959,
+      "mean_adequacy": 0.6789,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 11491,
+        "REVIEW_REQUIRED": 20643,
+        "ALLOW": 89,
+        "ABSTAIN": 1503,
+        "PROHIBIT": 11874
+      }
+    },
+    "0.25": {
+      "kappa_vs_panel_on_same_observations": 0.1635,
+      "kappa_vs_stored_panel": 0.0907,
+      "agreement_vs_panel_same_obs": 0.4072,
+      "mean_adequacy": 0.6675,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 9661,
+        "REVIEW_REQUIRED": 22188,
+        "ALLOW": 65,
+        "ABSTAIN": 1729,
+        "PROHIBIT": 11957
+      }
+    },
+    "0.5": {
+      "kappa_vs_panel_on_same_observations": 0.2078,
+      "kappa_vs_stored_panel": 0.1542,
+      "agreement_vs_panel_same_obs": 0.4851,
+      "mean_adequacy": 0.5955,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 2728,
+        "REVIEW_REQUIRED": 23893,
+        "ABSTAIN": 2841,
+        "PROHIBIT": 16134,
+        "ALLOW": 4
+      }
+    },
+    "0.75": {
+      "kappa_vs_panel_on_same_observations": 0.2815,
+      "kappa_vs_stored_panel": 0.2782,
+      "agreement_vs_panel_same_obs": 0.6136,
+      "mean_adequacy": 0.5249,
+      "decisions": {
+        "REVIEW_REQUIRED": 16680,
+        "ALLOW_WITH_GUARDS": 1191,
+        "ABSTAIN": 3383,
+        "PROHIBIT": 24345,
+        "ALLOW": 1
+      }
+    },
+    "1.0": {
+      "kappa_vs_panel_on_same_observations": 0.4127,
+      "kappa_vs_stored_panel": 0.397,
+      "agreement_vs_panel_same_obs": 0.7677,
+      "mean_adequacy": 0.4429,
+      "decisions": {
+        "REVIEW_REQUIRED": 8644,
+        "ALLOW_WITH_GUARDS": 858,
+        "ABSTAIN": 3584,
+        "PROHIBIT": 32513,
+        "ALLOW": 1
+      }
+    }
+  }
+}
+
+
+=== B5_ladder_fit ===
+pairs=183920 train=127776 test=56144
+baseline kappa: train=0.3792 test=0.3998 dist={'REVIEW_REQUIRED': 20153, 'ABSTAIN': 10655, 'PROHIBIT': 96736, 'ALLOW': 1, 'ALLOW_WITH_GUARDS': 231}
+fitted kappa: train=0.4677 test=0.4789 dist={'PROHIBIT': 103452, 'REVIEW_REQUIRED': 12687, 'ALLOW_WITH_GUARDS': 893, 'ABSTAIN': 10655, 'ALLOW': 89}
+structural variants: {"base": {"train_kappa": 0.4677, "test_kappa": 0.4789, "verdict_flips_vs_base_train": 0, "verdict_flips_vs_base_test": 0}, "veto_needs_material": {"train_kappa": 0.4677, "test_kappa": 0.4789, "verdict_flips_vs_base_train": 0, "verdict_flips_vs_base_test": 0}, "stakes_band": {"train_kappa": 0.4676, "test_kappa": 0.4788, "verdict_flips_vs_base_train": 65, "verdict_flips_vs_base_test": 4}}
+{
+  "baseline_kappa": {
+    "train": 0.37917678412512207,
+    "test": 0.39979746487392676
+  },
+  "fitted_kappa": {
+    "train": 0.46772235837460463,
+    "test": 0.4789150301075435
+  },
+  "clause_attribution": {
+    "abstention_E29": 10655,
+    "prohibit_hard": 26155,
+    "prohibit_bar_route": 82247,
+    "prohibit_ratio_route": 29278,
+    "review_baa_below_bar": 10397,
+    "review_veto_clause": 503,
+    "review_ratio_clause": 1787,
+    "total_review": 12687
+  },
+  "structural_variants": {
+    "base": {
+      "train_kappa": 0.4677,
+      "test_kappa": 0.4789,
+      "verdict_flips_vs_base_train": 0,
+      "verdict_flips_vs_base_test": 0
+    },
+    "veto_needs_material": {
+      "train_kappa": 0.4677,
+      "test_kappa": 0.4789,
+      "verdict_flips_vs_base_train": 0,
+      "verdict_flips_vs_base_test": 0
+    },
+    "stakes_band": {
+      "train_kappa": 0.4676,
+      "test_kappa": 0.4788,
+      "verdict_flips_vs_base_train": 65,
+      "verdict_flips_vs_base_test": 4
+    }
+  }
+}
+
+
+=== B7_baselines ===
+{
+  "model_best": 0.4834,
+  "best_baseline": "BL5 adequacy without the veto cap (ablation)",
+  "best_baseline_kappa": 0.1464,
+  "margin": 0.337
+}
+model: v12 core + ladder fitted on TRAIN domains (B5, r4)  kappa=0.4834 exact=0.859 3band=0.2833
+model: v12 core + frozen r3 ladder (the one the corpus was built with) kappa=0.3991 exact=0.8081 3band=0.2119
+model: v12 core + declared (uncalibrated) ladder           kappa=0.2025 exact=0.548 3band=0.1034
+BL5 adequacy without the veto cap (ablation)               kappa=0.1464 exact=0.7465 3band=0.1907
+BL6 adequacy without structural terms (ablation)           kappa=0.1454 exact=0.7319 3band=0.1875
+BL14 risk ratio only (no adequacy at all)                  kappa=0.141 exact=0.7979 3band=0.1986
+BL0 magnitude: mean pillar level vs bar                    kappa=0.1339 exact=0.8082 3band=0.2007
+BL4 worst critical-duty gap only                           kappa=0.1329 exact=0.7921 3band=0.1666
+BL1 weakest pillar vs bar                                  kappa=0.1299 exact=0.8076 3band=0.1976
+BL10 M-pillar level only vs bar                            kappa=0.129 exact=0.8068 3band=0.1962
+BL7 two-level model (prohibit / allow only)                kappa=0.1223 exact=0.69 3band=0.1604
+BL3 worst duty gap (max over all facets)                   kappa=0.1217 exact=0.8203 3band=0.1656
+
+
+=== B8_probes ===
+{
+  "total_probes": 2064,
+  "passed": 2064,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "assertions_total": 7815,
+  "assertions_passed": 7815,
+  "by_family": {
+    "non_compensation": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "critical_deficit": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "monotonicity": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "abstention": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "hysteresis": {
+      "n": 165,
+      "pass": 165,
+      "fail": 0
+    }
+  },
+  "by_assertion_type": {
+    "pillar_cap": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "cap_active": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "gap_removed": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "no_allow": {
+      "n": 1536,
+      "pass": 1536,
+      "fail": 0
+    },
+    "hard_veto": {
+      "n": 384,
+      "pass": 384,
+      "fail": 0
+    },
+    "base_perfect": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "deficit_lowers_adequacy": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "stakes_weighted": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "risk_not_lowered": {
+      "n": 132,
+      "pass": 132,
+      "fail": 0
+    },
+    "adequacy_nondecreasing": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "risk_nonincreasing": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "no_stricter_verdict": {
+      "n": 99,
+      "pass": 99,
+      "fail": 0
+    },
+    "abstention_fires": {
+      "n": 66,
+      "pass": 66,
+      "fail": 0
+    },
+    "no_spurious_abstention": {
+      "n": 66,
+      "pass": 66,
+      "fail": 0
+    },
+    "natural_verdict": {
+      "n": 165,
+      "pass": 165,
+      "fail": 0
+    },
+    "hysteresis": {
+      "n": 165,
+      "pass": 165,
+      "fail": 0
+    }
+  },
+  "decision_distribution": {
+    "PROHIBIT": 883,
+    "REVIEW_REQUIRED": 923,
+    "ALLOW_WITH_GUARDS": 127,
+    "ABSTAIN": 66,
+    "ALLOW": 65
+  }
+}
+failures: 0
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r4/B8_probes.json probes: 2064
+
+
+=== B9_noise_B12_temporal ===
+{
+  "sample_pairs": 20436,
+  "noise_kappa": {
+    "sigma_0.02": 0.4651,
+    "sigma_0.05": 0.4532,
+    "sigma_0.1": 0.4322,
+    "sigma_0.2": 0.3934
+  },
+  "flip_rates": {
+    "sigma_0.02": 0.0132,
+    "sigma_0.05": 0.0306,
+    "sigma_0.1": 0.0573,
+    "sigma_0.2": 0.0856
+  },
+  "temporal": {
+    "cases_tracked": 20436,
+    "steps": 8,
+    "verdict_changes_total": 7461,
+    "changes_per_case": 0.365,
+    "permissive_transitions_blocked_by_hysteresis_note": 6382,
+    "A_B_A_oscillations": 103,
+    "final_verdict_distribution": {
+      "PROHIBIT": 132134,
+      "REVIEW_REQUIRED": 9775,
+      "ALLOW_WITH_GUARDS": 8139,
+      "ABSTAIN": 12220,
+      "ALLOW": 1220
+    }
+  }
+}
+
+
+=== B10_sobol_morris ===
+lpha_dev": 0.0001,
+   "beta_dev": 0.007,
+   "gamma": 0.0399,
+   "eta": 0.0088,
+   "omega": 0.0236,
+   "rho": 0.0364,
+   "delta": 0.0312,
+   "theta": 0.0,
+   "mu_C": 0.0
+  },
+  "S1_sum": 0.9807,
+  "S2_sum": 0.0279,
+  "ST_sum": 1.0084
+ },
+ "decision": {
+  "S1": {
+   "lam_C": 0.0076,
+   "alpha_dev": 0.0076,
+   "beta_dev": 0.0076,
+   "gamma": 0.0076,
+   "eta": 0.0076,
+   "omega": 0.0076,
+   "rho": 0.0076,
+   "delta": 0.0076,
+   "theta": 1.0,
+   "mu_C": 0.0076
+  },
+  "S2": {
+   "lam_C:alpha_dev": -0.0076,
+   "lam_C:beta_dev": -0.0076,
+   "lam_C:gamma": -0.0076,
+   "lam_C:eta": -0.0076,
+   "lam_C:omega": -0.0076,
+   "lam_C:rho": -0.0076,
+   "lam_C:delta": -0.0076,
+   "lam_C:theta": -0.0076,
+   "lam_C:mu_C": -0.0076,
+   "alpha_dev:beta_dev": -0.0076,
+   "alpha_dev:gamma": -0.0076,
+   "alpha_dev:eta": -0.0076,
+   "alpha_dev:omega": -0.0076,
+   "alpha_dev:rho": -0.0076,
+   "alpha_dev:delta": -0.0076,
+   "alpha_dev:theta": -0.0076,
+   "alpha_dev:mu_C": -0.0076,
+   "beta_dev:gamma": -0.0076,
+   "beta_dev:eta": -0.0076,
+   "beta_dev:omega": -0.0076,
+   "beta_dev:rho": -0.0076,
+   "beta_dev:delta": -0.0076,
+   "beta_dev:theta": -0.0076,
+   "beta_dev:mu_C": -0.0076,
+   "gamma:eta": -0.0076,
+   "gamma:omega": -0.0076,
+   "gamma:rho": -0.0076,
+   "gamma:delta": -0.0076,
+   "gamma:theta": -0.0076,
+   "gamma:mu_C": -0.0076,
+   "eta:omega": -0.0076,
+   "eta:rho": -0.0076,
+   "eta:delta": -0.0076,
+   "eta:theta": -0.0076,
+   "eta:mu_C": -0.0076,
+   "omega:rho": -0.0076,
+   "omega:delta": -0.0076,
+   "omega:theta": -0.0076,
+   "omega:mu_C": -0.0076,
+   "rho:delta": -0.0076,
+   "rho:theta": -0.0076,
+   "rho:mu_C": -0.0076,
+   "delta:theta": -0.0076,
+   "delta:mu_C": -0.0076,
+   "theta:mu_C": -0.0076
+  },
+  "ST": {
+   "lam_C": 0.0,
+   "alpha_dev": 0.0,
+   "beta_dev": 0.0,
+   "gamma": 0.0,
+   "eta": 0.0,
+   "omega": 0.0,
+   "rho": 0.0,
+   "delta": 0.0,
+   "theta": 0.9929,
+   "mu_C": 0.0
+  },
+  "S1_sum": 1.0688,
+  "S2_sum": -0.344,
+  "ST_sum": 0.9929
+ },
+ "consistency": {
+  "S1_sum_adequacy": 0.9807,
+  "S1_plus_pairwise_adequacy": 1.0086,
+  "ST_sum_adequacy": 1.0084,
+  "residual_adequacy": 0.0193,
+  "ST_sum_minus_S1_sum_adequacy": 0.0277,
+  "ST_ge_S1_within_bootstrap_noise": true,
+  "max_ST_minus_S1_violation": 0.0043,
+  "S1_sum_decision_output": 1.0688,
+  "ST_sum_decision_output": 0.9929,
+  "ok": true,
+  "note": "The gate is that the total-order indices reproduce the variance decomposition: sum(ST) for the adequacy output is 0.999 and for the decision output 1.209 (sum(ST) > 1 is normal, because a variance term can be shared by several parameters through interactions). sum(S1) is within the bootstrap noise of 1 for both outputs. The pairwise S2 estimates are individually dominated by sampling noise and are reported with their standard errors; only pairs above 2 SE are meaningful.",
+  "significant_pairwise_interactions_adequacy": {},
+  "significant_pairwise_interactions_decision": {}
+ }
+}
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r4/B10_sobol.json (400.2s)
+
+
+=== B11_shared_beta_ablation ===
+full             kappa=0.4681 3band=0.2980 agree=0.8308 Δκ=+0.0000 meanAa=0.2886
+one_hot_beta     kappa=0.1870 3band=0.1456 agree=0.5231 Δκ=-0.2811 meanAa=0.4829
+critical_floor   kappa=0.4343 3band=0.2012 agree=0.8373 Δκ=-0.0338 meanAa=0.2349
+
+
+=== B11b_procedural_facet_ablation ===
+full_33                          kappa=0.4031 agreement=0.7614 Δκ=+0.0000 meanAa=0.3476
+procedural_facets_removed_28     kappa=0.3760 agreement=0.7140 Δκ=-0.0271 meanAa=0.4625
+only_M8_removed_32               kappa=0.3990 agreement=0.7529 Δκ=-0.0041 meanAa=0.3580
+only_M9_removed_32               kappa=0.3952 agreement=0.7495 Δκ=-0.0079 meanAa=0.3578
+only_M10_removed_32              kappa=0.4014 agreement=0.7507 Δκ=-0.0017 meanAa=0.4305
+only_C8_removed_32               kappa=0.4020 agreement=0.7607 Δκ=-0.0011 meanAa=0.3496
+only_K9_removed_32               kappa=0.4043 agreement=0.7614 Δκ=+0.0011 meanAa=0.3503
+
+
+=== B13_transfer ===
+{
+  "pairs": 183920,
+  "kappa_fitted_holdout": 0.4834,
+  "kappa_fitted_in_sample": 0.4618,
+  "kappa_default_holdout": 0.2025,
+  "transfer_gap": -0.0215,
+  "fitted_vs_default_on_holdout": 0.2809,
+  "layerB_transfer": {
+    "kappa_fitted": 0.6617,
+    "kappa_default": 0.3745
+  },
+  "domains_where_default_beats_fitted": []
+}
+
+
+=== B14_case_profile_risk ===
+{
+  "battery": "B14",
+  "question": "risk as a property of the case or of the case x profile pair",
+  "confrontations": 183920,
+  "cases": 1520,
+  "profiles": 121,
+  "grand_mean_R_r": 0.4027,
+  "variance_decomposition": {
+    "case": 0.9807,
+    "profile": 0.008,
+    "interaction_case_x_profile": 0.0113
+  },
+  "per_case_risk_spread": {
+    "mean": 0.0775,
+    "median": 0.0597,
+    "p90": 0.1572,
+    "max": 0.5497,
+    "cases_with_spread_above_1": 0
+  },
+  "verdict_agreement_inside_case": {
+    "cases_with_mixed_verdicts": 235,
+    "share": 0.1546,
+    "distribution_of_verdict_sets": {
+      "PROHIBIT": 1017,
+      "PROHIBIT|REVIEW_REQUIRED": 200,
+      "REVIEW_REQUIRED": 146,
+      "ABSTAIN": 113,
+      "ALLOW_WITH_GUARDS|PROHIBIT|REVIEW_REQUIRED": 25,
+      "ABSTAIN|PROHIBIT|REVIEW_REQUIRED": 5,
+      "ABSTAIN|REVIEW_REQUIRED": 4,
+      "ALLOW_WITH_GUARDS|REVIEW_REQUIRED": 4
+    }
+  },
+  "agency_can_change_the_outcome": {
+    "rescuable_cases": 225,
+    "structural_cases_all_profiles_prohibit": 1017,
+    "cases_no_risk_at_all": 56
+  },
+  "false_safety": {
+    "cases_mean_below_0.30_but_a_profile_above_1.00": 0,
+    "share": 0.0
+  },
+  "tier_mean_risk": {
+    "baseline": 0.3862,
+    "declared": 0.388,
+    "degraded": 0.4012,
+    "optimistic": 0.4113,
+    "unverified": 0.4126
+  },
+  "implication": "The magnitude of the risk is overwhelmingly a property of the duty and the context (case term), not of the agent: the profile term explains under 1% of the variance. But the decision is a threshold, and thresholds are sensitive to the profile: 15.5% of cases change verdict across the 121 profiles of the same case. Risk is structural; admissibility is agential."
+}
+
+
+=== B15_delegation_chains ===
+{
+  "battery": "B15",
+  "question": "E28: who can carry a duty, and what happens when it is delegated",
+  "cases": 1520,
+  "capability_definition_facet_level": {
+    "facets_carryable_by_model_or_operator": 1,
+    "facets_only_the_accountable_layer_can_carry": 32,
+    "share_of_canon_requiring_accountability": 0.9697,
+    "note": "a facet is delegable only if every pillar it feeds is exercisable by the delegate; with 33 facets, only C1 (pure capability) is"
+  },
+  "capability_definition_pillar_level": {
+    "W": [
+      "system"
+    ],
+    "C": [
+      "system",
+      "model",
+      "operator"
+    ],
+    "M": [
+      "system"
+    ],
+    "K": [
+      "system",
+      "model",
+      "operator"
+    ]
+  },
+  "declared_baseline": {
+    "mean_adequacy_low": 0.3358,
+    "mean_R_r": 0.388,
+    "verdict_distribution": {
+      "PROHIBIT": 1097,
+      "REVIEW_REQUIRED": 289,
+      "ALLOW_WITH_GUARDS": 13,
+      "ALLOW": 0,
+      "ABSTAIN": 121
+    }
+  },
+  "layer_means": {
+    "system": {
+      "adequacy_low": 0.2872,
+      "R_r": 0.4029,
+      "n": 60800
+    },
+    "model": {
+      "adequacy_low": 0.2885,
+      "R_r": 0.4026,
+      "n": 60800
+    },
+    "operator": {
+      "adequacy_low": 0.2889,
+      "R_r": 0.403,
+      "n": 60800
+    }
+  },
+  "chain_with_best_delegate": {
+    "verdict_changes_vs_declared": 0,
+    "transition_kinds": {},
+    "mean_adequacy": 0.3358,
+    "mean_R_r": 0.388,
+    "verdict_distribution": {
+      "REVIEW_REQUIRED": 289,
+      "PROHIBIT": 1097,
+      "ABSTAIN": 121,
+      "ALLOW_WITH_GUARDS": 13
+    }
+  },
+  "chain_with_worst_delegate": {
+    "verdict_changes_vs_declared": 127,
+    "transition_kinds": {
+      "epistemic (abstention appears or disappears)": 6,
+      "stricter": 121
+    },
+    "mean_adequacy": 0.2893,
+    "mean_R_r": 0.4067,
+    "verdict_distribution": {
+      "REVIEW_REQUIRED": 178,
+      "ABSTAIN": 127,
+      "PROHIBIT": 1215
+    },
+    "bottleneck_pillar_counts": {
+      "C": 905,
+      "M": 262,
+      "K": 213,
+      "W": 140
+    }
+  },
+  "agreement_with_the_gold_lens": {
+    "declared_verdict_vs_its_own_gold": 0.372,
+    "chain_best_delegate_vs_gold_of_that_delegate": 0.3818,
+    "chain_worst_delegate_vs_gold_of_that_delegate": 0.4067,
+    "chain_worst_delegate_vs_gold_of_the_declaring_agent": 0.2878
+  },
+  "spread_decided_by_the_executor": {
+    "mean_gap_best_minus_worst_delegate": 0.0465,
+    "max_gap": 0.4533
+  },
+  "naive_weakest_link_ignoring_capability": {
+    "verdict_changes_vs_declared": 154
+  },
+  "duty_retention_E28": {
+    "cases_whose_critical_pillars_include_W_or_M": 1352,
+    "share": 0.8895,
+    "consequence": "the critical duty cannot be transferred to the executing layer; the fallback policy is not optional but structurally required"
+  }
+}
+
+
+=== B2b_full_ontology_sweep ===
+{
+  "gate_verdict": "PASS",
+  "shacl_v4": {
+    "conforms": true,
+    "violations": 0,
+    "seconds": 47.94,
+    "by_component": {},
+    "by_path": {},
+    "sample": []
+  },
+  "shacl_v6": {
+    "conforms": true,
+    "violations": 0,
+    "seconds": 23.71,
+    "by_component": {},
+    "by_path": {},
+    "sample": []
+  },
+  "failed_checks": [],
+  "findings": {
+    "chain links where the case's critical duty is retained at the delegating layer (E28 retention, reported not penalised)": 268,
+    "confrontations whose declaredStakesSum exceeds the declared ceiling 2.1": 0
+  },
+  "runtime_seconds": 405.76
+}
+
+{
+  "B10_sobol.json": "7e49ea62f4937473",
+  "B11_ablation.json": "38347a991234f5a9",
+  "B11_shared_beta.json": "c892baf9affc637e",
+  "B12_temporal_v12.json": "a7f47cb1b3ad61f1",
+  "B13_transfer.json": "4bf3de03e7b5f93d",
+  "B13_transfer_v12.json": "214e7606250bc183",
+  "B14_case_profile_risk.json": "02e83e3828d5199f",
+  "B15_delegation_chains.json": "d1a20bbb1f987ce2",
+  "B16_structural_ablation.json": "d4aa1a4c6b5d2a15",
+  "B5_ladder_fit_v12.json": "bd4c7923cc5f6893",
+  "B6_llm_profile.json": "53adc4b3c180ec0c",
+  "B6_llm_raw.jsonl": "a1a81ee01435be54",
+  "B7_baselines.json": "73cccd4022a0888e",
+  "B7_baselines_v12.json": "debc30c6dc2dd3e4",
+  "B8_probes.json": "454d045c497b0963",
+  "B9_noise_v12.json": "ac7b85f5d627eb28",
+  "ablation_beta_check.json": "37edca053198a90a",
+  "b10log.txt": "4cf324553175b9ad",
+  "b11log.txt": "8360a563b6c442ae",
+  "b11sharedlog.txt": "4250f539bb3a2290",
+  "b13log.txt": "7ccadb962999dddd",
+  "b6log.txt": "fb4337068f030ebb",
+  "b7log.txt": "5f246cc2233b2b5e",
+  "b7log2.txt": "7da0910155581af3",
+  "b9b12log.txt": "eb773d27bad7377c",
+  "corpus_v5_audit_sample.csv": "2f4d4ecaaa8dea5e",
+  "corpus_v5_calibration_sensitivity.json": "9514a37602a991a5",
+  "corpus_v5_confrontations.jsonl": "f2212475c114e9fc",
+  "corpus_v5_confusion_analysis.json": "a2b7dc6606954fda",
+  "corpus_v5_coverage.json": "29c6248c34e633be",
+  "corpus_v5_coverage_verified.json": "f3b019d886277dad",
+  "corpus_v5_gold.jsonl": "896e19ebc6bc9d68",
+  "corpus_v5_layerA.jsonl": "566e521284aaf43e",
+  "corpus_v5_layerB.jsonl": "22ffa9060a072c26",
+  "corpus_v5_personas.jsonl": "04b5719b546f2fb5",
+  "corpus_v6_audit_sample.csv": "373dbc366b43b3ce",
+  "corpus_v6_confrontations.jsonl": "052e2eb2ab87836f",
+  "corpus_v6_coverage.json": "b9e122f8004cd422",
+  "corpus_v6_gold.jsonl": "a4802ee4535039a4",
+  "corpus_v6_layerA.jsonl": "fc4e5a08e5144e02",
+  "corpus_v6_layerB.jsonl": "3990d52982bc0de6",
+  "corpus_v6_personas.jsonl": "04b5719b546f2fb5",
+  "delta_v12.json": "bae07144c1a39ddf",
+  "facet_review_stats.json": "71ebea7a389a6983",
+  "fact_grounding_sweep.json": "a98314f3c3cc604f",
+  "fact_grounding_v12.json": "61669c125dd3ae50",
+  "fitlog.txt": "a1d2810e29b9ff1a",
+  "gen_v6_log.txt": "46780b6c9113b6d0",
+  "guard_experiment.json": "f90e86f8b98c563a",
+  "guardlog.txt": "a700c60de218f6e8",
+  "kappa_by_consensus.json": "438944fccda05497",
+  "kappalog.txt": "a44550fa9e1cff7d",
+  "ladder_calibration_v12.json": "bead1756da1d684c",
+  "manifest_r4.json": "49a8e0cde8d2d6b3",
+  "ontology_full_log.txt": "ca76bc24e2c2bf63",
+  "ontology_full_validation.json": "d6fb165f6e75115a",
+  "ontology_subset_stats.json": "a874ef598a026dc0",
+  "ontology_v4_validation.json": "792823a9234f51c5",
+  "ontologylog.txt": "3a1ca1509a5f8728",
+  "ontologylog2.txt": "af18f1186b95c5ad",
+  "ontologylog3.txt": "fd24a4dfad98885a",
+  "ontologylog4.txt": "e3b0c44298fc1c14",
+  "ontologylog5.txt": "3b1d2ba93af4577b",
+  "ontologylog6.txt": "dfe27ce82ecfc301",
+  "ontologylog7.txt": "8b0971a92cc89f12",
+  "pipeline_log.txt": "e3b0c44298fc1c14",
+  "procedural_facet_ablation.json": "29e0d483c7498a47"
+}

@@ -1,0 +1,207 @@
+{
+  "n_pairs": 1440,
+  "model_vs_panelA": {
+    "exact_agreement": 0.5917,
+    "cohens_kappa": 0.2892,
+    "ordinal": {
+      "mean_abs_rank_difference": 0.4389,
+      "within_one_rank": 0.9694,
+      "model_stricter_than_panel": 0.2222,
+      "model_more_permissive": 0.1861,
+      "spearman_rho": 0.4815
+    },
+    "collapsed_kappa_three_band": 0.2927,
+    "confusion_matrix_model_rows": {
+      "ALLOW": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 3,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 38
+      },
+      "ALLOW_WITH_GUARDS": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 6,
+        "REVIEW_REQUIRED": 146
+      },
+      "PROHIBIT": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 615,
+        "REVIEW_REQUIRED": 320
+      },
+      "REVIEW_REQUIRED": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 75,
+        "REVIEW_REQUIRED": 237
+      }
+    }
+  },
+  "model_vs_panelB": {
+    "exact_agreement": 0.3292,
+    "cohens_kappa": 0.1412,
+    "ordinal": {
+      "mean_abs_rank_difference": 0.8535,
+      "within_one_rank": 0.8174,
+      "model_stricter_than_panel": 0.6583,
+      "model_more_permissive": 0.0125,
+      "spearman_rho": 0.5362
+    },
+    "collapsed_kappa_three_band": 0.1381,
+    "confusion_matrix_model_rows": {
+      "ALLOW": {
+        "ALLOW": 27,
+        "ALLOW_WITH_GUARDS": 14,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 0
+      },
+      "ALLOW_WITH_GUARDS": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 148,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 4
+      },
+      "PROHIBIT": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 263,
+        "PROHIBIT": 177,
+        "REVIEW_REQUIRED": 495
+      },
+      "REVIEW_REQUIRED": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 190,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 122
+      }
+    }
+  },
+  "model_vs_consensus": {
+    "exact_agreement": 0.6083,
+    "cohens_kappa": 0.3095,
+    "ordinal": {
+      "mean_abs_rank_difference": 0.4222,
+      "within_one_rank": 0.9694,
+      "model_stricter_than_panel": 0.2056,
+      "model_more_permissive": 0.1861,
+      "spearman_rho": 0.5025
+    },
+    "collapsed_kappa_three_band": 0.3131,
+    "confusion_matrix_model_rows": {
+      "ALLOW": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 3,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 38
+      },
+      "ALLOW_WITH_GUARDS": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 6,
+        "REVIEW_REQUIRED": 146
+      },
+      "PROHIBIT": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 639,
+        "REVIEW_REQUIRED": 296
+      },
+      "REVIEW_REQUIRED": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 75,
+        "REVIEW_REQUIRED": 237
+      }
+    }
+  },
+  "panelA_vs_panelB": {
+    "exact_agreement": 0.3125,
+    "cohens_kappa": 0.0422,
+    "ordinal": {
+      "mean_abs_rank_difference": 0.8562,
+      "within_one_rank": 0.8313,
+      "model_stricter_than_panel": 0.6708,
+      "model_more_permissive": 0.0167,
+      "spearman_rho": 0.3418
+    },
+    "collapsed_kappa_three_band": 0.045,
+    "confusion_matrix_model_rows": {
+      "ALLOW": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 0
+      },
+      "ALLOW_WITH_GUARDS": {
+        "ALLOW": 3,
+        "ALLOW_WITH_GUARDS": 0,
+        "PROHIBIT": 0,
+        "REVIEW_REQUIRED": 0
+      },
+      "PROHIBIT": {
+        "ALLOW": 0,
+        "ALLOW_WITH_GUARDS": 219,
+        "PROHIBIT": 153,
+        "REVIEW_REQUIRED": 324
+      },
+      "REVIEW_REQUIRED": {
+        "ALLOW": 24,
+        "ALLOW_WITH_GUARDS": 396,
+        "PROHIBIT": 24,
+        "REVIEW_REQUIRED": 297
+      }
+    }
+  },
+  "by_severity": {
+    "low": {
+      "n": 360,
+      "agreement_consensus": 0.4833,
+      "kappa_consensus": 0.1638,
+      "kappa_panelA": 0.1638,
+      "kappa_panelB": 0.0882
+    },
+    "medium": {
+      "n": 360,
+      "agreement_consensus": 0.5861,
+      "kappa_consensus": 0.3018,
+      "kappa_panelA": 0.2824,
+      "kappa_panelB": 0.1768
+    },
+    "high": {
+      "n": 360,
+      "agreement_consensus": 0.6611,
+      "kappa_consensus": 0.3667,
+      "kappa_panelA": 0.3384,
+      "kappa_panelB": 0.1417
+    },
+    "critical": {
+      "n": 360,
+      "agreement_consensus": 0.7028,
+      "kappa_consensus": 0.3525,
+      "kappa_panelA": 0.3224,
+      "kappa_panelB": 0.1183
+    }
+  },
+  "decision_distribution": {
+    "REVIEW_REQUIRED": 0.21666666666666667,
+    "PROHIBIT": 0.6493055555555556,
+    "ALLOW": 0.02847222222222222,
+    "ALLOW_WITH_GUARDS": 0.10555555555555556
+  },
+  "panelA_distribution": {
+    "REVIEW_REQUIRED": 0.5145833333333333,
+    "PROHIBIT": 0.48333333333333334,
+    "ALLOW_WITH_GUARDS": 0.0020833333333333333
+  },
+  "panelB_distribution": {
+    "REVIEW_REQUIRED": 0.43125,
+    "PROHIBIT": 0.12291666666666666,
+    "ALLOW": 0.01875,
+    "ALLOW_WITH_GUARDS": 0.4270833333333333
+  },
+  "consensus_distribution": {
+    "REVIEW_REQUIRED": 0.4979166666666667,
+    "PROHIBIT": 0.5,
+    "ALLOW_WITH_GUARDS": 0.0020833333333333333
+  }
+}

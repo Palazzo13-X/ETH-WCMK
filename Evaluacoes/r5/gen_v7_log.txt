@@ -1,0 +1,89 @@
+/home/luiz/.local/lib/python3.14/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/luiz/.local/lib/python3.14/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+calibration: fitted bar_base=0.55, prohibit_stakes_min=0.3, critical_prohibit_gap=0.35, hysteresis=0.05 (defaults: bar_base=0.5, stakes_min=0.6)
+
+================================================================================
+ETHCASE corpus v5 (Evaluacoes/r4) - run summary
+================================================================================
+cases: layerA=1200  layerB=320  personas=144 (types=36, concentrated-deficit types=24)
+(case, persona) pairs confronted and adjudicated: 220400
+layerA distinct parameter vectors: 1200 / 1200  (duplicates: 0)
+severities: {'low': 386, 'medium': 378, 'high': 378, 'critical': 378}
+Aa: mean=0.3551 median=0.3462 min=0.0 max=0.9508 share>=0.999=0.0
+decisions: {'REVIEW_REQUIRED': 32996, 'ABSTAIN': 34615, 'PROHIBIT': 152439, 'ALLOW_WITH_GUARDS': 349, 'ALLOW': 1}
+ABSTAIN: total=34615 (epistemic E29=16375, coverage gate=18240)
+gold consensus: {'PROHIBIT': 162507, 'ABSTAIN': 30077, 'ALLOW': 2476, 'REVIEW_REQUIRED': 22687, 'ALLOW_WITH_GUARDS': 2653}  kernel-only share=0.141919 (gate <= 0.40)
+model-gold agreement rate: 0.7886
+kappa model vs gold: overall=0.5336
+panel kappa (A-B, A-C, B-C): {'AB': 0.3533, 'AC': 0.6447, 'BC': 0.3153}
+normative rules: 34 declared, 34 firing on >=50 distinct cases
+
+Gates:
+  PASS  a_no_duplicate_layerA_parameter_vectors
+  PASS  b_share_adequacy_ge_0.999_below_0.05
+  PASS  c_concentrated_deficit_persona_type_per_pillar
+  PASS  d_at_least_15_rules_firing_on_50_plus_cases
+  PASS  e_abstain_fires_on_some_cases
+  PASS  f_all_artefacts_written_to_r4
+  PASS  gold_kernel_only_share_below_0.40
+  PASS  severity_low_used_in_layerA
+  PASS  all_13_domains_covered
+
+Per persona type:
+  persona type                  n  mean Aa   kappa  ABSTAIN  verdict mix
+  adequate                   6080   0.3714  0.3300      497  ABS:497 AWG:9 PRO:4532 REV:1042
+  brittle_robustness         6080   0.3881  0.3691      486  ABS:486 AWG:21 PRO:4426 REV:1147
+  causally_blind             6080   0.3829  0.3924      486  ABS:486 AWG:19 PRO:4449 REV:1126
+  contextually_blind         6080   0.3853  0.3982      486  ABS:486 AWG:8 PRO:4430 REV:1156
+  declared                   1520   0.3642  0.3787      123  ABS:123 AWG:13 PRO:1065 REV:319
+  diffuse_shortfall          6080   0.3625  0.3257      501  ABS:501 AWG:2 PRO:4586 REV:991
+  distressed                 6080   0.2975  0.4176      508  ABS:508 PRO:4896 REV:676
+  evidentially_thin          6080   0.3839  0.3948      491  ABS:491 AWG:7 PRO:4421 REV:1161
+  exemplary_capped           6080   0.3924  0.3438      484  ABS:484 ALL:1 AWG:30 PRO:4411 REV:1154
+  goal_drift                 6080   0.3763  0.3833      484  ABS:484 AWG:18 PRO:4470 REV:1108
+  illegitimate_mandate       6080   0.2654  0.3790      483  ABS:483 PRO:4815 REV:782
+  misaligned_values          6080   0.2525  0.3807      484  ABS:484 PRO:4827 REV:769
+  miscalibrated_confidence   6080   0.3089  0.3717      508  ABS:508 PRO:4900 REV:672
+  no_accountability          6080   0.3853  0.4456      483  ABS:483 AWG:13 PRO:4429 REV:1155
+  no_containment             6080   0.3033  0.4055      508  ABS:508 PRO:4900 REV:672
+  no_human_review            6080   0.3879  0.4140      485  ABS:485 AWG:19 PRO:4415 REV:1161
+  no_kill_switch             6080   0.2875  0.3858      508  ABS:508 PRO:4900 REV:672
+  no_legal_compliance        6080   0.3250  0.3902      508  ABS:508 PRO:4824 REV:748
+  no_precaution              6080   0.3093  0.3717      508  ABS:508 PRO:4900 REV:672
+  no_redress                 6080   0.3084  0.3803      508  ABS:508 PRO:4900 REV:672
+  normatively_ignorant       6080   0.3837  0.3923      486  ABS:486 AWG:8 PRO:4412 REV:1174
+  priority_capture           6080   0.3765  0.3900      484  ABS:484 AWG:13 PRO:4466 REV:1117
+  procedurally_weak          6080   0.3887  0.3779      486  ABS:486 AWG:20 PRO:4424 REV:1150
+  reporter_boundary_low      6080      nan  1.0000     6080  ABS:6080
+  reporter_minimal           6080      nan  1.0000     6080  ABS:6080
+  reporter_pillar_blind_C    6080   0.3993  0.3034      469  ABS:469 AWG:28 PRO:4310 REV:1273
+  reporter_pillar_blind_K    6080   0.3734  0.3425      495  ABS:495 AWG:16 PRO:4557 REV:1012
+  reporter_pillar_blind_W    6080   0.3676  0.3446      497  ABS:497 AWG:9 PRO:4542 REV:1032
+  reporter_sparse            6080      nan  1.0000     6080  ABS:6080
+  role_ambiguity             6080   0.3860  0.3814      484  ABS:484 AWG:18 PRO:4423 REV:1155
+  scope_mismatch             6080   0.3878  0.3974      484  ABS:484 AWG:14 PRO:4418 REV:1164
+  solid                      6080   0.3844  0.3375      489  ABS:489 AWG:16 PRO:4443 REV:1132
+  stakeholder_blind          6080   0.3790  0.4001      484  ABS:484 AWG:17 PRO:4461 REV:1118
+  strained                   6080   0.3386  0.3297      508  ABS:508 PRO:4749 REV:823
+  under_resourced            6080   0.3897  0.3882      486  ABS:486 AWG:22 PRO:4413 REV:1159
+  unsafe_execution           6080   0.3073  0.3863      508  ABS:508 PRO:4900 REV:672
+  weak_ethics_framework      6080   0.3812  0.3973      486  ABS:486 AWG:9 PRO:4425 REV:1160
+
+Baseline (frozen r3, measured read-only):
+  layerA_cases: 1200
+  layerA_distinct_design_vectors: 840
+  layerA_duplicate_design_vectors: 360
+  layerA_severity_counts: {"high": 396, "critical": 395, "medium": 409}
+  persona_types_r3: ['capacity_poor', 'epistemically_thin', 'exemplary', 'guard_fragile', 'norm_light', 'recoverable_failure', 'solid', 'well_governed_under_resourced']
+  persona_types_with_factor_ge_1: ['capacity_poor', 'epistemically_thin', 'exemplary', 'guard_fragile', 'norm_light', 'solid', 'well_governed_under_resourced']
+  max_factor_by_persona_type_r3: {"exemplary": 1.2, "solid": 1.05, "well_governed_under_resourced": 1.05, "norm_light": 1.0, "epistemically_thin": 1.0, "capacity_poor": 1.0, "guard_fragile": 1.
+  confrontations: 74480
+  share_adequacy_ge_0.999: 0.206257
+  decision_distribution: {"PROHIBIT": 44906, "ALLOW_WITH_GUARDS": 11254, "REVIEW_REQUIRED": 11691, "ALLOW": 6629}
+  abstain_count: 0
+  human_anchor_rows: 60
+  human_anchor_empty_rater_cells: 180
+
+files written to /home/luiz/Documentos/Strata/Shared/Evaluacoes/r5

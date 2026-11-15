@@ -1,0 +1,5 @@
+full                     κ=0.4681 Δ=+0.0000 agree=0.8308 meanAa=0.2886
+guards_K1_K3             κ=0.4639 Δ=-0.0042 agree=0.8322 meanAa=0.2852
+guards_all_K             κ=0.1234 Δ=-0.3447 agree=0.4140 meanAa=0.5575
+no_K9                    κ=0.4672 Δ=-0.0009 agree=0.8304 meanAa=0.2910
+rebalanced_criticality   κ=0.4718 Δ=+0.0037 agree=0.8340 meanAa=0.2622

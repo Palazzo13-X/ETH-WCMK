@@ -1,0 +1,60 @@
+{
+  "battery": "B4 - parameter sensitivity (Morris)",
+  "seed": 2026,
+  "result": {
+    "morris_elementary_effects": {
+      "gamma": {
+        "mu_star": 0.00269,
+        "sigma": 0.00261,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      },
+      "eta": {
+        "mu_star": 0.0002,
+        "sigma": 0.00052,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      },
+      "omega": {
+        "mu_star": 0.0,
+        "sigma": 0.0,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      },
+      "rho": {
+        "mu_star": 0.00606,
+        "sigma": 0.01152,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      },
+      "theta": {
+        "mu_star": 0.04461,
+        "sigma": 0.0347,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      },
+      "phi": {
+        "mu_star": 0.08557,
+        "sigma": 0.07242,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      },
+      "floor": {
+        "mu_star": 0.0,
+        "sigma": 0.0,
+        "interpretation": "larger mu = larger average effect; larger sigma = non-linear/interacting behaviour"
+      }
+    },
+    "dominant_parameter": "phi",
+    "most_nonlinear_parameter": "phi",
+    "budget_constraint": {
+      "rule": "gamma + rho + eta + omega <= 0.30",
+      "random_draws_violating": 4704,
+      "draws": 5000
+    },
+    "output_range_at_extremes": {
+      "gamma=0.12,rho=0.15": [
+        0.0139,
+        0.996
+      ],
+      "gamma=0.30,rho=0.30": [
+        0.0,
+        0.9958
+      ]
+    }
+  }
+}

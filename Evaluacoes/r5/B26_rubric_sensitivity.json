@@ -1,0 +1,241 @@
+{
+ "battery": "B26",
+ "question": "how much of kappa is the model and how much is the rubric's own normative priors?",
+ "generated_at": "2026-11-09T22:43:33.415233+00:00",
+ "runtime_seconds": 1042.4,
+ "cases": 1520,
+ "variants": [
+  {
+   "variant": "V0 baseline rubric",
+   "pairs": 220400,
+   "kappa": 0.5336,
+   "ci95_paired_bootstrap": [
+    0.5212,
+    0.5496
+   ],
+   "boot_se": 0.0047,
+   "consensus_distribution": {
+    "PROHIBIT": 162507,
+    "ABSTAIN": 30077,
+    "ALLOW": 2476,
+    "REVIEW_REQUIRED": 22688,
+    "ALLOW_WITH_GUARDS": 2652
+   },
+   "unanimous_share": 0.509,
+   "spread_ge_1_share": 0.491,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": 0.0
+  },
+  {
+   "variant": "V1 floors x1.10",
+   "pairs": 220400,
+   "kappa": 0.5507,
+   "ci95_paired_bootstrap": [
+    0.537,
+    0.5663
+   ],
+   "boot_se": 0.0049,
+   "consensus_distribution": {
+    "PROHIBIT": 171535,
+    "ABSTAIN": 30077,
+    "REVIEW_REQUIRED": 15672,
+    "ALLOW": 1070,
+    "ALLOW_WITH_GUARDS": 2046
+   },
+   "unanimous_share": 0.5349,
+   "spread_ge_1_share": 0.4651,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": 0.0171
+  },
+  {
+   "variant": "V2 floors x0.90",
+   "pairs": 220400,
+   "kappa": 0.525,
+   "ci95_paired_bootstrap": [
+    0.5135,
+    0.5395
+   ],
+   "boot_se": 0.005,
+   "consensus_distribution": {
+    "PROHIBIT": 154728,
+    "ABSTAIN": 30077,
+    "ALLOW": 3927,
+    "REVIEW_REQUIRED": 28501,
+    "ALLOW_WITH_GUARDS": 3167
+   },
+   "unanimous_share": 0.4924,
+   "spread_ge_1_share": 0.5076,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": -0.0086
+  },
+  {
+   "variant": "V3 categorical set = 3 duties",
+   "pairs": 220400,
+   "kappa": 0.5085,
+   "ci95_paired_bootstrap": [
+    0.496,
+    0.5222
+   ],
+   "boot_se": 0.0051,
+   "consensus_distribution": {
+    "PROHIBIT": 160214,
+    "ABSTAIN": 30077,
+    "ALLOW": 2991,
+    "REVIEW_REQUIRED": 21817,
+    "ALLOW_WITH_GUARDS": 5301
+   },
+   "unanimous_share": 0.4647,
+   "spread_ge_1_share": 0.5353,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": -0.0251
+  },
+  {
+   "variant": "V4 every duty categorical",
+   "pairs": 220400,
+   "kappa": 0.5461,
+   "ci95_paired_bootstrap": [
+    0.5336,
+    0.5606
+   ],
+   "boot_se": 0.0049,
+   "consensus_distribution": {
+    "PROHIBIT": 164162,
+    "ABSTAIN": 30077,
+    "ALLOW": 1718,
+    "REVIEW_REQUIRED": 22985,
+    "ALLOW_WITH_GUARDS": 1458
+   },
+   "unanimous_share": 0.5299,
+   "spread_ge_1_share": 0.4701,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": 0.0125
+  },
+  {
+   "variant": "V5 consensus = lens A only",
+   "pairs": 220400,
+   "kappa": 0.5223,
+   "ci95_paired_bootstrap": [
+    0.5106,
+    0.5371
+   ],
+   "boot_se": 0.0048,
+   "consensus_distribution": {
+    "PROHIBIT": 155768,
+    "ABSTAIN": 30077,
+    "ALLOW": 3670,
+    "REVIEW_REQUIRED": 26046,
+    "ALLOW_WITH_GUARDS": 4839
+   },
+   "unanimous_share": 0.509,
+   "spread_ge_1_share": 0.491,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": -0.0113
+  },
+  {
+   "variant": "V6 consensus = lens B only",
+   "pairs": 220400,
+   "kappa": 0.3324,
+   "ci95_paired_bootstrap": [
+    0.323,
+    0.3425
+   ],
+   "boot_se": 0.0038,
+   "consensus_distribution": {
+    "ALLOW_WITH_GUARDS": 35970,
+    "ABSTAIN": 30077,
+    "ALLOW": 5238,
+    "REVIEW_REQUIRED": 60051,
+    "PROHIBIT": 89064
+   },
+   "unanimous_share": 0.509,
+   "spread_ge_1_share": 0.491,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": -0.2012
+  },
+  {
+   "variant": "V7 consensus = lens C only",
+   "pairs": 220400,
+   "kappa": 0.5147,
+   "ci95_paired_bootstrap": [
+    0.5028,
+    0.5283
+   ],
+   "boot_se": 0.0047,
+   "consensus_distribution": {
+    "PROHIBIT": 157885,
+    "ABSTAIN": 30077,
+    "ALLOW": 1378,
+    "ALLOW_WITH_GUARDS": 5075,
+    "REVIEW_REQUIRED": 25985
+   },
+   "unanimous_share": 0.509,
+   "spread_ge_1_share": 0.491,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": -0.0189
+  },
+  {
+   "variant": "V8 coverage gate 0.80",
+   "pairs": 220400,
+   "kappa": 0.6005,
+   "ci95_paired_bootstrap": [
+    0.5885,
+    0.6102
+   ],
+   "boot_se": 0.0044,
+   "consensus_distribution": {
+    "PROHIBIT": 151176,
+    "ABSTAIN": 41525,
+    "ALLOW": 2476,
+    "REVIEW_REQUIRED": 22571,
+    "ALLOW_WITH_GUARDS": 2652
+   },
+   "unanimous_share": 0.5345,
+   "spread_ge_1_share": 0.4655,
+   "mean_adequacy_model": 0.3531,
+   "delta_kappa_vs_baseline": 0.0669
+  },
+  {
+   "variant": "V9 coverage gate 0.60",
+   "pairs": 220400,
+   "kappa": 0.4907,
+   "ci95_paired_bootstrap": [
+    0.4787,
+    0.5051
+   ],
+   "boot_se": 0.0052,
+   "consensus_distribution": {
+    "PROHIBIT": 168203,
+    "ABSTAIN": 24353,
+    "ALLOW": 2476,
+    "REVIEW_REQUIRED": 22716,
+    "ALLOW_WITH_GUARDS": 2652
+   },
+   "unanimous_share": 0.4949,
+   "spread_ge_1_share": 0.5051,
+   "mean_adequacy_model": 0.3559,
+   "delta_kappa_vs_baseline": -0.0429
+  },
+  {
+   "variant": "V10 gap mode assume_breach",
+   "pairs": 220400,
+   "kappa": 0.2974,
+   "ci95_paired_bootstrap": [
+    0.2819,
+    0.3123
+   ],
+   "boot_se": 0.0054,
+   "consensus_distribution": {
+    "PROHIBIT": 179584,
+    "ALLOW": 2476,
+    "REVIEW_REQUIRED": 22783,
+    "ALLOW_WITH_GUARDS": 2652,
+    "ABSTAIN": 12905
+   },
+   "unanimous_share": 0.4682,
+   "spread_ge_1_share": 0.5318,
+   "mean_adequacy_model": 0.3551,
+   "delta_kappa_vs_baseline": -0.2362
+  }
+ ],
+ "reading": ""
+}

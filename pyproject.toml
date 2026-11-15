@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eth-wcmk"
+version = "13.0.0"
+description = "A formal core and a SHACL-validated ontology for auditing delegated ethical agency"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT (code) / CC BY-SA 4.0 (model, ontologies, corpora)" }
+authors = [
+  { name = "Luiz M. M. Palazzo" },
+  { name = "Tarcísio Vanzin" },
+]
+keywords = ["AI ethics", "deontic logic", "SHACL", "RDF", "auditability", "governance", "FAIR"]
+dependencies = [
+  "rdflib>=7.6",
+  "pyshacl>=0.40",
+  "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9.0"]
+dev = ["pytest>=9.0", "ruff>=0.6", "black>=24.0", "mypy>=1.10"]
+llm = ["ollama>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/ETH-WCMK/ETH-WCMK"
+Documentation = "https://github.com/ETH-WCMK/ETH-WCMK/tree/main/docs"
+Releases = "https://github.com/ETH-WCMK/ETH-WCMK/releases"
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+testpaths = ["_analysis/formal_core/tests"]
+addopts = "-q"
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [".cache_validation", "release_assets", "_analysis/docx_v9", "Evaluacoes"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true

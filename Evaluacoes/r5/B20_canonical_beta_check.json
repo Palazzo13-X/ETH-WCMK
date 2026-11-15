@@ -1,0 +1,476 @@
+{
+  "battery": "B20",
+  "question": "which of the v13 mechanisms change agreement with the panels?",
+  "n_cases_sampled": 1080,
+  "n_personas": 120,
+  "calibration": "frozen r3 ladder (the convention declared in the manifest)",
+  "results": [
+    {
+      "name": "v13_baseline",
+      "variant": {
+        "name": "v13_baseline",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4049,
+      "kappa_by_stratum": {
+        "contested": 0.0402,
+        "majority": 0.1254,
+        "unanimous": 0.7348
+      },
+      "pairs_by_stratum": {
+        "contested": 22396,
+        "majority": 44603,
+        "unanimous": 63681
+      },
+      "kappa_vs_panel": {
+        "A": 0.4157,
+        "B": 0.2398,
+        "C": 0.3857
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4835,
+        "FI": 0.2781,
+        "GP": 0.3446,
+        "IC": 0.497,
+        "IM": 0.3445,
+        "JS": 0.4322,
+        "MA": 0.5348,
+        "PD": 0.3388,
+        "RS": 0.4645,
+        "SA": 0.3343,
+        "TB": 0.2882,
+        "TS": 0.5264
+      },
+      "mean_adequacy": 0.3523,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 99922,
+        "REVIEW_REQUIRED": 19347,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2501,
+        "REVIEW_REQUIRED": 0.2873,
+        "ABSTAIN": 0.3197,
+        "ALLOW_WITH_GUARDS": 0.2229
+      },
+      "runtime_seconds": 94.19
+    },
+    {
+      "name": "lambda(E) s=0.5",
+      "variant": {
+        "name": "lambda(E) s=0.5",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4048,
+      "kappa_by_stratum": {
+        "contested": 0.0401,
+        "majority": 0.1251,
+        "unanimous": 0.7347
+      },
+      "pairs_by_stratum": {
+        "contested": 22396,
+        "majority": 44603,
+        "unanimous": 63681
+      },
+      "kappa_vs_panel": {
+        "A": 0.4156,
+        "B": 0.2398,
+        "C": 0.3857
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4831,
+        "FI": 0.278,
+        "GP": 0.3442,
+        "IC": 0.4969,
+        "IM": 0.3445,
+        "JS": 0.4321,
+        "MA": 0.5348,
+        "PD": 0.3385,
+        "RS": 0.464,
+        "SA": 0.3343,
+        "TB": 0.2882,
+        "TS": 0.5264
+      },
+      "mean_adequacy": 0.3513,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 99922,
+        "REVIEW_REQUIRED": 19347,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2498,
+        "REVIEW_REQUIRED": 0.2869,
+        "ABSTAIN": 0.3192,
+        "ALLOW_WITH_GUARDS": 0.2229
+      },
+      "runtime_seconds": 99.22,
+      "delta_kappa_vs_baseline": -0.0001,
+      "delta_ci95_bootstrap": [
+        -0.0002,
+        -0.0
+      ]
+    },
+    {
+      "name": "lambda(E) s=1.0",
+      "variant": {
+        "name": "lambda(E) s=1.0",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4047,
+      "kappa_by_stratum": {
+        "contested": 0.0397,
+        "majority": 0.125,
+        "unanimous": 0.7347
+      },
+      "pairs_by_stratum": {
+        "contested": 22396,
+        "majority": 44603,
+        "unanimous": 63681
+      },
+      "kappa_vs_panel": {
+        "A": 0.4155,
+        "B": 0.2398,
+        "C": 0.3856
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4831,
+        "FI": 0.2779,
+        "GP": 0.3443,
+        "IC": 0.4966,
+        "IM": 0.3445,
+        "JS": 0.4322,
+        "MA": 0.5348,
+        "PD": 0.3373,
+        "RS": 0.4635,
+        "SA": 0.3343,
+        "TB": 0.2882,
+        "TS": 0.5264
+      },
+      "mean_adequacy": 0.3503,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 99921,
+        "REVIEW_REQUIRED": 19348,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2494,
+        "REVIEW_REQUIRED": 0.2865,
+        "ABSTAIN": 0.3187,
+        "ALLOW_WITH_GUARDS": 0.2229
+      },
+      "runtime_seconds": 102.45,
+      "delta_kappa_vs_baseline": -0.0002,
+      "delta_ci95_bootstrap": [
+        -0.0004,
+        -0.0001
+      ]
+    },
+    {
+      "name": "lambda(E) s=2.0",
+      "variant": {
+        "name": "lambda(E) s=2.0",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4046,
+      "kappa_by_stratum": {
+        "contested": 0.04,
+        "majority": 0.1249,
+        "unanimous": 0.7346
+      },
+      "pairs_by_stratum": {
+        "contested": 22396,
+        "majority": 44603,
+        "unanimous": 63681
+      },
+      "kappa_vs_panel": {
+        "A": 0.4155,
+        "B": 0.2398,
+        "C": 0.3855
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4827,
+        "FI": 0.277,
+        "GP": 0.3436,
+        "IC": 0.4959,
+        "IM": 0.3446,
+        "JS": 0.4337,
+        "MA": 0.5348,
+        "PD": 0.3373,
+        "RS": 0.4635,
+        "SA": 0.3345,
+        "TB": 0.2882,
+        "TS": 0.5261
+      },
+      "mean_adequacy": 0.3483,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 99924,
+        "REVIEW_REQUIRED": 19345,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2487,
+        "REVIEW_REQUIRED": 0.2858,
+        "ABSTAIN": 0.3178,
+        "ALLOW_WITH_GUARDS": 0.2229
+      },
+      "runtime_seconds": 103.44,
+      "delta_kappa_vs_baseline": -0.0003,
+      "delta_ci95_bootstrap": [
+        -0.0005,
+        -0.0
+      ]
+    },
+    {
+      "name": "cross-pillar zeta=0.05",
+      "variant": {
+        "name": "cross-pillar zeta=0.05",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4026,
+      "kappa_by_stratum": {
+        "contested": 0.033,
+        "majority": 0.1212,
+        "unanimous": 0.7341
+      },
+      "pairs_by_stratum": {
+        "contested": 22396,
+        "majority": 44603,
+        "unanimous": 63681
+      },
+      "kappa_vs_panel": {
+        "A": 0.4131,
+        "B": 0.2391,
+        "C": 0.3823
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4831,
+        "FI": 0.2772,
+        "GP": 0.3411,
+        "IC": 0.493,
+        "IM": 0.3446,
+        "JS": 0.4246,
+        "MA": 0.5348,
+        "PD": 0.3325,
+        "RS": 0.463,
+        "SA": 0.33,
+        "TB": 0.2882,
+        "TS": 0.5264
+      },
+      "mean_adequacy": 0.3435,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 100224,
+        "REVIEW_REQUIRED": 19046,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 174
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2474,
+        "REVIEW_REQUIRED": 0.2849,
+        "ABSTAIN": 0.3169,
+        "ALLOW_WITH_GUARDS": 0.2249
+      },
+      "runtime_seconds": 96.85,
+      "delta_kappa_vs_baseline": -0.0023,
+      "delta_ci95_bootstrap": [
+        -0.003,
+        -0.0016
+      ]
+    },
+    {
+      "name": "cross-pillar zeta=0.10",
+      "variant": {
+        "name": "cross-pillar zeta=0.10",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.3998,
+      "kappa_by_stratum": {
+        "contested": 0.0237,
+        "majority": 0.1156,
+        "unanimous": 0.734
+      },
+      "pairs_by_stratum": {
+        "contested": 22396,
+        "majority": 44603,
+        "unanimous": 63681
+      },
+      "kappa_vs_panel": {
+        "A": 0.4101,
+        "B": 0.2388,
+        "C": 0.3788
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4824,
+        "FI": 0.279,
+        "GP": 0.3335,
+        "IC": 0.4873,
+        "IM": 0.3443,
+        "JS": 0.4196,
+        "MA": 0.5348,
+        "PD": 0.3214,
+        "RS": 0.461,
+        "SA": 0.3231,
+        "TB": 0.2888,
+        "TS": 0.5264
+      },
+      "mean_adequacy": 0.3346,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 100558,
+        "REVIEW_REQUIRED": 18713,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 173
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2447,
+        "REVIEW_REQUIRED": 0.2824,
+        "ABSTAIN": 0.3141,
+        "ALLOW_WITH_GUARDS": 0.2268
+      },
+      "runtime_seconds": 98.49,
+      "delta_kappa_vs_baseline": -0.0051,
+      "delta_ci95_bootstrap": [
+        -0.006,
+        -0.0043
+      ]
+    },
+    {
+      "name": "oversight from facts",
+      "variant": {
+        "name": "oversight from facts",
+        "oversight": "derived"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4119,
+      "kappa_by_stratum": {
+        "contested": 0.0655,
+        "majority": 0.1554,
+        "unanimous": 0.7268
+      },
+      "pairs_by_stratum": {
+        "contested": 22872,
+        "majority": 46257,
+        "unanimous": 61551
+      },
+      "kappa_vs_panel": {
+        "A": 0.4176,
+        "B": 0.2369,
+        "C": 0.3856
+      },
+      "kappa_by_domain": {
+        "DS": 0.392,
+        "ED": 0.4659,
+        "FI": 0.2933,
+        "GP": 0.3455,
+        "IC": 0.5289,
+        "IM": 0.336,
+        "JS": 0.4665,
+        "MA": 0.519,
+        "PD": 0.3609,
+        "RS": 0.4599,
+        "SA": 0.3418,
+        "TB": 0.2808,
+        "TS": 0.542
+      },
+      "mean_adequacy": 0.353,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 98069,
+        "REVIEW_REQUIRED": 21200,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2501,
+        "REVIEW_REQUIRED": 0.2857,
+        "ABSTAIN": 0.3199,
+        "ALLOW_WITH_GUARDS": 0.2228
+      },
+      "runtime_seconds": 98.47,
+      "delta_kappa_vs_baseline": 0.007,
+      "delta_ci95_bootstrap": [
+        0.005,
+        0.009
+      ]
+    },
+    {
+      "name": "oversight from facts + zeta=0.05",
+      "variant": {
+        "name": "oversight from facts + zeta=0.05",
+        "oversight": "derived"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.41,
+      "kappa_by_stratum": {
+        "contested": 0.0578,
+        "majority": 0.1516,
+        "unanimous": 0.727
+      },
+      "pairs_by_stratum": {
+        "contested": 22872,
+        "majority": 46257,
+        "unanimous": 61551
+      },
+      "kappa_vs_panel": {
+        "A": 0.415,
+        "B": 0.2366,
+        "C": 0.3825
+      },
+      "kappa_by_domain": {
+        "DS": 0.392,
+        "ED": 0.4655,
+        "FI": 0.2929,
+        "GP": 0.3417,
+        "IC": 0.5261,
+        "IM": 0.3361,
+        "JS": 0.462,
+        "MA": 0.519,
+        "PD": 0.3546,
+        "RS": 0.4585,
+        "SA": 0.3379,
+        "TB": 0.2808,
+        "TS": 0.5423
+      },
+      "mean_adequacy": 0.3441,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 98401,
+        "REVIEW_REQUIRED": 20869,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 174
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2473,
+        "REVIEW_REQUIRED": 0.2833,
+        "ABSTAIN": 0.317,
+        "ALLOW_WITH_GUARDS": 0.2249
+      },
+      "runtime_seconds": 96.52,
+      "delta_kappa_vs_baseline": 0.0051,
+      "delta_ci95_bootstrap": [
+        0.003,
+        0.0075
+      ]
+    }
+  ]
+}

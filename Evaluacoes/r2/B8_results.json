@@ -1,0 +1,90 @@
+{
+  "total": 210,
+  "passed": 210,
+  "failed": 0,
+  "by_kind": {
+    "coverage_degeneracy": {
+      "n": 15,
+      "pass": 15
+    },
+    "saturation": {
+      "n": 15,
+      "pass": 15
+    },
+    "compensation_attempt": {
+      "n": 15,
+      "pass": 15
+    },
+    "threshold_edge": {
+      "n": 30,
+      "pass": 30
+    },
+    "guard_cap": {
+      "n": 15,
+      "pass": 15
+    },
+    "epistemic_blank": {
+      "n": 15,
+      "pass": 15
+    },
+    "severity_ladder": {
+      "n": 60,
+      "pass": 60
+    },
+    "pillar_tie": {
+      "n": 15,
+      "pass": 15
+    },
+    "veto_isolation": {
+      "n": 15,
+      "pass": 15
+    },
+    "near_saturation": {
+      "n": 15,
+      "pass": 15
+    }
+  },
+  "failures": [],
+  "severity_ladder_families": 15,
+  "severity_ladder_monotone": true,
+  "threshold_edges_below_veto": 15,
+  "threshold_edges_above_veto": 15,
+  "threshold_edges_sample": [
+    {
+      "probe": "PRB-003",
+      "deficit_M": 0.599,
+      "veto": false,
+      "decision": "PROHIBIT"
+    },
+    {
+      "probe": "PRB-004",
+      "deficit_M": 0.601,
+      "veto": true,
+      "decision": "PROHIBIT"
+    },
+    {
+      "probe": "PRB-017",
+      "deficit_M": 0.599,
+      "veto": false,
+      "decision": "PROHIBIT"
+    },
+    {
+      "probe": "PRB-018",
+      "deficit_M": 0.601,
+      "veto": true,
+      "decision": "PROHIBIT"
+    },
+    {
+      "probe": "PRB-031",
+      "deficit_M": 0.599,
+      "veto": false,
+      "decision": "PROHIBIT"
+    },
+    {
+      "probe": "PRB-032",
+      "deficit_M": 0.601,
+      "veto": true,
+      "decision": "PROHIBIT"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+calibration: fitted bar_base=0.55, prohibit_stakes_min=0.3, critical_prohibit_gap=0.35, hysteresis=0.05 (defaults: bar_base=0.5, stakes_min=0.6)
+Traceback (most recent call last):
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/corpus/gen_corpus_v5.py", line 1105, in <module>
+    main()
+    ~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/corpus/gen_corpus_v5.py", line 972, in main
+    cal12 = load_fitted_calibration(v12_path)
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/corpus/../formal_core/core.py", line 640, in load_fitted_calibration
+    raise ValueError(f"fitted calibration is invalid: {errs}")
+ValueError: fitted calibration is invalid: ['material_gap must be below critical_prohibit_gap']

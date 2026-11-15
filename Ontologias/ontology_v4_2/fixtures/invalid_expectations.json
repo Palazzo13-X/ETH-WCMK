@@ -1,0 +1,436 @@
+{
+  "expectations": [
+    {
+      "iri": "fac:bad_facet_beta_sum",
+      "shape": "sh:FacetShape",
+      "defect": "beta sum != 1"
+    },
+    {
+      "iri": "fac:bad_facet_beta_token",
+      "shape": "sh:FacetShape",
+      "defect": "beta token smaller than 0.15"
+    },
+    {
+      "iri": "fac:bad_facet_four_pillars",
+      "shape": "sh:FacetShape",
+      "defect": "facet spread over four pillars"
+    },
+    {
+      "iri": "fac:bad_facet_guard_without_floor",
+      "shape": "sh:FacetShape",
+      "defect": "hard guard declared with guard floor 0"
+    },
+    {
+      "iri": "fac:bad_facet_no_observable",
+      "shape": "sh:FacetShape",
+      "defect": "no observable declared"
+    },
+    {
+      "iri": "fac:bad_facet_12_domains",
+      "shape": "sh:FacetShape",
+      "defect": "criticality missing for the 13th domain"
+    },
+    {
+      "iri": "fac:bad_facet_beta_above_one",
+      "shape": "sh:FacetShape",
+      "defect": "participation beta above 1"
+    },
+    {
+      "iri": "fac:bad_facet_no_primary_pillar",
+      "shape": "sh:FacetShape",
+      "defect": "no primary pillar declared"
+    },
+    {
+      "iri": "fac:bad_facet_unknown_policy",
+      "shape": "sh:FacetShape",
+      "defect": "aggregation policy not in the declared set"
+    },
+    {
+      "iri": "fac:bad_facet_negative_beta",
+      "shape": "sh:FacetShape",
+      "defect": "negative beta"
+    },
+    {
+      "iri": "eth:bad_slot_weight_out_of_range",
+      "shape": "sh:LatticeSlotShape",
+      "defect": "slot weight above 1"
+    },
+    {
+      "iri": "eth:bad_slot_no_term",
+      "shape": "sh:LatticeSlotShape",
+      "defect": "slot attached to no structural term"
+    },
+    {
+      "iri": "eth:bad_slot_unknown_kind",
+      "shape": "sh:LatticeSlotShape",
+      "defect": "unknown lattice slot kind"
+    },
+    {
+      "iri": "eth:bad_term_unnormalised",
+      "shape": "sh:StructuralTermShape",
+      "defect": "term weights do not sum to 1"
+    },
+    {
+      "iri": "cal:bad_calibration_lam_sum",
+      "shape": "sh:CalibrationShape",
+      "defect": "pillar weights do not sum to 1"
+    },
+    {
+      "iri": "cal:bad_calibration_mu_sum",
+      "shape": "sh:CalibrationShape",
+      "defect": "failure probabilities mu do not sum to 1"
+    },
+    {
+      "iri": "cal:bad_calibration_budget",
+      "shape": "sh:CalibrationShape",
+      "defect": "penalty budget exceeded"
+    },
+    {
+      "iri": "cal:bad_calibration_theta",
+      "shape": "sh:CalibrationShape",
+      "defect": "veto threshold above 1"
+    },
+    {
+      "iri": "cal:bad_calibration_negative_hysteresis",
+      "shape": "sh:CalibrationShape",
+      "defect": "negative hysteresis"
+    },
+    {
+      "iri": "cal:bad_calibration_abstain_floor",
+      "shape": "sh:CalibrationShape",
+      "defect": "abstention threshold above 1"
+    },
+    {
+      "iri": "cal:bad_calibration_stake_weights",
+      "shape": "sh:CalibrationShape",
+      "defect": "stakes coefficients do not sum to 1"
+    },
+    {
+      "iri": "cal:bad_calibration_missing_lattice",
+      "shape": "sh:CalibrationShape",
+      "defect": "calibration does not use the four structural terms"
+    },
+    {
+      "iri": "cse:bad_case_no_domain",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case with no domain"
+    },
+    {
+      "iri": "cse:bad_case_no_severity",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case with no severity band"
+    },
+    {
+      "iri": "cse:bad_case_no_prudential",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case with no prudential mode"
+    },
+    {
+      "iri": "cse:bad_case_no_horizon",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case with no horizon"
+    },
+    {
+      "iri": "cse:bad_case_no_reversibility",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case with no reversibility"
+    },
+    {
+      "iri": "cse:bad_case_unknown_severity",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "severity band outside the declared set"
+    },
+    {
+      "iri": "cse:bad_case_uncertainty_above_one",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "epistemic uncertainty above 1"
+    },
+    {
+      "iri": "cse:bad_case_zero_consequence",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "consequence mass of zero"
+    },
+    {
+      "iri": "cse:bad_case_exposure_above_one",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "exposure scale above 1"
+    },
+    {
+      "iri": "cse:bad_case_single_critical_pillar",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "fewer than two declared critical pillars"
+    },
+    {
+      "iri": "cse:bad_case_unresolved_without_conflict",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "status unresolved with no conflict attached"
+    },
+    {
+      "iri": "cse:bad_case_unknown_status",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "conflict status outside the declared set"
+    },
+    {
+      "iri": "cse:bad_case_no_norms",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case engaging no norm"
+    },
+    {
+      "iri": "cse:bad_case_27_requirements",
+      "shape": "sh:EthicalCaseShape",
+      "defect": "case with 27 instead of 28 facet requirements"
+    },
+    {
+      "iri": "cse:bad_profile_no_layer",
+      "shape": "sh:ProfileShape",
+      "defect": "profile with no agency layer"
+    },
+    {
+      "iri": "cse:bad_profile_coverage_above_one",
+      "shape": "sh:ProfileShape",
+      "defect": "coverage above 1"
+    },
+    {
+      "iri": "cse:bad_profile_no_observation",
+      "shape": "sh:ProfileShape",
+      "defect": "profile with no facet observation"
+    },
+    {
+      "iri": "cse:bad_observation_value_above_one",
+      "shape": "sh:FacetObservationShape",
+      "defect": "observed level above 1"
+    },
+    {
+      "iri": "cse:bad_observation_no_facet",
+      "shape": "sh:FacetObservationShape",
+      "defect": "observation with no facet"
+    },
+    {
+      "iri": "cse:bad_requirement_below_floor",
+      "shape": "sh:FacetRequirementShape",
+      "defect": "requirement below the canonical floor"
+    },
+    {
+      "iri": "cse:bad_conf_adequacy_above_one",
+      "shape": "sh:ConfrontationShape",
+      "defect": "adequacy above 1"
+    },
+    {
+      "iri": "cse:bad_conf_adequacy_negative",
+      "shape": "sh:ConfrontationShape",
+      "defect": "negative adequacy"
+    },
+    {
+      "iri": "cse:bad_conf_no_decision",
+      "shape": "sh:ConfrontationShape",
+      "defect": "confrontation without a verdict"
+    },
+    {
+      "iri": "cse:bad_conf_two_decisions",
+      "shape": "sh:ConfrontationShape",
+      "defect": "two verdicts for one confrontation"
+    },
+    {
+      "iri": "cse:bad_conf_unknown_decision",
+      "shape": "sh:ConfrontationShape",
+      "defect": "verdict outside the ladder"
+    },
+    {
+      "iri": "cse:bad_conf_level_above_one",
+      "shape": "sh:ConfrontationShape",
+      "defect": "pillar level above 1"
+    },
+    {
+      "iri": "cse:bad_conf_no_case",
+      "shape": "sh:ConfrontationShape",
+      "defect": "confrontation not linked to a case"
+    },
+    {
+      "iri": "cse:bad_conf_no_calibration",
+      "shape": "sh:ConfrontationShape",
+      "defect": "confrontation without a calibration"
+    },
+    {
+      "iri": "cse:bad_conf_negative_deficit",
+      "shape": "sh:ConfrontationShape",
+      "defect": "negative pillar deficit"
+    },
+    {
+      "iri": "cse:bad_conf_S4_above_S3",
+      "shape": "sh:ConfrontationShape",
+      "defect": "cell term exceeds the face term"
+    },
+    {
+      "iri": "cse:bad_conf_sigma_above_max",
+      "shape": "sh:ConfrontationShape",
+      "defect": "prudential floor above the declared maximum"
+    },
+    {
+      "iri": "cse:bad_conf_risk_increases",
+      "shape": "sh:ConfrontationShape",
+      "defect": "residual risk above the consequence mass"
+    },
+    {
+      "iri": "cse:bad_conf_low_coverage",
+      "shape": "sh:ConfrontationShape",
+      "defect": "profile covers less than 70% of the facets"
+    },
+    {
+      "iri": "cse:bad_conf_failure_probability",
+      "shape": "sh:ConfrontationShape",
+      "defect": "failure probability above the clamped maximum"
+    },
+    {
+      "iri": "cse:bad_conf_no_guard_count",
+      "shape": "sh:ConfrontationShape",
+      "defect": "no guard-failure count recorded"
+    },
+    {
+      "iri": "norm:bad_norm_no_pillar",
+      "shape": "sh:NormShape",
+      "defect": "norm that targets no pillar"
+    },
+    {
+      "iri": "norm:bad_norm_no_instrument",
+      "shape": "sh:NormShape",
+      "defect": "obligation with no instrument behind it"
+    },
+    {
+      "iri": "norm:bad_prohibition_no_defeasibility",
+      "shape": "sh:NormShape",
+      "defect": "prohibition with no defeasibility declared"
+    },
+    {
+      "iri": "norm:bad_prohibition_no_consequence",
+      "shape": "sh:ProhibitionShape",
+      "defect": "prohibition with no declared consequence"
+    },
+    {
+      "iri": "norm:bad_permission_no_scope",
+      "shape": "sh:PermissionShape",
+      "defect": "permission with no scope"
+    },
+    {
+      "iri": "norm:bad_conflict_one_norm",
+      "shape": "sh:NormConflictShape",
+      "defect": "conflict with only one norm in the pair"
+    },
+    {
+      "iri": "norm:bad_conflict_no_resolution",
+      "shape": "sh:NormConflictShape",
+      "defect": "conflict with neither a strategy nor a priority"
+    },
+    {
+      "iri": "norm:bad_conflict_unknown_status",
+      "shape": "sh:NormConflictShape",
+      "defect": "conflict status outside the declared set"
+    },
+    {
+      "iri": "ag:bad_agent_no_layer",
+      "shape": "sh:DelegationShape",
+      "defect": "agent placed in no agency layer"
+    },
+    {
+      "iri": "ag:bad_agent_factor_above_two",
+      "shape": "sh:DelegationShape",
+      "defect": "attainment factor above 2"
+    },
+    {
+      "iri": "ag:bad_agent_no_fallback",
+      "shape": "sh:DelegationShape",
+      "defect": "agent with no fallback policy"
+    },
+    {
+      "iri": "cse:bad_link_delegates_forbidden_duty",
+      "shape": "sh:ChainLinkShape",
+      "defect": "duty delegated to an agent forbidden to carry it"
+    },
+    {
+      "iri": "ag:bad_chain_no_root",
+      "shape": "sh:DelegationChainShape",
+      "defect": "delegation chain with no root agent"
+    },
+    {
+      "iri": "cse:bad_chain_no_weakest_link",
+      "shape": "sh:ConfrontationChainShape",
+      "defect": "layered chain without a weakest link"
+    },
+    {
+      "iri": "eth:bad_drift_no_pillar",
+      "shape": "sh:DriftProfileShape",
+      "defect": "drift profile with no pillar"
+    },
+    {
+      "iri": "eth:bad_drift_rate_out_of_range",
+      "shape": "sh:DriftProfileShape",
+      "defect": "drift rate outside [-1, 1]"
+    },
+    {
+      "iri": "cse:bad_fact_compliance_above_one",
+      "shape": "sh:GroundedFactShape",
+      "defect": "compliance factor above 1"
+    },
+    {
+      "iri": "cse:bad_fact_no_facet",
+      "shape": "sh:GroundedFactShape",
+      "defect": "fact anchored to no facet"
+    },
+    {
+      "iri": "cse:bad_fact_no_compliance",
+      "shape": "sh:GroundedFactShape",
+      "defect": "fact with no compliance value"
+    },
+    {
+      "iri": "cse:bad_fact_no_strength",
+      "shape": "sh:GroundedFactShape",
+      "defect": "fact with no E30 strength"
+    },
+    {
+      "iri": "cse:bad_fact_negative_cap",
+      "shape": "sh:GroundedFactShape",
+      "defect": "negative grounding cap"
+    },
+    {
+      "iri": "cse:bad_case_no_grounding",
+      "shape": "sh:GroundingCaseShape",
+      "defect": "case with no grounded facts"
+    },
+    {
+      "iri": "cse:bad_conf_no_grounding_strength",
+      "shape": "sh:ConfrontationGroundingShape",
+      "defect": "confrontation without an E30 grounding strength"
+    },
+    {
+      "iri": "cse:bad_conf_grounding_above_one",
+      "shape": "sh:ConfrontationGroundingShape",
+      "defect": "grounding strength above 1"
+    },
+    {
+      "iri": "cse:bad_conf_negative_material_gap",
+      "shape": "sh:ConfrontationGroundingShape",
+      "defect": "negative material gap in the pessimistic mode"
+    },
+    {
+      "iri": "cse:bad_conf_two_strengths",
+      "shape": "sh:ConfrontationGroundingShape",
+      "defect": "two grounding strengths for one confrontation"
+    },
+    {
+      "iri": "cse:bad_observation_low_confidence",
+      "shape": "sh:GroundedObservationShape",
+      "defect": "facet observation with confidence below 0.30"
+    },
+    {
+      "iri": "cse:bad_observation_level_above_one",
+      "shape": "sh:GroundedObservationShape",
+      "defect": "facet observation with a level above 1"
+    },
+    {
+      "iri": "cse:bad_conf_abstention_not_boolean",
+      "shape": "sh:ConfrontationGroundingShape",
+      "defect": "E29 abstention flag emitted as a string instead of a boolean"
+    }
+  ],
+  "v4_fixtures": 73,
+  "e30_fixtures": 13
+}

@@ -1,0 +1,720 @@
+{
+  "battery": "B20",
+  "question": "which of the v13 mechanisms change agreement with the panels?",
+  "n_cases_sampled": 1080,
+  "n_personas": 120,
+  "calibration": "frozen r3 ladder (the convention declared in the manifest)",
+  "results": [
+    {
+      "name": "v13_baseline",
+      "variant": {
+        "name": "v13_baseline",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4028,
+      "kappa_by_stratum": {
+        "contested": 0.0531,
+        "majority": 0.1269,
+        "unanimous": 0.7287
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4146,
+        "B": 0.2402,
+        "C": 0.3864
+      },
+      "kappa_by_domain": {
+        "DS": 0.4017,
+        "ED": 0.4788,
+        "FI": 0.2769,
+        "GP": 0.3476,
+        "IC": 0.4873,
+        "IM": 0.3442,
+        "JS": 0.4268,
+        "MA": 0.5373,
+        "PD": 0.3497,
+        "RS": 0.4642,
+        "SA": 0.343,
+        "TB": 0.2732,
+        "TS": 0.4988
+      },
+      "mean_adequacy": 0.358,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 99430,
+        "REVIEW_REQUIRED": 20048,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 176
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2496,
+        "REVIEW_REQUIRED": 0.2866,
+        "ABSTAIN": 0.3185,
+        "ALLOW_WITH_GUARDS": 0.2227
+      },
+      "runtime_seconds": 69.1
+    },
+    {
+      "name": "lambda(E) s=0.5",
+      "variant": {
+        "name": "lambda(E) s=0.5",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4028,
+      "kappa_by_stratum": {
+        "contested": 0.0536,
+        "majority": 0.1268,
+        "unanimous": 0.7286
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4146,
+        "B": 0.2401,
+        "C": 0.3864
+      },
+      "kappa_by_domain": {
+        "DS": 0.4017,
+        "ED": 0.4788,
+        "FI": 0.2768,
+        "GP": 0.3472,
+        "IC": 0.4872,
+        "IM": 0.3442,
+        "JS": 0.4275,
+        "MA": 0.5373,
+        "PD": 0.35,
+        "RS": 0.4642,
+        "SA": 0.3429,
+        "TB": 0.2732,
+        "TS": 0.4984
+      },
+      "mean_adequacy": 0.3569,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 99423,
+        "REVIEW_REQUIRED": 20055,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 176
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2492,
+        "REVIEW_REQUIRED": 0.2862,
+        "ABSTAIN": 0.318,
+        "ALLOW_WITH_GUARDS": 0.2228
+      },
+      "runtime_seconds": 73.34,
+      "delta_kappa_vs_baseline": 0.0,
+      "delta_ci95_bootstrap": [
+        -0.0001,
+        0.0001
+      ]
+    },
+    {
+      "name": "lambda(E) s=1.0",
+      "variant": {
+        "name": "lambda(E) s=1.0",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4027,
+      "kappa_by_stratum": {
+        "contested": 0.0534,
+        "majority": 0.1266,
+        "unanimous": 0.7284
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4145,
+        "B": 0.2401,
+        "C": 0.3862
+      },
+      "kappa_by_domain": {
+        "DS": 0.4017,
+        "ED": 0.4788,
+        "FI": 0.2765,
+        "GP": 0.3466,
+        "IC": 0.4869,
+        "IM": 0.3442,
+        "JS": 0.4275,
+        "MA": 0.5373,
+        "PD": 0.3498,
+        "RS": 0.4637,
+        "SA": 0.3426,
+        "TB": 0.2732,
+        "TS": 0.4979
+      },
+      "mean_adequacy": 0.3559,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 99424,
+        "REVIEW_REQUIRED": 20054,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 176
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2488,
+        "REVIEW_REQUIRED": 0.2858,
+        "ABSTAIN": 0.3175,
+        "ALLOW_WITH_GUARDS": 0.2228
+      },
+      "runtime_seconds": 71.63,
+      "delta_kappa_vs_baseline": -0.0001,
+      "delta_ci95_bootstrap": [
+        -0.0004,
+        0.0
+      ]
+    },
+    {
+      "name": "lambda(E) s=2.0",
+      "variant": {
+        "name": "lambda(E) s=2.0",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4025,
+      "kappa_by_stratum": {
+        "contested": 0.0528,
+        "majority": 0.1263,
+        "unanimous": 0.7284
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4142,
+        "B": 0.2401,
+        "C": 0.3861
+      },
+      "kappa_by_domain": {
+        "DS": 0.4017,
+        "ED": 0.4783,
+        "FI": 0.2762,
+        "GP": 0.3465,
+        "IC": 0.4861,
+        "IM": 0.3442,
+        "JS": 0.4278,
+        "MA": 0.5373,
+        "PD": 0.3478,
+        "RS": 0.4637,
+        "SA": 0.3424,
+        "TB": 0.2737,
+        "TS": 0.4979
+      },
+      "mean_adequacy": 0.3539,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 99442,
+        "REVIEW_REQUIRED": 20036,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 176
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2481,
+        "REVIEW_REQUIRED": 0.2851,
+        "ABSTAIN": 0.3165,
+        "ALLOW_WITH_GUARDS": 0.2228
+      },
+      "runtime_seconds": 58.57,
+      "delta_kappa_vs_baseline": -0.0003,
+      "delta_ci95_bootstrap": [
+        -0.0007,
+        -0.0001
+      ]
+    },
+    {
+      "name": "cross-pillar zeta=0.05",
+      "variant": {
+        "name": "cross-pillar zeta=0.05",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4,
+      "kappa_by_stratum": {
+        "contested": 0.0439,
+        "majority": 0.1222,
+        "unanimous": 0.7279
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4115,
+        "B": 0.2392,
+        "C": 0.3828
+      },
+      "kappa_by_domain": {
+        "DS": 0.4017,
+        "ED": 0.4788,
+        "FI": 0.2767,
+        "GP": 0.343,
+        "IC": 0.4787,
+        "IM": 0.3444,
+        "JS": 0.4198,
+        "MA": 0.5373,
+        "PD": 0.3404,
+        "RS": 0.4627,
+        "SA": 0.3375,
+        "TB": 0.2739,
+        "TS": 0.4999
+      },
+      "mean_adequacy": 0.3491,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 99787,
+        "REVIEW_REQUIRED": 19692,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2468,
+        "REVIEW_REQUIRED": 0.2843,
+        "ABSTAIN": 0.3156,
+        "ALLOW_WITH_GUARDS": 0.2248
+      },
+      "runtime_seconds": 57.36,
+      "delta_kappa_vs_baseline": -0.0028,
+      "delta_ci95_bootstrap": [
+        -0.0036,
+        -0.0021
+      ]
+    },
+    {
+      "name": "cross-pillar zeta=0.10",
+      "variant": {
+        "name": "cross-pillar zeta=0.10",
+        "oversight": "unspecified"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.3969,
+      "kappa_by_stratum": {
+        "contested": 0.0319,
+        "majority": 0.1165,
+        "unanimous": 0.7279
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4085,
+        "B": 0.2383,
+        "C": 0.3791
+      },
+      "kappa_by_domain": {
+        "DS": 0.4017,
+        "ED": 0.4781,
+        "FI": 0.2786,
+        "GP": 0.3335,
+        "IC": 0.4706,
+        "IM": 0.3445,
+        "JS": 0.4153,
+        "MA": 0.5373,
+        "PD": 0.3282,
+        "RS": 0.4608,
+        "SA": 0.3291,
+        "TB": 0.2743,
+        "TS": 0.5024
+      },
+      "mean_adequacy": 0.3402,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 100168,
+        "REVIEW_REQUIRED": 19312,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 174
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2441,
+        "REVIEW_REQUIRED": 0.2818,
+        "ABSTAIN": 0.3128,
+        "ALLOW_WITH_GUARDS": 0.2267
+      },
+      "runtime_seconds": 57.2,
+      "delta_kappa_vs_baseline": -0.0059,
+      "delta_ci95_bootstrap": [
+        -0.007,
+        -0.0049
+      ]
+    },
+    {
+      "name": "oversight from facts",
+      "variant": {
+        "name": "oversight from facts",
+        "oversight": "derived"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4106,
+      "kappa_by_stratum": {
+        "contested": 0.0788,
+        "majority": 0.1576,
+        "unanimous": 0.7211
+      },
+      "pairs_by_stratum": {
+        "contested": 22838,
+        "majority": 46284,
+        "unanimous": 61558
+      },
+      "kappa_vs_panel": {
+        "A": 0.4171,
+        "B": 0.2368,
+        "C": 0.3873
+      },
+      "kappa_by_domain": {
+        "DS": 0.3985,
+        "ED": 0.4615,
+        "FI": 0.2921,
+        "GP": 0.3511,
+        "IC": 0.519,
+        "IM": 0.3358,
+        "JS": 0.4611,
+        "MA": 0.5215,
+        "PD": 0.3783,
+        "RS": 0.4596,
+        "SA": 0.3503,
+        "TB": 0.2674,
+        "TS": 0.5178
+      },
+      "mean_adequacy": 0.3587,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 97507,
+        "REVIEW_REQUIRED": 21971,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 176
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2495,
+        "REVIEW_REQUIRED": 0.285,
+        "ABSTAIN": 0.3187,
+        "ALLOW_WITH_GUARDS": 0.2227
+      },
+      "runtime_seconds": 57.05,
+      "delta_kappa_vs_baseline": 0.0078,
+      "delta_ci95_bootstrap": [
+        0.0057,
+        0.01
+      ]
+    },
+    {
+      "name": "oversight from facts + zeta=0.05",
+      "variant": {
+        "name": "oversight from facts + zeta=0.05",
+        "oversight": "derived"
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4082,
+      "kappa_by_stratum": {
+        "contested": 0.0685,
+        "majority": 0.1535,
+        "unanimous": 0.721
+      },
+      "pairs_by_stratum": {
+        "contested": 22838,
+        "majority": 46284,
+        "unanimous": 61558
+      },
+      "kappa_vs_panel": {
+        "A": 0.4139,
+        "B": 0.2363,
+        "C": 0.3839
+      },
+      "kappa_by_domain": {
+        "DS": 0.3985,
+        "ED": 0.4615,
+        "FI": 0.2923,
+        "GP": 0.3463,
+        "IC": 0.5127,
+        "IM": 0.3359,
+        "JS": 0.4574,
+        "MA": 0.5215,
+        "PD": 0.3674,
+        "RS": 0.4581,
+        "SA": 0.3453,
+        "TB": 0.2682,
+        "TS": 0.5183
+      },
+      "mean_adequacy": 0.3498,
+      "mean_cross_pillar_duty": 0.1839,
+      "decision_distribution": {
+        "PROHIBIT": 97893,
+        "REVIEW_REQUIRED": 21586,
+        "ABSTAIN": 11026,
+        "ALLOW_WITH_GUARDS": 175
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.2468,
+        "REVIEW_REQUIRED": 0.2827,
+        "ABSTAIN": 0.3158,
+        "ALLOW_WITH_GUARDS": 0.2248
+      },
+      "runtime_seconds": 57.86,
+      "delta_kappa_vs_baseline": 0.0054,
+      "delta_ci95_bootstrap": [
+        0.003,
+        0.0078
+      ]
+    },
+    {
+      "name": "revised beta canon",
+      "variant": {
+        "name": "revised beta canon",
+        "oversight": "unspecified",
+        "beta_overrides": {
+          "_comment": "D5.5 candidate revision: break the beta-ties that make facets arithmetically indistinguishable inside a pillar (26 pairs with ||delta beta||_inf < 0.12, 8 pairs identical). Each change is justified by the duty's semantic anchor, not by a fitting procedure; R3 (every non-zero beta >= 0.15) is respected. Tested by B20 before adoption.",
+          "W6": [
+            0.45,
+            0.0,
+            0.55,
+            0.0
+          ],
+          "C2": [
+            0.0,
+            0.7,
+            0.15,
+            0.15
+          ],
+          "C5": [
+            0.0,
+            0.6,
+            0.15,
+            0.25
+          ],
+          "M2": [
+            0.0,
+            0.15,
+            0.7,
+            0.15
+          ],
+          "M4": [
+            0.0,
+            0.25,
+            0.55,
+            0.2
+          ],
+          "M10": [
+            0.25,
+            0.0,
+            0.6,
+            0.15
+          ],
+          "K1": [
+            0.0,
+            0.15,
+            0.15,
+            0.7
+          ],
+          "K2": [
+            0.0,
+            0.3,
+            0.2,
+            0.5
+          ],
+          "K5": [
+            0.35,
+            0.15,
+            0.0,
+            0.5
+          ],
+          "K7": [
+            0.0,
+            0.15,
+            0.25,
+            0.6
+          ]
+        }
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4047,
+      "kappa_by_stratum": {
+        "contested": 0.041,
+        "majority": 0.1251,
+        "unanimous": 0.7344
+      },
+      "pairs_by_stratum": {
+        "contested": 22366,
+        "majority": 44619,
+        "unanimous": 63695
+      },
+      "kappa_vs_panel": {
+        "A": 0.4155,
+        "B": 0.2399,
+        "C": 0.3851
+      },
+      "kappa_by_domain": {
+        "DS": 0.3952,
+        "ED": 0.4835,
+        "FI": 0.2781,
+        "GP": 0.3446,
+        "IC": 0.4932,
+        "IM": 0.3445,
+        "JS": 0.4322,
+        "MA": 0.5348,
+        "PD": 0.3401,
+        "RS": 0.4645,
+        "SA": 0.3343,
+        "TB": 0.2882,
+        "TS": 0.5264
+      },
+      "mean_adequacy": 0.3518,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 99931,
+        "REVIEW_REQUIRED": 19339,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 174
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.25,
+        "REVIEW_REQUIRED": 0.2871,
+        "ABSTAIN": 0.3195,
+        "ALLOW_WITH_GUARDS": 0.2226
+      },
+      "runtime_seconds": 58.39,
+      "delta_kappa_vs_baseline": 0.0019,
+      "delta_ci95_bootstrap": [
+        0.0009,
+        0.0032
+      ]
+    },
+    {
+      "name": "revised beta + oversight",
+      "variant": {
+        "name": "revised beta + oversight",
+        "oversight": "derived",
+        "beta_overrides": {
+          "_comment": "D5.5 candidate revision: break the beta-ties that make facets arithmetically indistinguishable inside a pillar (26 pairs with ||delta beta||_inf < 0.12, 8 pairs identical). Each change is justified by the duty's semantic anchor, not by a fitting procedure; R3 (every non-zero beta >= 0.15) is respected. Tested by B20 before adoption.",
+          "W6": [
+            0.45,
+            0.0,
+            0.55,
+            0.0
+          ],
+          "C2": [
+            0.0,
+            0.7,
+            0.15,
+            0.15
+          ],
+          "C5": [
+            0.0,
+            0.6,
+            0.15,
+            0.25
+          ],
+          "M2": [
+            0.0,
+            0.15,
+            0.7,
+            0.15
+          ],
+          "M4": [
+            0.0,
+            0.25,
+            0.55,
+            0.2
+          ],
+          "M10": [
+            0.25,
+            0.0,
+            0.6,
+            0.15
+          ],
+          "K1": [
+            0.0,
+            0.15,
+            0.15,
+            0.7
+          ],
+          "K2": [
+            0.0,
+            0.3,
+            0.2,
+            0.5
+          ],
+          "K5": [
+            0.35,
+            0.15,
+            0.0,
+            0.5
+          ],
+          "K7": [
+            0.0,
+            0.15,
+            0.25,
+            0.6
+          ]
+        }
+      },
+      "n_pairs": 130680,
+      "kappa_overall": 0.4122,
+      "kappa_by_stratum": {
+        "contested": 0.0665,
+        "majority": 0.1556,
+        "unanimous": 0.7269
+      },
+      "pairs_by_stratum": {
+        "contested": 22838,
+        "majority": 46284,
+        "unanimous": 61558
+      },
+      "kappa_vs_panel": {
+        "A": 0.418,
+        "B": 0.237,
+        "C": 0.3853
+      },
+      "kappa_by_domain": {
+        "DS": 0.392,
+        "ED": 0.4659,
+        "FI": 0.2933,
+        "GP": 0.3455,
+        "IC": 0.5293,
+        "IM": 0.336,
+        "JS": 0.4665,
+        "MA": 0.519,
+        "PD": 0.3636,
+        "RS": 0.4599,
+        "SA": 0.3418,
+        "TB": 0.2808,
+        "TS": 0.542
+      },
+      "mean_adequacy": 0.3525,
+      "mean_cross_pillar_duty": 0.1825,
+      "decision_distribution": {
+        "PROHIBIT": 98067,
+        "REVIEW_REQUIRED": 21203,
+        "ABSTAIN": 11236,
+        "ALLOW_WITH_GUARDS": 174
+      },
+      "mean_review_need_by_decision": {
+        "PROHIBIT": 0.25,
+        "REVIEW_REQUIRED": 0.2855,
+        "ABSTAIN": 0.3197,
+        "ALLOW_WITH_GUARDS": 0.2225
+      },
+      "runtime_seconds": 62.45,
+      "delta_kappa_vs_baseline": 0.0094,
+      "delta_ci95_bootstrap": [
+        0.0069,
+        0.012
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "cases": 1200,
+  "profiles": 40,
+  "probes": 210,
+  "gold_cases": 1440,
+  "confrontations": 14400,
+  "adequacy_1_share": 0.0003,
+  "gate_adequacy_1_below_3pct": true,
+  "veto_share_by_severity": {
+    "low": 0.1014,
+    "medium": 0.2356,
+    "high": 0.315,
+    "critical": 0.3661
+  },
+  "veto_share_overall": 0.2545,
+  "gate_veto_monotone_in_severity": true,
+  "gate_veto_share_overall_in_15_60pct": true,
+  "severity_monotonicity_pairs": 10800,
+  "severity_monotonicity_failures": 0,
+  "severity_monotonicity_rate": 1.0,
+  "gate_monotonicity_above_95pct": true,
+  "decision_distribution": {
+    "REVIEW_REQUIRED": 0.3195,
+    "ALLOW": 0.0847,
+    "ALLOW_WITH_GUARDS": 0.1777,
+    "PROHIBIT": 0.4181
+  },
+  "gold_consensus_distribution": {
+    "REVIEW_REQUIRED": 717,
+    "PROHIBIT": 720,
+    "ALLOW_WITH_GUARDS": 3
+  },
+  "panelA_distribution": {
+    "REVIEW_REQUIRED": 741,
+    "PROHIBIT": 696,
+    "ALLOW_WITH_GUARDS": 3
+  },
+  "panelB_distribution": {
+    "ALLOW_WITH_GUARDS": 615,
+    "REVIEW_REQUIRED": 621,
+    "ALLOW": 27,
+    "PROHIBIT": 177
+  },
+  "panel_agreement_rate": 0.3125,
+  "inter_panel_kappa": 0.0422,
+  "gold_rule_hits_A": {
+    "A4": 696,
+    "A1": 600,
+    "A8": 45,
+    "A2": 60,
+    "A3": 36,
+    "A6": 3
+  },
+  "gold_rule_hits_B": {
+    "B3": 615,
+    "B2": 621,
+    "B4": 27,
+    "B1": 177
+  },
+  "domains": {
+    "SA": 108,
+    "JS": 108,
+    "IC": 108,
+    "FI": 108,
+    "PD": 108,
+    "GP": 108,
+    "IM": 108,
+    "ED": 84,
+    "TB": 72,
+    "MA": 72,
+    "TS": 72,
+    "RS": 72,
+    "DS": 72
+  },
+  "severities": {
+    "low": 300,
+    "medium": 300,
+    "high": 300,
+    "critical": 300
+  },
+  "split_sizes": {
+    "train": 840,
+    "calibration": 180,
+    "test": 180
+  }
+}

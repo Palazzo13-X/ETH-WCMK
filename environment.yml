@@ -1,0 +1,15 @@
+# Conda environment for exact reproduction of round r5.
+# conda env create -f environment.yml && conda activate ethwcmk
+name: ethwcmk
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - rdflib=7.6
+  - pyshacl=0.40
+  - numpy=2.5
+  - pytest=9.2
+  - pip:
+    - ruff>=0.6
+    - black>=24.0

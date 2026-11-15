@@ -1,0 +1,4 @@
+chunk 1: 120 cases, 166843 triples, v4 violations 104, v6 violations 104
+chunk 2: 120 cases, 159154 triples, v4 violations 245, v6 violations 245
+chunk 3: 120 cases, 159668 triples, v4 violations 527, v6 violations 527
+chunk 4: 120 cases, 168465 triples, v4 violations 532, v6 violations 532

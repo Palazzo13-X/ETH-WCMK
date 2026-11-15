@@ -1,0 +1,261 @@
+{
+  "battery": "B22",
+  "question": "does a declared level survive a fact that contradicts it?",
+  "n_pairs": 43210,
+  "n_pairs_with_contradiction": 42464,
+  "share_pairs_with_contradiction": 0.9827,
+  "caps_applied_total": 224097,
+  "mean_excess_over_cap": 0.3611,
+  "by_fact": {
+    "affected_can_exit": {
+      "count": 19243,
+      "mean_excess": 0.3132,
+      "max_excess": 0.4275
+    },
+    "appeal_channel": {
+      "count": 9017,
+      "mean_excess": 0.3821,
+      "max_excess": 0.5225
+    },
+    "consent_obtained": {
+      "count": 16756,
+      "mean_excess": 0.4521,
+      "max_excess": 0.6175
+    },
+    "containment_exercised": {
+      "count": 17529,
+      "mean_excess": 0.4256,
+      "max_excess": 0.6175
+    },
+    "data_minimised": {
+      "count": 19180,
+      "mean_excess": 0.3506,
+      "max_excess": 0.475
+    },
+    "human_review_channel": {
+      "count": 19850,
+      "mean_excess": 0.4781,
+      "max_excess": 0.6175
+    },
+    "independent_audit": {
+      "count": 9112,
+      "mean_excess": 0.2479,
+      "max_excess": 0.38
+    },
+    "logs_available": {
+      "count": 19458,
+      "mean_excess": 0.4551,
+      "max_excess": 0.665
+    },
+    "notice_given": {
+      "count": 16754,
+      "mean_excess": 0.4792,
+      "max_excess": 0.6175
+    },
+    "prior_incident": {
+      "count": 8722,
+      "mean_excess": 0.1412,
+      "max_excess": 0.2375
+    },
+    "remedy_days": {
+      "count": 32404,
+      "mean_excess": 0.2886,
+      "max_excess": 0.7125
+    },
+    "sunset_review": {
+      "count": 25480,
+      "mean_excess": 0.3197,
+      "max_excess": 0.4275
+    },
+    "worker_consulted": {
+      "count": 10592,
+      "mean_excess": 0.2201,
+      "max_excess": 0.3325
+    }
+  },
+  "by_facet": {
+    "C3": {
+      "count": 19243,
+      "mean_excess": 0.3132
+    },
+    "C6": {
+      "count": 8722,
+      "mean_excess": 0.1412
+    },
+    "C7": {
+      "count": 17529,
+      "mean_excess": 0.4256
+    },
+    "C8": {
+      "count": 19180,
+      "mean_excess": 0.3506
+    },
+    "K9": {
+      "count": 25480,
+      "mean_excess": 0.3197
+    },
+    "M10": {
+      "count": 27348,
+      "mean_excess": 0.3623
+    },
+    "M6": {
+      "count": 28570,
+      "mean_excess": 0.389
+    },
+    "M7": {
+      "count": 32404,
+      "mean_excess": 0.2886
+    },
+    "M8": {
+      "count": 16754,
+      "mean_excess": 0.4792
+    },
+    "M9": {
+      "count": 28867,
+      "mean_excess": 0.4481
+    }
+  },
+  "verdict_flips": {
+    "REVIEW_REQUIRED->PROHIBIT": 15153,
+    "PROHIBIT->PROHIBIT": 12772,
+    "ABSTAIN->ABSTAIN": 5826,
+    "REVIEW_REQUIRED->REVIEW_REQUIRED": 5582,
+    "ALLOW_WITH_GUARDS->PROHIBIT": 1620,
+    "REVIEW_REQUIRED->ABSTAIN": 906,
+    "ALLOW_WITH_GUARDS->REVIEW_REQUIRED": 567,
+    "PROHIBIT->ABSTAIN": 426,
+    "ALLOW_WITH_GUARDS->ABSTAIN": 212,
+    "ALLOW_WITH_GUARDS->ALLOW_WITH_GUARDS": 132,
+    "ALLOW->PROHIBIT": 5,
+    "ALLOW->REVIEW_REQUIRED": 5,
+    "ALLOW->ABSTAIN": 4
+  },
+  "n_verdict_flips": 18898,
+  "flip_share": 0.4374,
+  "mean_adequacy_with_E30": 0.3633,
+  "mean_adequacy_without_E30": 0.6481,
+  "kappa_with_E30": 0.5526,
+  "kappa_without_E30": 0.2463,
+  "delta_kappa_E30": 0.3062,
+  "flip_examples": [
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "AGENT-declared",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "remedy_days": 7,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "REVIEW_REQUIRED",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.7531,
+      "aa_with": 0.5179
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-exemplary_capped-baseline-000",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "remedy_days": 7,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "ALLOW_WITH_GUARDS",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.9524,
+      "aa_with": 0.5221
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-exemplary_capped-degraded-001",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "remedy_days": 7,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "REVIEW_REQUIRED",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.7978,
+      "aa_with": 0.4992
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-exemplary_capped-optimistic-002",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "remedy_days": 7,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "REVIEW_REQUIRED",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.9415,
+      "aa_with": 0.5206
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-exemplary_capped-unverified-003",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "REVIEW_REQUIRED",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.7445,
+      "aa_with": 0.4814
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-solid-baseline-004",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "remedy_days": 7,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "ALLOW_WITH_GUARDS",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.9079,
+      "aa_with": 0.5081
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-solid-degraded-005",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "REVIEW_REQUIRED",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.7609,
+      "aa_with": 0.487
+    },
+    {
+      "case": "ETHCASE-A-1129",
+      "persona": "PERSONA-solid-optimistic-006",
+      "facts": {
+        "logs_available": false,
+        "notice_given": false,
+        "remedy_days": 7,
+        "sunset_review": false,
+        "affected_can_exit": false
+      },
+      "without_E30": "REVIEW_REQUIRED",
+      "with_E30": "PROHIBIT",
+      "aa_without": 0.938,
+      "aa_with": 0.519
+    }
+  ],
+  "runtime_seconds": 34.06
+}

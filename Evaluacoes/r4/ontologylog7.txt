@@ -1,0 +1,21 @@
+instance graph parsed: 258024 triples from instances_subset.ttl
+SHACL modules vs v4 shapes: conforms=False violations=1 (0.2 s)
+SHACL instances vs v4 shapes: conforms=False violations=23 (13.1 s)
+SHACL instances vs v6 shapes: conforms=False violations=806 (4.7 s)
+invalid fixtures invalid_examples.ttl (73 fixtures): 63/63 caught, 63 attributed to the intended shape
+invalid fixtures invalid_examples_v6.ttl (12 E30 fixtures): 12/12 caught, 12 attributed to the intended shape
+======================================================================
+GATE G4' verdict: CONDITIONAL / NOT MET
+triples: modules 7587 instances 258024 total validated 265599
+instantiated confrontations: 403
+SHACL v4 shapes on instances: 23 violations; v6 shapes: 806 ; modules: 1
+invalid fixtures caught: 75 / 75 attributed to the intended shape: 75
+SPARQL checks: 31 (deontic: 15 ) all pass: False
+failed checks: ['conflictStatus agrees with conflictResolved', 'every case declaring a norm conflict links a NormConflict individual', 'no declared duty (requirement) sits below the guard floor of the facet it governs', 'an incomplete profile never yields a non-ABSTAIN verdict', 'every facet declares exactly one aggregation policy', 'E30: every stored capValue equals requirement x (1 - strength x (1 - compliance))', 'chain links delegating no pillar (corpus gap)']
+mirror global max abs diff: 1.5666357100485584e-12
+verdict mismatches: {'python_ladder_vs_rdf': 0, 'core_decide_vs_rdf': 0, 'python_ladder_vs_core_decide': 0}
+lattice slots: 15 by kind: {'vertex': 4, 'edge': 6, 'face': 4, 'cell': 1} sums to one: True
+registry mismatches: 0
+seconds: 82.1
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r4/ontology_v4_validation.json
+======================================================================

@@ -1,0 +1,197 @@
+ETH-WCMK com LLMs
+Documento de Arquitetura v1Integração de LLMs como segunda camada de serviços sobre o núcleo formal ETH-WCMK
+Propósito: consolidar uma arquitetura estruturada e funcional em que um caso ético, descrito por ETHCASE, é confrontado com um perfil WCMK por meio do bridge, produzindo análise, decisão, risco residual, guardrails e relatório, com apoio de serviços LLM auditáveis.
+Princípio diretor
+LLMs entram no sistema como camada de serviço cognitivo e operacional. O fundamento ético, semântico e auditável permanece no núcleo formal ETH-WCMK: ETHCASE, WCMK, bridge, policies, bases canônicas e mecanismos de calibração.
+
+Resumo executivo
+O projeto ETH-WCMK já dispõe de uma base suficientemente madura para receber uma camada de serviços LLM sem perder sua identidade. Essa identidade repousa em três elementos centrais: a ontologia do caso ético (ETHCASE), a ontologia da agência ética (WCMK) e a ontologia ou camada de bridge que confronta contexto e agência para produzir uma adjudicação rastreável.
+A proposta desta arquitetura v1 é preservar esse núcleo e acrescentar uma segunda camada, orientada a serviços, capaz de realizar ingestão assistida, estruturação de casos, grounding normativo, sugestão de perfis WCMK, geração de explicações, produção de relatórios e criação controlada de edge cases. Em outras palavras, o LLM não se torna o fundamento ético do sistema; torna-se um conjunto de serviços especializados que ampliam a utilidade, a velocidade e a escalabilidade do núcleo.
+O resultado é uma arquitetura em quatro estratos: núcleo formal, camada de serviços LLM, orquestração e governança, e interfaces de uso. Essa arquitetura cria condições para pesquisa, operação, auditoria, treinamento e evolução futura, inclusive com múltiplos fornecedores de modelos, sem aprisionar o sistema a uma única API ou a um único estilo de prompting.
+1. Objetivos do documento
+Este documento organiza, em linguagem arquitetural, a próxima evolução do ETH-WCMK. Ele parte do estado atual do projeto, no qual já existem ontologias, bancos canônicos, policies, relatórios e dashboards, e propõe como os LLMs devem ser incorporados de forma coerente, segura e funcional.
+Os objetivos específicos são quatro: definir o papel do núcleo formal; definir o papel da nova camada de serviços LLM; especificar como um caso ético é confrontado com um perfil WCMK para gerar análise e relato; e indicar melhorias e possibilidades de expansão em médio prazo.
+2. Princípios de arquitetura
+O núcleo formal permanece soberano: a verdade operacional do sistema continua nos artefatos canônicos, não no texto livre gerado por modelos.
+ETHCASE modela o caso; WCMK modela a agência; o bridge modela a confrontação entre ambos. Esses papéis não devem ser confundidos.
+LLMs são serviços de segunda camada: extraem, propõem, explicam, recuperam, simulam e assistem; não devem substituir a adjudicação formal sem controles adicionais.
+Todo uso de LLM deve ser versionado e rastreável: modelo, prompt, schema, tool calls, fontes recuperadas, confiança e revisão humana precisam ser registradas.
+A arquitetura deve permanecer multi-fornecedor e orientada a padrões: trocar um modelo não deve exigir reconstruir as ontologias centrais.
+3. Visão geral da arquitetura
+A arquitetura proposta é organizada em quatro estratos, cada um com papel distinto e complementar.
+Estrato
+Função principal
+Artefatos centrais
+Saída típica
+A. Núcleo formal
+Representar, avaliar e registrar o caso ético e a agência
+ETHCASE, WCMK, bridge, policies, ethr, eths
+Risco contextual, qualidade de agência, risco residual, decisão
+B. Serviços LLM
+Oferecer serviços cognitivos e operacionais sobre o núcleo
+Case Structuring, Grounding, WCMK Profiling, Explanation, Edge Cases
+Propostas estruturadas, explicações, relatórios, cenários
+C. Orquestração e governança
+Controlar chamadas, revisão, confiança e proveniência
+Service registry, model registry, prompt registry, review workflow
+Execuções auditáveis e seguras
+D. Interfaces e uso
+Expor o sistema a pesquisadores, gestores e analistas
+Dashboards, assistente conversacional, formulários, relatórios
+Consultas, análises, comparações e relatórios
+
+4. Ontologias centrais e seus papéis
+4.1 ETHCASE
+A ontologia ETHCASE deve continuar sendo a representação do caso ético em si. Ela descreve situação, agentes, ações, consequências, vulnerabilidades, evidências, domínio, tensões normativas e risco contextual. Sua função é transformar narrativas heterogêneas em um contrato semântico canônico.
+Para receber melhor o apoio de LLMs sem perder pureza conceitual, recomenda-se separar um núcleo estável, aqui chamado de ethcase-core, de uma extensão analítica, aqui chamada de ethcase-analysis. O núcleo contém o caso validado; a extensão contém hipóteses, lacunas, sinais de incerteza, conflitos normativos e propostas de salvaguarda geradas durante a análise.
+4.2 WCMK
+A ontologia WCMK permanece responsável por modelar a agência ética. Seus quatro componentes — Want, Can, Must e Know — continuam sendo o eixo da avaliação da qualidade da resposta do agente.
+Para tornar o sistema mais operacional, recomenda-se distinguir três camadas dentro de WCMK: Profile, que descreve um tipo de agente; Instance, que descreve uma configuração concreta em execução; e Assessment, que descreve a avaliação daquele agente diante de um caso específico.
+Em termos práticos, isso permite separar o que o agente promete, o que ele realmente possui na sua configuração atual e o que foi observado na análise do caso.
+4.3 Bridge
+O bridge não deve ser visto apenas como uma fórmula. Ele deve ser tratado como ontologia de adjudicação ética, responsável por reunir o caso, o perfil de agência, as policies vigentes e os cálculos necessários para produzir decisão, risco residual, guardrails e exigência de revisão humana.
+Recomenda-se modelar no bridge entidades como BridgeEvaluation, ContextAssessment, AgencyAssessment, ResidualRiskAssessment, DecisionRecommendation, RequiredGuardrail e ExplanationBundle. Essa mudança transforma a confrontação entre caso e agência em objeto auditável de primeira classe.
+5. Nova ontologia complementar: camada de serviços LLM
+Em vez de introduzir semântica operacional de modelos diretamente em ETHCASE ou WCMK, recomenda-se criar uma ontologia complementar, aqui designada provisoriamente como ETHSVC-LLM. Ela representará a segunda camada do sistema: os serviços cognitivos e operacionais prestados por modelos de linguagem.
+Essa ontologia deve conter classes como ServiceRun, ModelInvocation, ToolInvocation, RetrievalRun, PromptTemplate, StructuredOutputSchema, EvidenceSource, GroundingResult, ConfidenceEstimate, ReviewTask e HumanOverride. Deve também registrar relações como analyzesCase, proposesAgencyAssessment, retrievesNormativeSources, supportsBridgeEvaluation, requiresReview e producedStructuredOutput.
+Com isso, o projeto ganha duas vantagens ao mesmo tempo: mantém o núcleo limpo e, ao mesmo tempo, torna o uso de LLMs governável, auditável e intercambiável entre fornecedores.
+Componente
+Deve permanecer
+Deve ser revisto / acrescentado
+ETHCASE
+Modelagem do caso, risco contextual, evidências, domínio
+Separar núcleo e extensão analítica; explicitar lacunas, incerteza, conflitos normativos e hipóteses
+WCMK
+Perfil de agência Want / Can / Must / Know
+Distinguir Profile, Instance e Assessment; decompor Know por evidência, norma, operação e incerteza
+Bridge
+Cálculo de contexto versus agência
+Transformar em ontologia explícita de adjudicação, guardrails, revisão humana e pacote de explicações
+ETHSVC-LLM
+—
+Nova ontologia para serviços, chamadas, tools, grounding, confiança e revisão
+
+6. Fluxo funcional do sistema
+A situação operacional fundamental do ETH-WCMK pode ser descrita assim: um caso ético é formalizado; esse caso é confrontado com um perfil WCMK; o bridge produz análise, decisão, risco residual e necessidades de mitigação; por fim, o sistema gera um relato adaptado ao público e ao objetivo.
+Etapa
+Entrada
+Processamento principal
+Saída
+1. Ingestão e formalização
+Texto, PDF, URL, incidente, formulário
+LLM estrutura proposta; núcleo valida schema e sinaliza lacunas
+EthicalCase canônico + campos faltantes
+2. Seleção do perfil WCMK
+Tipo de agente, domínio, configuração real
+Recuperação de perfil base e eventual ajuste assistido
+WCMK Profile / Instance prontos para análise
+3. Adjudicação no bridge
+Caso + perfil + policy ativa
+Cálculo de R_c, A_a e R_r; classificação e guardrails
+BridgeEvaluation + decisão + revisão humana, se necessária
+4. Explicação e relato
+Bundle de adjudicação
+Geração de explicação ancorada nos artefatos formais
+Relatório executivo, técnico, de auditoria ou treinamento
+
+7. Catálogo inicial de serviços LLM
+A camada de serviços deve começar com um catálogo pequeno e de alto valor, evitando um salto prematuro para automações opacas.
+Serviço
+Finalidade
+Entradas típicas
+Saída principal
+Risco dominante
+Case Structuring Service
+Converter material não estruturado em proposta ETHCASE
+Notícia, PDF, texto livre
+Caso estruturado + lacunas
+Narrativa fluente, mas schema incorreto
+Normative Grounding Service
+Recuperar normas, precedentes e salvaguardas
+Caso, domínio, termos normativos
+Bundle de evidências normativas
+Fontes irrelevantes ou incompletas
+WCMK Profiling Service
+Sugerir perfil WCMK e justificativas
+Caso, tipo de agente, contexto de uso
+Perfil proposto e limites
+Antropomorfização ou excesso de confiança
+Bridge Explanation Service
+Explicar a decisão formal
+Bundle do bridge
+Explicação executiva/técnica
+Explicação elegante, mas pouco ancorada
+Edge Case Generation Service
+Gerar casos limítrofes para teste e calibração
+Domínio, policy, objetivo de stress
+Casos sintéticos críticos
+Casos plausíveis na linguagem, mas fracos estruturalmente
+Interactive Analyst Service
+Responder perguntas sobre casos, domínios e policies
+Consulta do usuário
+Resposta conversacional ancorada
+Excesso de síntese ou omissão de nuance
+
+8. Melhorias prioritárias no bridge
+Primeiro, recomenda-se dividir o bridge em duas fases. A fase de admissibilidade verifica se o caso está suficientemente descrito, se o perfil WCMK é válido, se a evidência é adequada e se a incerteza está abaixo de um limite aceitável. A fase de adjudicação só ocorre quando essas condições mínimas são atendidas.
+Segundo, recomenda-se tornar a incerteza explícita. O bridge deve registrar não apenas a decisão final, mas também ausência de informação, contradições, sinais de baixa confiança e necessidade de revisão humana. Isso é particularmente importante quando serviços LLM participam do processo.
+Terceiro, guardrails devem tornar-se objetos de primeira classe. Em vez de apenas dizer que um caso exige cautela, o sistema deve identificar quais guardrails são necessários, em que etapa atuam, com que prioridade e por qual motivo.
+Quarto, a saída do bridge deve ser multiformato. O mesmo núcleo decisório deve produzir uma decisão resumida, uma justificativa curta, uma explicação completa, um pacote de auditoria e um relato executivo.
+9. Orquestração, governança e auditoria
+A integração de LLMs só será sustentável se existir uma camada formal de governança operacional. Essa camada deve registrar quem chamou qual serviço, usando qual modelo, com qual prompt, com qual schema, com quais ferramentas, sobre quais fontes e com qual revisão final.
+Model registry: catálogo de modelos aprovados por finalidade, custo, limites e nível de autonomia.
+Prompt registry: versionamento de prompts, instruções, schemas e testes de regressão.
+Service policy registry: regras sobre quando um serviço pode rodar automaticamente e quando exige revisão humana.
+Review workflow: abertura de tarefas de revisão, override humano, justificativa do override e trilha de responsabilidade.
+Observabilidade: métricas de custo, latência, taxa de erro, divergência entre proposta LLM e decisão formal, e cobertura de grounding.
+10. MVP recomendado e roadmap em fases
+A implementação deve começar por um conjunto pequeno de serviços de alto retorno e baixo risco, amadurecendo gradualmente até cenários mais ambiciosos.
+Fase
+Horizonte
+Escopo
+Resultado esperado
+Fase 1
+0–8 semanas
+Case Structuring, Normative Grounding e Bridge Explanation
+Primeiro ciclo útil de ingestão assistida, grounding e relato ancorado
+Fase 2
+8–16 semanas
+WCMK Profiling e Interactive Analyst
+Maior usabilidade para analistas e gestores; apoio a comparação de perfis
+Fase 3
+16–24 semanas
+Edge Case Generation, multi-perfil e simulação de políticas
+Ambiente de pesquisa, teste de robustez e recalibração mais sofisticada
+Fase 4
+24+ semanas
+Múltiplos fornecedores, avaliação automática e conectores externos
+Escala institucional, reprodutibilidade ampliada e governança multi-plataforma
+
+11. Melhorias e possibilidades estratégicas
+Uma primeira possibilidade é evoluir de um único perfil WCMK por caso para comparação entre múltiplos perfis. O mesmo caso poderia ser confrontado com um agente humano, um copiloto LLM com grounding, um sistema autônomo com guardrails rígidos e um workflow híbrido. Isso transforma o ETH-WCMK em ferramenta de desenho organizacional, e não apenas de avaliação pontual.
+Uma segunda possibilidade é aprofundar a calibragem por domínio. Alguns domínios provavelmente exigirão thresholds, guardrails e interpretações de Know diferentes. A camada de serviços pode ajudar a descobrir essas diferenças, mas a consolidação deve ser feita no núcleo formal.
+Uma terceira possibilidade é ampliar a multimodalidade de entrada. Casos podem vir de texto, áudio, imagem, vídeo, dashboards ou logs. A arquitetura proposta suporta essa ampliação desde que o resultado continue convergindo para o contrato canônico do caso.
+Uma quarta possibilidade é transformar o sistema em ambiente de formação. Com o bridge e a camada de explicação, o ETH-WCMK pode produzir estudos de caso, exercícios, versões comentadas e comparações entre decisões, com alto valor educacional e institucional.
+12. Riscos e salvaguardas
+O risco mais importante é deformar o núcleo formal para acomodar peculiaridades passageiras de modelos e APIs. Para evitar isso, toda semântica de serviço deve ser mantida em ontologia complementar e em camada de orquestração.
+Evitar que o texto gerado pelo LLM seja confundido com verdade operacional sem validação estrutural.
+Evitar dependência excessiva de um fornecedor específico de modelo ou API.
+Evitar decisões automáticas em casos com baixa completude, alta incerteza ou conflito normativo intenso.
+Evitar perda de reprodutibilidade; todo experimento precisa registrar policy, prompt, modelo, fontes e revisão.
+Evitar antropomorfização do agente avaliado; o perfil WCMK deve descrever capacidade e agência, não personalidade fictícia.
+13. Conclusão
+A arquitetura v1 aqui proposta preserva o que há de mais valioso no ETH-WCMK: a separação entre contexto ético, agência ética e adjudicação. Essa separação não é um detalhe acadêmico; ela é a base para interpretabilidade, auditabilidade e evolução cumulativa do sistema.
+A inclusão de LLMs faz sentido e pode trazer ganhos substanciais de escala, velocidade, interação e experimentação. Mas esses ganhos só serão sustentáveis se os modelos forem posicionados corretamente: como segunda camada de serviços, jamais como substitutos implícitos do núcleo formal.
+Em termos práticos, a arquitetura recomendada já é suficiente para orientar as próximas revisões de ontologia, a implementação de serviços, a evolução dos dashboards e a preparação de um MVP exploratório robusto.
+Referências de apoio
+Documentos internos do projeto
+White Paper ETH v0.1 rev. A.
+Teoria da Separação entre Contexto Ético e Agência.
+Relatório ETH-QPDS v3 científico.
+Relatório ETH-QPDS consolidado expandido.
+QPDS Domínios.
+Referências externas para a camada de serviços LLM
+OpenAI. Introducing Structured Outputs in the API. 2024.
+OpenAI Developers. Migrate to the Responses API. documentação consultada em março de 2026.
+Anthropic Docs. Tools overview e Web Search Tool. documentação consultada em março de 2026.
+Google Cloud Vertex AI. Grounding overview, Function calling e Structured output. documentação consultada em março de 2026.

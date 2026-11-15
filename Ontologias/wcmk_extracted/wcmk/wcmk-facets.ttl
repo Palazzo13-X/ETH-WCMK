@@ -1,0 +1,603 @@
+@prefix : <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix wcmk: <https://ethwcmk.org/ontology/wcmk-core#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix bridge: <https://ethwcmk.org/ontology/bridge#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/wcmk-facets>
+    a owl:Ontology ;
+    rdfs:label "WCMK Facets Ontology (Draft v0.1)"@en , "Ontologia de Facetas WCMK (rascunho v0.1)"@pt-BR ;
+    rdfs:comment "First draft of a rich facet extension for the canonical WCMK tetrahedral core. The draft preserves the four primary vertices and refines them into auditable, calibratable internal semantic components."@en ,
+                 "Primeiro rascunho de uma extensão facetada rica para o núcleo tetraédrico canônico WCMK. O rascunho preserva os quatro vértices primários e os refina em componentes semânticos internos auditáveis e calibráveis."@pt-BR ;
+    owl:versionInfo "0.1-draft" ;
+    owl:imports prov: , skos: ;
+    rdfs:seeAlso <https://ethwcmk.org/ontology/wcmk-core> , <https://ethwcmk.org/ontology/ethcase> , <https://ethwcmk.org/ontology/bridge> .
+
+#################################################################
+# Design notes
+#################################################################
+
+# This draft intentionally avoids hard commitments about the exact IRIs
+# used by the existing project core. Replace imported project IRIs if the
+# canonical repository uses a different base namespace.
+#
+# Intended architectural stance:
+# - the tetrahedral core remains canonical (Want, Can, Must, Know)
+# - this module refines each vertex into semantically differentiated facets
+# - aggregation back to the canonical four-dimensional profile remains possible
+# - domain profiles and bridge requirements operate at facet level
+# - provenance and calibration are explicit rather than implicit
+
+#################################################################
+# Core scaffolding
+#################################################################
+
+wcmkf:CoreVertex a owl:Class ;
+    rdfs:label "Core Vertex"@en , "Vértice do núcleo"@pt-BR ;
+    rdfs:comment "One of the four primary vertices of the canonical WCMK tetrahedral model."@en .
+
+wcmkf:WantVertex a wcmkf:CoreVertex ;
+    rdfs:label "Want vertex"@en , "Vértice Want"@pt-BR ;
+    skos:prefLabel "Want"@en ;
+    skos:prefLabel "Querer"@pt-BR .
+
+wcmkf:CanVertex a wcmkf:CoreVertex ;
+    rdfs:label "Can vertex"@en , "Vértice Can"@pt-BR ;
+    skos:prefLabel "Can"@en ;
+    skos:prefLabel "Poder"@pt-BR .
+
+wcmkf:MustVertex a wcmkf:CoreVertex ;
+    rdfs:label "Must vertex"@en , "Vértice Must"@pt-BR ;
+    skos:prefLabel "Must"@en ;
+    skos:prefLabel "Dever"@pt-BR .
+
+wcmkf:KnowVertex a wcmkf:CoreVertex ;
+    rdfs:label "Know vertex"@en , "Vértice Know"@pt-BR ;
+    skos:prefLabel "Know"@en ;
+    skos:prefLabel "Saber"@pt-BR .
+
+wcmkf:Facet a owl:Class ;
+    rdfs:label "Facet"@en , "Faceta"@pt-BR ;
+    rdfs:comment "A semantically differentiated internal component of one canonical WCMK vertex."@en .
+
+wcmkf:WantFacet a owl:Class ;
+    rdfs:subClassOf wcmkf:Facet ;
+    rdfs:label "Want Facet"@en , "Faceta de Want"@pt-BR ;
+    rdfs:comment "Facet belonging to the teleological-orientational dimension of agency."@en .
+
+wcmkf:CanFacet a owl:Class ;
+    rdfs:subClassOf wcmkf:Facet ;
+    rdfs:label "Can Facet"@en , "Faceta de Can"@pt-BR ;
+    rdfs:comment "Facet belonging to the effective capability dimension of agency."@en .
+
+wcmkf:MustFacet a owl:Class ;
+    rdfs:subClassOf wcmkf:Facet ;
+    rdfs:label "Must Facet"@en , "Faceta de Must"@pt-BR ;
+    rdfs:comment "Facet belonging to the normativity-obligation dimension of agency."@en .
+
+wcmkf:KnowFacet a owl:Class ;
+    rdfs:subClassOf wcmkf:Facet ;
+    rdfs:label "Know Facet"@en , "Faceta de Know"@pt-BR ;
+    rdfs:comment "Facet belonging to the epistemic-sufficiency dimension of agency."@en .
+
+wcmkf:FacetizedAgencyProfile a owl:Class ;
+    rdfs:label "Facetized Agency Profile"@en , "Perfil facetado de agência"@pt-BR ;
+    rdfs:comment "An agency profile represented at facet level and projectable back to the canonical WCMK tetrahedron."@en .
+
+wcmkf:FacetAssessment a owl:Class ;
+    rdfs:label "Facet Assessment"@en , "Avaliação de faceta"@pt-BR ;
+    rdfs:comment "Observed or estimated assessment of a facet for an agent, system or profile in a given context."@en ;
+    rdfs:subClassOf prov:Entity .
+
+wcmkf:FacetRequirement a owl:Class ;
+    rdfs:label "Facet Requirement"@en , "Requisito de faceta"@pt-BR ;
+    rdfs:comment "Required minimum or target level of a facet induced by a domain or ethical case."@en ;
+    rdfs:subClassOf prov:Entity .
+
+wcmkf:FacetDeficit a owl:Class ;
+    rdfs:label "Facet Deficit"@en , "Déficit de faceta"@pt-BR ;
+    rdfs:comment "Positive gap between required and observed facet level during ETHCASE × WCMK confrontation."@en ;
+    rdfs:subClassOf prov:Entity .
+
+wcmkf:AggregationPolicy a owl:Class ;
+    rdfs:label "Aggregation Policy"@en , "Política de agregação"@pt-BR ;
+    rdfs:comment "Policy that explains how lower-level facet values are aggregated into a canonical W, C, M or K score."@en .
+
+wcmkf:DomainProfile a owl:Class ;
+    rdfs:label "Domain Profile"@en , "Perfil de domínio"@pt-BR ;
+    rdfs:comment "Domain-specific weighting and criticality profile used during calibration and confrontation."@en .
+
+wcmkf:CalibrationArtifact a owl:Class ;
+    rdfs:label "Calibration Artifact"@en , "Artefato de calibragem"@pt-BR ;
+    rdfs:comment "Report, model, rule set or dataset that supports facet-level score derivation or threshold selection."@en ;
+    rdfs:subClassOf prov:Entity .
+
+#################################################################
+# Object properties
+#################################################################
+
+wcmkf:projectsToCoreVertex a owl:ObjectProperty ;
+    rdfs:label "projects to core vertex"@en , "projeta para vértice do núcleo"@pt-BR ;
+    rdfs:domain wcmkf:Facet ;
+    rdfs:range wcmkf:CoreVertex ;
+    rdfs:comment "Associates a facet with one canonical WCMK core vertex."@en .
+
+wcmkf:hasFacet a owl:ObjectProperty ;
+    rdfs:label "has facet"@en , "tem faceta"@pt-BR ;
+    rdfs:domain wcmkf:FacetizedAgencyProfile ;
+    rdfs:range wcmkf:Facet ;
+    rdfs:comment "Associates a facetized profile with a facet that composes it."@en .
+
+wcmkf:hasAssessment a owl:ObjectProperty ;
+    rdfs:label "has assessment"@en , "tem avaliação"@pt-BR ;
+    rdfs:domain wcmkf:FacetizedAgencyProfile ;
+    rdfs:range wcmkf:FacetAssessment ;
+    rdfs:comment "Associates a facetized profile with one or more facet assessments."@en .
+
+wcmkf:assessesFacet a owl:ObjectProperty ;
+    rdfs:label "assesses facet"@en , "avalia faceta"@pt-BR ;
+    rdfs:domain wcmkf:FacetAssessment ;
+    rdfs:range wcmkf:Facet ;
+    rdfs:comment "Indicates which facet is being assessed."@en .
+
+wcmkf:hasRequirement a owl:ObjectProperty ;
+    rdfs:label "has requirement"@en , "tem requisito"@pt-BR ;
+    rdfs:range wcmkf:FacetRequirement ;
+    rdfs:comment "Associates a case, bridge object, domain profile or profile with a facet requirement."@en .
+
+wcmkf:requiresFacet a owl:ObjectProperty ;
+    rdfs:label "requires facet"@en , "requer faceta"@pt-BR ;
+    rdfs:domain wcmkf:FacetRequirement ;
+    rdfs:range wcmkf:Facet ;
+    rdfs:comment "Indicates which facet is required."@en .
+
+wcmkf:hasDeficit a owl:ObjectProperty ;
+    rdfs:label "has deficit"@en , "tem déficit"@pt-BR ;
+    rdfs:range wcmkf:FacetDeficit ;
+    rdfs:comment "Associates a confrontation result with one or more facet deficits."@en .
+
+wcmkf:concernsFacet a owl:ObjectProperty ;
+    rdfs:label "concerns facet"@en , "diz respeito à faceta"@pt-BR ;
+    rdfs:domain wcmkf:FacetDeficit ;
+    rdfs:range wcmkf:Facet ;
+    rdfs:comment "Indicates which facet a deficit is about."@en .
+
+wcmkf:hasAggregationPolicy a owl:ObjectProperty ;
+    rdfs:label "has aggregation policy"@en , "tem política de agregação"@pt-BR ;
+    rdfs:domain wcmkf:Facet ;
+    rdfs:range wcmkf:AggregationPolicy ;
+    rdfs:comment "Recommends how the facet should be aggregated into its canonical score."@en .
+
+wcmkf:isCriticalInDomain a owl:ObjectProperty ;
+    rdfs:label "is critical in domain"@en , "é crítica no domínio"@pt-BR ;
+    rdfs:domain wcmkf:Facet ;
+    rdfs:range wcmkf:DomainProfile ;
+    rdfs:comment "Marks a facet as especially important for one or more domains."@en .
+
+wcmkf:usesCalibrationArtifact a owl:ObjectProperty ;
+    rdfs:label "uses calibration artifact"@en , "usa artefato de calibragem"@pt-BR ;
+    rdfs:range wcmkf:CalibrationArtifact ;
+    rdfs:comment "Links an assessment, requirement or profile to calibration artifacts used in its derivation."@en .
+
+#################################################################
+# Datatype properties
+#################################################################
+
+wcmkf:hasNormalizedScore a owl:DatatypeProperty ;
+    rdfs:label "has normalized score"@en , "tem escore normalizado"@pt-BR ;
+    rdfs:domain wcmkf:FacetAssessment ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Normalized score in [0,1] for an assessed facet."@en .
+
+wcmkf:hasConfidence a owl:DatatypeProperty ;
+    rdfs:label "has confidence"@en , "tem confiança"@pt-BR ;
+    rdfs:domain wcmkf:FacetAssessment ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Confidence level in [0,1] attached to a facet assessment."@en .
+
+wcmkf:minimumRequiredLevel a owl:DatatypeProperty ;
+    rdfs:label "minimum required level"@en , "nível mínimo requerido"@pt-BR ;
+    rdfs:domain wcmkf:FacetRequirement ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Required minimum level in [0,1] for a facet under a given case or domain."@en .
+
+wcmkf:observedLevel a owl:DatatypeProperty ;
+    rdfs:label "observed level"@en , "nível observado"@pt-BR ;
+    rdfs:domain wcmkf:FacetDeficit ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Observed facet level used to compute the deficit."@en .
+
+wcmkf:requiredLevel a owl:DatatypeProperty ;
+    rdfs:label "required level"@en , "nível requerido"@pt-BR ;
+    rdfs:domain wcmkf:FacetDeficit ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Required facet level used to compute the deficit."@en .
+
+wcmkf:deficitValue a owl:DatatypeProperty ;
+    rdfs:label "deficit value"@en , "valor do déficit"@pt-BR ;
+    rdfs:domain wcmkf:FacetDeficit ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Positive deficit value, usually max(0, required - observed)."@en .
+
+wcmkf:hasWeight a owl:DatatypeProperty ;
+    rdfs:label "has weight"@en , "tem peso"@pt-BR ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Generic weight used by a profile, requirement or aggregation policy."@en .
+
+wcmkf:criticalityLevel a owl:DatatypeProperty ;
+    rdfs:label "criticality level"@en , "nível de criticidade"@pt-BR ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Domain-specific criticality marker, e.g., high, medium, low."@en .
+
+wcmkf:aggregationMode a owl:DatatypeProperty ;
+    rdfs:label "aggregation mode"@en , "modo de agregação"@pt-BR ;
+    rdfs:domain wcmkf:AggregationPolicy ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Textual indicator of the aggregation family, e.g., weighted_mean, soft_min, threshold_override."@en .
+
+wcmkf:allowsCompensation a owl:DatatypeProperty ;
+    rdfs:label "allows compensation"@en , "permite compensação"@pt-BR ;
+    rdfs:domain wcmkf:AggregationPolicy ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Whether high values in some subfacets may compensate low values in others under this policy."@en .
+
+#################################################################
+# Cardinality helpers for facetized profiles
+#################################################################
+
+wcmkf:FacetizedAgencyProfile
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty wcmkf:hasFacet ;
+        owl:minQualifiedCardinality "24"^^xsd:nonNegativeInteger ;
+        owl:onClass wcmkf:Facet
+    ] .
+
+wcmkf:GoalOrientation a owl:Class ;
+    rdfs:subClassOf wcmkf:WantFacet ;
+    rdfs:label "Goal Orientation"@en , "Orientação a objetivos"@pt-BR ;
+    skos:prefLabel "Goal Orientation"@en ;
+    skos:prefLabel "Orientação a objetivos"@pt-BR ;
+    skos:definition "Teleological orientation of the agent toward a concrete end or target state."@en ;
+    rdfs:comment "Purpose toward which the agent action is directed."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:WantVertex .
+
+wcmkf:ValueAlignment a owl:Class ;
+    rdfs:subClassOf wcmkf:WantFacet ;
+    rdfs:label "Value Alignment"@en , "Alinhamento axiológico"@pt-BR ;
+    skos:prefLabel "Value Alignment"@en ;
+    skos:prefLabel "Alinhamento axiológico"@pt-BR ;
+    skos:definition "Compatibility between intended goals and the value commitments of the system."@en ;
+    rdfs:comment "Alignment of the pursued end with protected values and ethical commitments."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:WantVertex .
+
+wcmkf:StakeholderRegard a owl:Class ;
+    rdfs:subClassOf wcmkf:WantFacet ;
+    rdfs:label "Stakeholder Regard"@en , "Consideração de stakeholders"@pt-BR ;
+    skos:prefLabel "Stakeholder Regard"@en ;
+    skos:prefLabel "Consideração de stakeholders"@pt-BR ;
+    skos:definition "Coverage of morally relevant stakeholders in the action orientation."@en ;
+    rdfs:comment "Recognition of affected parties, including indirect and vulnerable stakeholders."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:WantVertex .
+
+wcmkf:PriorityDiscipline a owl:Class ;
+    rdfs:subClassOf wcmkf:WantFacet ;
+    rdfs:label "Priority Discipline"@en , "Disciplina de prioridades"@pt-BR ;
+    skos:prefLabel "Priority Discipline"@en ;
+    skos:prefLabel "Disciplina de prioridades"@pt-BR ;
+    skos:definition "Discipline used to rank conflicting objectives when trade-offs arise."@en ;
+    rdfs:comment "Capacity to order competing goals under ethical precedence rules."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:WantVertex .
+
+wcmkf:IntentionalStability a owl:Class ;
+    rdfs:subClassOf wcmkf:WantFacet ;
+    rdfs:label "Intentional Stability"@en , "Estabilidade intencional"@pt-BR ;
+    skos:prefLabel "Intentional Stability"@en ;
+    skos:prefLabel "Estabilidade intencional"@pt-BR ;
+    skos:definition "Stability of the practical orientation under domain and situational variation."@en ;
+    rdfs:comment "Consistency of action orientation across relevant contextual changes."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:WantVertex .
+
+wcmkf:FunctionalCapability a owl:Class ;
+    rdfs:subClassOf wcmkf:CanFacet ;
+    rdfs:label "Functional Capability"@en , "Capacidade funcional"@pt-BR ;
+    skos:prefLabel "Functional Capability"@en ;
+    skos:prefLabel "Capacidade funcional"@pt-BR ;
+    skos:definition "Operational ability to perform the target function."@en ;
+    rdfs:comment "Ability to execute the intended task or operation."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:CanVertex .
+
+wcmkf:Robustness a owl:Class ;
+    rdfs:subClassOf wcmkf:CanFacet ;
+    rdfs:label "Robustness"@en , "Robustez"@pt-BR ;
+    skos:prefLabel "Robustness"@en ;
+    skos:prefLabel "Robustez"@pt-BR ;
+    skos:definition "Resilience against noise, drift, missing information and adversarial variation."@en ;
+    rdfs:comment "Capacity to preserve acceptable performance under perturbation and uncertainty."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:CanVertex .
+
+wcmkf:Controllability a owl:Class ;
+    rdfs:subClassOf wcmkf:CanFacet ;
+    rdfs:label "Controllability"@en , "Controlabilidade"@pt-BR ;
+    skos:prefLabel "Controllability"@en ;
+    skos:prefLabel "Controlabilidade"@pt-BR ;
+    skos:definition "Degree to which the system remains governable during operation."@en ;
+    rdfs:comment "Ability to be constrained, interrupted, redirected, audited or reversed."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:CanVertex .
+
+wcmkf:ScopeAdequacy a owl:Class ;
+    rdfs:subClassOf wcmkf:CanFacet ;
+    rdfs:label "Scope Adequacy"@en , "Adequação de escopo"@pt-BR ;
+    skos:prefLabel "Scope Adequacy"@en ;
+    skos:prefLabel "Adequação de escopo"@pt-BR ;
+    skos:definition "Fitness of the agent capabilities to the scope and complexity of the case."@en ;
+    rdfs:comment "Adequacy of the agent competence to the domain and case at hand."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:CanVertex .
+
+wcmkf:ResourceSufficiency a owl:Class ;
+    rdfs:subClassOf wcmkf:CanFacet ;
+    rdfs:label "Resource Sufficiency"@en , "Suficiência de recursos"@pt-BR ;
+    skos:prefLabel "Resource Sufficiency"@en ;
+    skos:prefLabel "Suficiência de recursos"@pt-BR ;
+    skos:definition "Sufficiency of resources needed to act safely and effectively."@en ;
+    rdfs:comment "Availability of computational, temporal, informational and organizational resources."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:CanVertex .
+
+wcmkf:SafeExecutability a owl:Class ;
+    rdfs:subClassOf wcmkf:CanFacet ;
+    rdfs:label "Safe Executability"@en , "Executabilidade segura"@pt-BR ;
+    skos:prefLabel "Safe Executability"@en ;
+    skos:prefLabel "Executabilidade segura"@pt-BR ;
+    skos:definition "Whether action can be carried out without creating excessive secondary harms."@en ;
+    rdfs:comment "Feasibility of execution without disproportionate collateral risk."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:CanVertex .
+
+wcmkf:LegalObligation a owl:Class ;
+    rdfs:subClassOf wcmkf:MustFacet ;
+    rdfs:label "Legal Obligation"@en , "Obrigação legal"@pt-BR ;
+    skos:prefLabel "Legal Obligation"@en ;
+    skos:prefLabel "Obrigação legal"@pt-BR ;
+    skos:definition "Normative requirements grounded in the legal-regulatory layer."@en ;
+    rdfs:comment "Binding duties derived from law and regulation."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:MustVertex .
+
+wcmkf:InstitutionalPolicyObligation a owl:Class ;
+    rdfs:subClassOf wcmkf:MustFacet ;
+    rdfs:label "Institutional Policy Obligation"@en , "Obrigação de política institucional"@pt-BR ;
+    skos:prefLabel "Institutional Policy Obligation"@en ;
+    skos:prefLabel "Obrigação de política institucional"@pt-BR ;
+    skos:definition "Requirements imposed by institutional policy and governance instruments."@en ;
+    rdfs:comment "Duties derived from organizational policy, protocol and compliance."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:MustVertex .
+
+wcmkf:EthicalPrincipleObligation a owl:Class ;
+    rdfs:subClassOf wcmkf:MustFacet ;
+    rdfs:label "Ethical Principle Obligation"@en , "Obrigação de princípio ético"@pt-BR ;
+    skos:prefLabel "Ethical Principle Obligation"@en ;
+    skos:prefLabel "Obrigação de princípio ético"@pt-BR ;
+    skos:definition "Requirements justified by principles that may exceed legal and policy minima."@en ;
+    rdfs:comment "Duties grounded in ethical principles such as dignity, fairness and non-maleficence."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:MustVertex .
+
+wcmkf:PrudentialObligation a owl:Class ;
+    rdfs:subClassOf wcmkf:MustFacet ;
+    rdfs:label "Prudential Obligation"@en , "Obrigação prudencial"@pt-BR ;
+    skos:prefLabel "Prudential Obligation"@en ;
+    skos:prefLabel "Obrigação prudencial"@pt-BR ;
+    skos:definition "Context-sensitive duty of caution under elevated moral uncertainty or potential harm."@en ;
+    rdfs:comment "Heightened caution required by risk, ambiguity, irreversibility or vulnerability."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:MustVertex .
+
+wcmkf:RoleObligation a owl:Class ;
+    rdfs:subClassOf wcmkf:MustFacet ;
+    rdfs:label "Role Obligation"@en , "Obrigação de papel"@pt-BR ;
+    skos:prefLabel "Role Obligation"@en ;
+    skos:prefLabel "Obrigação de papel"@pt-BR ;
+    skos:definition "Normative commitments attached to institutional or functional role."@en ;
+    rdfs:comment "Duties tied to the role performed by the agent within a sociotechnical arrangement."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:MustVertex .
+
+wcmkf:AccountabilityObligation a owl:Class ;
+    rdfs:subClassOf wcmkf:MustFacet ;
+    rdfs:label "Accountability Obligation"@en , "Obrigação de accountability"@pt-BR ;
+    skos:prefLabel "Accountability Obligation"@en ;
+    skos:prefLabel "Obrigação de accountability"@pt-BR ;
+    skos:definition "Requirements related to auditability, traceability and accountability."@en ;
+    rdfs:comment "Duties of traceability, explanation, record and answerability."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:MustVertex .
+
+wcmkf:EvidentialKnowledge a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Evidential Knowledge"@en , "Conhecimento evidencial"@pt-BR ;
+    skos:prefLabel "Evidential Knowledge"@en ;
+    skos:prefLabel "Conhecimento evidencial"@pt-BR ;
+    skos:definition "Factual or evidential basis supporting the decision."@en ;
+    rdfs:comment "Knowledge grounded in available data, evidence and signals."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+wcmkf:ContextualKnowledge a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Contextual Knowledge"@en , "Conhecimento contextual"@pt-BR ;
+    skos:prefLabel "Contextual Knowledge"@en ;
+    skos:prefLabel "Conhecimento contextual"@pt-BR ;
+    skos:definition "Knowledge of the circumstances that give meaning to the case."@en ;
+    rdfs:comment "Understanding of domain, circumstances, actors and situational constraints."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+wcmkf:NormativeKnowledge a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Normative Knowledge"@en , "Conhecimento normativo"@pt-BR ;
+    skos:prefLabel "Normative Knowledge"@en ;
+    skos:prefLabel "Conhecimento normativo"@pt-BR ;
+    skos:definition "Knowledge of what norms apply and how they constrain action."@en ;
+    rdfs:comment "Understanding of rules, duties, constraints and normative expectations."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+wcmkf:ProceduralKnowledge a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Procedural Knowledge"@en , "Conhecimento procedimental"@pt-BR ;
+    skos:prefLabel "Procedural Knowledge"@en ;
+    skos:prefLabel "Conhecimento procedimental"@pt-BR ;
+    skos:definition "Know-how required to operationalize a justified course of action."@en ;
+    rdfs:comment "Knowledge of how to act, in which order and under which procedural constraints."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+wcmkf:CausalKnowledge a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Causal Knowledge"@en , "Conhecimento causal"@pt-BR ;
+    skos:prefLabel "Causal Knowledge"@en ;
+    skos:prefLabel "Conhecimento causal"@pt-BR ;
+    skos:definition "Knowledge of causal structure and consequences of action."@en ;
+    rdfs:comment "Understanding of likely effects, side effects and second-order consequences."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+wcmkf:UncertaintyAwareness a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Uncertainty Awareness"@en , "Consciência de incerteza"@pt-BR ;
+    skos:prefLabel "Uncertainty Awareness"@en ;
+    skos:prefLabel "Consciência de incerteza"@pt-BR ;
+    skos:definition "Meta-knowledge concerning uncertainty, ignorance and confidence limits."@en ;
+    rdfs:comment "Capacity to represent what is unknown, uncertain or weakly supported."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+wcmkf:ProvenanceAwareness a owl:Class ;
+    rdfs:subClassOf wcmkf:KnowFacet ;
+    rdfs:label "Provenance Awareness"@en , "Consciência de proveniência"@pt-BR ;
+    skos:prefLabel "Provenance Awareness"@en ;
+    skos:prefLabel "Consciência de proveniência"@pt-BR ;
+    skos:definition "Knowledge of where information came from and how trustworthy it is."@en ;
+    rdfs:comment "Awareness of the origin, reliability and transformation history of supporting information."@en ;
+    wcmkf:projectsToCoreVertex wcmkf:KnowVertex .
+
+#################################################################
+# Aggregation policies (draft individuals)
+#################################################################
+
+wcmkf:WeightedMeanCompensatory a wcmkf:AggregationPolicy ;
+    rdfs:label "Weighted Mean Compensatory"@en , "Média ponderada compensatória"@pt-BR ;
+    wcmkf:aggregationMode "weighted_mean" ;
+    wcmkf:allowsCompensation true ;
+    rdfs:comment "Useful where partial compensation between subfacets is acceptable."@en .
+
+wcmkf:GuardedWeightedMean a wcmkf:AggregationPolicy ;
+    rdfs:label "Guarded Weighted Mean"@en , "Média ponderada com guardas"@pt-BR ;
+    wcmkf:aggregationMode "guarded_weighted_mean" ;
+    wcmkf:allowsCompensation true ;
+    rdfs:comment "Weighted mean subject to threshold guards on selected critical subfacets."@en .
+
+wcmkf:ThresholdOverride a wcmkf:AggregationPolicy ;
+    rdfs:label "Threshold Override"@en , "Override por limiar"@pt-BR ;
+    wcmkf:aggregationMode "threshold_override" ;
+    wcmkf:allowsCompensation false ;
+    rdfs:comment "Any subfacet below threshold triggers a non-compensatory constraint or override."@en .
+
+wcmkf:SoftMinPenalty a wcmkf:AggregationPolicy ;
+    rdfs:label "Soft-Min Penalty"@en , "Penalização soft-min"@pt-BR ;
+    wcmkf:aggregationMode "soft_min" ;
+    wcmkf:allowsCompensation false ;
+    rdfs:comment "Aggregation family designed to emphasize the weakest relevant subfacet."@en .
+
+wcmkf:UncertaintyPenalizedMean a wcmkf:AggregationPolicy ;
+    rdfs:label "Uncertainty Penalized Mean"@en , "Média penalizada por incerteza"@pt-BR ;
+    wcmkf:aggregationMode "uncertainty_penalized_mean" ;
+    wcmkf:allowsCompensation true ;
+    rdfs:comment "Weighted mean with explicit penalty for uncertainty-awareness deficits or low confidence."@en .
+
+#################################################################
+# Recommended policy links
+#################################################################
+
+wcmkf:GoalOrientation wcmkf:hasAggregationPolicy wcmkf:WeightedMeanCompensatory .
+wcmkf:ValueAlignment wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:StakeholderRegard wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:PriorityDiscipline wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:IntentionalStability wcmkf:hasAggregationPolicy wcmkf:WeightedMeanCompensatory .
+
+wcmkf:FunctionalCapability wcmkf:hasAggregationPolicy wcmkf:WeightedMeanCompensatory .
+wcmkf:Robustness wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:Controllability wcmkf:hasAggregationPolicy wcmkf:ThresholdOverride .
+wcmkf:ScopeAdequacy wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:ResourceSufficiency wcmkf:hasAggregationPolicy wcmkf:WeightedMeanCompensatory .
+wcmkf:SafeExecutability wcmkf:hasAggregationPolicy wcmkf:ThresholdOverride .
+
+wcmkf:LegalObligation wcmkf:hasAggregationPolicy wcmkf:ThresholdOverride .
+wcmkf:InstitutionalPolicyObligation wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:EthicalPrincipleObligation wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:PrudentialObligation wcmkf:hasAggregationPolicy wcmkf:ThresholdOverride .
+wcmkf:RoleObligation wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:AccountabilityObligation wcmkf:hasAggregationPolicy wcmkf:ThresholdOverride .
+
+wcmkf:EvidentialKnowledge wcmkf:hasAggregationPolicy wcmkf:WeightedMeanCompensatory .
+wcmkf:ContextualKnowledge wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:NormativeKnowledge wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:ProceduralKnowledge wcmkf:hasAggregationPolicy wcmkf:WeightedMeanCompensatory .
+wcmkf:CausalKnowledge wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+wcmkf:UncertaintyAwareness wcmkf:hasAggregationPolicy wcmkf:UncertaintyPenalizedMean .
+wcmkf:ProvenanceAwareness wcmkf:hasAggregationPolicy wcmkf:GuardedWeightedMean .
+
+#################################################################
+# Domain profiles (draft individuals)
+#################################################################
+
+wcmkf:HealthDomainProfile a wcmkf:DomainProfile ;
+    rdfs:label "Health Domain Profile"@en , "Perfil de domínio: saúde"@pt-BR ;
+    rdfs:comment "Health-critical profile emphasizing prudential, epistemic and controllability demands."@en .
+
+wcmkf:JusticeSecurityDomainProfile a wcmkf:DomainProfile ;
+    rdfs:label "Justice and Security Domain Profile"@en , "Perfil de domínio: justiça e segurança"@pt-BR ;
+    rdfs:comment "Profile emphasizing legality, role obligations, traceability and contextual knowledge."@en .
+
+wcmkf:CriticalInfrastructureDomainProfile a wcmkf:DomainProfile ;
+    rdfs:label "Critical Infrastructure Domain Profile"@en , "Perfil de domínio: infraestrutura crítica"@pt-BR ;
+    rdfs:comment "Profile emphasizing safe executability, robustness, controllability and causal knowledge."@en .
+
+wcmkf:EducationDomainProfile a wcmkf:DomainProfile ;
+    rdfs:label "Education Domain Profile"@en , "Perfil de domínio: educação"@pt-BR ;
+    rdfs:comment "Profile emphasizing stakeholder regard, accountability and contextual sensitivity."@en .
+
+#################################################################
+# Example criticality links
+#################################################################
+
+wcmkf:PrudentialObligation wcmkf:isCriticalInDomain wcmkf:HealthDomainProfile, wcmkf:CriticalInfrastructureDomainProfile .
+wcmkf:Controllability wcmkf:isCriticalInDomain wcmkf:HealthDomainProfile, wcmkf:CriticalInfrastructureDomainProfile, wcmkf:JusticeSecurityDomainProfile .
+wcmkf:NormativeKnowledge wcmkf:isCriticalInDomain wcmkf:HealthDomainProfile, wcmkf:JusticeSecurityDomainProfile .
+wcmkf:AccountabilityObligation wcmkf:isCriticalInDomain wcmkf:JusticeSecurityDomainProfile, wcmkf:EducationDomainProfile .
+wcmkf:StakeholderRegard wcmkf:isCriticalInDomain wcmkf:EducationDomainProfile, wcmkf:HealthDomainProfile .
+wcmkf:CausalKnowledge wcmkf:isCriticalInDomain wcmkf:CriticalInfrastructureDomainProfile, wcmkf:HealthDomainProfile .
+
+#################################################################
+# Alignment hooks to core/bridge/ethcase (minimal draft)
+#################################################################
+
+wcmkf:facetizedProjectionToCanonicalScore a owl:ObjectProperty ;
+    rdfs:label "facetized projection to canonical score"@en , "projeção facetada para escore canônico"@pt-BR ;
+    rdfs:domain wcmkf:FacetizedAgencyProfile ;
+    rdfs:comment "Hook property intended to point to the derived canonical W, C, M or K scores in the core ontology."@en .
+
+wcmkf:derivedFromCaseRequirement a owl:ObjectProperty ;
+    rdfs:label "derived from case requirement"@en , "derivado de requisito do caso"@pt-BR ;
+    rdfs:domain wcmkf:FacetRequirement ;
+    rdfs:comment "Hook property intended to connect facet requirements to ETHCASE/bridge requirement objects."@en .
+
+wcmkf:usedInConfrontation a owl:ObjectProperty ;
+    rdfs:label "used in confrontation"@en , "usado na confrontação"@pt-BR ;
+    rdfs:domain wcmkf:FacetDeficit ;
+    rdfs:comment "Hook property intended to connect deficits to a bridge confrontation result or adjudication artifact."@en .
+
+#################################################################
+# Optional disjointness axioms across major groups
+#################################################################
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( wcmkf:WantFacet wcmkf:CanFacet wcmkf:MustFacet wcmkf:KnowFacet ) .
+
+#################################################################
+# End of draft
+#################################################################

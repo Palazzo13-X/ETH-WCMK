@@ -1,0 +1,462 @@
+{
+  "round": "r5",
+  "generated_at": "2026-11-09T23:10:41.394229+00:00",
+  "git_rev": "e38544a6896a92542e7ee16614ba09b8c5ea3c66",
+  "python": "3.14.4",
+  "machine": "Linux-7.0.0-1000-generic-x86_64-desconhecido-with-glibc2.43",
+  "canon": "33 facets, differentiated beta (v13 canon)",
+  "corpus": "corpus_v7 (1,520 cases, 144 personas + 1 declared profile, 220,400 confrontations)",
+  "core_version": "v13 (Prop-1 derived alpha, oversight regime E11c', ReviewNeed E32, declared coverage gate)",
+  "calibration_convention": "corpus and gold use the frozen r3 ladder; sensitivity and mechanism batteries use core.load_fitted_calibration() defaults and are reported separately",
+  "immutability_note": "r2/r3/r4 artefacts are not rewritten (D5.10). v13 re-verifications are stored in r5: mirror_full_corpus_v13.json, B8_probes_reverified_v13.json, ontology_v4_validation_reverified.json",
+  "artefacts": [
+    {
+      "path": "_analysis/formal_core/core.py",
+      "sha256": "7b25b780acabc3b75521ff37ebb47cb14f40b502114a55a79e09e5759d837983",
+      "bytes": 42600,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/geometry.py",
+      "sha256": "80ae3c4b8cad3c4f865169fea9ae9d01b0c731cf2485265f48a7ea4fe6214e9d",
+      "bytes": 7189,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/facet_registry.py",
+      "sha256": "6febe98a73b7aa4ce7c8050e8385fa9765c52ee47ace7339ab9e51f55b549e04",
+      "bytes": 16158,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/fact_grounding.py",
+      "sha256": "7b6adde3501487c5d390cc66f13ec9d609120a9141326a98c937103355d0f916",
+      "bytes": 3252,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/run_battery_B8_v13.py",
+      "sha256": "50dc31dd4156f74a01ed096c53ab082d7b72c7a637ee4a438b96bf066a4ee8fb",
+      "bytes": 24464,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/tests/test_invariants.py",
+      "sha256": "c16885ef13f3a04ed802e4582e073ce53e4c4b7c043d999f28680f9f4ef5c37d",
+      "bytes": 44411,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/tests/test_geometry.py",
+      "sha256": "3094d366262d8104bfe317cdbfe333152d56beccaf6c08aa71dd3c068eb0f641",
+      "bytes": 5920,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/formal_core/tests/test_fact_grounding.py",
+      "sha256": "54d651c2b0a1eb28e3e203c482348cbbaeef02ae8b0972c3baf2139fe6d8fbed",
+      "bytes": 5945,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/corpus/gen_corpus_v5.py",
+      "sha256": "9c3ef843d6dc496cc86fefed60c3a11cb47844dc7ade97d73a85728906d47a31",
+      "bytes": 72184,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/corpus/gold_panels_v5.py",
+      "sha256": "f17442665155e366b0a939234beb7b6ca38214949038e93a094a9cb66536642d",
+      "bytes": 20719,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/ontology/gen_ontology_v6.py",
+      "sha256": "fd838c06d2148b0e005d5296884b9bb8136b3717d0d5a08a896c9ae96d45dc8d",
+      "bytes": 54486,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/ontology/validate_ontology_v6.py",
+      "sha256": "b76ce9a425e33885d16310f1f4d9b1d6c2aec1f744dccd683baa672d2c1d53e2",
+      "bytes": 88120,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/b20_variant_eval.py",
+      "sha256": "9e85217c529a632b5d5568519b7376b3bae21cddaa866e789e471c28dedebf58",
+      "bytes": 15264,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/b22_fact_contradiction.py",
+      "sha256": "d0844d33270d5da2b797845d8e91af175169aefa54a1945e8f9860297d79df51",
+      "bytes": 8359,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/sobol_v13_b23.py",
+      "sha256": "7fcdc0d5f0b81720b737b25fc8d7b4ea77f673ad1fae11b8b4c1d6f80d02413f",
+      "bytes": 12134,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/mirror_full_corpus_v13.py",
+      "sha256": "a7c9c76829655c7dd1009c1c17cb5b270b624d214cfbb3e8e367b1d1b8471e32",
+      "bytes": 7454,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/adjudication_packet.py",
+      "sha256": "7e65212bc6f6e420adf14677457fe29936b5c080340ebf8f68e5a6e21c9bb5a1",
+      "bytes": 5936,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/llm_anchor_v13.py",
+      "sha256": "1526a889079ab89bdebafb75525f44e3f75f1464bc405cf15f80b8223ed35e27",
+      "bytes": 12888,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/kappa_by_stratum.py",
+      "sha256": "5730d39b625ce023cf211d91f2342d4617b303db0b97882c77edb5ecc69724e2",
+      "bytes": 4491,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/paper_artifact_consistency_v13.py",
+      "sha256": "af3f8dd1f4fecf26b7acac1e5583c6ad445f812b32c5b04d4bddfdcd07f656bb",
+      "bytes": 26104,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/make_manifest_r5.py",
+      "sha256": "772b8915764bcbff11dc5bf5d6f0ecb113f6cf94fe40c9d3a5dea2b304eb1e15",
+      "bytes": 5704,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/analysis/b26_rubric_sensitivity.py",
+      "sha256": "c48e8305234cf2a81044cc162d21a144a3b74a6724325a59a4e69880fee264f3",
+      "bytes": 8427,
+      "kind": "code"
+    },
+    {
+      "path": "_analysis/PAPER_v13.md",
+      "sha256": "2126bb61c6280de314f7645f58437d52626c305727424d9b9482f866f54a4983",
+      "bytes": 54308,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/SPEC_v13_equations.md",
+      "sha256": "4543ba59c33220825248f7a4c6bf29c0f6dd288d96b8cb0f090b777590d3d6e2",
+      "bytes": 12673,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/GATE_REPORT_r5.md",
+      "sha256": "c813128037b3bc6059b6945fbd3d41a51a7afaa08bc388295840142b9ab6817c",
+      "bytes": 14726,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/CHANGELOG_DECISIONS.md",
+      "sha256": "4f5f4e177863597069761ab48d6029998b49f520b12b64157e21a44d7226d0bc",
+      "bytes": 44907,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/ADJUDICATION_PROTOCOL_v13.md",
+      "sha256": "9a74f4c867b0b4d5db6484fd957c3044f64e30d9ea3fe174272dbf319bd46a97",
+      "bytes": 3405,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/RETOMADA_r5_REPORT.md",
+      "sha256": "a17441451245ec0dc6cc3eebb5cd4c9f3ad0ad8456870474b701de6a7a2b6a9b",
+      "bytes": 6631,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/facets/beta_differentiation_v13.json",
+      "sha256": "12a89375a6e4e7c72cc5bc33cd9e11c7e7b7318236081e2f2bd4c186f61fed25",
+      "bytes": 685,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/facets/criticality_rebalance_v13.json",
+      "sha256": "2dd4ca13d9b907c73a902ed45696b74d313f17c3be964c4c9abd2f336fcddcdd",
+      "bytes": 2986,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/facets/criticality_mild_cap3_v13.json",
+      "sha256": "d99887b479fdc162cba5da27d99474d244f34384d82c82d7b9eff87adfcd0464",
+      "bytes": 1705,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/facets/criticality_targeted_TB_TS_IM_v13.json",
+      "sha256": "4d4d043ec7c6748bb9908d5ae16692657d6b6d315afcc447598fc851fd9e7056",
+      "bytes": 1037,
+      "kind": "document"
+    },
+    {
+      "path": "_analysis/facets/facet_registry_v13.csv",
+      "sha256": "651f2a98dc2570330a03c6f4dc485bc21844e55f56bb2121b4b0f8a9b5a52721",
+      "bytes": 6420,
+      "kind": "document"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/01_core.ttl",
+      "sha256": "c78c9a90a744c86500df81d3a67056992197eb469330fd09a1689442cdad83b5",
+      "bytes": 64095,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/02_facets.ttl",
+      "sha256": "c4d7312ee793fe2ba38dbfc290d785410f58bb507587215d71337002d62f42f2",
+      "bytes": 65549,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/03_deontic.ttl",
+      "sha256": "335785f6ca15f4dc8ce86c3167dfc7f221c780776c30de9b779989f7b69ff9a8",
+      "bytes": 151822,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/04_agency.ttl",
+      "sha256": "4ea709028e199632238da356793f4bba5fa409f9c4e870e2a0bf7fd36f038250",
+      "bytes": 10389,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/05_dynamics.ttl",
+      "sha256": "437ab4c777493b586ea331751c172eb7f07efd8f0d061a5b8022ab502e8ed9b1",
+      "bytes": 5893,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/06_calibration.ttl",
+      "sha256": "3ca5a9bfbc4915cf1c1168e05496b7112437ed21664fd2b029d4f5158b2efdb7",
+      "bytes": 7460,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/07_grounding.ttl",
+      "sha256": "38fd37ed08867aea837f6a1b23dea4e86348b811ddfeb2741b040b4f9e89ecb3",
+      "bytes": 3258,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/generation_report.json",
+      "sha256": "123730cc824af346a71484995e2df12b156c3eeea319c5d57ca116f22a65b8b6",
+      "bytes": 1209,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/shapes/ontology_shapes.ttl",
+      "sha256": "c5f4d6fdf3604910c4211db9461b91f153e163befc2590f58e2e4a21ad0431a0",
+      "bytes": 26832,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/shapes/ontology_shapes_v6.ttl",
+      "sha256": "77825a66e5c3cb2402aeed9e24acb31d4c298335ab713c80243a7cd7e2fdd659",
+      "bytes": 5980,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/fixtures/instances.ttl",
+      "sha256": "c7507dd11663d9d7ccf58fc6c6aa5d935a7e2260f891230a427e44b22247d03c",
+      "bytes": 64242382,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/fixtures/invalid_examples.ttl",
+      "sha256": "22d8d8f003ff61570aa194259c66217e1a5a35165d4f787350743c2c6341b86a",
+      "bytes": 127963,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/fixtures/invalid_examples_v6.ttl",
+      "sha256": "43648a33aa0903dc6fcee63b7dfd6b29d6d882a6d570a3e8ef7c5c093cc66384",
+      "bytes": 5775,
+      "kind": "ontology"
+    },
+    {
+      "path": "Ontologias/ontology_v4_2/fixtures/invalid_expectations.json",
+      "sha256": "5c02e07bcccb887d4bfdd7af939e67998550241d52ebf54e0d7e44d932bbc50f",
+      "bytes": 12729,
+      "kind": "ontology"
+    },
+    {
+      "path": "_analysis/PAPER_v15.docx",
+      "sha256": "c65ee43b34118b326593c9e42d0c84d32c7ae49280b749bc3e1d640d8961352c",
+      "bytes": 324437,
+      "kind": "deliverable"
+    },
+    {
+      "path": "_analysis/paper/build_paper_v15.py",
+      "sha256": "0772b0911fb5def1b4a8c845d8040e00e577c895414a3349c6cc7d4917bc94bd",
+      "bytes": 104135,
+      "kind": "code"
+    },
+    {
+      "path": "Evaluacoes/r5/paper_docx_number_trace_v15.json",
+      "sha256": "537c45c69ecf0e76c97d797386916f11ef68e2c868a77a3e155c3637ce4c5ee4",
+      "bytes": 28232,
+      "kind": "evaluation"
+    },
+    {
+      "path": "Evaluacoes/r5/paper_docx_number_trace_v14.json",
+      "sha256": "14fd4754a7be0313d17a7e7bfb1f5a7b0a74255d7e2fd5c585ffb1c845deb2ad",
+      "bytes": 27331,
+      "kind": "evaluation"
+    }
+  ],
+  "runs": [
+    {
+      "name": "B20_canonical_beta_check.json",
+      "duration_s": null,
+      "sha256": "113b8f6e9777e266dbcd79e452f5a7efa1550e56d5156a3d00544997c4affccd",
+      "bytes": 11459
+    },
+    {
+      "name": "B20_crit_mild_cap3.json",
+      "duration_s": null,
+      "sha256": "0156977f38388c78860aad76ade13bb3ac1473ddd41095cee3a8fcc0d4752944",
+      "bytes": 19269
+    },
+    {
+      "name": "B20_crit_mild_cap3_full_corpus.json",
+      "duration_s": null,
+      "sha256": "d93afa4312a10352256250a82f7f10f6b3ae86873553729f7b4f4dd6915b6aaf",
+      "bytes": 20328
+    },
+    {
+      "name": "B20_crit_targeted_TB_TS_IM.json",
+      "duration_s": null,
+      "sha256": "fa1ca3790900e58d718c70c44c10359a47cd4592d1fcbbfb41b26ade732a4049",
+      "bytes": 16880
+    },
+    {
+      "name": "B20_crit_targeted_full_corpus.json",
+      "duration_s": null,
+      "sha256": "3e4263baa5b3d7c981313f985139686ae1908bc19c4cf4f3931318a921ad1947",
+      "bytes": 17942
+    },
+    {
+      "name": "B20_variant_eval.json",
+      "duration_s": null,
+      "sha256": "ae273ca3dca675b8c7bb9c5686776a130a1643050da779b4161b8abbb0aff3fe",
+      "bytes": 31743
+    },
+    {
+      "name": "B20_variant_eval_full.json",
+      "duration_s": null,
+      "sha256": "9b16e0a1fefeaf34f7ba0cd88567f19c0e906c195320aaff03799a51a6cdb551",
+      "bytes": 26282614
+    },
+    {
+      "name": "B20_variant_eval_full_corpus.json",
+      "duration_s": null,
+      "sha256": "d491f866f4ab322e563f95ef88acac7a2deb8e37e2257f194b6173bde8eddc5b",
+      "bytes": 17093
+    },
+    {
+      "name": "B21_ablation.json",
+      "duration_s": null,
+      "sha256": "6f4bb2ea0f8c6d8452a5b0e7dba85d3b54f288fd0b6f7e41fdec84cdd2587216",
+      "bytes": 31874
+    },
+    {
+      "name": "B22_fact_contradiction.json",
+      "duration_s": 34.06,
+      "sha256": "85b0adea0c75c6ce3a83eaac5193a74919d6c27bd09d806f1afcc8af43dbdb4e",
+      "bytes": 6353
+    },
+    {
+      "name": "B23_sobol_v13.json",
+      "duration_s": 200.7,
+      "sha256": "965ad562ddbc3b6368f87267c3c5eed6ac45de6c8e4bdeafb5beeabf6e527b70",
+      "bytes": 15589
+    },
+    {
+      "name": "B26_rubric_sensitivity.json",
+      "duration_s": 1042.4,
+      "sha256": "b6e73c140b19db2bd98718989e74c2fc1b18d6761639345869c3d828aa6a8092",
+      "bytes": 5362
+    },
+    {
+      "name": "B8_probes_reverified.json",
+      "duration_s": null,
+      "sha256": "81574cae3c4d7d669c3114b93273d3a535d049464385ca6848e22009255323ac",
+      "bytes": 4117733
+    },
+    {
+      "name": "B8_probes_reverified_v13.json",
+      "duration_s": null,
+      "sha256": "0e1b23709c715dba71eddf1edac2a619d729a185b96101cfa8c45c2b286a231d",
+      "bytes": 4123560
+    },
+    {
+      "name": "adjudication_sample_power.json",
+      "duration_s": null,
+      "sha256": "45c5d2650111cdd782bed7004e77f70d405f0dc2a03ef4b49ea4249874f3c339",
+      "bytes": 333
+    },
+    {
+      "name": "corpus_v7_coverage.json",
+      "duration_s": null,
+      "sha256": "32a6255b5c941b04c732ebc0543a849ba3afbbfcc3da0777ce7aaf9ab03d2b07",
+      "bytes": 26329
+    },
+    {
+      "name": "kappa_by_stratum_v13.json",
+      "duration_s": null,
+      "sha256": "e55c353208113b3a1a2f425dc2c3f32d198b4295dd466e5f5d6a1e37a53f6051",
+      "bytes": 2224
+    },
+    {
+      "name": "mirror_full_corpus_v13.json",
+      "duration_s": 121.87,
+      "sha256": "4f2caaddd130a4d8b53e9862a47868fea330052fcdab5dab2891c0569d8789af",
+      "bytes": 893
+    },
+    {
+      "name": "ontology_v4_2_validation.json",
+      "duration_s": 301.9,
+      "sha256": "7f10b081284adf81d46077a9df94f91a1b6a558d94991c75ba8a2568188806ac",
+      "bytes": 4350679
+    },
+    {
+      "name": "ontology_v4_validation_reverified.json",
+      "duration_s": 74.2,
+      "sha256": "98462c218ae7fa680cf65ea9d6ed3d6a6b30552232d38efd2b8b3bc3fa5298ed",
+      "bytes": 3616330
+    },
+    {
+      "name": "paper_consistency_check_v13.json",
+      "duration_s": null,
+      "sha256": "031f477304903876ae4186d4599e4124dd66cba7f032447f119fbcf25b77ab87",
+      "bytes": 46315
+    },
+    {
+      "name": "paper_docx_number_trace_v15.json",
+      "duration_s": 99.3,
+      "sha256": "6d5aef6a64f594b940c4c9750a67ad63c44616ef40089a5168f704d2ad5f7b6c",
+      "bytes": 28514,
+      "note": "traceability re-run against PAPER_v15.docx: 177 checks, 177 passed"
+    }
+  ],
+  "counts": {
+    "artefacts": 51,
+    "r5_json_runs": 21,
+    "core_files": 8,
+    "ontology_files": 14
+  },
+  "artefacts_count": 51
+}

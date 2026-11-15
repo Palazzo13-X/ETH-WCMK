@@ -1,0 +1,26 @@
+@prefix : <https://eth2.local/ontology/ethcase-analysis#> .
+@prefix core: <https://eth2.local/ontology/ethcase-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/ethcase-analysis> a owl:Ontology ;
+    rdfs:label "ETHCASE Analysis" ;
+    rdfs:comment "Analytical extension for hypotheses, gaps and normative tensions." .
+
+:CaseAnalysis a owl:Class ; rdfs:label "Case Analysis" .
+:Hypothesis a owl:Class ; rdfs:label "Hypothesis" .
+:GapSignal a owl:Class ; rdfs:label "Gap Signal" .
+:NormativeTension a owl:Class ; rdfs:label "Normative Tension" .
+:SafeguardProposal a owl:Class ; rdfs:label "Safeguard Proposal" .
+:UncertaintySignal a owl:Class ; rdfs:label "Uncertainty Signal" .
+
+:aboutCase a owl:ObjectProperty ; rdfs:domain :CaseAnalysis ; rdfs:range core:EthicalCase .
+:hasHypothesis a owl:ObjectProperty ; rdfs:domain :CaseAnalysis ; rdfs:range :Hypothesis .
+:hasGapSignal a owl:ObjectProperty ; rdfs:domain :CaseAnalysis ; rdfs:range :GapSignal .
+:hasNormativeTension a owl:ObjectProperty ; rdfs:domain :CaseAnalysis ; rdfs:range :NormativeTension .
+:hasSafeguardProposal a owl:ObjectProperty ; rdfs:domain :CaseAnalysis ; rdfs:range :SafeguardProposal .
+:hasUncertaintySignal a owl:ObjectProperty ; rdfs:domain :CaseAnalysis ; rdfs:range :UncertaintySignal .
+
+:confidence a owl:DatatypeProperty ; rdfs:range xsd:decimal .
+:requiresHumanReview a owl:DatatypeProperty ; rdfs:range xsd:boolean .

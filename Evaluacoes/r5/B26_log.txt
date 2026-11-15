@@ -1,0 +1,61 @@
+{
+ "runtime_s": 1042.4,
+ "pairs": 220400,
+ "variants": [
+  [
+   "V0 baseline rubric",
+   0.5336,
+   0.0
+  ],
+  [
+   "V1 floors x1.10",
+   0.5507,
+   0.0171
+  ],
+  [
+   "V2 floors x0.90",
+   0.525,
+   -0.0086
+  ],
+  [
+   "V3 categorical set = 3 duties",
+   0.5085,
+   -0.0251
+  ],
+  [
+   "V4 every duty categorical",
+   0.5461,
+   0.0125
+  ],
+  [
+   "V5 consensus = lens A only",
+   0.5223,
+   -0.0113
+  ],
+  [
+   "V6 consensus = lens B only",
+   0.3324,
+   -0.2012
+  ],
+  [
+   "V7 consensus = lens C only",
+   0.5147,
+   -0.0189
+  ],
+  [
+   "V8 coverage gate 0.80",
+   0.6005,
+   0.0669
+  ],
+  [
+   "V9 coverage gate 0.60",
+   0.4907,
+   -0.0429
+  ],
+  [
+   "V10 gap mode assume_breach",
+   0.2974,
+   -0.2362
+  ]
+ ]
+}

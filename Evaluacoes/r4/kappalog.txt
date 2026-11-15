@@ -1,0 +1,90 @@
+{
+  "pairs": 183920,
+  "panel_unanimity": {
+    "majority": 84563,
+    "unanimous": 87134,
+    "contested": 12223
+  },
+  "strata": {
+    "majority": {
+      "n": 84563,
+      "share": 0.4598,
+      "kappa_5class": 0.1368,
+      "kappa_3band": 0.161,
+      "agreement": 0.6694,
+      "gold_marginal": {
+        "PROHIBIT": 64310,
+        "ALLOW": 1342,
+        "REVIEW_REQUIRED": 16449,
+        "ALLOW_WITH_GUARDS": 2462
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 18222,
+        "ABSTAIN": 2235,
+        "PROHIBIT": 63944,
+        "ALLOW_WITH_GUARDS": 162
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 51415,
+        "PROHIBIT->REVIEW_REQUIRED": 11060,
+        "REVIEW_REQUIRED->PROHIBIT": 10939,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 5120,
+        "ABSTAIN->PROHIBIT": 1939,
+        "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 1364,
+        "PROHIBIT->ALLOW_WITH_GUARDS": 984,
+        "REVIEW_REQUIRED->ALLOW": 799,
+        "PROHIBIT->ALLOW": 485,
+        "ABSTAIN->REVIEW_REQUIRED": 235,
+        "ALLOW_WITH_GUARDS->ALLOW_WITH_GUARDS": 75,
+        "ABSTAIN->ALLOW_WITH_GUARDS": 39
+      }
+    },
+    "unanimous": {
+      "n": 87134,
+      "share": 0.4738,
+      "kappa_5class": 0.6955,
+      "kappa_3band": 0.7016,
+      "agreement": 0.9043,
+      "gold_marginal": {
+        "ALLOW": 819,
+        "REVIEW_REQUIRED": 2957,
+        "PROHIBIT": 72498,
+        "ABSTAIN": 10769,
+        "ALLOW_WITH_GUARDS": 91
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 5068,
+        "ABSTAIN": 12190,
+        "PROHIBIT": 69786,
+        "ALLOW": 1,
+        "ALLOW_WITH_GUARDS": 89
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 67522,
+        "ABSTAIN->ABSTAIN": 10219,
+        "REVIEW_REQUIRED->PROHIBIT": 3098,
+        "ABSTAIN->PROHIBIT": 1876,
+        "PROHIBIT->REVIEW_REQUIRED": 1826,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 1040,
+        "REVIEW_REQUIRED->ALLOW": 567,
+        "REVIEW_REQUIRED->ABSTAIN": 315,
+        "PROHIBIT->ALLOW": 204,
+        "PROHIBIT->ABSTAIN": 202,
+        "ABSTAIN->REVIEW_REQUIRED": 88,
+        "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 48
+      }
+    },
+    "contested": {
+      "n": 12223,
+      "share": 0.0665,
+      "kappa_5class": 0.0547,
+      "kappa_3band": 0.0507,
+      "agreement": 0.6118,
+      "gold_marginal": {
+        "REVIEW_REQUIRED": 1424,
+        "PROHIBIT": 10799
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 4325,
+        "PROHIBIT": 7583,
+        "ALLOW_WITH_GUARDS": 

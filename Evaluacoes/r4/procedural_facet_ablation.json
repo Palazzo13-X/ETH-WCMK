@@ -1,0 +1,110 @@
+{
+  "pairs_sampled": 47120,
+  "calibration": "fitted (B5 v12)",
+  "gold_distribution": {
+    "PROHIBIT": 36964,
+    "ALLOW": 725,
+    "REVIEW_REQUIRED": 5938,
+    "ALLOW_WITH_GUARDS": 734,
+    "ABSTAIN": 2759
+  },
+  "variants": {
+    "full_33": {
+      "pairs": 47120,
+      "kappa": 0.4031,
+      "agreement": 0.7614,
+      "mean_adequacy_low": 0.3476,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 8798,
+        "ABSTAIN": 3678,
+        "PROHIBIT": 34356,
+        "ALLOW": 1,
+        "ALLOW_WITH_GUARDS": 287
+      },
+      "delta_kappa_vs_full": 0.0
+    },
+    "procedural_facets_removed_28": {
+      "pairs": 47120,
+      "kappa": 0.376,
+      "agreement": 0.714,
+      "mean_adequacy_low": 0.4625,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 12147,
+        "ALLOW_WITH_GUARDS": 1099,
+        "ABSTAIN": 3582,
+        "PROHIBIT": 30291,
+        "ALLOW": 1
+      },
+      "delta_kappa_vs_full": -0.0271
+    },
+    "only_M8_removed_32": {
+      "pairs": 47120,
+      "kappa": 0.399,
+      "agreement": 0.7529,
+      "mean_adequacy_low": 0.358,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 9702,
+        "ABSTAIN": 3576,
+        "PROHIBIT": 33540,
+        "ALLOW_WITH_GUARDS": 302
+      },
+      "delta_kappa_vs_full": -0.0041
+    },
+    "only_M9_removed_32": {
+      "pairs": 47120,
+      "kappa": 0.3952,
+      "agreement": 0.7495,
+      "mean_adequacy_low": 0.3578,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 9612,
+        "ALLOW_WITH_GUARDS": 469,
+        "ABSTAIN": 3678,
+        "PROHIBIT": 33361
+      },
+      "delta_kappa_vs_full": -0.0079
+    },
+    "only_M10_removed_32": {
+      "pairs": 47120,
+      "kappa": 0.4014,
+      "agreement": 0.7507,
+      "mean_adequacy_low": 0.4305,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 9790,
+        "ALLOW_WITH_GUARDS": 453,
+        "ABSTAIN": 3678,
+        "PROHIBIT": 33198,
+        "ALLOW": 1
+      },
+      "delta_kappa_vs_full": -0.0017
+    },
+    "only_C8_removed_32": {
+      "pairs": 47120,
+      "kappa": 0.402,
+      "agreement": 0.7607,
+      "mean_adequacy_low": 0.3496,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 8804,
+        "ABSTAIN": 3678,
+        "PROHIBIT": 34330,
+        "ALLOW": 1,
+        "ALLOW_WITH_GUARDS": 307
+      },
+      "delta_kappa_vs_full": -0.0011
+    },
+    "only_K9_removed_32": {
+      "pairs": 47120,
+      "kappa": 0.4043,
+      "agreement": 0.7614,
+      "mean_adequacy_low": 0.3503,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 8771,
+        "ABSTAIN": 3682,
+        "PROHIBIT": 34319,
+        "ALLOW": 1,
+        "ALLOW_WITH_GUARDS": 347
+      },
+      "delta_kappa_vs_full": 0.0011
+    }
+  },
+  "reading": "If kappa falls when the procedural facets are removed, the five new facets are carrying normative content the panel was already applying through its procedural rules; if it does not, they are decoration."
+}

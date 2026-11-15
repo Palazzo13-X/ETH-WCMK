@@ -1,0 +1,235 @@
+{
+  "battery": "V-ontology",
+  "triples": {
+    "01_core.ttl": 450,
+    "02_facets.ttl": 1749,
+    "03_domains_context.ttl": 92,
+    "04_pillars_lattice.ttl": 119,
+    "05_calibration.ttl": 26,
+    "06_decisions.ttl": 40,
+    "shapes/facet_and_context_shapes.ttl": 339
+  },
+  "data_triples_valid": 2751,
+  "shacl_valid_instance": {
+    "conformant": true,
+    "violations": 0
+  },
+  "shacl_invalid_instance": {
+    "conformant": false,
+    "violations": 10,
+    "detected": [
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/facet/M7",
+        "value": "1.2"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/facet/M7",
+        "value": "1.2"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/slot/BAD_ARITY",
+        "value": "5"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/decision/OPEN",
+        "value": "9"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/case/BROKEN-0001",
+        "value": "-0.1"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/case/BROKEN-0001",
+        "value": "1.2"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/case/BROKEN-0001",
+        "value": "https://ethwcmk.org/ontology/severity/very_high"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/confrontation/BROKEN-0001",
+        "value": "https://ethwcmk.org/ontology/decision/OPEN"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/confrontation/BROKEN-0001",
+        "value": "1.3"
+      },
+      {
+        "path": "None",
+        "focus": "https://ethwcmk.org/ontology/confrontation/BROKEN-0001",
+        "value": "-0.2"
+      }
+    ]
+  },
+  "validations": [
+    {
+      "id": "V1_beta_sum_equals_1",
+      "bad_rows": 0,
+      "expected": 0,
+      "pass": true,
+      "sample": []
+    },
+    {
+      "id": "V2_pillar_Want_has_facets",
+      "n_facets": 8,
+      "pass": true
+    },
+    {
+      "id": "V2_pillar_Can_has_facets",
+      "n_facets": 11,
+      "pass": true
+    },
+    {
+      "id": "V2_pillar_Must_has_facets",
+      "n_facets": 16,
+      "pass": true
+    },
+    {
+      "id": "V2_pillar_Know_has_facets",
+      "n_facets": 9,
+      "pass": true
+    },
+    {
+      "id": "V3_facets_are_individuals_not_classes",
+      "facets": 26,
+      "named_individuals": 74,
+      "declared_classes": 16,
+      "pass": true
+    },
+    {
+      "id": "V4_facet_codes_unique",
+      "n": 26,
+      "distinct": 26,
+      "pass": true
+    },
+    {
+      "id": "V5_face_lattice_complete",
+      "slots": 15,
+      "by_arity": {
+        "1": 4,
+        "2": 6,
+        "3": 4,
+        "4": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "V6_guard_consistency",
+      "bad_values": 0,
+      "missing_threshold": 0,
+      "threshold_on_unguarded_facet": 0,
+      "pass": true
+    },
+    {
+      "id": "V7_decision_vocabulary_closed_ordered",
+      "n": 5,
+      "ranks": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pass": true
+    },
+    {
+      "id": "V8_calibration_normalisation",
+      "lambda_sum_not_1": 0,
+      "budget_exceeded": 0,
+      "pass": true
+    },
+    {
+      "id": "V9_risk_arithmetic_recomputable",
+      "confrontations": 1,
+      "inconsistent": 0,
+      "pass": true,
+      "formula": "R_r = R_c(1 - Aa) + sigma * R_c"
+    },
+    {
+      "id": "V10_veto_pillars_qualify",
+      "violations": 0,
+      "pass": true
+    },
+    {
+      "id": "V11_domain_coverage_complete",
+      "domains": 13,
+      "cells": 338,
+      "expected_cells": 338,
+      "domains_without_level4_facets": [],
+      "pass": true
+    },
+    {
+      "id": "V12_no_dangling_facet_references",
+      "bad_requirements": 0,
+      "bad_levels": 0,
+      "pass": true
+    },
+    {
+      "id": "V13_requirement_coverage",
+      "distinct_facets": 26,
+      "coverage": 1.0,
+      "pass": true
+    },
+    {
+      "id": "V14_profile_shape_normalised",
+      "violations": 0,
+      "pass": true
+    },
+    {
+      "id": "V15_penalty_budget_closure",
+      "violations": [],
+      "pass": true
+    },
+    {
+      "id": "V16_veto_thresholds_valid",
+      "violations": [],
+      "pass": true
+    },
+    {
+      "id": "V17_decision_bar_declared_and_non_negative",
+      "n_calibrations": 1,
+      "pass": true
+    }
+  ],
+  "all_validations_pass": true,
+  "negative_fixture_detected": true,
+  "legacy_v1_reproduction": [
+    {
+      "data": "eth_extracted/eth/ethcase-facet-requirements.ttl",
+      "shapes": "eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+      "conformant": false,
+      "violations": 21
+    },
+    {
+      "data": "wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+      "error": "A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes"
+    },
+    {
+      "data": "wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "conformant": true,
+      "violations": 0
+    },
+    {
+      "data": "wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+      "shapes": "wcmk_extracted/wcmk/wcmk-profile.shacl.ttl",
+      "conformant": true,
+      "violations": 0
+    },
+    {
+      "data": "wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+      "shapes": "wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+      "conformant": true,
+      "violations": 0
+    }
+  ]
+}

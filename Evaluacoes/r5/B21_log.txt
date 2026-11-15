@@ -1,0 +1,44 @@
+v13_baseline                           kappa=0.4633  n=48400  meanAa=0.3516  (27.92s)
+lambda(E) s=0.5                        kappa=0.4632  n=48400  meanAa=0.3506  (32.7s)
+lambda(E) s=1.0                        kappa=0.4631  n=48400  meanAa=0.3495  (32.62s)
+lambda(E) s=2.0                        kappa=0.4631  n=48400  meanAa=0.3475  (28.51s)
+cross-pillar zeta=0.05                 kappa=0.462  n=48400  meanAa=0.3428  (26.66s)
+cross-pillar zeta=0.10                 kappa=0.4603  n=48400  meanAa=0.334  (32.82s)
+oversight from facts                   kappa=0.4748  n=48400  meanAa=0.3523  (32.27s)
+oversight from facts + zeta=0.05       kappa=0.4742  n=48400  meanAa=0.3435  (31.57s)
+all guards removed                     kappa=0.1399  n=48400  meanAa=0.6153  (28.4s)
+guard removed: W2                      kappa=0.464  n=48400  meanAa=0.3559  (32.52s)
+guard removed: W6                      kappa=0.4647  n=48400  meanAa=0.3557  (31.78s)
+guard removed: C3                      kappa=0.4639  n=48400  meanAa=0.3576  (31.22s)
+guard removed: C6                      kappa=0.4631  n=48400  meanAa=0.3548  (26.33s)
+guard removed: C7                      kappa=0.4591  n=48400  meanAa=0.3692  (22.25s)
+guard removed: M1                      kappa=0.4621  n=48400  meanAa=0.3535  (22.38s)
+guard removed: M4                      kappa=0.4643  n=48400  meanAa=0.3542  (24.16s)
+guard removed: M7                      kappa=0.4613  n=48400  meanAa=0.3795  (27.47s)
+guard removed: K6                      kappa=0.4641  n=48400  meanAa=0.3542  (27.26s)
+guard removed: M8                      kappa=0.4621  n=48400  meanAa=0.3573  (26.24s)
+guard removed: M9                      kappa=0.4609  n=48400  meanAa=0.3576  (26.84s)
+guard removed: M10                     kappa=0.4646  n=48400  meanAa=0.433  (31.13s)
+duties collapsed to primary pillar     kappa=0.2691  n=48400  meanAa=0.5627  (23.24s)
+   Δκ lambda(E) s=0.5                    -0.0001 CI95 [-0.0003, 0.0]
+   Δκ lambda(E) s=1.0                    -0.0002 CI95 [-0.0004, -0.0]
+   Δκ lambda(E) s=2.0                    -0.0002 CI95 [-0.0006, 0.0002]
+   Δκ cross-pillar zeta=0.05             -0.0013 CI95 [-0.0021, -0.0005]
+   Δκ cross-pillar zeta=0.10             -0.0030 CI95 [-0.0042, -0.0016]
+   Δκ oversight from facts               +0.0115 CI95 [0.0085, 0.0149]
+   Δκ oversight from facts + zeta=0.05   +0.0109 CI95 [0.0076, 0.0141]
+   Δκ all guards removed                 -0.3234 CI95 [-0.3306, -0.3147]
+   Δκ guard removed: W2                  +0.0007 CI95 [-0.0001, 0.0018]
+   Δκ guard removed: W6                  +0.0014 CI95 [0.0004, 0.0024]
+   Δκ guard removed: C3                  +0.0006 CI95 [-0.0018, 0.0028]
+   Δκ guard removed: C6                  -0.0002 CI95 [-0.0014, 0.0013]
+   Δκ guard removed: C7                  -0.0042 CI95 [-0.0073, -0.001]
+   Δκ guard removed: M1                  -0.0012 CI95 [-0.0025, 0.0004]
+   Δκ guard removed: M4                  +0.0010 CI95 [-0.0002, 0.0021]
+   Δκ guard removed: M7                  -0.0020 CI95 [-0.0056, 0.0009]
+   Δκ guard removed: K6                  +0.0008 CI95 [-0.0002, 0.0019]
+   Δκ guard removed: M8                  -0.0012 CI95 [-0.0031, 0.0004]
+   Δκ guard removed: M9                  -0.0024 CI95 [-0.0044, 0.0001]
+   Δκ guard removed: M10                 +0.0013 CI95 [-0.0012, 0.0038]
+   Δκ duties collapsed to primary pillar -0.1942 CI95 [-0.2025, -0.1831]
+wrote Evaluacoes/r5/B21_ablation.json

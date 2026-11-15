@@ -1,0 +1,239 @@
+{
+  "pairs": 183920,
+  "panel_unanimity": {
+    "majority": 84563,
+    "unanimous": 87134,
+    "contested": 12223
+  },
+  "strata": {
+    "majority": {
+      "n": 84563,
+      "share": 0.4598,
+      "kappa_5class": 0.1368,
+      "kappa_3band": 0.161,
+      "agreement": 0.6694,
+      "gold_marginal": {
+        "PROHIBIT": 64310,
+        "ALLOW": 1342,
+        "REVIEW_REQUIRED": 16449,
+        "ALLOW_WITH_GUARDS": 2462
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 18222,
+        "ABSTAIN": 2235,
+        "PROHIBIT": 63944,
+        "ALLOW_WITH_GUARDS": 162
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 51415,
+        "PROHIBIT->REVIEW_REQUIRED": 11060,
+        "REVIEW_REQUIRED->PROHIBIT": 10939,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 5120,
+        "ABSTAIN->PROHIBIT": 1939,
+        "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 1364,
+        "PROHIBIT->ALLOW_WITH_GUARDS": 984,
+        "REVIEW_REQUIRED->ALLOW": 799,
+        "PROHIBIT->ALLOW": 485,
+        "ABSTAIN->REVIEW_REQUIRED": 235,
+        "ALLOW_WITH_GUARDS->ALLOW_WITH_GUARDS": 75,
+        "ABSTAIN->ALLOW_WITH_GUARDS": 39
+      }
+    },
+    "unanimous": {
+      "n": 87134,
+      "share": 0.4738,
+      "kappa_5class": 0.6955,
+      "kappa_3band": 0.7016,
+      "agreement": 0.9043,
+      "gold_marginal": {
+        "ALLOW": 819,
+        "REVIEW_REQUIRED": 2957,
+        "PROHIBIT": 72498,
+        "ABSTAIN": 10769,
+        "ALLOW_WITH_GUARDS": 91
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 5068,
+        "ABSTAIN": 12190,
+        "PROHIBIT": 69786,
+        "ALLOW": 1,
+        "ALLOW_WITH_GUARDS": 89
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 67522,
+        "ABSTAIN->ABSTAIN": 10219,
+        "REVIEW_REQUIRED->PROHIBIT": 3098,
+        "ABSTAIN->PROHIBIT": 1876,
+        "PROHIBIT->REVIEW_REQUIRED": 1826,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 1040,
+        "REVIEW_REQUIRED->ALLOW": 567,
+        "REVIEW_REQUIRED->ABSTAIN": 315,
+        "PROHIBIT->ALLOW": 204,
+        "PROHIBIT->ABSTAIN": 202,
+        "ABSTAIN->REVIEW_REQUIRED": 88,
+        "REVIEW_REQUIRED->ALLOW_WITH_GUARDS": 48
+      }
+    },
+    "contested": {
+      "n": 12223,
+      "share": 0.0665,
+      "kappa_5class": 0.0547,
+      "kappa_3band": 0.0507,
+      "agreement": 0.6118,
+      "gold_marginal": {
+        "REVIEW_REQUIRED": 1424,
+        "PROHIBIT": 10799
+      },
+      "model_marginal": {
+        "REVIEW_REQUIRED": 4325,
+        "PROHIBIT": 7583,
+        "ALLOW_WITH_GUARDS": 37,
+        "ABSTAIN": 278
+      },
+      "top_confusions": {
+        "PROHIBIT->PROHIBIT": 6826,
+        "REVIEW_REQUIRED->PROHIBIT": 3673,
+        "PROHIBIT->REVIEW_REQUIRED": 757,
+        "REVIEW_REQUIRED->REVIEW_REQUIRED": 652,
+        "ABSTAIN->PROHIBIT": 274,
+        "ALLOW_WITH_GUARDS->PROHIBIT": 26,
+        "ALLOW_WITH_GUARDS->REVIEW_REQUIRED": 11,
+        "ABSTAIN->REVIEW_REQUIRED": 4
+      }
+    }
+  },
+  "by_domain": {
+    "DS": {
+      "n": 14036,
+      "kappa": 0.4231,
+      "agreement": 0.7865
+    },
+    "ED": {
+      "n": 14157,
+      "kappa": 0.4488,
+      "agreement": 0.8407
+    },
+    "FI": {
+      "n": 14278,
+      "kappa": 0.2982,
+      "agreement": 0.7022
+    },
+    "GP": {
+      "n": 14157,
+      "kappa": 0.3363,
+      "agreement": 0.7648
+    },
+    "IC": {
+      "n": 14278,
+      "kappa": 0.3613,
+      "agreement": 0.7402
+    },
+    "IM": {
+      "n": 14157,
+      "kappa": 0.3801,
+      "agreement": 0.7656
+    },
+    "JS": {
+      "n": 14278,
+      "kappa": 0.3961,
+      "agreement": 0.7402
+    },
+    "MA": {
+      "n": 14036,
+      "kappa": 0.455,
+      "agreement": 0.8019
+    },
+    "PD": {
+      "n": 14157,
+      "kappa": 0.3643,
+      "agreement": 0.7899
+    },
+    "RS": {
+      "n": 14036,
+      "kappa": 0.4639,
+      "agreement": 0.8297
+    },
+    "SA": {
+      "n": 14278,
+      "kappa": 0.3553,
+      "agreement": 0.7243
+    },
+    "TB": {
+      "n": 14036,
+      "kappa": 0.2819,
+      "agreement": 0.7917
+    },
+    "TS": {
+      "n": 14036,
+      "kappa": 0.412,
+      "agreement": 0.8244
+    }
+  },
+  "by_conflict_pattern": {
+    "none": {
+      "n": 183920,
+      "kappa": 0.383
+    }
+  },
+  "by_severity": {
+    "low": {
+      "n": 46706,
+      "kappa": 0.245
+    },
+    "medium": {
+      "n": 45738,
+      "kappa": 0.3793
+    },
+    "high": {
+      "n": 45738,
+      "kappa": 0.4624
+    },
+    "critical": {
+      "n": 45738,
+      "kappa": 0.512
+    }
+  },
+  "by_horizon": {
+    "immediate": {
+      "n": 49731,
+      "kappa": 0.3192
+    },
+    "long": {
+      "n": 40535,
+      "kappa": 0.4328
+    },
+    "medium": {
+      "n": 46827,
+      "kappa": 0.4314
+    },
+    "short": {
+      "n": 46827,
+      "kappa": 0.3667
+    }
+  },
+  "by_layer": {
+    "A": {
+      "n": 145200,
+      "kappa": 0.3132
+    },
+    "B": {
+      "n": 38720,
+      "kappa": 0.5524
+    }
+  },
+  "panel_vs_own_consensus": {
+    "A": 0.7587,
+    "B": 0.3207,
+    "C": 0.719
+  },
+  "panel_pairwise_agreement": {
+    "A-B": 0.5456,
+    "A-C": 0.8197,
+    "B-C": 0.5157
+  },
+  "panel_pairwise_kappa": {
+    "A-B": 0.2557,
+    "A-C": 0.5237,
+    "B-C": 0.2012
+  }
+}

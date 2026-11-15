@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-manager: pip
+    directories:
+      - "/"
+    schedule:
+      interval: monthly
+    open-pr-credentials: false
+    commit-message:
+      prefix: "deps"
+
+  - package-manager: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly

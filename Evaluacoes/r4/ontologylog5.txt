@@ -1,0 +1,16 @@
+instance graph parsed: 258024 triples from instances_subset.ttl
+SHACL modules vs v4 shapes: conforms=False violations=1 (0.3 s)
+SHACL instances vs v4 shapes: conforms=False violations=23 (10.1 s)
+SHACL instances vs v6 shapes: conforms=False violations=806 (3.0 s)
+invalid fixtures invalid_examples.ttl (73 fixtures): 63/63 caught, 63 attributed to the intended shape
+invalid fixtures invalid_examples_v6.ttl (12 E30 fixtures): 12/12 caught, 12 attributed to the intended shape
+Traceback (most recent call last):
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1334, in <module>
+    main()
+    ~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1162, in main
+    checks = consistency_checks(full_graph)
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 502, in consistency_checks
+    if abs(float(r["floor"]) - float(r["declaredFloor"])) > 1e-6 or
+                                     ~^^^^^^^^^^^^^^^^^
+KeyError: 'declaredFloor'

@@ -1,0 +1,73 @@
+{
+  "corpus": "corpus_v6",
+  "calibration": "fitted B5 v12",
+  "pairs": 183920,
+  "variants": {
+    "full": {
+      "kappa": 0.4681,
+      "delta_vs_full": 0.0,
+      "agreement": 0.8308,
+      "mean_adequacy_low": 0.2886,
+      "decision_distribution": {
+        "PROHIBIT": 153048,
+        "REVIEW_REQUIRED": 15188,
+        "ALLOW_WITH_GUARDS": 869,
+        "ABSTAIN": 14702,
+        "ALLOW": 113
+      }
+    },
+    "guards_K1_K3": {
+      "kappa": 0.4639,
+      "delta_vs_full": -0.0042,
+      "agreement": 0.8322,
+      "mean_adequacy_low": 0.2852,
+      "decision_distribution": {
+        "PROHIBIT": 154403,
+        "REVIEW_REQUIRED": 13862,
+        "ALLOW_WITH_GUARDS": 789,
+        "ABSTAIN": 14756,
+        "ALLOW": 110
+      }
+    },
+    "guards_all_K": {
+      "kappa": 0.1234,
+      "delta_vs_full": -0.3447,
+      "agreement": 0.414,
+      "mean_adequacy_low": 0.5575,
+      "decision_distribution": {
+        "PROHIBIT": 63433,
+        "ALLOW": 9022,
+        "ALLOW_WITH_GUARDS": 20425,
+        "REVIEW_REQUIRED": 79387,
+        "ABSTAIN": 11653
+      }
+    },
+    "no_K9": {
+      "kappa": 0.4672,
+      "delta_vs_full": -0.0009,
+      "agreement": 0.8304,
+      "mean_adequacy_low": 0.291,
+      "decision_distribution": {
+        "PROHIBIT": 153004,
+        "REVIEW_REQUIRED": 15146,
+        "ALLOW_WITH_GUARDS": 957,
+        "ABSTAIN": 14672,
+        "ALLOW": 141
+      }
+    },
+    "rebalanced_criticality": {
+      "kappa": 0.4718,
+      "delta_vs_full": 0.0037,
+      "agreement": 0.834,
+      "mean_adequacy_low": 0.2622,
+      "decision_distribution": {
+        "PROHIBIT": 154072,
+        "REVIEW_REQUIRED": 14213,
+        "ALLOW_WITH_GUARDS": 829,
+        "ABSTAIN": 14702,
+        "ALLOW": 104
+      }
+    }
+  },
+  "reading": "A variant that does not improve kappa should not be added to the model: guards and criticality weights are normative claims and must pay for themselves in agreement, not in intuition."
+}

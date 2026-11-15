@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1181, in <module>
+    main()
+    ~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1106, in main
+    modules, shapes, instances, invalid, per_module = load_graphs()
+                                                      ~~~~~~~~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 115, in load_graphs
+    instances.parse(os.path.join(ONT, "fixtures", "instances.ttl"), format="turtle")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/graph.py", line 1669, in parse
+    raise se
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/graph.py", line 1660, in parse
+    parser.parse(source, self, **args)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 2034, in parse
+    p.loadStream(stream)
+    ~~~~~~~~~~~~^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 492, in loadStream
+    return self.loadBuf(stream.read())  # Not ideal
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 498, in loadBuf
+    self.feed(buf)
+    ~~~~~~~~~^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 524, in feed
+    i = self.directiveOrStatement(s, j)
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 545, in directiveOrStatement
+    return self.checkDot(argstr, j)
+           ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 1227, in checkDot
+    self.BadSyntax(argstr, j, "expected '.' or '}' or ']' at end of statement")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/parsers/notation3.py", line 1743, in BadSyntax
+    raise BadSyntax(self._thisDoc, self.lines, argstr, i, msg)
+rdflib.plugins.parsers.notation3.BadSyntax: <no detail available>

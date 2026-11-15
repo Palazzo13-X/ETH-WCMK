@@ -1,0 +1,265 @@
+{
+ "_rule": "4 if the domain is catalogued critical for the facet or in an explicit addition; 4 if the domain is high-consequence and the facet's primary pillar is structurally salient to it; 3 if salient; 2 otherwise. The seven SALIENCE_ADDITIONS entries are the documented analogy assignments that close the TB/TS/IM/MA/ED/DS/RS gap.",
+ "salience_additions": {
+  "TB": [
+   "M",
+   "C",
+   "K"
+  ],
+  "IM": [
+   "M",
+   "K"
+  ],
+  "ED": [
+   "M",
+   "K",
+   "C"
+  ],
+  "TS": [
+   "K",
+   "M"
+  ],
+  "DS": [
+   "K",
+   "M"
+  ],
+  "RS": [
+   "C",
+   "M"
+  ],
+  "MA": [
+   "M",
+   "C"
+  ]
+ },
+ "high_consequence_domains": [
+  "SA",
+  "JS",
+  "IC",
+  "FI",
+  "PD",
+  "GP",
+  "TB",
+  "TS",
+  "IM",
+  "MA",
+  "ED",
+  "DS",
+  "RS"
+ ],
+ "overrides": {
+  "W2": {
+   "FI": 4,
+   "ED": 4
+  },
+  "W3": {
+   "IC": 4,
+   "FI": 4,
+   "ED": 4
+  },
+  "W4": {
+   "GP": 4
+  },
+  "W5": {
+   "GP": 4,
+   "ED": 4
+  },
+  "W6": {
+   "IC": 4
+  },
+  "C1": {
+   "ED": 4,
+   "TB": 4,
+   "RS": 4
+  },
+  "C2": {
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "C3": {
+   "ED": 4,
+   "RS": 4
+  },
+  "C4": {
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "C5": {
+   "JS": 4,
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4
+  },
+  "C6": {
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "C7": {
+   "ED": 4,
+   "TB": 4,
+   "RS": 4
+  },
+  "M1": {
+   "IM": 4,
+   "ED": 4,
+   "MA": 4,
+   "RS": 4
+  },
+  "M2": {
+   "JS": 4,
+   "IM": 4,
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "M3": {
+   "FI": 4,
+   "MA": 4,
+   "TS": 4,
+   "DS": 4
+  },
+  "M4": {
+   "GP": 4,
+   "IM": 4,
+   "ED": 4,
+   "TB": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "M5": {
+   "PD": 4,
+   "IM": 4,
+   "ED": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "M6": {
+   "IM": 4,
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "M7": {
+   "IM": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "K1": {
+   "IC": 4,
+   "IM": 4,
+   "ED": 4,
+   "TB": 4,
+   "DS": 4
+  },
+  "K2": {
+   "IM": 4,
+   "ED": 4,
+   "MA": 4,
+   "TS": 4
+  },
+  "K3": {
+   "IM": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "DS": 4
+  },
+  "K4": {
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "K5": {
+   "PD": 4,
+   "IM": 4,
+   "ED": 4,
+   "TB": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "K6": {
+   "IM": 4,
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "K7": {
+   "IC": 4,
+   "ED": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4
+  },
+  "K8": {
+   "JS": 4,
+   "PD": 4,
+   "IM": 4,
+   "TB": 4,
+   "MA": 4,
+   "TS": 4
+  },
+  "M8": {
+   "MA": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "M9": {
+   "IM": 4,
+   "ED": 4,
+   "MA": 4,
+   "RS": 4,
+   "DS": 4
+  },
+  "M10": {
+   "FI": 4,
+   "IM": 4,
+   "MA": 4,
+   "TS": 4,
+   "DS": 4
+  },
+  "C8": {
+   "JS": 4,
+   "IC": 4,
+   "ED": 4,
+   "MA": 4,
+   "TS": 4
+  },
+  "K9": {
+   "JS": 4,
+   "PD": 4,
+   "IM": 4,
+   "ED": 4,
+   "RS": 4
+  }
+ }
+}

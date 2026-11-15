@@ -1,0 +1,69 @@
+{
+  "severity_filter": {
+    "agreement_consensus": 0.2833,
+    "kappa_consensus": 0.0442,
+    "ordinal": {
+      "mean_abs_rank_difference": 1.1771,
+      "within_one_rank": 0.6438,
+      "model_stricter_than_panel": 0.1271,
+      "model_more_permissive": 0.5896,
+      "spearman_rho": 0.163
+    },
+    "decision_distribution": {
+      "REVIEW_REQUIRED": 0.175,
+      "PROHIBIT": 0.325,
+      "ALLOW": 0.25,
+      "ALLOW_WITH_GUARDS": 0.25
+    }
+  },
+  "v9_compensatory_mean": {
+    "agreement_consensus": 0.3792,
+    "kappa_consensus": 0.056,
+    "ordinal": {
+      "mean_abs_rank_difference": 0.8021,
+      "within_one_rank": 0.8187,
+      "model_stricter_than_panel": 0.0076,
+      "model_more_permissive": 0.6132,
+      "spearman_rho": 0.4582
+    },
+    "decision_distribution": {
+      "REVIEW_REQUIRED": 0.5576388888888889,
+      "PROHIBIT": 0.1284722222222222,
+      "ALLOW": 0.10347222222222222,
+      "ALLOW_WITH_GUARDS": 0.21041666666666667
+    }
+  },
+  "veto_only": {
+    "agreement_consensus": 0.1917,
+    "kappa_consensus": -0.0947,
+    "ordinal": {
+      "mean_abs_rank_difference": 1.3646,
+      "within_one_rank": 0.5271,
+      "model_stricter_than_panel": 0.0063,
+      "model_more_permissive": 0.8021,
+      "spearman_rho": 0.6212
+    },
+    "decision_distribution": {
+      "REVIEW_REQUIRED": 0.42916666666666664,
+      "PROHIBIT": 0.09583333333333334,
+      "ALLOW": 0.475
+    }
+  },
+  "v10_core": {
+    "agreement_consensus": 0.6083,
+    "kappa_consensus": 0.3095,
+    "ordinal": {
+      "mean_abs_rank_difference": 0.4222,
+      "within_one_rank": 0.9694,
+      "model_stricter_than_panel": 0.2056,
+      "model_more_permissive": 0.1861,
+      "spearman_rho": 0.5025
+    },
+    "decision_distribution": {
+      "REVIEW_REQUIRED": 0.21666666666666667,
+      "PROHIBIT": 0.6493055555555556,
+      "ALLOW": 0.02847222222222222,
+      "ALLOW_WITH_GUARDS": 0.10555555555555556
+    }
+  }
+}

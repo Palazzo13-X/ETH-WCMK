@@ -1,0 +1,11 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arch: <https://example.org/eth2/arch#> .
+
+arch:WcmkAssessmentShape a sh:NodeShape ;
+  sh:targetClass arch:WCMKAssessment ;
+  sh:property [ sh:path arch:assessmentId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:wantScore ; sh:minCount 1 ] ;
+  sh:property [ sh:path arch:canScore ; sh:minCount 1 ] ;
+  sh:property [ sh:path arch:mustScore ; sh:minCount 1 ] ;
+  sh:property [ sh:path arch:knowScore ; sh:minCount 1 ] .

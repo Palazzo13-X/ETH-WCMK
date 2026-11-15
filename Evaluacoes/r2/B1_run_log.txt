@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/formal_core/run_battery_B1.py", line 199, in <module>
+    main()
+    ~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/formal_core/run_battery_B1.py", line 88, in main
+    pairs = sample_pairs(N, SEED)
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/formal_core/run_battery_B1.py", line 58, in sample_pairs
+    if k % 2:                      # population B: high-demand, partly resourced agent
+       ^
+NameError: name 'k' is not defined

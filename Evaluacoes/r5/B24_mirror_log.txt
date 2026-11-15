@@ -1,0 +1,7 @@
+{
+  "confrontations": 220400,
+  "global_max_abs_difference": 0.0,
+  "verdict_divergences": 0,
+  "veto_set_divergences": 0,
+  "runtime_seconds": 121.87
+}

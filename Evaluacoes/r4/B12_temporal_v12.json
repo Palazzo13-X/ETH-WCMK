@@ -1,0 +1,67 @@
+{
+  "cases_tracked": 20436,
+  "steps": 8,
+  "verdict_changes_total": 7461,
+  "changes_per_case": 0.365,
+  "permissive_transitions_blocked_by_hysteresis_note": 6382,
+  "A_B_A_oscillations": 103,
+  "final_verdict_distribution": {
+    "PROHIBIT": 132134,
+    "REVIEW_REQUIRED": 9775,
+    "ALLOW_WITH_GUARDS": 8139,
+    "ABSTAIN": 12220,
+    "ALLOW": 1220
+  },
+  "sample_first_5_trajectories": [
+    [
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT"
+    ],
+    [
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "REVIEW_REQUIRED",
+      "REVIEW_REQUIRED",
+      "ALLOW_WITH_GUARDS",
+      "REVIEW_REQUIRED"
+    ],
+    [
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "ALLOW_WITH_GUARDS",
+      "REVIEW_REQUIRED"
+    ],
+    [
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT"
+    ],
+    [
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT",
+      "PROHIBIT"
+    ]
+  ]
+}

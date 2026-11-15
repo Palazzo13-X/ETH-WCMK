@@ -1,0 +1,45 @@
+@prefix decision: <https://ethwcmk.org/ontology/decision/> .
+@prefix domain: <https://ethwcmk.org/ontology/domain/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix facet: <https://ethwcmk.org/ontology/facet/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix policy: <https://ethwcmk.org/ontology/policy/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/confrontation/BROKEN-0001> a eth:Confrontation ;
+    eth:adequacy 1.3 ;
+    eth:concernsCase <https://ethwcmk.org/ontology/case/BROKEN-0001> ;
+    eth:decisionOf decision:OPEN ;
+    eth:pillarDeficit 1.0 ;
+    eth:residualRisk 1.2 ;
+    eth:riskFloor 0.0 ;
+    eth:structuralTermPair -0.2 .
+
+facet:M7 a owl:NamedIndividual,
+        eth:Facet ;
+    eth:aggregationPolicy policy:weighted_mean ;
+    eth:betaCan 0.4 ;
+    eth:betaKnow 0.0 ;
+    eth:betaMust 0.0 ;
+    eth:betaWant 0.9 ;
+    eth:facetCode "M7" ;
+    eth:facetWeight 1.2 ;
+    eth:guardMin 1.2 ;
+    eth:hasGuard true ;
+    eth:source "legacy_import" .
+
+facet:W9 a owl:Class ;
+    eth:facetCode "W11" .
+
+<https://ethwcmk.org/ontology/slot/BAD_ARITY> a eth:RelationalSlot ;
+    eth:slotArity 5 .
+
+<https://ethwcmk.org/ontology/case/BROKEN-0001> a eth:EthicalCase ;
+    eth:contextualRisk 1.2 ;
+    eth:epistemicUncertainty -0.1 ;
+    eth:hasDomain domain:IC ;
+    eth:hasSeverity <https://ethwcmk.org/ontology/severity/very_high> .
+
+decision:OPEN a eth:Decision ;
+    eth:permissivenessRank 9 .
+

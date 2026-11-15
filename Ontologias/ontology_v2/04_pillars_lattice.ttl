@@ -1,0 +1,146 @@
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pillar: <https://ethwcmk.org/ontology/pillar/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix slot: <https://ethwcmk.org/ontology/slot/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/lattice/axiom> rdfs:comment "Face lattice of the 3-simplex = non-empty subsets of a 4-set: 4 vertices + 6 edges + 4 faces + 1 cell = 15 relational slots."@en .
+
+slot:C a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Can"@en ;
+    eth:alignedWithPillar pillar:Can ;
+    eth:slotArity 1 ;
+    eth:slotInvolves pillar:Can .
+
+slot:C_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Can + Know"@en ;
+    eth:slotArity 2 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Know .
+
+slot:C_M a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Can + Must"@en ;
+    eth:slotArity 2 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Must .
+
+slot:C_M_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Can + Must + Know"@en ;
+    eth:slotArity 3 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Know,
+        pillar:Must .
+
+slot:K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Know"@en ;
+    eth:alignedWithPillar pillar:Know ;
+    eth:slotArity 1 ;
+    eth:slotInvolves pillar:Know .
+
+slot:M a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Must"@en ;
+    eth:alignedWithPillar pillar:Must ;
+    eth:slotArity 1 ;
+    eth:slotInvolves pillar:Must .
+
+slot:M_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Must + Know"@en ;
+    eth:slotArity 2 ;
+    eth:slotInvolves pillar:Know,
+        pillar:Must .
+
+slot:W a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want"@en ;
+    eth:alignedWithPillar pillar:Want ;
+    eth:slotArity 1 ;
+    eth:slotInvolves pillar:Want .
+
+slot:W_C a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Can"@en ;
+    eth:slotArity 2 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Want .
+
+slot:W_C_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Can + Know"@en ;
+    eth:slotArity 3 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Know,
+        pillar:Want .
+
+slot:W_C_M a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Can + Must"@en ;
+    eth:slotArity 3 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Must,
+        pillar:Want .
+
+slot:W_C_M_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Can + Must + Know"@en ;
+    eth:slotArity 4 ;
+    eth:slotInvolves pillar:Can,
+        pillar:Know,
+        pillar:Must,
+        pillar:Want .
+
+slot:W_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Know"@en ;
+    eth:slotArity 2 ;
+    eth:slotInvolves pillar:Know,
+        pillar:Want .
+
+slot:W_M a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Must"@en ;
+    eth:slotArity 2 ;
+    eth:slotInvolves pillar:Must,
+        pillar:Want .
+
+slot:W_M_K a owl:NamedIndividual,
+        eth:RelationalSlot ;
+    rdfs:label "Want + Must + Know"@en ;
+    eth:slotArity 3 ;
+    eth:slotInvolves pillar:Know,
+        pillar:Must,
+        pillar:Want .
+
+pillar:Want a owl:NamedIndividual,
+        eth:Pillar ;
+    rdfs:label "Want"@en ;
+    owl:disjointWith pillar:Can,
+        pillar:Know,
+        pillar:Must ;
+    eth:pillarIndex 0 .
+
+pillar:Can a owl:NamedIndividual,
+        eth:Pillar ;
+    rdfs:label "Can"@en ;
+    owl:disjointWith pillar:Know,
+        pillar:Must ;
+    eth:pillarIndex 1 .
+
+pillar:Must a owl:NamedIndividual,
+        eth:Pillar ;
+    rdfs:label "Must"@en ;
+    owl:disjointWith pillar:Know ;
+    eth:pillarIndex 2 .
+
+pillar:Know a owl:NamedIndividual,
+        eth:Pillar ;
+    rdfs:label "Know"@en ;
+    eth:pillarIndex 3 .
+

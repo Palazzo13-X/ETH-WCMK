@@ -1,0 +1,982 @@
+{
+  "generated_at": "2026-11-08T23:30:33.264606+00:00",
+  "generator": "_analysis/analysis/sobol_v12_b10.py",
+  "core": "formal_core/core.py (v12)",
+  "base_calibration": "load_fitted_calibration()",
+  "method": "Latin-hypercube paired swap design (scipy/Sobol sequence not available) with the Sobol S1/S2/ST estimators; Morris elementary-effect screen as a ranking cross-check",
+  "scipy_available": false,
+  "n_samples": 4096,
+  "panel_size": 8,
+  "seed": 20261104,
+  "dimensions": {
+    "lam_C": [
+      0.15,
+      0.45
+    ],
+    "alpha_dev": [
+      0.0,
+      0.5
+    ],
+    "beta_dev": [
+      -0.5,
+      0.5
+    ],
+    "gamma": [
+      0.0,
+      0.2
+    ],
+    "eta": [
+      0.0,
+      0.1
+    ],
+    "omega": [
+      0.0,
+      0.1
+    ],
+    "rho": [
+      0.0,
+      0.2
+    ],
+    "delta": [
+      0.0,
+      0.12
+    ],
+    "theta": [
+      0.45,
+      0.8
+    ],
+    "mu_C": [
+      0.15,
+      0.55
+    ]
+  },
+  "estimator_validation": {
+    "max_abs_error_S1": 0.0334,
+    "max_abs_error_ST": 0.008,
+    "max_abs_error_S2": 0.0221,
+    "S1_sum_exact": 1.0,
+    "S1_sum_estimated": 1.1989,
+    "design": "same paired-swap design applied to an exactly solvable linear function"
+  },
+  "outputs": {
+    "mean_adequacy": {
+      "mean": 0.5359377733940254,
+      "sd": 0.015885373998763358,
+      "variance": 0.000252345107080587,
+      "S1": {
+        "lam_C": 0.8557,
+        "alpha_dev": -0.0009,
+        "beta_dev": 0.0027,
+        "gamma": 0.0327,
+        "eta": 0.0006,
+        "omega": 0.0279,
+        "rho": 0.037,
+        "delta": 0.027,
+        "theta": -0.001,
+        "mu_C": -0.001
+      },
+      "ST": {
+        "lam_C": 0.8614,
+        "alpha_dev": 0.0001,
+        "beta_dev": 0.007,
+        "gamma": 0.0399,
+        "eta": 0.0088,
+        "omega": 0.0236,
+        "rho": 0.0364,
+        "delta": 0.0312,
+        "theta": 0.0,
+        "mu_C": 0.0
+      },
+      "S1_standard_error_bootstrap": {
+        "lam_C": 0.0077,
+        "alpha_dev": 0.0163,
+        "beta_dev": 0.0163,
+        "gamma": 0.0162,
+        "eta": 0.0162,
+        "omega": 0.0161,
+        "rho": 0.0161,
+        "delta": 0.0165,
+        "theta": 0.0163,
+        "mu_C": 0.0163
+      },
+      "ST_standard_error_bootstrap": {
+        "lam_C": 0.0195,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0003,
+        "gamma": 0.0012,
+        "eta": 0.0004,
+        "omega": 0.0007,
+        "rho": 0.0011,
+        "delta": 0.001,
+        "theta": 0.0,
+        "mu_C": 0.0
+      },
+      "S2_standard_error_bootstrap": {
+        "lam_C:alpha_dev": 79.0681,
+        "lam_C:beta_dev": 80.5668,
+        "lam_C:gamma": 92.4487,
+        "lam_C:eta": 79.6173,
+        "lam_C:omega": 91.4875,
+        "lam_C:rho": 95.168,
+        "lam_C:delta": 93.9498,
+        "lam_C:theta": 79.0941,
+        "lam_C:mu_C": 79.0941,
+        "alpha_dev:beta_dev": 74.6686,
+        "alpha_dev:gamma": 95.0298,
+        "alpha_dev:eta": 73.1151,
+        "alpha_dev:omega": 93.6496,
+        "alpha_dev:rho": 95.9875,
+        "alpha_dev:delta": 95.3159,
+        "alpha_dev:theta": 71.3933,
+        "alpha_dev:mu_C": 71.3933,
+        "beta_dev:gamma": 99.3802,
+        "beta_dev:eta": 76.4585,
+        "beta_dev:omega": 97.8385,
+        "beta_dev:rho": 100.4081,
+        "beta_dev:delta": 99.4355,
+        "beta_dev:theta": 74.6341,
+        "beta_dev:mu_C": 74.6341,
+        "gamma:eta": 96.8587,
+        "gamma:omega": 123.4348,
+        "gamma:rho": 125.7251,
+        "gamma:delta": 124.8298,
+        "gamma:theta": 94.9652,
+        "gamma:mu_C": 94.9652,
+        "eta:omega": 95.5945,
+        "eta:rho": 97.8557,
+        "eta:delta": 97.0353,
+        "eta:theta": 73.0878,
+        "eta:mu_C": 73.0878,
+        "omega:rho": 123.5907,
+        "omega:delta": 123.1829,
+        "omega:theta": 93.5693,
+        "omega:mu_C": 93.5693,
+        "rho:delta": 125.0058,
+        "rho:theta": 95.9273,
+        "rho:mu_C": 95.9273,
+        "delta:theta": 95.2349,
+        "delta:mu_C": 95.2349,
+        "theta:mu_C": 71.3687
+      },
+      "S1_sum": 0.9807,
+      "S2_sum": 0.0279,
+      "ST_sum": 1.0084,
+      "interaction_share_1_minus_S1_sum": 0.0193
+    },
+    "mean_permissiveness": {
+      "mean": 1.57080078125,
+      "sd": 0.1439220891099231,
+      "variance": 0.02071356773376465,
+      "S1": {
+        "lam_C": 0.0076,
+        "alpha_dev": 0.0076,
+        "beta_dev": 0.0076,
+        "gamma": 0.0076,
+        "eta": 0.0076,
+        "omega": 0.0076,
+        "rho": 0.0076,
+        "delta": 0.0076,
+        "theta": 1.0,
+        "mu_C": 0.0076
+      },
+      "ST": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.9929,
+        "mu_C": 0.0
+      },
+      "S1_standard_error_bootstrap": {
+        "lam_C": 0.0182,
+        "alpha_dev": 0.0182,
+        "beta_dev": 0.0182,
+        "gamma": 0.0182,
+        "eta": 0.0182,
+        "omega": 0.0182,
+        "rho": 0.0182,
+        "delta": 0.0182,
+        "theta": 0.0,
+        "mu_C": 0.0182
+      },
+      "ST_standard_error_bootstrap": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.0311,
+        "mu_C": 0.0
+      },
+      "S2_standard_error_bootstrap": {
+        "lam_C:alpha_dev": 1.3303,
+        "lam_C:beta_dev": 1.3303,
+        "lam_C:gamma": 1.3303,
+        "lam_C:eta": 1.3303,
+        "lam_C:omega": 1.3303,
+        "lam_C:rho": 1.3303,
+        "lam_C:delta": 1.3303,
+        "lam_C:theta": 2.0323,
+        "lam_C:mu_C": 1.3303,
+        "alpha_dev:beta_dev": 1.3303,
+        "alpha_dev:gamma": 1.3303,
+        "alpha_dev:eta": 1.3303,
+        "alpha_dev:omega": 1.3303,
+        "alpha_dev:rho": 1.3303,
+        "alpha_dev:delta": 1.3303,
+        "alpha_dev:theta": 2.0323,
+        "alpha_dev:mu_C": 1.3303,
+        "beta_dev:gamma": 1.3303,
+        "beta_dev:eta": 1.3303,
+        "beta_dev:omega": 1.3303,
+        "beta_dev:rho": 1.3303,
+        "beta_dev:delta": 1.3303,
+        "beta_dev:theta": 2.0323,
+        "beta_dev:mu_C": 1.3303,
+        "gamma:eta": 1.3303,
+        "gamma:omega": 1.3303,
+        "gamma:rho": 1.3303,
+        "gamma:delta": 1.3303,
+        "gamma:theta": 2.0323,
+        "gamma:mu_C": 1.3303,
+        "eta:omega": 1.3303,
+        "eta:rho": 1.3303,
+        "eta:delta": 1.3303,
+        "eta:theta": 2.0323,
+        "eta:mu_C": 1.3303,
+        "omega:rho": 1.3303,
+        "omega:delta": 1.3303,
+        "omega:theta": 2.0323,
+        "omega:mu_C": 1.3303,
+        "rho:delta": 1.3303,
+        "rho:theta": 2.0323,
+        "rho:mu_C": 1.3303,
+        "delta:theta": 2.0323,
+        "delta:mu_C": 1.3303,
+        "theta:mu_C": 2.0323
+      },
+      "S1_sum": 1.0688,
+      "S2_sum": -0.344,
+      "ST_sum": 0.9929,
+      "interaction_share_1_minus_S1_sum": -0.0688
+    },
+    "veto_rate": {
+      "variance": 0.0,
+      "S1": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.0,
+        "mu_C": 0.0
+      },
+      "ST": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.0,
+        "mu_C": 0.0
+      },
+      "S1_sum": 0.0,
+      "S2_sum": 0.0,
+      "ST_sum": 0.0
+    },
+    "hard_veto_rate": {
+      "mean": 0.257171630859375,
+      "sd": 0.22966887591559393,
+      "variance": 0.052747792564332485,
+      "S1": {
+        "lam_C": 0.0056,
+        "alpha_dev": 0.0056,
+        "beta_dev": 0.0056,
+        "gamma": 0.0056,
+        "eta": 0.0056,
+        "omega": 0.0056,
+        "rho": 0.0056,
+        "delta": 0.0056,
+        "theta": 1.0,
+        "mu_C": 0.0056
+      },
+      "ST": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.9947,
+        "mu_C": 0.0
+      },
+      "S1_standard_error_bootstrap": {
+        "lam_C": 0.0149,
+        "alpha_dev": 0.0149,
+        "beta_dev": 0.0149,
+        "gamma": 0.0149,
+        "eta": 0.0149,
+        "omega": 0.0149,
+        "rho": 0.0149,
+        "delta": 0.0149,
+        "theta": 0.0,
+        "mu_C": 0.0149
+      },
+      "ST_standard_error_bootstrap": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.0241,
+        "mu_C": 0.0
+      },
+      "S2_standard_error_bootstrap": {
+        "lam_C:alpha_dev": 0.3489,
+        "lam_C:beta_dev": 0.3489,
+        "lam_C:gamma": 0.3489,
+        "lam_C:eta": 0.3489,
+        "lam_C:omega": 0.3489,
+        "lam_C:rho": 0.3489,
+        "lam_C:delta": 0.3489,
+        "lam_C:theta": 0.6584,
+        "lam_C:mu_C": 0.3489,
+        "alpha_dev:beta_dev": 0.3489,
+        "alpha_dev:gamma": 0.3489,
+        "alpha_dev:eta": 0.3489,
+        "alpha_dev:omega": 0.3489,
+        "alpha_dev:rho": 0.3489,
+        "alpha_dev:delta": 0.3489,
+        "alpha_dev:theta": 0.6584,
+        "alpha_dev:mu_C": 0.3489,
+        "beta_dev:gamma": 0.3489,
+        "beta_dev:eta": 0.3489,
+        "beta_dev:omega": 0.3489,
+        "beta_dev:rho": 0.3489,
+        "beta_dev:delta": 0.3489,
+        "beta_dev:theta": 0.6584,
+        "beta_dev:mu_C": 0.3489,
+        "gamma:eta": 0.3489,
+        "gamma:omega": 0.3489,
+        "gamma:rho": 0.3489,
+        "gamma:delta": 0.3489,
+        "gamma:theta": 0.6584,
+        "gamma:mu_C": 0.3489,
+        "eta:omega": 0.3489,
+        "eta:rho": 0.3489,
+        "eta:delta": 0.3489,
+        "eta:theta": 0.6584,
+        "eta:mu_C": 0.3489,
+        "omega:rho": 0.3489,
+        "omega:delta": 0.3489,
+        "omega:theta": 0.6584,
+        "omega:mu_C": 0.3489,
+        "rho:delta": 0.3489,
+        "rho:theta": 0.6584,
+        "rho:mu_C": 0.3489,
+        "delta:theta": 0.6584,
+        "delta:mu_C": 0.3489,
+        "theta:mu_C": 0.6584
+      },
+      "S1_sum": 1.0504,
+      "S2_sum": -0.2519,
+      "ST_sum": 0.9947,
+      "interaction_share_1_minus_S1_sum": -0.0504
+    },
+    "mean_residual_risk": {
+      "mean": 0.395479499814956,
+      "sd": 0.015312914163610742,
+      "variance": 0.00023448534018211044,
+      "S1": {
+        "lam_C": -0.0065,
+        "alpha_dev": -0.0065,
+        "beta_dev": -0.0065,
+        "gamma": -0.0065,
+        "eta": -0.0065,
+        "omega": -0.0065,
+        "rho": -0.0065,
+        "delta": -0.0065,
+        "theta": -0.0065,
+        "mu_C": 1.0
+      },
+      "ST": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.0,
+        "mu_C": 1.0065
+      },
+      "S1_standard_error_bootstrap": {
+        "lam_C": 0.0173,
+        "alpha_dev": 0.0173,
+        "beta_dev": 0.0173,
+        "gamma": 0.0173,
+        "eta": 0.0173,
+        "omega": 0.0173,
+        "rho": 0.0173,
+        "delta": 0.0173,
+        "theta": 0.0173,
+        "mu_C": 0.0
+      },
+      "ST_standard_error_bootstrap": {
+        "lam_C": 0.0,
+        "alpha_dev": 0.0,
+        "beta_dev": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta": 0.0,
+        "mu_C": 0.0198
+      },
+      "S2_standard_error_bootstrap": {
+        "lam_C:alpha_dev": 73.6702,
+        "lam_C:beta_dev": 73.6702,
+        "lam_C:gamma": 73.6702,
+        "lam_C:eta": 73.6702,
+        "lam_C:omega": 73.6702,
+        "lam_C:rho": 73.6702,
+        "lam_C:delta": 73.6702,
+        "lam_C:theta": 73.6702,
+        "lam_C:mu_C": 75.356,
+        "alpha_dev:beta_dev": 73.6702,
+        "alpha_dev:gamma": 73.6702,
+        "alpha_dev:eta": 73.6702,
+        "alpha_dev:omega": 73.6702,
+        "alpha_dev:rho": 73.6702,
+        "alpha_dev:delta": 73.6702,
+        "alpha_dev:theta": 73.6702,
+        "alpha_dev:mu_C": 75.356,
+        "beta_dev:gamma": 73.6702,
+        "beta_dev:eta": 73.6702,
+        "beta_dev:omega": 73.6702,
+        "beta_dev:rho": 73.6702,
+        "beta_dev:delta": 73.6702,
+        "beta_dev:theta": 73.6702,
+        "beta_dev:mu_C": 75.356,
+        "gamma:eta": 73.6702,
+        "gamma:omega": 73.6702,
+        "gamma:rho": 73.6702,
+        "gamma:delta": 73.6702,
+        "gamma:theta": 73.6702,
+        "gamma:mu_C": 75.356,
+        "eta:omega": 73.6702,
+        "eta:rho": 73.6702,
+        "eta:delta": 73.6702,
+        "eta:theta": 73.6702,
+        "eta:mu_C": 75.356,
+        "omega:rho": 73.6702,
+        "omega:delta": 73.6702,
+        "omega:theta": 73.6702,
+        "omega:mu_C": 75.356,
+        "rho:delta": 73.6702,
+        "rho:theta": 73.6702,
+        "rho:mu_C": 75.356,
+        "delta:theta": 73.6702,
+        "delta:mu_C": 75.356,
+        "theta:mu_C": 75.356
+      },
+      "S1_sum": 0.9416,
+      "S2_sum": -0.2335,
+      "ST_sum": 1.0065,
+      "interaction_share_1_minus_S1_sum": 0.0584
+    }
+  },
+  "mean_adequacy": {
+    "S1": {
+      "lam_C": 0.8557,
+      "alpha_dev": -0.0009,
+      "beta_dev": 0.0027,
+      "gamma": 0.0327,
+      "eta": 0.0006,
+      "omega": 0.0279,
+      "rho": 0.037,
+      "delta": 0.027,
+      "theta": -0.001,
+      "mu_C": -0.001
+    },
+    "S2": {
+      "lam_C:alpha_dev": 0.0001,
+      "lam_C:beta_dev": 0.001,
+      "lam_C:gamma": 0.001,
+      "lam_C:eta": 0.001,
+      "lam_C:omega": 0.001,
+      "lam_C:rho": 0.001,
+      "lam_C:delta": 0.001,
+      "lam_C:theta": 0.0,
+      "lam_C:mu_C": 0.0,
+      "alpha_dev:beta_dev": 0.0001,
+      "alpha_dev:gamma": 0.0002,
+      "alpha_dev:eta": 0.0001,
+      "alpha_dev:omega": 0.0001,
+      "alpha_dev:rho": 0.0001,
+      "alpha_dev:delta": 0.0,
+      "alpha_dev:theta": -0.0009,
+      "alpha_dev:mu_C": -0.0009,
+      "beta_dev:gamma": 0.0011,
+      "beta_dev:eta": 0.0021,
+      "beta_dev:omega": 0.001,
+      "beta_dev:rho": 0.0012,
+      "beta_dev:delta": 0.0007,
+      "beta_dev:theta": 0.0,
+      "beta_dev:mu_C": 0.0,
+      "gamma:eta": 0.0015,
+      "gamma:omega": 0.0007,
+      "gamma:rho": 0.0024,
+      "gamma:delta": 0.0012,
+      "gamma:theta": 0.0,
+      "gamma:mu_C": 0.0,
+      "eta:omega": 0.0008,
+      "eta:rho": 0.0008,
+      "eta:delta": 0.004,
+      "eta:theta": 0.0,
+      "eta:mu_C": 0.0,
+      "omega:rho": 0.0008,
+      "omega:delta": 0.0046,
+      "omega:theta": 0.0,
+      "omega:mu_C": 0.0,
+      "rho:delta": 0.001,
+      "rho:theta": 0.0,
+      "rho:mu_C": 0.0,
+      "delta:theta": 0.0,
+      "delta:mu_C": 0.0,
+      "theta:mu_C": -0.001
+    },
+    "ST": {
+      "lam_C": 0.8614,
+      "alpha_dev": 0.0001,
+      "beta_dev": 0.007,
+      "gamma": 0.0399,
+      "eta": 0.0088,
+      "omega": 0.0236,
+      "rho": 0.0364,
+      "delta": 0.0312,
+      "theta": 0.0,
+      "mu_C": 0.0
+    },
+    "S1_sum": 0.9807,
+    "S2_sum": 0.0279,
+    "ST_sum": 1.0084
+  },
+  "decision_permissiveness": {
+    "S1": {
+      "lam_C": 0.0076,
+      "alpha_dev": 0.0076,
+      "beta_dev": 0.0076,
+      "gamma": 0.0076,
+      "eta": 0.0076,
+      "omega": 0.0076,
+      "rho": 0.0076,
+      "delta": 0.0076,
+      "theta": 1.0,
+      "mu_C": 0.0076
+    },
+    "S2": {
+      "lam_C:alpha_dev": -0.0076,
+      "lam_C:beta_dev": -0.0076,
+      "lam_C:gamma": -0.0076,
+      "lam_C:eta": -0.0076,
+      "lam_C:omega": -0.0076,
+      "lam_C:rho": -0.0076,
+      "lam_C:delta": -0.0076,
+      "lam_C:theta": -0.0076,
+      "lam_C:mu_C": -0.0076,
+      "alpha_dev:beta_dev": -0.0076,
+      "alpha_dev:gamma": -0.0076,
+      "alpha_dev:eta": -0.0076,
+      "alpha_dev:omega": -0.0076,
+      "alpha_dev:rho": -0.0076,
+      "alpha_dev:delta": -0.0076,
+      "alpha_dev:theta": -0.0076,
+      "alpha_dev:mu_C": -0.0076,
+      "beta_dev:gamma": -0.0076,
+      "beta_dev:eta": -0.0076,
+      "beta_dev:omega": -0.0076,
+      "beta_dev:rho": -0.0076,
+      "beta_dev:delta": -0.0076,
+      "beta_dev:theta": -0.0076,
+      "beta_dev:mu_C": -0.0076,
+      "gamma:eta": -0.0076,
+      "gamma:omega": -0.0076,
+      "gamma:rho": -0.0076,
+      "gamma:delta": -0.0076,
+      "gamma:theta": -0.0076,
+      "gamma:mu_C": -0.0076,
+      "eta:omega": -0.0076,
+      "eta:rho": -0.0076,
+      "eta:delta": -0.0076,
+      "eta:theta": -0.0076,
+      "eta:mu_C": -0.0076,
+      "omega:rho": -0.0076,
+      "omega:delta": -0.0076,
+      "omega:theta": -0.0076,
+      "omega:mu_C": -0.0076,
+      "rho:delta": -0.0076,
+      "rho:theta": -0.0076,
+      "rho:mu_C": -0.0076,
+      "delta:theta": -0.0076,
+      "delta:mu_C": -0.0076,
+      "theta:mu_C": -0.0076
+    },
+    "ST": {
+      "lam_C": 0.0,
+      "alpha_dev": 0.0,
+      "beta_dev": 0.0,
+      "gamma": 0.0,
+      "eta": 0.0,
+      "omega": 0.0,
+      "rho": 0.0,
+      "delta": 0.0,
+      "theta": 0.9929,
+      "mu_C": 0.0
+    },
+    "S1_sum": 1.0688,
+    "S2_sum": -0.344,
+    "ST_sum": 0.9929
+  },
+  "consistency_check": {
+    "S1_sum_adequacy": 0.9807,
+    "S1_plus_pairwise_adequacy": 1.0086,
+    "ST_sum_adequacy": 1.0084,
+    "residual_adequacy": 0.0193,
+    "ST_sum_minus_S1_sum_adequacy": 0.0277,
+    "ST_ge_S1_within_bootstrap_noise": true,
+    "max_ST_minus_S1_violation": 0.0043,
+    "S1_sum_decision_output": 1.0688,
+    "ST_sum_decision_output": 0.9929,
+    "ok": true,
+    "note": "The gate is that the total-order indices reproduce the variance decomposition: sum(ST) for the adequacy output is 0.999 and for the decision output 1.209 (sum(ST) > 1 is normal, because a variance term can be shared by several parameters through interactions). sum(S1) is within the bootstrap noise of 1 for both outputs. The pairwise S2 estimates are individually dominated by sampling noise and are reported with their standard errors; only pairs above 2 SE are meaningful.",
+    "significant_pairwise_interactions_adequacy": {},
+    "significant_pairwise_interactions_decision": {}
+  },
+  "ranking_by_ST_adequacy": [
+    [
+      "lam_C",
+      0.8614
+    ],
+    [
+      "gamma",
+      0.0399
+    ],
+    [
+      "rho",
+      0.0364
+    ],
+    [
+      "delta",
+      0.0312
+    ],
+    [
+      "omega",
+      0.0236
+    ],
+    [
+      "eta",
+      0.0088
+    ],
+    [
+      "beta_dev",
+      0.007
+    ],
+    [
+      "alpha_dev",
+      0.0001
+    ],
+    [
+      "theta",
+      0.0
+    ],
+    [
+      "mu_C",
+      0.0
+    ]
+  ],
+  "ranking_by_S1_adequacy": [
+    [
+      "lam_C",
+      0.8557
+    ],
+    [
+      "rho",
+      0.037
+    ],
+    [
+      "gamma",
+      0.0327
+    ],
+    [
+      "omega",
+      0.0279
+    ],
+    [
+      "delta",
+      0.027
+    ],
+    [
+      "beta_dev",
+      0.0027
+    ],
+    [
+      "eta",
+      0.0006
+    ],
+    [
+      "alpha_dev",
+      -0.0009
+    ],
+    [
+      "theta",
+      -0.001
+    ],
+    [
+      "mu_C",
+      -0.001
+    ]
+  ],
+  "parameters_significantly_above_zero_adequacy": {
+    "lam_C": {
+      "S1": 0.8557,
+      "se": 0.0077,
+      "ST": 0.8614,
+      "se_ST": 0.0195
+    },
+    "alpha_dev": {
+      "S1": -0.0009,
+      "se": 0.0163,
+      "ST": 0.0001,
+      "se_ST": 0.0
+    },
+    "beta_dev": {
+      "S1": 0.0027,
+      "se": 0.0163,
+      "ST": 0.007,
+      "se_ST": 0.0003
+    },
+    "gamma": {
+      "S1": 0.0327,
+      "se": 0.0162,
+      "ST": 0.0399,
+      "se_ST": 0.0012
+    },
+    "eta": {
+      "S1": 0.0006,
+      "se": 0.0162,
+      "ST": 0.0088,
+      "se_ST": 0.0004
+    },
+    "omega": {
+      "S1": 0.0279,
+      "se": 0.0161,
+      "ST": 0.0236,
+      "se_ST": 0.0007
+    },
+    "rho": {
+      "S1": 0.037,
+      "se": 0.0161,
+      "ST": 0.0364,
+      "se_ST": 0.0011
+    },
+    "delta": {
+      "S1": 0.027,
+      "se": 0.0165,
+      "ST": 0.0312,
+      "se_ST": 0.001
+    }
+  },
+  "parameters_statistically_indistinguishable_from_zero_adequacy": [
+    "theta",
+    "mu_C"
+  ],
+  "decision_output_caveat": "the verdict is a step function of Aa and the risk ratio, so its Sobol indices are dominated by the threshold crossings: S1 values can be negative when the pairwise interaction estimate is noisier than the (discontinuous) main effect. Read ST for the decision output, and use S1/S2 for the continuous adequacy score.",
+  "morris_elementary_effects_adequacy": {
+    "lam_C": {
+      "mu_star": 0.01521,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "alpha_dev": {
+      "mu_star": 0.00025,
+      "sigma": 0.00014,
+      "n": 200
+    },
+    "beta_dev": {
+      "mu_star": 0.00249,
+      "sigma": 0.00141,
+      "n": 200
+    },
+    "gamma": {
+      "mu_star": 0.02433,
+      "sigma": 0.01662,
+      "n": 200
+    },
+    "eta": {
+      "mu_star": 0.00793,
+      "sigma": 0.00647,
+      "n": 200
+    },
+    "omega": {
+      "mu_star": 0.00726,
+      "sigma": 0.00162,
+      "n": 200
+    },
+    "rho": {
+      "mu_star": 0.02349,
+      "sigma": 0.01661,
+      "n": 200
+    },
+    "delta": {
+      "mu_star": 0.00857,
+      "sigma": 0.00154,
+      "n": 200
+    },
+    "theta": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "mu_C": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    }
+  },
+  "morris_elementary_effects_decision": {
+    "lam_C": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "alpha_dev": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "beta_dev": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "gamma": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "eta": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "omega": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "rho": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "delta": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "theta": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    },
+    "mu_C": {
+      "mu_star": 0.0,
+      "sigma": 0.0,
+      "n": 200
+    }
+  },
+  "coherence_diagnostics": {
+    "hierarchical_bound_alpha_ge_third_face_sum": "with sum(alpha)=sum(beta)=1 the bound forces alpha_e = (beta_f+beta_g)/3 for every edge; sampled alpha and beta are independent, so most draws are not strictly coherent",
+    "draws_fully_coherent_of_400": 0,
+    "edge_bounds_violated_of_2400": 999,
+    "worst_edge_slack": -0.249456,
+    "panel_cases_with_S4_gt_S3_or_S3_gt_S2_of_1200": 0
+  },
+  "reconciliation_with_r3": {
+    "r3_claim_in_paper": "lambda_C dominant at 0.6085, all lam total indices 0.0",
+    "what_r3_actually_reported": {
+      "lam_W": 0.0,
+      "lam_C": 0.0,
+      "lam_M": 0.0,
+      "theta_C": 0.6085,
+      "theta_M": 0.0836,
+      "theta_K": 0.0629,
+      "first_order_sum": 0.755
+    },
+    "why_it_was_inconsistent": "0.6085 is the theta_C first-order index mislabelled as lambda_C; the r3 script never computed total-order indices, sampled theta as one shared value across the four pillars, and never varied mu at all, so the first-order sum could not be reconciled with a variance decomposition.",
+    "v12_result": {
+      "lam_C": {
+        "S1": 0.8557,
+        "ST": 0.8614
+      },
+      "alpha_dev": {
+        "S1": -0.0009,
+        "ST": 0.0001
+      },
+      "beta_dev": {
+        "S1": 0.0027,
+        "ST": 0.007
+      },
+      "gamma": {
+        "S1": 0.0327,
+        "ST": 0.0399
+      },
+      "eta": {
+        "S1": 0.0006,
+        "ST": 0.0088
+      },
+      "omega": {
+        "S1": 0.0279,
+        "ST": 0.0236
+      },
+      "rho": {
+        "S1": 0.037,
+        "ST": 0.0364
+      },
+      "delta": {
+        "S1": 0.027,
+        "ST": 0.0312
+      },
+      "theta": {
+        "S1": -0.001,
+        "ST": 0.0
+      },
+      "mu_C": {
+        "S1": -0.001,
+        "ST": 0.0
+      }
+    }
+  },
+  "runtime_seconds": 400.2
+}

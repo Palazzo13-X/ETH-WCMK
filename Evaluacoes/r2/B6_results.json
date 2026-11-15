@@ -1,0 +1,20 @@
+{
+  "self_report_optimism": {
+    "n_confrontations": 1200,
+    "decision_stability": 0.475,
+    "mean_abs_adequacy_shift": 0.1292,
+    "p95_abs_adequacy_shift": 0.2627
+  },
+  "calibration_drift": {
+    "n_confrontations": 1200,
+    "decision_stability": 0.8383,
+    "mean_abs_adequacy_shift": 0.058,
+    "p95_abs_adequacy_shift": 0.1855
+  },
+  "adversarial_inflation": {
+    "n_confrontations": 1200,
+    "decision_stability": 0.5833,
+    "mean_abs_adequacy_shift": 0.1016,
+    "p95_abs_adequacy_shift": 0.2287
+  }
+}

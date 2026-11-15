@@ -1,0 +1,31 @@
+@prefix : <https://eth2.local/ontology/ethcase-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/ethcase-core> a owl:Ontology ;
+    rdfs:label "ETHCASE Core" ;
+    rdfs:comment "Stable canonical representation of the ethical case." .
+
+:EthicalCase a owl:Class ; rdfs:label "Ethical Case" .
+:Situation a owl:Class ; rdfs:label "Situation" .
+:Stakeholder a owl:Class ; rdfs:label "Stakeholder" .
+:Action a owl:Class ; rdfs:label "Action" .
+:Consequence a owl:Class ; rdfs:label "Consequence" .
+:Vulnerability a owl:Class ; rdfs:label "Vulnerability" .
+:EvidenceItem a owl:Class ; rdfs:label "Evidence Item" .
+:Domain a owl:Class ; rdfs:label "Domain" .
+
+:hasSituation a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :Situation .
+:hasStakeholder a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :Stakeholder .
+:hasAction a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :Action .
+:hasConsequence a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :Consequence .
+:hasVulnerability a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :Vulnerability .
+:hasEvidenceItem a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :EvidenceItem .
+:inDomain a owl:ObjectProperty ; rdfs:domain :EthicalCase ; rdfs:range :Domain .
+
+:caseId a owl:DatatypeProperty ; rdfs:domain :EthicalCase ; rdfs:range xsd:string .
+:title a owl:DatatypeProperty ; rdfs:domain :EthicalCase ; rdfs:range xsd:string .
+:summary a owl:DatatypeProperty ; rdfs:domain :EthicalCase ; rdfs:range xsd:string .
+:completenessScore a owl:DatatypeProperty ; rdfs:domain :EthicalCase ; rdfs:range xsd:decimal .

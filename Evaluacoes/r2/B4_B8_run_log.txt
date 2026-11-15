@@ -1,0 +1,182 @@
+{
+ "n_valid_draws": 2048,
+ "rejected_invalid_draws": 6047,
+ "response_mean": 0.4886,
+ "response_std": 0.0295,
+ "sobol_first_order": {
+  "lam_W": 0.05,
+  "lam_C": 0.0622,
+  "lam_M": 0.0442,
+  "gamma": 0.0243,
+  "eta": 0.0111,
+  "omega": 0.0127,
+  "rho": 0.0071,
+  "theta": 0.7991
+ },
+ "sobol_sum_first_order": 1.0107,
+ "morris_mean_abs_elementary_effect": {
+  "lam_W": 0.1138,
+  "lam_C": 0.1571,
+  "lam_M": 0.0235,
+  "gamma": 0.2624,
+  "eta": 0.2423,
+  "omega": 0.3107,
+  "rho": 0.1865,
+  "theta": 0.0387
+ },
+ "ranking_sobol": [
+  "theta",
+  "lam_C",
+  "lam_W",
+  "lam_M",
+  "gamma",
+  "omega",
+  "eta",
+  "rho"
+ ],
+ "ranking_morris": [
+  "omega",
+  "gamma",
+  "eta",
+  "rho",
+  "lam_C",
+  "lam_W",
+  "theta",
+  "lam_M"
+ ]
+}
+model_vs_panelA 0.5917 0.2892 0.2927 {'mean_abs_rank_difference': 0.4389, 'within_one_rank': 0.9694, 'model_stricter_than_panel': 0.2222, 'model_more_permissive': 0.1861, 'spearman_rho': 0.4815}
+model_vs_panelB 0.3292 0.1412 0.1381 {'mean_abs_rank_difference': 0.8535, 'within_one_rank': 0.8174, 'model_stricter_than_panel': 0.6583, 'model_more_permissive': 0.0125, 'spearman_rho': 0.5362}
+model_vs_consensus 0.6083 0.3095 0.3131 {'mean_abs_rank_difference': 0.4222, 'within_one_rank': 0.9694, 'model_stricter_than_panel': 0.2056, 'model_more_permissive': 0.1861, 'spearman_rho': 0.5025}
+panelA_vs_panelB 0.3125 0.0422 0.045 {'mean_abs_rank_difference': 0.8562, 'within_one_rank': 0.8313, 'model_stricter_than_panel': 0.6708, 'model_more_permissive': 0.0167, 'spearman_rho': 0.3418}
+{
+ "severity_filter": {
+  "agreement_consensus": 0.2833,
+  "kappa_consensus": 0.0442,
+  "ordinal": {
+   "mean_abs_rank_difference": 1.1771,
+   "within_one_rank": 0.6438,
+   "model_stricter_than_panel": 0.1271,
+   "model_more_permissive": 0.5896,
+   "spearman_rho": 0.163
+  },
+  "decision_distribution": {
+   "REVIEW_REQUIRED": 0.175,
+   "PROHIBIT": 0.325,
+   "ALLOW": 0.25,
+   "ALLOW_WITH_GUARDS": 0.25
+  }
+ },
+ "v9_compensatory_mean": {
+  "agreement_consensus": 0.3792,
+  "kappa_consensus": 0.056,
+  "ordinal": {
+   "mean_abs_rank_difference": 0.8021,
+   "within_one_rank": 0.8187,
+   "model_stricter_than_panel": 0.0076,
+   "model_more_permissive": 0.6132,
+   "spearman_rho": 0.4582
+  },
+  "decision_distribution": {
+   "REVIEW_REQUIRED": 0.5576388888888889,
+   "PROHIBIT": 0.1284722222222222,
+   "ALLOW": 0.10347222222222222,
+   "ALLOW_WITH_GUARDS": 0.21041666666666667
+  }
+ },
+ "veto_only": {
+  "agreement_consensus": 0.1917,
+  "kappa_consensus": -0.0947,
+  "ordinal": {
+   "mean_abs_rank_difference": 1.3646,
+   "within_one_rank": 0.5271,
+   "model_stricter_than_panel": 0.0063,
+   "model_more_permissive": 0.8021,
+   "spearman_rho": 0.6212
+  },
+  "decision_distribution": {
+   "REVIEW_REQUIRED": 0.42916666666666664,
+   "PROHIBIT": 0.09583333333333334,
+   "ALLOW": 0.475
+  }
+ },
+ "v10_core": {
+  "agreement_consensus": 0.6083,
+  "kappa_consensus": 0.3095,
+  "ordinal": {
+   "mean_abs_rank_difference": 0.4222,
+   "within_one_rank": 0.9694,
+   "model_stricter_than_panel": 0.2056,
+   "model_more_permissive": 0.1861,
+   "spearman_rho": 0.5025
+  },
+  "decision_distribution": {
+   "REVIEW_REQUIRED": 0.21666666666666667,
+   "PROHIBIT": 0.6493055555555556,
+   "ALLOW": 0.02847222222222222,
+   "ALLOW_WITH_GUARDS": 0.10555555555555556
+  }
+ }
+}
+{
+ "coverage_degeneracy": {
+  "n": 15,
+  "pass": 15
+ },
+ "saturation": {
+  "n": 15,
+  "pass": 15
+ },
+ "compensation_attempt": {
+  "n": 15,
+  "pass": 15
+ },
+ "threshold_edge": {
+  "n": 30,
+  "pass": 30
+ },
+ "guard_cap": {
+  "n": 15,
+  "pass": 15
+ },
+ "epistemic_blank": {
+  "n": 15,
+  "pass": 15
+ },
+ "severity_ladder": {
+  "n": 60,
+  "pass": 60
+ },
+ "pillar_tie": {
+  "n": 15,
+  "pass": 15
+ },
+ "veto_isolation": {
+  "n": 15,
+  "pass": 15
+ },
+ "near_saturation": {
+  "n": 15,
+  "pass": 15
+ }
+}
+{
+ "self_report_optimism": {
+  "n_confrontations": 1200,
+  "decision_stability": 0.475,
+  "mean_abs_adequacy_shift": 0.1292,
+  "p95_abs_adequacy_shift": 0.2627
+ },
+ "calibration_drift": {
+  "n_confrontations": 1200,
+  "decision_stability": 0.8383,
+  "mean_abs_adequacy_shift": 0.058,
+  "p95_abs_adequacy_shift": 0.1855
+ },
+ "adversarial_inflation": {
+  "n_confrontations": 1200,
+  "decision_stability": 0.5833,
+  "mean_abs_adequacy_shift": 0.1016,
+  "p95_abs_adequacy_shift": 0.2287
+ }
+}

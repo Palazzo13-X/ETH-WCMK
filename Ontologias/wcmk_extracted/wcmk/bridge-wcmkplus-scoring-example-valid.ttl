@@ -1,0 +1,749 @@
+@prefix ex: <https://ethwcmk.org/resource/examples/bridge-derived/> .
+@prefix bwd: <https://ethwcmk.org/ontology/bridge-wcmkplus-derived#> .
+@prefix bridge: <https://ethwcmk.org/ontology/bridge#> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:case_health_triage a eth:EthicalCase ;
+    eth:hasNormalizedRiskScore "0.82"^^xsd:decimal ;
+    eth:hasPrudentialFlag true ;
+    eth:hasDataSensitivity "sensitive" ;
+    eth:hasHumanImpact "high" ;
+    eth:hasIrreversibility "medium" ;
+    eth:hasDomain efr:health_domain ;
+    eth:hasRiskBand efr:SEVERITY_CRITICAL .
+
+ex:profile_health_agent a wcmkf:FacetizedAgencyProfile ;
+    wcmkf:hasFacet wcmkf:GoalOrientation ;
+    wcmkf:hasFacet wcmkf:ValueAlignment ;
+    wcmkf:hasFacet wcmkf:StakeholderRegard ;
+    wcmkf:hasFacet wcmkf:PriorityDiscipline ;
+    wcmkf:hasFacet wcmkf:IntentionalStability ;
+    wcmkf:hasFacet wcmkf:FunctionalCapability ;
+    wcmkf:hasFacet wcmkf:Robustness ;
+    wcmkf:hasFacet wcmkf:Controllability ;
+    wcmkf:hasFacet wcmkf:ScopeAdequacy ;
+    wcmkf:hasFacet wcmkf:ResourceSufficiency ;
+    wcmkf:hasFacet wcmkf:SafeExecutability ;
+    wcmkf:hasFacet wcmkf:LegalObligation ;
+    wcmkf:hasFacet wcmkf:InstitutionalPolicyObligation ;
+    wcmkf:hasFacet wcmkf:EthicalPrincipleObligation ;
+    wcmkf:hasFacet wcmkf:PrudentialObligation ;
+    wcmkf:hasFacet wcmkf:RoleObligation ;
+    wcmkf:hasFacet wcmkf:AccountabilityObligation ;
+    wcmkf:hasFacet wcmkf:EvidentialKnowledge ;
+    wcmkf:hasFacet wcmkf:ContextualKnowledge ;
+    wcmkf:hasFacet wcmkf:NormativeKnowledge ;
+    wcmkf:hasFacet wcmkf:ProceduralKnowledge ;
+    wcmkf:hasFacet wcmkf:CausalKnowledge ;
+    wcmkf:hasFacet wcmkf:UncertaintyAwareness ;
+    wcmkf:hasFacet wcmkf:ProvenanceAwareness ;
+    wcmkf:hasAssessment ex:ass_GoalOrientation ;
+    wcmkf:hasAssessment ex:ass_ValueAlignment ;
+    wcmkf:hasAssessment ex:ass_StakeholderRegard ;
+    wcmkf:hasAssessment ex:ass_PriorityDiscipline ;
+    wcmkf:hasAssessment ex:ass_IntentionalStability ;
+    wcmkf:hasAssessment ex:ass_FunctionalCapability ;
+    wcmkf:hasAssessment ex:ass_Robustness ;
+    wcmkf:hasAssessment ex:ass_Controllability ;
+    wcmkf:hasAssessment ex:ass_ScopeAdequacy ;
+    wcmkf:hasAssessment ex:ass_ResourceSufficiency ;
+    wcmkf:hasAssessment ex:ass_SafeExecutability ;
+    wcmkf:hasAssessment ex:ass_LegalObligation ;
+    wcmkf:hasAssessment ex:ass_InstitutionalPolicyObligation ;
+    wcmkf:hasAssessment ex:ass_EthicalPrincipleObligation ;
+    wcmkf:hasAssessment ex:ass_PrudentialObligation ;
+    wcmkf:hasAssessment ex:ass_RoleObligation ;
+    wcmkf:hasAssessment ex:ass_AccountabilityObligation ;
+    wcmkf:hasAssessment ex:ass_EvidentialKnowledge ;
+    wcmkf:hasAssessment ex:ass_ContextualKnowledge ;
+    wcmkf:hasAssessment ex:ass_NormativeKnowledge ;
+    wcmkf:hasAssessment ex:ass_ProceduralKnowledge ;
+    wcmkf:hasAssessment ex:ass_CausalKnowledge ;
+    wcmkf:hasAssessment ex:ass_UncertaintyAwareness ;
+    wcmkf:hasAssessment ex:ass_ProvenanceAwareness .
+
+ex:ass_GoalOrientation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:GoalOrientation ;
+    wcmkf:hasNormalizedScore "0.82"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_ValueAlignment a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:ValueAlignment ;
+    wcmkf:hasNormalizedScore "0.79"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_StakeholderRegard a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:StakeholderRegard ;
+    wcmkf:hasNormalizedScore "0.77"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_PriorityDiscipline a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:PriorityDiscipline ;
+    wcmkf:hasNormalizedScore "0.75"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_IntentionalStability a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:IntentionalStability ;
+    wcmkf:hasNormalizedScore "0.78"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_FunctionalCapability a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:FunctionalCapability ;
+    wcmkf:hasNormalizedScore "0.84"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_Robustness a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:Robustness ;
+    wcmkf:hasNormalizedScore "0.74"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_Controllability a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:Controllability ;
+    wcmkf:hasNormalizedScore "0.69"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_ScopeAdequacy a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:ScopeAdequacy ;
+    wcmkf:hasNormalizedScore "0.81"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_ResourceSufficiency a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:ResourceSufficiency ;
+    wcmkf:hasNormalizedScore "0.86"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_SafeExecutability a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:SafeExecutability ;
+    wcmkf:hasNormalizedScore "0.71"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_LegalObligation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:LegalObligation ;
+    wcmkf:hasNormalizedScore "0.88"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_InstitutionalPolicyObligation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:InstitutionalPolicyObligation ;
+    wcmkf:hasNormalizedScore "0.83"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_EthicalPrincipleObligation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:EthicalPrincipleObligation ;
+    wcmkf:hasNormalizedScore "0.80"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_PrudentialObligation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:PrudentialObligation ;
+    wcmkf:hasNormalizedScore "0.67"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_RoleObligation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:RoleObligation ;
+    wcmkf:hasNormalizedScore "0.79"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_AccountabilityObligation a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:AccountabilityObligation ;
+    wcmkf:hasNormalizedScore "0.73"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_EvidentialKnowledge a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:EvidentialKnowledge ;
+    wcmkf:hasNormalizedScore "0.82"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_ContextualKnowledge a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:ContextualKnowledge ;
+    wcmkf:hasNormalizedScore "0.70"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_NormativeKnowledge a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:NormativeKnowledge ;
+    wcmkf:hasNormalizedScore "0.68"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_ProceduralKnowledge a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:ProceduralKnowledge ;
+    wcmkf:hasNormalizedScore "0.76"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_CausalKnowledge a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:CausalKnowledge ;
+    wcmkf:hasNormalizedScore "0.72"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_UncertaintyAwareness a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:UncertaintyAwareness ;
+    wcmkf:hasNormalizedScore "0.66"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:ass_ProvenanceAwareness a wcmkf:FacetAssessment ;
+    wcmkf:assessesFacet wcmkf:ProvenanceAwareness ;
+    wcmkf:hasNormalizedScore "0.71"^^xsd:decimal ;
+    wcmkf:hasConfidence "0.92"^^xsd:decimal .
+
+ex:req_profile_health a efr:CaseRequirementProfile ;
+    efr:derivedFromCase ex:case_health_triage ;
+    efr:usesSeverityBand efr:SEVERITY_CRITICAL ;
+    efr:usesPrudentialMode efr:PRUDENTIAL_MAXIMUM ;
+    efr:usesAggregationProfile efr:ConservativeRequirementAggregation ;
+    efr:requirementCoverage "1.00"^^xsd:decimal ;
+    efr:derivedRequirementCount "24"^^xsd:integer ;
+    efr:hasDerivedRequirement ex:req_GoalOrientation ;
+    efr:hasDerivedRequirement ex:req_ValueAlignment ;
+    efr:hasDerivedRequirement ex:req_StakeholderRegard ;
+    efr:hasDerivedRequirement ex:req_PriorityDiscipline ;
+    efr:hasDerivedRequirement ex:req_IntentionalStability ;
+    efr:hasDerivedRequirement ex:req_FunctionalCapability ;
+    efr:hasDerivedRequirement ex:req_Robustness ;
+    efr:hasDerivedRequirement ex:req_Controllability ;
+    efr:hasDerivedRequirement ex:req_ScopeAdequacy ;
+    efr:hasDerivedRequirement ex:req_ResourceSufficiency ;
+    efr:hasDerivedRequirement ex:req_SafeExecutability ;
+    efr:hasDerivedRequirement ex:req_LegalObligation ;
+    efr:hasDerivedRequirement ex:req_InstitutionalPolicyObligation ;
+    efr:hasDerivedRequirement ex:req_EthicalPrincipleObligation ;
+    efr:hasDerivedRequirement ex:req_PrudentialObligation ;
+    efr:hasDerivedRequirement ex:req_RoleObligation ;
+    efr:hasDerivedRequirement ex:req_AccountabilityObligation ;
+    efr:hasDerivedRequirement ex:req_EvidentialKnowledge ;
+    efr:hasDerivedRequirement ex:req_ContextualKnowledge ;
+    efr:hasDerivedRequirement ex:req_NormativeKnowledge ;
+    efr:hasDerivedRequirement ex:req_ProceduralKnowledge ;
+    efr:hasDerivedRequirement ex:req_CausalKnowledge ;
+    efr:hasDerivedRequirement ex:req_UncertaintyAwareness ;
+    efr:hasDerivedRequirement ex:req_ProvenanceAwareness .
+
+ex:rule_GoalOrientation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:GoalOrientation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_GoalOrientation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:GoalOrientation ;
+    wcmkf:minimumRequiredLevel "0.72"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.68"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_SUPPORTING ;
+    efr:derivedByRule ex:rule_GoalOrientation .
+
+ex:rule_ValueAlignment a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ValueAlignment ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_ValueAlignment a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:ValueAlignment ;
+    wcmkf:minimumRequiredLevel "0.74"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.70"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_ValueAlignment .
+
+ex:rule_StakeholderRegard a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:StakeholderRegard ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_StakeholderRegard a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:StakeholderRegard ;
+    wcmkf:minimumRequiredLevel "0.73"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.69"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_StakeholderRegard .
+
+ex:rule_PriorityDiscipline a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:PriorityDiscipline ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_PriorityDiscipline a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:PriorityDiscipline ;
+    wcmkf:minimumRequiredLevel "0.72"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.68"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_PriorityDiscipline .
+
+ex:rule_IntentionalStability a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:IntentionalStability ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_IntentionalStability a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:IntentionalStability ;
+    wcmkf:minimumRequiredLevel "0.70"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.66"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_SUPPORTING ;
+    efr:derivedByRule ex:rule_IntentionalStability .
+
+ex:rule_FunctionalCapability a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:FunctionalCapability ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_FunctionalCapability a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:FunctionalCapability ;
+    wcmkf:minimumRequiredLevel "0.76"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.72"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_FunctionalCapability .
+
+ex:rule_Robustness a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:Robustness ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_Robustness a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:Robustness ;
+    wcmkf:minimumRequiredLevel "0.72"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.68"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_Robustness .
+
+ex:rule_Controllability a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:Controllability ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_Controllability a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:Controllability ;
+    wcmkf:minimumRequiredLevel "0.78"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.74"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_Controllability .
+
+ex:rule_ScopeAdequacy a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ScopeAdequacy ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_ScopeAdequacy a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:ScopeAdequacy ;
+    wcmkf:minimumRequiredLevel "0.74"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.70"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_ScopeAdequacy .
+
+ex:rule_ResourceSufficiency a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ResourceSufficiency ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_ResourceSufficiency a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:ResourceSufficiency ;
+    wcmkf:minimumRequiredLevel "0.70"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.66"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_SUPPORTING ;
+    efr:derivedByRule ex:rule_ResourceSufficiency .
+
+ex:rule_SafeExecutability a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:SafeExecutability ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_SafeExecutability a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:SafeExecutability ;
+    wcmkf:minimumRequiredLevel "0.80"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.76"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_SafeExecutability .
+
+ex:rule_LegalObligation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:LegalObligation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_LegalObligation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:LegalObligation ;
+    wcmkf:minimumRequiredLevel "0.83"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.79"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_LegalObligation .
+
+ex:rule_InstitutionalPolicyObligation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:InstitutionalPolicyObligation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_InstitutionalPolicyObligation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:InstitutionalPolicyObligation ;
+    wcmkf:minimumRequiredLevel "0.78"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.74"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_InstitutionalPolicyObligation .
+
+ex:rule_EthicalPrincipleObligation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:EthicalPrincipleObligation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_EthicalPrincipleObligation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:EthicalPrincipleObligation ;
+    wcmkf:minimumRequiredLevel "0.79"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.75"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_EthicalPrincipleObligation .
+
+ex:rule_PrudentialObligation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:PrudentialObligation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_PrudentialObligation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:PrudentialObligation ;
+    wcmkf:minimumRequiredLevel "0.84"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.80"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_PrudentialObligation .
+
+ex:rule_RoleObligation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:RoleObligation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_RoleObligation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:RoleObligation ;
+    wcmkf:minimumRequiredLevel "0.74"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.70"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_RoleObligation .
+
+ex:rule_AccountabilityObligation a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:AccountabilityObligation ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_AccountabilityObligation a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:AccountabilityObligation ;
+    wcmkf:minimumRequiredLevel "0.81"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.77"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_AccountabilityObligation .
+
+ex:rule_EvidentialKnowledge a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:EvidentialKnowledge ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_EvidentialKnowledge a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:EvidentialKnowledge ;
+    wcmkf:minimumRequiredLevel "0.76"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.72"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_EvidentialKnowledge .
+
+ex:rule_ContextualKnowledge a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ContextualKnowledge ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_ContextualKnowledge a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:ContextualKnowledge ;
+    wcmkf:minimumRequiredLevel "0.82"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.78"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_ContextualKnowledge .
+
+ex:rule_NormativeKnowledge a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:NormativeKnowledge ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_NormativeKnowledge a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:NormativeKnowledge ;
+    wcmkf:minimumRequiredLevel "0.85"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.81"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_NormativeKnowledge .
+
+ex:rule_ProceduralKnowledge a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ProceduralKnowledge ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_ProceduralKnowledge a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:ProceduralKnowledge ;
+    wcmkf:minimumRequiredLevel "0.77"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.73"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_ProceduralKnowledge .
+
+ex:rule_CausalKnowledge a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:CausalKnowledge ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_CausalKnowledge a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:CausalKnowledge ;
+    wcmkf:minimumRequiredLevel "0.78"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.74"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CORE ;
+    efr:derivedByRule ex:rule_CausalKnowledge .
+
+ex:rule_UncertaintyAwareness a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:UncertaintyAwareness ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_UncertaintyAwareness a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:UncertaintyAwareness ;
+    wcmkf:minimumRequiredLevel "0.82"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.78"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_CRITICAL ;
+    efr:derivedByRule ex:rule_UncertaintyAwareness .
+
+ex:rule_ProvenanceAwareness a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ProvenanceAwareness ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.80"^^xsd:decimal .
+
+ex:req_ProvenanceAwareness a efr:DerivedFacetRequirement ;
+    wcmkf:requiresFacet wcmkf:ProvenanceAwareness ;
+    wcmkf:minimumRequiredLevel "0.76"^^xsd:decimal ;
+    wcmkf:hasWeight "0.80"^^xsd:decimal ;
+    efr:baseRequiredLevel "0.72"^^xsd:decimal ;
+    efr:derivedWeight "0.80"^^xsd:decimal ;
+    efr:prudentialDelta "0.04"^^xsd:decimal ;
+    efr:priorityTier efr:PRIORITY_SUPPORTING ;
+    efr:derivedByRule ex:rule_ProvenanceAwareness .
+
+ex:confrontation_health a bwd:DerivedBridgeConfrontation ;
+    bridge:confrontsCase ex:case_health_triage ;
+    bridge:confrontsProfile ex:profile_health_agent ;
+    bwd:consumesRequirementProfile ex:req_profile_health ;
+    bwd:usesBridgeComputationPolicy bwd:ConservativeBridgeComputation ;
+    bridge:hasFacetComparison ex:cmp_ValueAlignment ;
+    bridge:hasFacetComparison ex:cmp_Controllability ;
+    bridge:hasFacetComparison ex:cmp_SafeExecutability ;
+    bridge:hasFacetComparison ex:cmp_PrudentialObligation ;
+    bridge:hasFacetComparison ex:cmp_AccountabilityObligation ;
+    bridge:hasFacetComparison ex:cmp_ContextualKnowledge ;
+    bridge:hasFacetComparison ex:cmp_NormativeKnowledge ;
+    bridge:hasFacetComparison ex:cmp_UncertaintyAwareness ;
+    bridge:hasAggregateOutcome ex:outcome_health ;
+    bridge:derivedRcNorm "0.82"^^xsd:decimal ;
+    bridge:derivedAgencyAdequacy "0.77"^^xsd:decimal ;
+    bwd:derivedAaStar "0.74"^^xsd:decimal ;
+    bwd:derivedDeficitScore "0.21"^^xsd:decimal ;
+    bridge:derivedResidualRisk "0.19"^^xsd:decimal ;
+    bridge:decisionRegion "high_risk_guarded" ;
+    bridge:recommendedAction "ALLOW_WITH_GUARDS" .
+
+ex:outcome_health a bwd:BridgeDerivedOutcome ;
+    bwd:outcomeOfConfrontation ex:confrontation_health ;
+    bridge:coverageAdequacy "0.88"^^xsd:decimal ;
+    bridge:aggregateDeficit "0.21"^^xsd:decimal ;
+    bridge:criticalDeficitCount "3"^^xsd:integer ;
+    bridge:requiresGuardrail true ;
+    bwd:requirementCoverageScore "1.00"^^xsd:decimal ;
+    bwd:comparisonCoverageScore "0.33"^^xsd:decimal ;
+    bwd:coveragePenalty "0.03"^^xsd:decimal ;
+    bwd:comparedFacetCount "8"^^xsd:integer ;
+    bwd:blockingFacetCount "0"^^xsd:integer .
+
+ex:def_ValueAlignment a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:ValueAlignment ;
+    wcmkf:observedLevel "0.79"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.74"^^xsd:decimal ;
+    wcmkf:deficitValue "0.00"^^xsd:decimal .
+
+ex:cmp_ValueAlignment a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:ValueAlignment ;
+    bwd:comparesDerivedRequirement ex:req_ValueAlignment ;
+    bridge:usesAssessment ex:ass_ValueAlignment ;
+    bridge:producesDeficit ex:def_ValueAlignment ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "satisfied" ;
+    bridge:localCriticality "high" ;
+    bridge:isBlockingFacet false .
+
+ex:def_Controllability a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:Controllability ;
+    wcmkf:observedLevel "0.69"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.78"^^xsd:decimal ;
+    wcmkf:deficitValue "0.09"^^xsd:decimal .
+
+ex:cmp_Controllability a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:Controllability ;
+    bwd:comparesDerivedRequirement ex:req_Controllability ;
+    bridge:usesAssessment ex:ass_Controllability ;
+    bridge:producesDeficit ex:def_Controllability ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet false .
+
+ex:def_SafeExecutability a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:SafeExecutability ;
+    wcmkf:observedLevel "0.71"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.80"^^xsd:decimal ;
+    wcmkf:deficitValue "0.09"^^xsd:decimal .
+
+ex:cmp_SafeExecutability a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:SafeExecutability ;
+    bwd:comparesDerivedRequirement ex:req_SafeExecutability ;
+    bridge:usesAssessment ex:ass_SafeExecutability ;
+    bridge:producesDeficit ex:def_SafeExecutability ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet false .
+
+ex:def_PrudentialObligation a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:PrudentialObligation ;
+    wcmkf:observedLevel "0.67"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.84"^^xsd:decimal ;
+    wcmkf:deficitValue "0.17"^^xsd:decimal .
+
+ex:cmp_PrudentialObligation a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:PrudentialObligation ;
+    bwd:comparesDerivedRequirement ex:req_PrudentialObligation ;
+    bridge:usesAssessment ex:ass_PrudentialObligation ;
+    bridge:producesDeficit ex:def_PrudentialObligation ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet true .
+
+ex:def_AccountabilityObligation a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:AccountabilityObligation ;
+    wcmkf:observedLevel "0.73"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.81"^^xsd:decimal ;
+    wcmkf:deficitValue "0.08"^^xsd:decimal .
+
+ex:cmp_AccountabilityObligation a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:AccountabilityObligation ;
+    bwd:comparesDerivedRequirement ex:req_AccountabilityObligation ;
+    bridge:usesAssessment ex:ass_AccountabilityObligation ;
+    bridge:producesDeficit ex:def_AccountabilityObligation ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "borderline" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet false .
+
+ex:def_ContextualKnowledge a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:ContextualKnowledge ;
+    wcmkf:observedLevel "0.70"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.82"^^xsd:decimal ;
+    wcmkf:deficitValue "0.12"^^xsd:decimal .
+
+ex:cmp_ContextualKnowledge a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:ContextualKnowledge ;
+    bwd:comparesDerivedRequirement ex:req_ContextualKnowledge ;
+    bridge:usesAssessment ex:ass_ContextualKnowledge ;
+    bridge:producesDeficit ex:def_ContextualKnowledge ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet false .
+
+ex:def_NormativeKnowledge a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:NormativeKnowledge ;
+    wcmkf:observedLevel "0.68"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.85"^^xsd:decimal ;
+    wcmkf:deficitValue "0.17"^^xsd:decimal .
+
+ex:cmp_NormativeKnowledge a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:NormativeKnowledge ;
+    bwd:comparesDerivedRequirement ex:req_NormativeKnowledge ;
+    bridge:usesAssessment ex:ass_NormativeKnowledge ;
+    bridge:producesDeficit ex:def_NormativeKnowledge ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet true .
+
+ex:def_UncertaintyAwareness a wcmkf:FacetDeficit ;
+    wcmkf:concernsFacet wcmkf:UncertaintyAwareness ;
+    wcmkf:observedLevel "0.66"^^xsd:decimal ;
+    wcmkf:requiredLevel "0.82"^^xsd:decimal ;
+    wcmkf:deficitValue "0.16"^^xsd:decimal .
+
+ex:cmp_UncertaintyAwareness a bwd:BridgeRequirementComparison ;
+    bwd:forConfrontation ex:confrontation_health ;
+    bridge:comparisonForFacet wcmkf:UncertaintyAwareness ;
+    bwd:comparesDerivedRequirement ex:req_UncertaintyAwareness ;
+    bridge:usesAssessment ex:ass_UncertaintyAwareness ;
+    bridge:producesDeficit ex:def_UncertaintyAwareness ;
+    bridge:localWeight "0.80"^^xsd:decimal ;
+    bridge:comparisonStatus "deficient" ;
+    bridge:localCriticality "critical" ;
+    bridge:isBlockingFacet true .

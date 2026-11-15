@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-11-08T20:46:46-0300",
+  "gate": "G4' (full corpus, streamed)",
+  "graph": {
+    "blocks": 37997,
+    "case_groups": 1520,
+    "persona_blocks": 132,
+    "chunks": 13,
+    "triples_validated": 2014563,
+    "triples_in_file": 0
+  },
+  "shacl_v4": {
+    "conforms": true,
+    "violations": 0,
+    "seconds": 47.94,
+    "by_component": {},
+    "by_path": {},
+    "sample": []
+  },
+  "shacl_v6": {
+    "conforms": true,
+    "violations": 0,
+    "seconds": 23.71,
+    "by_component": {},
+    "by_path": {},
+    "sample": []
+  },
+  "consistency_checks_over_full_corpus": {
+    "E30: every stored capValue equals requirement x (1 - strength x (1 - compliance))": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "an incomplete profile never yields a non-ABSTAIN verdict": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "chain links where the case's critical duty is retained at the delegating layer (E28 retention, reported not penalised)": {
+      "kind": "finding",
+      "violating_rows": 268
+    },
+    "conflictStatus agrees with conflictResolved": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "confrontations whose declaredStakesSum exceeds the declared ceiling 2.1": {
+      "kind": "finding",
+      "violating_rows": 0
+    },
+    "declared lam and mu sums equal 1": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "each pillar's vertex-slot weight equals the calibration lambda": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "every Confrontation references an existing EthicalCase and Profile": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every Norm has a normative instrument": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every NormConflict names both norms and a resolution strategy": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every PROHIBIT verdict is grounded in a hard veto or in the gated score route": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every Prohibition targets a pillar": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every case declaring a norm conflict links a NormConflict individual": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every chain link declares at least one delegated pillar": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "every conflict pair carries a priority engine or is flagged unresolved": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every delegation chain declares a fallback policy": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "every facet declares exactly one aggregation policy": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "every facet's beta weights sum to 1": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "every pillar is touched by at least one facet with a non-zero beta": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "every recorded guard breach uses the facet's own declared floor and really breaches it": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "guardFailureCount equals the number of GuardFailure individuals attached": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "lattice slot weights sum to 1 inside each structural term": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "no chain link delegates a pillar the delegate is forbidden to carry": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "no chain link delegates more than the four pillars": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "no confrontation is missing the structural terms or the decision bar": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "no declared GuardFailure is at or above its floor": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "no declared duty (requirement) sits below the guard floor of the facet it governs": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "no duty is delegated to an agent forbidden to carry it": {
+      "kind": "deontic",
+      "violating_rows": 0
+    },
+    "risk quantities stay inside their declared ranges": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "stored adequacy never exceeds raw adequacy": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "the adequacy band is ordered: adequacyLow <= adequacy <= adequacyHigh": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "the guard floor of every guarded facet is within [0,1] and its requirement is above it": {
+      "kind": "structural",
+      "violating_rows": 0
+    },
+    "the hierarchy S4 <= S3 <= S2 holds for every confrontation": {
+      "kind": "structural",
+      "violating_rows": 0
+    }
+  },
+  "failed_checks": [],
+  "findings": {
+    "chain links where the case's critical duty is retained at the delegating layer (E28 retention, reported not penalised)": 268,
+    "confrontations whose declaredStakesSum exceeds the declared ceiling 2.1": 0
+  },
+  "runtime_seconds": 405.76,
+  "gate_verdict": "PASS"
+}

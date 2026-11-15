@@ -1,0 +1,79 @@
+{
+ "battery": "B16 structural-term ablation (D3.4)",
+ "pairs": 183920,
+ "calibration": "fitted B5 v12",
+ "coefficients": {
+  "gamma": 0.12,
+  "eta": 0.05,
+  "omega": 0.03,
+  "max_penalty_from_structure": 0.2
+ },
+ "variants": {
+  "full": {
+   "kappa": 0.4681,
+   "delta_vs_full": 0.0,
+   "agreement": 0.8308,
+   "mean_adequacy_low": 0.2886,
+   "decision_distribution": {
+    "PROHIBIT": 153048,
+    "REVIEW_REQUIRED": 15188,
+    "ALLOW_WITH_GUARDS": 869,
+    "ABSTAIN": 14702,
+    "ALLOW": 113
+   }
+  },
+  "no_S2": {
+   "kappa": 0.4678,
+   "delta_vs_full": -0.0003,
+   "agreement": 0.8274,
+   "mean_adequacy_low": 0.3484,
+   "decision_distribution": {
+    "PROHIBIT": 151410,
+    "REVIEW_REQUIRED": 16780,
+    "ALLOW_WITH_GUARDS": 915,
+    "ABSTAIN": 14702,
+    "ALLOW": 113
+   }
+  },
+  "no_S3": {
+   "kappa": 0.4686,
+   "delta_vs_full": 0.0005,
+   "agreement": 0.8297,
+   "mean_adequacy_low": 0.311,
+   "decision_distribution": {
+    "PROHIBIT": 152389,
+    "REVIEW_REQUIRED": 15825,
+    "ALLOW_WITH_GUARDS": 891,
+    "ABSTAIN": 14702,
+    "ALLOW": 113
+   }
+  },
+  "no_S4": {
+   "kappa": 0.4688,
+   "delta_vs_full": 0.0007,
+   "agreement": 0.8303,
+   "mean_adequacy_low": 0.3007,
+   "decision_distribution": {
+    "PROHIBIT": 152692,
+    "REVIEW_REQUIRED": 15531,
+    "ALLOW_WITH_GUARDS": 882,
+    "ABSTAIN": 14702,
+    "ALLOW": 113
+   }
+  },
+  "no_structure": {
+   "kappa": 0.4688,
+   "delta_vs_full": 0.0007,
+   "agreement": 0.8262,
+   "mean_adequacy_low": 0.3827,
+   "decision_distribution": {
+    "PROHIBIT": 150620,
+    "REVIEW_REQUIRED": 17547,
+    "ALLOW_WITH_GUARDS": 938,
+    "ABSTAIN": 14702,
+    "ALLOW": 113
+   }
+  }
+ },
+ "reading": "Removing the face-lattice terms changes kappa by less than the inter-panel noise: the tetrahedron organises the audit trail but does not, by itself, produce normative information. That is what D3.4 claims and what this battery now measures."
+}

@@ -1,0 +1,4 @@
+# Code owners: reviewers that must sign off on changes to the formal core.
+_analysis/formal_core/ @Palazzo13-X
+Ontologias/ontology_v4_2/ @Palazzo13-X
+Evaluacoes/ @Palazzo13-X

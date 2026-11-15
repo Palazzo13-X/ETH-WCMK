@@ -1,0 +1,368 @@
+ETH-WCMK: A Dual-Ontology and Tetrahedral Model for Machine Ethics in AI Systems
+Luiz Palazzo and Tarcísio Vanzin
+Federal University of Santa Catarina (UFSC), 
+Postgraduate Program in Engineering and Knowledge Management (PPGEGC), Brazil
+
+Abstract. Machine ethics still lacks a representation that simultaneously preserves contextual specificity, explicit normativity, operational auditability, and computable agency assessment. This paper presents ETH-WCMK, a dual-ontology and vector-geometric framework designed to address that gap. The proposal separates two coupled but non-identical objects: the ethical case itself, modeled by ETHCASE, and the delegated ethical agency available to act in that case, modeled by WCMK (Want, Can, Must, Know). This separation is theoretically important because severe contexts do not automatically prohibit automation, and highly capable systems do not automatically justify ethical delegation. The bridge between ETHCASE and WCMK formalizes the confrontation between contextual requirements and available agency, producing explicit measures of adequacy, residual risk, and review need. The model is grounded in moral philosophy, semantics, semiotics, and a tetrahedral 3-simplex representation in which the four WCMK dimensions operate as vertices of a regular tetrahedron. Building on the project’s most recent research phase, the paper also introduces WCMK+, a faceted extension that decomposes each canonical vertex into auditable subcomponents while preserving projection back to the tetrahedral core. We derive a compact formal layer based on requirement vectors, salience vectors, weighted deficits, epistemic penalties, and residual-risk functions, and we show how the facet layer strengthens calibration, explainability, and governance. We also describe the project’s ontology stack, data assets, ingestion-normalization-calibration pipeline, and dashboard. Relative to mainstream guardrail architectures, ETH-WCMK is not merely a content filter; it is a deliberative and auditable ethical-control layer designed for AI systems that retrieve information, use tools, and act under domain-sensitive constraints. The result is a research program that combines conceptual rigor with an operational path toward explainable and governable machine ethics.
+Keywords. machine ethics; ethical AI; ontology engineering; delegated ethical agency; tetrahedral model; WCMK+; facet ontology; governance; algorithmic platforms
+1. Introduction
+Artificial intelligence systems increasingly mediate decisions, recommendations, rankings, classifications, and actions in domains where the moral stakes are neither incidental nor reducible to content moderation. In public administration, education, health, finance, labor, and information platforms, the relevant question is not simply whether an output contains prohibited content, but whether a system acts under adequate normative orientation, evidential grounding, proportional constraints, and review discipline. This shift motivates machine ethics as a field concerned with the design of artificial agents capable of producing actions or action recommendations under ethically constrained conditions (Moor, 2006; Allen, Wallach, & Smit, 2006; Anderson & Anderson, 2011).
+The human-machine contrast remains fundamental. Human moral judgment emerges from embodied experience, social learning, affect, intention, narrative selfhood, and historically sedimented institutions. Machine systems, by contrast, operate through formal representations, optimization procedures, learned statistical regularities, symbolic rules, or hybrids thereof. They do not possess human conscience, but they can nevertheless participate in morally significant causal chains. For that reason, the practical aim of machine ethics is not to anthropomorphize AI, but to specify what kind of bounded, delegated, and auditable ethical agency may be ascribed to computational systems under explicit institutional constraints (Floridi, 2004; Wallach & Allen, 2008).
+This paper argues that a robust model of machine ethics must distinguish two analytically different objects. First, one must represent the ethical case: the context, stakeholders, vulnerabilities, norms, severity, uncertainty, and circumstances that make a situation ethically salient. Second, one must represent the available ethical agency: what the acting system wants, can do, must respect, and knows well enough to act responsibly. Many existing approaches conflate these dimensions or treat ethical control as a late-stage filter over generated content. ETH-WCMK was developed precisely to avoid that reduction. It separates contextual description from delegated agency and then confronts them through a bridge layer that makes adequacy and residual risk explicit.
+The paper follows the ordered structure requested for the project manuscript and extends prior internal studies into a journal-scale argument. It first reviews the current landscape of machine ethics, including institutional frameworks and industrial safety architectures. It then introduces the ETH-WCMK model and its philosophical, semantic, semiotic, and mathematical foundations. Next, it presents the ETHCASE ontology, the WCMK agency ontology, the bridge ontology, and the LLM service layer. The final sections describe the project’s research assets, ingestion-normalization-calibration pipeline, confrontation logic, dashboard, initial results, limitations, and next steps. Throughout the paper, the emphasis is on explainability, provenance, and governance rather than on opaque automation.
+2. Machine Ethics
+Machine ethics has evolved from a largely philosophical debate into an engineering and governance problem. Early work asked whether machines could be moral agents at all, or only moral patients or tools (Floridi, 2004; Moor, 2006). Subsequent research explored top-down approaches based on explicit rules, bottom-up approaches based on learning, and hybrid architectures combining normative constraints with adaptive behavior (Allen, Smit, & Wallach, 2005; Wallach & Allen, 2008). More recently, large language models and tool-using agents have intensified the problem by enabling systems that retrieve information, plan multi-step actions, and affect real users across high-impact domains.
+From an institutional perspective, the field is now framed by converging but not identical governance documents. The UNESCO Recommendation on the Ethics of Artificial Intelligence places human rights, human dignity, environmental and societal well-being, transparency, accountability, and human oversight at the center of AI governance (UNESCO, 2021). The OECD AI Principles were updated in 2024 and remain one of the main intergovernmental reference points for trustworthy AI aligned with human rights and democratic values (OECD, 2024a, 2024b). The NIST AI Risk Management Framework and its 2024 Generative AI Profile translate trustworthiness into lifecycle-oriented risk practices that emphasize documentation, oversight, validity, reliability, safety, security, explainability, and accountability (NIST, 2023, 2024). In Europe, Regulation (EU) 2024/1689 and the 2024 Council of Europe Framework Convention move these concerns into a more explicit legal grammar of risk, transparency, fundamental-rights protection, and remedies (European Union, 2024; Council of Europe, 2024). In Brazil, the final PBIA frames AI as a public-interest, inclusion, and sovereign-capacity agenda that must still remain ethical, secure, transparent, and evidence-oriented (Ministério da Ciência, Tecnologia e Inovação, 2025).
+Recent institutional tools make this convergence more operational. UNESCO's Readiness Assessment Methodology (RAM) and Ethical Impact Assessment (EIA) explicitly require structured examination of regulatory readiness, documentation, stakeholder inclusion, transparency, and harm prevention before AI systems are treated as ethically deployable (UNESCO, 2023a, 2023b). ISO/IEC 42001 adds an organizational management-system perspective, underscoring that responsible AI is not only a model property but a governed process spanning policies, controls, monitoring, and continual improvement (ISO/IEC, 2023).
+These frameworks are necessary but not sufficient. They specify principles, policy actions, and governance expectations, yet they do not by themselves solve the representational problem of how an AI system should confront a particular ethically loaded case. A content filter can block an output, but it does not usually explain whether the system lacked evidential grounding, normative adequacy, proportional authority, or contextual fit. This is one of the reasons why the present project adopts the notion of Minimal Machine Ethics: a machine should not be required to emulate the fullness of human moral life, but it should at least satisfy explicit requirements of contextual awareness, normative boundedness, epistemic sufficiency, provenance-aware traceability, and auditable residual-risk reporting.
+In our interpretation, recent governance documents converge on a requirement grammar that is highly relevant for ontology design: protection of persons and rights, legitimacy of purpose, bounded capability, evidence quality and uncertainty handling, transparency and provenance, human oversight and contestability, accountability and redress, and context-sensitive proportionality. ETH-WCMK takes these not as a flat checklist but as representational demands. ETHCASE is used to encode what a case requires; WCMK is used to evaluate whether a delegated profile can responsibly meet those requirements.
+Industrial safety architectures illustrate both progress and limitation. OpenAI’s moderation architecture provides scalable harmful-content detection and policy enforcement, but it remains primarily classifier-centered (OpenAI, 2026). Anthropic’s Constitutional AI introduced a training paradigm in which AI systems are guided by explicit principles during self-critique and reinforcement phases (Bai et al., 2022). Google’s Gemini stack exposes adjustable safety settings and content filters for different harm categories, making safety thresholds configurable for applications (Google, 2026). Meta’s Llama Guard line treats safety as an input-output classification layer that can sit alongside open models (Meta, 2025). These approaches are valuable, especially for harmful-content control, but they generally focus on policy compliance and surface-level filtering. They do not fully model the ethical case as a structured context, nor do they explicitly compute the match between case requirements and delegated agency.
+The research gap, therefore, is twofold. At the conceptual level, machine ethics needs a formal language capable of distinguishing case severity from agency adequacy. At the operational level, it needs a bridge from conceptual ethics to data assets, ontologies, pipelines, and audit records. ETH-WCMK is proposed as a response to both gaps. It is not a replacement for guardrails; rather, it is a deeper deliberative layer that can coexist with them and explain why a case should be allowed, restricted, escalated for review, or blocked.
+Before introducing the proposed model, it is useful to position it against the main families of machine-ethics approaches that dominate the literature and practice.
+
+Table 1. Comparative position of major machine-ethics approaches.
+Approach | Primary mechanism | Strength | Typical limitation
+Top-down ethics | Explicit rules or deontic constraints | Interpretability and clear prohibitions | Rigidity and brittle coverage
+Bottom-up ethics | Learning from examples or feedback | Adaptation and coverage | Opacity and norm drift
+Hybrid ethics | Rules plus learning | Balance of control and adaptation | Integration complexity
+Industrial guardrails | Moderation, classifiers, safety policies | Scalable content control | Shallow case representation
+ETH-WCMK | Case-agency confrontation through ontologies and vectors | Explicit adequacy and residual risk | Calibration and ontology effort
+
+The comparison shows that ETH-WCMK is best understood as a coupling framework: it inherits the need for principles, constraints, and learning, but adds an explicit representational split between case severity and delegated agency.
+The next table narrows the comparison from academic families to operational safety stacks used in contemporary platforms.
+
+Table 2. Illustrative comparison between industrial safety stacks and ETH-WCMK.
+System family | Core idea | Where it excels | What ETH-WCMK adds
+OpenAI moderation | Classifier-centered harmful-content detection | Scalable filtering and enforcement | Case structure and agency adequacy
+Anthropic Constitutional AI | Principle-guided self-critique and RL | Behavioral steering through constitutional norms | Formal case model and residual-risk output
+Google Gemini safety settings | Configurable harm filters | Application-level threshold control | Structured contextual confrontation
+Meta Llama Guard | Open safeguard classifier | Reusable input/output safety layer | Bridge-based adjudication across context and agency
+
+The representation clarifies that mainstream stacks are strong at filtering, policy enforcement, and scalable control, whereas ETH-WCMK adds a richer explanatory layer for why a particular case-profile pairing remains acceptable, guarded, restricted, or blocked.
+
+3. The ETH-WCMK Model
+ETH-WCMK was conceived to formalize a central intuition: the ethical status of an AI-mediated action cannot be inferred from either context alone or agency alone. A high-risk case does not necessarily prohibit AI participation if the delegated system is adequately bounded, knowledgeable, and review-aware. Conversely, an apparently capable system does not automatically authorize delegation in contexts involving vulnerable subjects, due-process demands, severe reversibility constraints, or deep epistemic uncertainty. The model therefore separates ETHCASE, which describes the ethical context, from WCMK, which describes delegated ethical agency.
+The acronym WCMK is the English rendering of the original Portuguese QPD-S model: Want, Can, Must, and Know. The four dimensions are not arbitrary. Want captures the orientation, priorities, or objective pressure embodied in the acting system; Can captures operational capability; Must captures normative obligations and constraints; Know captures evidential and contextual grounding. Together they form a minimal but expressive set of ethical coordinates for delegated action. In the project’s conceptual evolution, this tetrad emerged from an initial Augustinian triad and was expanded to include knowledge explicitly, on the grounds that contemporary AI acts under data dependence, uncertainty, latency, ambiguity, and contested evidence conditions that cannot be absorbed into mere capability or duty.
+Why two models rather than one? Because the project aims to preserve residual risk under variation. If the case changes while the agent remains fixed, the residual risk should change. If the agent changes while the case remains fixed, the residual risk should also change. A single undifferentiated representation would obscure this distinction. The separation of case and agency makes it possible to record: (i) what the case demanded, (ii) what the system could responsibly deliver, and (iii) what ethically relevant gap remained after confrontation. This design decision is one of the project’s strongest claims.
+The broader project goal is not only theoretical formalization, but also an operational pathway for machine ethics. The research program includes ontologies, case databases, normalization pipelines, calibration routines, prudential thresholds, comparative studies against industrial filters, and a dashboard for explainable inspection. The project therefore treats ethics neither as a purely speculative add-on nor as a flat policy checklist. It treats ethics as a structured relation between context, agency, adjudication, and governance.
+This two-sided architecture also follows a lesson reinforced by contemporary governance: obligations attach both to the situation and to the lifecycle properties of the acting system. A context may trigger privacy, safety, non-discrimination, due-process, or transparency duties, but whether those duties can actually be met depends on the concrete agency profile available at deployment time. ETH-WCMK operationalizes this distinction by projecting contextual demands into requirement profiles on the ETH side and delegated competence, boundedness, and evidential grounding into assessable profiles on the WCMK side. The separation therefore prevents governance language from collapsing into an abstract checklist detached from actual system capability.
+The opening figure synthesizes the argumentative move that motivates the paper: the transition from broad normative and institutional commitments to a formal architecture capable of supporting case-level machine-ethics judgments.
+[IMAGE: 1 embedded picture(s), inline]
+Figure 1. From normative theory to operational machine ethics.
+What the figure makes visible is that ETH-WCMK does not collapse principles into a single score. Instead, it translates normative concerns into structured case requirements, profile constraints, and auditable residual risk.
+4. ETH: The Ethical Case
+ETHCASE represents the ethical case as a structured context rather than as a free-form anecdote. The central idea is that morally relevant situations have compositional structure: domain, actors, affected stakeholders, relevant actions, expected and possible consequences, vulnerabilities, time pressure, reversibility, evidence quality, uncertainty, and applicable norms. ETHCASE is therefore designed to capture the context in which an AI system would act, not merely the textual prompt that triggers action.
+Semantically, the ethical case operates as a contextual network. A case is not just an event description; it is an organized packet of relations linking action possibilities to values, harms, duties, and affected parties. Semiotic considerations are equally important. Ethical salience often depends on how signs function in context: what is represented, omitted, inferred, disputed, or socially interpreted. For example, the same lexical signal may be innocuous in one domain and deeply harmful in another. ETHCASE therefore treats domain and circumstance as first-class dimensions rather than as decorative metadata.
+Within the project, the ethical case is formalized in an ontology tentatively centered on classes such as Case, Situation, Domain, Action, Stakeholder, Vulnerability, NormativeReference, Evidence, Uncertainty, SeverityAssessment, and RequirementProfile. The purpose of this ontology is not merely classificatory. It supports machine-readable derivation of requirement vectors and salience vectors that can later be confronted with WCMK profiles. In practical terms, ETHCASE acts as the formal carrier of contextual demand.
+The semantic design of ETHCASE is canonical-first rather than lexical-first. The ontology is not generated by mirroring the surface words found in prompts, incident reports, policies, or case narratives. Instead, heterogeneous expressions are normalized into relatively stable conceptual roles - such as stakeholder, vulnerability, evidence, normative reference, uncertainty, severity assessment, and requirement profile - so that semantically equivalent cases remain comparable across domains. This design choice is consistent with the RDF/OWL tradition, in which interoperable meaning is carried by graph structure, typed relations, and explicit identity conditions rather than by uncontrolled string variation (W3C, 2012, 2014).
+That decision directly shaped the generation and calibration of the canonical ontologies. Controlled vocabularies and taxonomic bridges are maintained at the lexical edge, while the canonical commitments remain comparatively stable in the ontological core. In practice, SKOS-like concept schemes help organize synonymy, broader/narrower relations, and domain labels; PROV-style lineage captures where a case packet, evidence item, or normalization step came from; and SHACL-like constraints ensure that essential fields, ranges, and relational shapes are present before confrontation proceeds (W3C, 2009, 2013, 2017). The result is not a closed-world claim that a case is complete, but a governed open-world representation whose minimum semantic adequacy can still be validated.
+From this perspective, ontology calibration is both a semantic and a prudential task. A category survives in the canonical ontology only if it improves discriminability, traceability, and deliberative usefulness without erasing distinctions that the model must preserve - for example, between harm severity and evidence quality, or between vulnerability concentration and normative prohibition. Calibration therefore proceeds by iterative contrast: heterogeneous materials are normalized, mapped, checked against shapes, confronted with WCMK profiles, and then revised whenever recurrent ambiguity or over-merging harms explanation. This is one of the methodological bridges between semantic engineering and ethical adjudication in the project.
+The network logic of ETHCASE is essential for explainability. When the model states that a case requires stronger Must or Know components, that judgment should be traceable to explicit contextual features: public harm potential, contested evidence, vulnerability concentration, legal obligations, or asymmetry of consequences. This traceability is one of the reasons why the project avoids purely black-box ethical scoring. Context must remain inspectable.
+The following table condenses the canonical semantic dimensions that organize ETHCASE as a structured contextual packet rather than a free-form narrative.
+
+Table 3. Core ETHCASE dimensions.
+Dimension | Representative question | Why it matters
+Domain | In what sociotechnical field does the case occur? | Norms and harms are domain-sensitive
+Stakeholders | Who is affected directly or indirectly? | Ethical salience depends on affected parties
+Severity | How serious are the plausible harms? | Constrains admissible automation
+Evidence | What is known and how reliable is it? | Grounds the Know requirement
+Vulnerability | Who is exposed asymmetrically? | Raises review and duty demands
+Reversibility | Can harms be undone? | Affects prudential thresholds
+Applicable norms | Which legal or ethical constraints apply? | Feeds Must and bridge reasoning
+Uncertainty | How contested, incomplete, or unstable is the case? | Triggers epistemic penalty and review
+
+Taken together, these dimensions show that contextual risk is not a primitive scalar. It is an interpretable composition of domain, actors, harms, vulnerabilities, evidence, temporality, and uncertainty.
+
+5. WCMK: Delegated Ethical Agency
+WCMK models the acting side of the ethical relation. The concept of delegated ethical agency is intentionally modest: it does not claim that machines possess human moral personhood. Instead, it identifies the ethically relevant dimensions under which an artificial system can be evaluated when it is entrusted with action, recommendation, prioritization, or escalation. WCMK asks four questions. What is the system oriented to do (Want)? What can it actually do under current constraints (Can)? What must it respect, prohibit, or prioritize (Must)? What does it know, and how well-grounded is that knowledge (Know)?
+Philosophically, the model is plural rather than sectarian. Want resonates with traditions concerned with intention, motivation, and volition, including Augustine, Anscombe, and Frankfurt. Can connects with responsibility conditions and practical capability. Must draws on deontic, duty-based, and prima facie normative traditions, including Kant and Ross. Know connects the model to epistemic virtue, evidence, uncertainty, and the conditions of justified action. Aristotle and Jonas remain relevant because practical wisdom and responsibility under technological amplification inform the project’s view that ethical action is not reducible to a single scalar objective.
+Semantically and semiotically, WCMK is not a bag of labels. Each dimension is a vector of interpretable commitments. Want is not mere desire; in computational settings it often appears as optimization pressure, ranking priority, or strategic objective. Can is not abstract possibility; it is situated capability conditioned by tools, permissions, latency, interfaces, and model competence. Must is not only a prohibition layer; it is the structured set of obligations, limits, rights, escalation duties, and governance constraints relevant to the case. Know is not binary possession of information; it includes evidence quality, contextual fit, recency, contestability, and uncertainty management.
+The semantic decomposition of WCMK was equally deliberate. The four terms were selected because they span four irreducible modal families that recur in ethical deliberation: teleological-volitional orientation (Want), dynamic-operational possibility (Can), deontic obligation and prohibition (Must), and epistemic-evidential grounding (Know). WCMK is therefore not just a mnemonic; it is a compact modal grammar for delegated action. Its advantage for ontology engineering is that each vertex can be decomposed into assessable subcomponents without losing its canonical role in the tetrahedral whole.
+This modal grammar guided the generation and calibration of wcmk.ttl. Want was constrained to represent declared objective pressure, ranking preference, or optimization direction rather than anthropomorphic desire; Can was decomposed into technical capability, permission, resource sufficiency, and operational robustness; Must into obligation, prohibition, escalation, and compliance commitments; and Know into evidence quality, contextual pertinence, recency, uncertainty, and recognized limits of knowledge. The calibration criterion was semantic separability with controlled interaction: the vertices must influence one another, but not collapse into one another. This is why the formal layer later preserves explicit deficit reporting and controlled non-compensation rather than allowing one strong dimension to erase a missing indispensable one.
+Mathematically, the project represents WCMK by a regular tetrahedron, or 3-simplex, whose four vertices correspond to Want, Can, Must, and Know. The tetrahedral choice is not merely visual. It is the minimal geometry that preserves four primitive dimensions without collapsing them into planar ambiguity. A triangle would force one dimension to be derivative; a higher-dimensional figure would sacrifice intuitive inspectability. The tetrahedron therefore becomes a conceptual, geometric, and vectorial compromise between expressive adequacy and explanatory tractability.
+The four vertices also support higher-order relational analysis. Edges capture binary tensions such as Want-Must or Can-Know. Faces capture triadic fragilities, for example cases in which Want, Can, and Must are present but Know remains weak. The interior of the tetrahedron represents integrated agency configurations rather than isolated dimensions. In this way, WCMK supports both local and global diagnostics of ethical agency.
+To keep the model operational, the project organizes a set of influential concepts around the tetrahedron: intention, priority, capability, authority, obligation, prohibition, evidence, uncertainty, stakeholder impact, proportionality, auditability, and residual risk. These do not replace WCMK; they refine it. In ontology terms, the wcmk.ttl layer is meant to represent profiles, instances, assessments, component strengths, tensions, and explainable outputs that can be versioned across deployments and redesign cycles.
+The next figure presents the geometric intuition that underlies the formal layer of WCMK and prepares the subsequent vector interpretation.
+[IMAGE: 1 embedded picture(s), inline]
+Figure 2. WCMK represented as a tetrahedral simplex.
+The tetrahedral representation makes one central point visually explicit: delegated ethical agency is not located at a single axis, but in a four-component state space whose vertices, edges, faces, and interior support progressively richer ethical readings. After the geometric overview, the model can be unpacked dimension by dimension.
+Table 4. The four WCMK dimensions and their role.
+Vertex | Operational meaning | Selected philosophical resonance
+Want | Objective orientation, priority pressure, intended direction of action | Augustine; Anscombe; Frankfurt
+Can | Situated capability under permissions, tools, latency, and competence | Practical agency and responsibility conditions
+Must | Obligation, prohibition, rights, escalation duty, governance constraint | Kant; Ross; deontic traditions
+Know | Evidence quality, contextual grounding, uncertainty handling | Epistemic virtue; semiotics; prudence
+
+The table shows why Want, Can, Must, and Know should be treated as irreducible but coupled components: each captures a different failure mode, and none can substitute cleanly for the others in ethically loaded cases.
+To keep the tetrahedron operational rather than merely schematic, the project organizes a broader semantic neighborhood around the four primary components.
+Table 5. Twelve influential concepts organized around WCMK.
+Concept cluster | Examples
+Orientation | intention, priority, optimization pressure
+Capability | competence, permissions, tool access
+Normativity | obligation, prohibition, authority
+Epistemics | evidence, recency, contestability, uncertainty
+Governance | stakeholder impact, proportionality, auditability, residual risk
+
+The resulting representation shows how the core simplex can be enriched without losing interpretability: secondary concepts remain anchored to primary vertices and relations instead of drifting into an uncontrolled vocabulary.
+
+5.1 WCMK+ as a faceted extension of the tetrahedral core
+The project’s recent evolution showed that the tetrahedral model should remain canonical, but that each vertex needs an internal semantic structure rich enough for calibration, ontology engineering, and explainable confrontation. The result is WCMK+, a faceted extension in which Want, Can, Must, and Know continue to function as the four vertices of the simplex while becoming projections of controlled subcomponents rather than opaque scalar slots.
+In the faceted reading adopted in this version, the barycentric profile remains the canonical mathematical object, but each coordinate is interpreted as the projection of a facet family. The simplex therefore preserves continuity and comparability, while the bridge can still diagnose finer deficits at the level of specific subcomponents such as prudential obligation, normative knowledge, controllability, or uncertainty awareness.
+The key design principle is preservation through refinement. WCMK+ does not replace the tetrahedron with a larger uncontrolled vocabulary; instead, it introduces a stable catalog of twenty-four facets distributed across the four vertices, with explicit projection back to W, C, M, and K. This preserves historical comparability, keeps the bridge mathematically interpretable, and strengthens auditability because deficits can now be stated at the level of specific normative, epistemic, or operational insufficiencies rather than only at the aggregate level.
+The following figure summarizes this relation between the canonical simplex and the facet layer. It shows the tetrahedral core at the center and the four facet families around it, making explicit that the extension operates by projection and controlled aggregation rather than by abandoning the original vector geometry.
+[IMAGE: 1 embedded picture(s), inline]
+Figure 3. WCMK+ as a faceted extension of the tetrahedral core.
+The figure makes a methodological point that is central to the present version of the paper: semantic enrichment and mathematical parsimony need not conflict. The tetrahedron remains the common space for comparison, while the facet layer supplies the finer discriminability required for ontology calibration, bridge diagnostics, and governance explanation.
+5.2 Summary of the facet families
+The catalog currently stabilizes twenty-four facets. For readability inside the paper, the tables below summarize them by vertex, keeping the functions concise while preserving their role in the later bridge and governance pipeline. The full technical catalog remains the reference for observables, criticity by domain, and implementation-level ontology details.
+The Want family refines teleological orientation. Instead of reducing agency to a generic objective function, it identifies which end is being pursued, whether that end remains value-aligned, who is considered morally relevant, how priorities are ordered, and whether the orientation remains stable under perturbation.
+Table 6. Summary of the Want facet family.
+Code | Facet | Core role
+W1 | Goal orientation | Practical end pursued in the case.
+W2 | Value alignment | Compatibility of aims with ethical and institutional values.
+W3 | Stakeholder regard | Breadth and quality of stakeholder consideration.
+W4 | Priority discipline | Ordering of competing objectives under ethical tension.
+W5 | Intentional stability | Coherence of orientation under contextual variation.
+
+Taken together, the Want facets prevent the acting side of the model from being reduced to raw optimization pressure. They make visible whether the system is aiming at a legitimate end and whether it orders its goals in a way compatible with contextual ethical constraints.
+The Can family refines capability into a governed notion of realizable action. The emphasis is not simply on whether the system can do something in principle, but whether it can do it robustly, within scope, with sufficient resources, and under adequate control and execution safety.
+Table 7. Summary of the Can facet family.
+Code | Facet | Core role
+C1 | Functional capability | Ability to execute the required task.
+C2 | Robustness | Performance under noise, shift, or adversarial pressure.
+C3 | Controllability | Interruptibility, containment, reversibility, and auditability.
+C4 | Scope adequacy | Fit between agent competence and the delegated domain/case.
+C5 | Resource sufficiency | Informational, computational, temporal, and organizational means.
+C6 | Safe executability | Ability to act without disproportionate execution risk.
+The Can decomposition shows why technical capacity alone is not a sufficient ethical defense. In the bridge, weak controllability, scope inadequacy, or unsafe executability can dominate even when functional capability remains high.
+The Must family stratifies normativity. This is especially important for the project because legal, policy, ethical, prudential, role-based, and accountability demands often coexist but should not be collapsed into a single undifferentiated duty score.
+
+
+
+Table 8. Summary of the Must facet family.
+Code | Facet | Core role
+M1 | Legal obligation | Binding legal and regulatory duties.
+M2 | Institutional policy obligation | Internal policies, protocols, and compliance constraints.
+M3 | Ethical principle obligation | Material ethical principles that must be respected.
+M4 | Prudential obligation | Additional caution under severity, ambiguity, or irreversibility.
+M5 | Role obligation | Duties tied to delegated authority and institutional role.
+M6 | Accountability obligation | Traceability, explainability, and answerability.
+
+This structure is one of the main reasons WCMK+ improves auditability. Once normativity is decomposed, the bridge can report whether a case fails because of law, policy, prudence, delegated role, or accountability rather than only stating that Must is globally insufficient.
+The Know family refines epistemic sufficiency. It distinguishes evidence, context, normativity, procedure, causality, uncertainty awareness, and provenance, thereby making the epistemic side of delegated agency much more informative than a single knowledge scalar would allow.
+Table 9. Summary of the Know facet family.
+Code | Facet | Core role
+K1 | Evidential knowledge | Facts supported by sufficiently reliable evidence.
+K2 | Contextual knowledge | Understanding of domain, situation, and circumstances.
+K3 | Normative knowledge | Knowledge of applicable norms, policies, and principles.
+K4 | Procedural knowledge | Knowledge of how to act correctly and in sequence.
+K5 | Causal knowledge | Understanding of consequences and second-order effects.
+K6 | Uncertainty awareness | Recognition of ambiguity, limits, and need for escalation.
+K7 | Provenance awareness | Source lineage of evidence, rules, and justifications.
+The resulting picture is particularly important for governance. In high-stakes cases, the crucial failure is often not that the system lacks any information at all, but that it lacks the right kind of knowledge: normative, contextual, causal, or provenance-aware, and especially the recognition of its own uncertainty.
+The introduction of WCMK+ does not alter the logic of the subsequent mathematical layer; rather, it clarifies how the canonical barycentric coordinates can be interpreted as controlled projections of richer facet families. The next section therefore keeps the tetrahedral formalism, while making clear that each coordinate may now be read as an aggregated and governable projection of internal semantic structure.
+6. Mathematical Layer: Tetrahedral and Vector Representation
+Let the four vertices of a regular tetrahedron in three-dimensional Euclidean space be denoted by W, C, M, and K. A delegated agency profile is represented by barycentric coordinates a = (w, c, m, k), with nonnegative components summing to one. The point associated with the profile is therefore an interior or boundary point of the tetrahedral simplex. This representation makes each agency assessment simultaneously algebraic and geometric: algebraic because the profile is a constrained vector, geometric because its location reveals dominance, absence, and balance relations among the four components.
+ETHCASE supplies the contextual counterpart. For a given case E, let r(E) denote the requirement vector and let lambda(E) denote the salience vector, with salience weights summing to one. Requirements express how much of each WCMK component the case demands; salience expresses which dimensions matter more ethically in that case. This distinction is useful because a case may require moderate capability but assign very high salience to knowledge and duty, as in high-uncertainty public decision settings.
+Component deficits are computed only when the delegated profile falls short of the case. This preserves ethical non-compensation: surplus in one dimension should not erase shortfall in another when the missing component is normatively indispensable. Weighted deficit aggregates the shortfalls using the salience vector. Additional terms capture internal tension within the agency profile and epistemic penalty under uncertainty. The resulting adequacy score, denoted here as agency adequacy, is clipped to the unit interval for interpretability.
+Residual risk is then computed by combining contextual severity with agency inadequacy. The key principle is attenuation without erasure. Adequate agency may reduce residual risk, but it does not nullify severe contextual danger. This is important both ethically and institutionally: a system should never claim that good internal configuration magically removes external stakes. By design, the formal layer yields inspectable intermediate quantities—requirements, saliences, deficits, tension, epistemic penalty, adequacy, and residual risk—rather than a single opaque score.
+The present paper uses the mathematical layer descriptively and operationally. Descriptively, it clarifies what kind of structure the model assumes. Operationally, it supports case-by-case confrontation, calibration, and thresholding. The formalism remains intentionally compact so that it can be audited, stress-tested, and revised without losing conceptual continuity with the philosophical foundations.
+6.1 Origin of the tetrahedral vector interpretation
+The vector interpretation begins with a regular tetrahedron because the model assumes four primary ethical modalities that must remain symmetric at the level of representation. A regular simplex is the minimal geometry that gives four vertices equal status, equal pairwise separation, and a well-defined centroid that can serve as the balanced reference profile.
+This symmetry matters mathematically. When the vertex vectors have equal norm, constant pairwise inner product, and zero centroid, no component is privileged by the embedding itself. The geometry therefore encodes parity of representation, while case-specific calibration enters later through requirements, salience, and thresholds rather than through a biased coordinate system.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (1). Symmetry conditions for the regular tetrahedral embedding.
+Equation (1) expresses this symmetry compactly: the centroid is zero and all off-diagonal inner products are equal. In practical terms, movement toward one vertex necessarily occurs in tension with the others, which is precisely what makes the tetrahedron a useful state space for delegated ethical agency.
+6.2 Domain calibration as a deformation of requirements and salience
+The mathematical origin of calibration lies on the case side rather than on the geometry itself. ETHCASE supplies a requirement vector r(E) and a salience vector λ(E), but domains such as crisis moderation, health support, public-sector allocation, or educational assistance do not make these dimensions equally decisive. Domain calibration therefore acts as an operator that reweights the case before confrontation while preserving the simplex constraint after renormalization.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (2). Domain-conditioned reweighting of requirements and salience.
+The result is not a new geometry, but a controlled deformation of ethical pressure inside the same geometry. A high-stakes domain typically amplifies Must and Know; a more permissive domain may leave greater relative room for Want or Can without erasing baseline normative constraints.
+Table 10 presents illustrative domain calibration operators. The values are not claimed here as final empirical coefficients; they are working exemplars that show how domain knowledge can be translated into explicit vector pressure before adjudication.
+
+Table 10. Illustrative domain calibration tendencies in the WCMK simplex.
+Domain family | Illustrative Ω_d on (W, C, M, K) | Interpretive effect
+Crisis moderation | (0.90, 1.00, 1.25, 1.30) | Elevates Must and Know under severe contextual volatility.
+Clinical or triage support | (0.85, 1.00, 1.35, 1.30) | Strong normative and epistemic pressure with bounded discretionary Want.
+Public-sector eligibility | (0.80, 0.95, 1.35, 1.25) | Prioritizes duty, justification, and reviewability over speed.
+Creative assistance | (1.15, 1.05, 0.90, 0.90) | Allows broader initiative while maintaining a lighter prudential envelope.
+
+The table makes calibration inspectable. Instead of silently changing thresholds by domain, the model declares how each domain reweights the same four modalities before the profile is confronted with the case.
+6.3 WCMK profile families and profile-to-profile distance
+Profiles are represented as simplex points, which makes them directly comparable. This is important for the research workflow because the same ETHCASE packet is intentionally tested against different delegated profiles in order to reveal how much of the residual risk comes from the case and how much from the acting profile.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (3). Simplex distance between two WCMK profiles.
+The simplex distance is operationally useful in the dashboard and in calibration reports. Small distances suggest near-substitutable delegated profiles; large distances indicate that the ethical posture of the acting system changes materially, even when the case remains fixed.
+Table 11 summarizes illustrative profile families used in confrontation reasoning. These are not anthropomorphic personalities but operational postures that can be compared, stress-tested, and calibrated.
+Table 11. Illustrative WCMK profile families for confrontation tests.
+Profile family | a = (W, C, M, K) | Typical use | Expected confrontation behavior
+Balanced supervised | (0.25, 0.25, 0.25, 0.25) | General-purpose governed assistant | Moderate adequacy across mixed cases; rarely dominant in any one mode.
+Action-oriented optimizer | (0.40, 0.30, 0.15, 0.15) | Fast execution under utility pressure | Performs well in low-risk settings but accumulates deficits in Must/Know-heavy cases.
+Normatively guarded specialist | (0.20, 0.25, 0.30, 0.25) | Regulated workflow support | Stronger fit for high-accountability domains with explicit controls.
+Epistemic reviewer | (0.15, 0.20, 0.25, 0.40) | Audit, explanation, and verification tasks | Good match where uncertainty is high and Know dominates case salience.
+
+The key point is comparative: one and the same case can generate distinct adequacy and residual-risk readings when confronted with these different profile families. That is the mathematical core of the project's insistence on keeping ETHCASE and WCMK separate.
+6.4 ETHCASE × WCMK confrontation as deficit plus tension
+A mere aggregate shortfall is not enough to characterize ethical inadequacy. Two profiles may have the same total deficit and still differ sharply in their internal geometry: one may fail mildly across several dimensions, while another may concentrate its weakness in the very dimensions that the case makes decisive. The confrontation operator therefore combines weighted component deficits with pairwise tension terms.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (4). Pairwise tension relative to calibrated case requirements.
+Equation (4) captures a crucial feature of the model's ethical reading: skew matters. High Want combined with low Must and low Know is not just a shortage; it is a structured imbalance that becomes especially serious when the case raises normative and epistemic pressure. This is why the bridge computes both magnitude of deficit and geometry of misalignment before deriving adequacy and residual risk.
+The practical outcome is a more discriminating confrontation surface. Domain calibration changes what the case demands, profile distance changes which delegated profiles are materially distinct, and the tension term explains why two superficially similar adequacy scores may still deserve different governance actions.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (5). Convenient regular tetrahedron coordinates.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (6). Admissible WCMK simplex.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (7). Barycentric realization of the agency profile.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (8). Component deficit and weighted deficit.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (9). Simple epistemic penalty.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (10). Agency adequacy.
+[IMAGE: 1 embedded picture(s), inline]
+Equation (11). Residual risk.
+Because the mathematical layer introduces several coupled objects, the notation is summarized before the calibration and confrontation rules are extended.
+
+Table 12. Core notation used in the formal layer.
+Symbol | Meaning
+a=(w,c,m,k) | Delegated WCMK profile
+r(E) | Case requirement vector
+λ(E) | Case salience vector
+D(E,a) | Weighted deficit between case and profile
+T_int(a) | Internal tension term of the profile
+U_E | Case uncertainty
+Aa(E,a) | Agency adequacy score
+R_c(E) | Contextual severity or context risk
+R_r(E,a) | Residual risk after confrontation
+
+This notation table makes the architecture audit-friendly: case variables, profile variables, weighting operators, and derived prudential outputs remain distinguishable throughout the derivation.
+
+7. Bridge: ETH-WCMK Coupling and Adjudication
+The bridge ontology is where the ethical case and the delegated agency profile are confronted. Conceptually, the bridge answers the project’s central question: given this case and this agent, what follows ethically? The bridge must therefore combine case demand, agency supply, policy context, prudential thresholds, and explainable output. It is not a mere formula; it is the adjudicative layer of the architecture.
+Several kinds of entities become necessary at this layer: BridgeEvaluation, ContextAssessment, AgencyAssessment, AdequacyAssessment, ResidualRiskAssessment, ReviewRequirement, DecisionRecommendation, and ExplanationBundle. Their function is to preserve lineage from input to output. In other words, the bridge should be able to say not only that a case is restricted or review-bound, but why: whether because Must is insufficient, Know is degraded by uncertainty, capability is inadequate, or the case severity itself exceeds prudential automation limits.
+The bridge also makes bidirectional dynamics explicit. WCMK acts on ETHCASE because agency may mitigate, control, or worsen case outcomes. ETHCASE acts on WCMK because contextual severity, vulnerability, and uncertainty change the adequacy demands imposed on the acting system. This bidirectional relation is one reason the project treats residual risk as a first-class output rather than as an afterthought. Ethical adjudication is not complete until the remaining risk is explicit and review governance is attached where necessary.
+Operationally, the bridge supports a family of outcomes such as allow, allow with guards, needs review, restrict, and block. The point is not to fetishize any fixed taxonomy, but to ensure that outcome classes correspond to interpretable ethical reasons. A decision without a reason is weak governance; a reason without a structured record is weak auditability. The bridge is designed to supply both.
+In the current project line, confrontation is not restricted to a one-case/one-profile evaluation. The same ETHCASE packet can be confronted with a profile family P = {a(1), ..., a(n)} so that the analyst can compare adequacy, residual risk, and recommended action under controlled profile variation. This comparative use is essential for calibration because it separates contextual severity from profile suitability instead of letting one obscure the other.
+The architecture figure locates the mathematical bridge within the broader ontology-and-services stack of the project.
+[IMAGE: 1 embedded picture(s), inline]
+Figure 4. Layered ETH-WCMK architecture with bridge-centered adjudication.
+The key result of the representation is that adjudication is neither buried inside the case ontology nor delegated to the service layer. It is concentrated in an explicit bridge where confrontation, explanation, and traceability can be inspected.
+Once the bridge is formalized, its output vocabulary must remain semantically disciplined rather than ad hoc.
+Table 13. Typical bridge outputs.
+Output class | Interpretation
+Allow | Case and agency are sufficiently aligned under current prudential thresholds
+Allow with guards | Action is admissible only with added safeguards or narrowed scope
+Needs review | Context or epistemics require explicit human judgment
+Restrict | Delegated agency is materially insufficient for the case
+Block | The case is beyond acceptable automation or violates hard constraints
+
+The table shows that bridge outcomes are not raw labels but governance actions tied to identifiable mathematical and semantic conditions, which is crucial for downstream audit and dashboard inspection.
+
+8. The LLM Service Layer
+The project treats large language models as a service layer rather than as the sovereign source of ethical judgment. This design choice is crucial. LLMs are useful for case structuring, information retrieval, evidence summarization, explanation generation, comparative analysis, ontology-assisted extraction, and interactive review support. However, these functions should remain governed by formal artifacts and versioned procedures rather than silently replacing the core adjudicative logic.
+For that reason, the architecture introduces a complementary ontology for service mediation, provisionally referred to as ethsvc-llm.ttl. This layer may represent service runs, model invocations, tool calls, retrieval episodes, prompt templates, evidence bundles, confidence estimates, and review tasks. The aim is governance interoperability: one should be able to change models, prompts, or providers without collapsing the identity of ETHCASE, WCMK, or the bridge.
+The role of the LLM layer is therefore assistive, not decisional by default. It can help transform free-form materials into structured case candidates, retrieve normative sources, compare alternative WCMK profiles, produce human-readable explanations, and support dashboard interaction. But when the system reaches ethically demanding cases, the architecture keeps formal adjudication and human oversight visible. This is consistent with current safety engineering best practices that combine retrieval, policy enforcement, moderation, and human review rather than relying on ungoverned generation alone.
+
+9. Research Program, Data Assets, and Pipeline
+The ETH-WCMK project has evolved beyond conceptual modeling into a structured research program with operational artifacts. The current corpus includes real ethical cases and synthetic cases designed for calibration and contrastive testing. Internal project documents report active real cases on one side and a synthetic core explicitly constructed to stress prudential thresholds, confront representational edge cases, and expose hidden tensions between severity, agency adequacy, and residual risk. This dual-corpus strategy matters because real cases keep the project anchored to grounded harms, while synthetic cases increase coverage, contrast, and controlled experimentation.
+The pipeline comprises ingestion, normalization, calibration, confrontation, and reporting. Ingestion collects cases, reference materials, and governance sources. Normalization maps heterogeneous inputs onto canonical schemas and ontological classes. Calibration tunes prudential thresholds and interpretable parameters rather than burying decisions inside opaque end-to-end optimization. Confrontation compares each ETHCASE packet with one or more WCMK profiles. Reporting produces audit artifacts, summaries, and dashboard views.
+Recent institutional instruments reinforce this pipeline logic. UNESCO's RAM and EIA move from principles to structured assessment questions; NIST's Generative AI Profile moves from abstract trustworthiness to lifecycle actions; and ISO/IEC 42001 moves from desirable governance to auditable management processes (UNESCO, 2023a, 2023b; NIST, 2024; ISO/IEC, 2023). ETH-WCMK mirrors this shift architecturally: it does not jump from raw inputs to a terminal label, but first structures the case, then evaluates the delegated profile, and only then produces a governed confrontation result.
+This pipeline design serves a specific governance purpose: trust in the journey from raw material to decision surface. Instead of assuming that a score is trustworthy because a model produced it, the project records provenance, transformation steps, and controlled outputs. The use of PROV-style lineage and ontology constraints is therefore not ornamental. It is part of the project’s claim that ethical AI should be inspectable not only at the output layer but across the entire representational and evaluative workflow.
+For that reason, the canonical ontologies are not static taxonomies but governed interfaces between normative language, source heterogeneity, and quantitative calibration. Their function in the pipeline is to stabilize meaning before scoring: ingestion may remain linguistically messy, but confrontation operates only after semantic normalization, provenance capture, and constraint validation. Without this semantic stabilization, threshold tuning would produce fragile numbers over moving categories rather than auditable judgments over controlled concepts.
+Internal reports describe prudential indicators such as context risk, agency adequacy, and residual risk, as well as the use of review-trigger thresholds and contrast batteries. One reported synthetic core contains 1,200 cases, with only a small permissive band, a substantial review band, and a large restrict band—an intentionally conservative profile aligned with governance rather than frictionless automation. Such results should not be read as final scientific validation, but they do show that the architecture already behaves as a prudential system rather than as a permissive optimizer.
+The next figure summarizes how the formal model is instantiated as a research and engineering pipeline rather than remaining purely conceptual. [IMAGE x1]
+Figure 5. Operational pipeline from ingestion to reporting.
+What emerges from the representation is a governed transformation chain: each stage produces inspectable intermediate artifacts, allowing later thresholds and confrontations to be traced back to source normalization and calibration choices.
+The pipeline is supported by a concrete set of ontologies, databases, reports, and interfaces, which are summarized below.
+Table 14. Research assets and operational components mentioned in the current project cycle.
+Asset | Role in the program
+Real case base (ethr) | Anchors the project in grounded cases and prudential reality
+Synthetic case base (eths) | Expands coverage, controlled contrast, and stress testing
+Ontologies | Provide machine-readable semantic structure for case, agency, and bridge
+Normalization pipeline | Maps heterogeneous sources into canonical representations
+Calibration reports | Tune prudential parameters and threshold behavior
+Dashboard | Supports explainable inspection by analysts and governance actors
+The table makes clear that the project is not a paper-only proposal. Its claims are already coupled to operational artifacts that support ingestion, normalization, calibration, confrontation, and analyst review.
+
+10. Dashboard, Validation, and Initial Results
+The dashboard is not a cosmetic accessory; it is the primary inspection surface for analysts, researchers, and eventually governance stakeholders. A useful machine-ethics dashboard must do more than display a final label. It should expose the case narrative, domain metadata, requirement profile, WCMK profile, comparison outputs, prudential class, and review rationale. In the project’s current design, the dashboard also includes comparative views, current-only navigation for active assets, radar-style profile visualization, and analyst-facing quality and calibration surfaces.
+Validation in this stage is multi-layered. There is conceptual validation, asking whether the ontology and formalism preserve the intended philosophical distinctions. There is semantic validation, asking whether classes, properties, and mappings remain coherent. There is empirical prudential validation, asking whether thresholds produce reasonable distributions under real and synthetic confrontation sets. There is also operational validation, asking whether the dashboard, reports, and pipelines remain auditable and reproducible.
+The initial results are promising but deliberately provisional. The project has already shown that ETHCASE-WCMK confrontation can differentiate between permissive, guarded, review-bound, and restrictive situations in a way that remains interpretable. It also shows that residual risk remains visible even when agency adequacy improves, which is one of the framework’s central desiderata. Just as importantly, the comparative studies suggest that ETH-WCMK can complement existing industrial guardrails by contributing structured deliberation where ordinary moderation layers are too shallow.
+Because the model is intended to be inspected rather than merely executed, the dashboard deserves explicit discussion as a representation layer.
+[IMAGE: 1 embedded picture(s), inline]
+Figure 6. Illustrative dashboard surface for governed inspection.
+The figure indicates that explanation is delivered through coordinated views of cases, profiles, deficits, and outputs. In other words, the dashboard externalizes the bridge logic instead of hiding it behind a black-box score.
+11. Comparative Analysis
+Compared with classical machine-ethics models, ETH-WCMK occupies a hybrid space. Like top-down models, it takes norms seriously and represents them explicitly. Like bottom-up or adaptive systems, it allows contextual variation and calibration. Like hybrid models, it can coexist with learned components and industrial safety layers. Its distinctive move is different: it separates the ethical case from delegated agency and couples them through an auditable bridge.
+Compared with mainstream industrial filters, the difference is even clearer. Moderation APIs, constitutional training, and safety classifiers are excellent at reducing classes of harmful generation and constraining outputs. However, they generally do not formalize the case as a semantically structured object, nor do they expose an explicit adequacy gap between what a case requires and what an acting system can ethically provide. ETH-WCMK therefore complements such systems by adding contextual and agency-sensitive adjudication. In principle, it can operate above, beside, or in front of existing guardrails.
+This comparative position also clarifies what ETH-WCMK is not. It is not a claim that all ethical reasoning can be reduced to four coordinates. It is not a claim that machine outputs can replace human judgment in all high-stakes settings. It is not a claim that one geometry settles moral philosophy. Rather, it is a proposal for a minimal but expressive formal scaffold capable of supporting machine-readable case representation, agency diagnosis, explainable coupling, and governed residual-risk reporting.
+12. Discussion, Limitations, and Future Work
+The framework’s principal strength is architectural clarity. By distinguishing ETHCASE from WCMK, the model preserves one of the most important practical facts about AI governance: context and agency vary independently. This enables explicit residual-risk tracking, comparative profile analysis, and auditable redesign cycles. The tetrahedral representation also provides a good compromise between conceptual richness and inspectability. The ontology strategy further connects conceptual work to pipelines, validation, and dashboard surfaces.
+The limitations are equally important. First, any mapping from real cases to requirement and salience vectors introduces modeling judgment and domain dependence. Second, the present version no longer treats WCMK as a monolithic tetrad: it introduces a first canonical faceted decomposition (WCMK+) that especially refines Must and Know, yet the empirical stability of those facets, their weights, and their non-compensatory rules still requires broader domain calibration. Third, prudential thresholds can be justified, stress-tested, and revised, but they cannot yet be treated as universally settled constants. Fourth, the framework still needs broader benchmarking against industrial stacks and against domain-specific human expert judgment.
+Future work therefore proceeds along several lines. One is deeper ontology alignment among case, agency, bridge, and LLM-service layers. Another is improved empirical confrontation on larger and more diverse case corpora. A third is stronger evaluation against human review outcomes, including disagreement analysis. A fourth is richer decomposition of Know and of contextual dynamics, allowing the model to express not only lack of knowledge but also contested knowledge, delayed knowledge, and confidence decay. Finally, future work should examine how ETH-WCMK behaves as part of sociotechnical governance arrangements rather than as an isolated scoring mechanism.
+A balanced assessment of the framework requires putting strengths, unresolved issues, and research priorities in the same analytic frame.
+Table 15. Main strengths, open issues, and next-step priorities.
+Dimension | Current contribution | Open issue / next step
+Representation | Separates case from agency | Finer case-to-vector mapping by domain
+Epistemics | Makes Know explicit | Decompose knowledge into richer sub-indicators
+Governance | Preserves residual risk and review logic | Benchmark against expert review outcomes
+Engineering | Connects theory to ontologies and pipeline | Expand empirical validation at scale
+Interoperability | Can complement existing guardrails | Define robust interfaces with vendor stacks
+The resulting representation emphasizes that the project is already structurally coherent, but that its next advances depend on tighter empirical calibration, broader domain validation, and further semantic refinement of the ontologies.
+
+13. Conclusion
+This paper presented ETH-WCMK as a formal and operational framework for machine ethics built on a decisive distinction between the ethical case and delegated ethical agency. ETHCASE models the context; WCMK models the acting profile; WCMK+ refines that profile into auditable facet families without abandoning the canonical tetrahedron; the bridge confronts case and agency and produces adequacy, residual risk, and review logic; the LLM layer assists without silently replacing formal governance. The tetrahedral 3-simplex provides the geometric and vectorial backbone of the agency model, while the ontology stack and research pipeline connect theory to implementation.
+At the mathematical level, the framework is not simply a scoring device. Its core contribution is a constrained confrontation operator defined on a tetrahedral simplex: the case side supplies calibrated requirements and salience, the profile side supplies barycentric agency weights, and the bridge derives deficits, tensions, adequacy, and residual risk without erasing the distinction between context and delegated agency.
+The broader contribution is methodological. Rather than treating machine ethics as either pure philosophy or pure content filtering, ETH-WCMK offers a middle path: philosophically grounded, mathematically explicit, semantically structured, operationally auditable, and institutionally governable. The project is still developing, but it already demonstrates a viable route toward explainable ethical control for AI systems that act in the world under domain-sensitive constraints. That route is especially relevant for contemporary AI, where the central challenge is no longer only what a model can generate, but under what conditions it may be trusted to act.
+References
+Allen, C., Smit, I., & Wallach, W. (2005). Artificial morality: Top-down, bottom-up, and hybrid approaches. Ethics and Information Technology, 7(3), 149-155.
+Allen, C., Wallach, W., & Smit, I. (2006). Why machine ethics? IEEE Intelligent Systems, 21(4), 12-17.
+Anderson, M., & Anderson, S. L. (Eds.). (2011). Machine Ethics. Cambridge University Press.
+Anscombe, G. E. M. (1957). Intention. Blackwell.
+Aristotle. (2009). Nicomachean Ethics (W. D. Ross, Trans.). Oxford University Press. (Original work ca. 4th century BCE).
+Augustine. (1993). On Free Choice of the Will (T. Williams, Trans.). Hackett.
+Augustine. (2008). Confessions (H. Chadwick, Trans.). Oxford University Press.
+Bai, Y., et al. (2022). Constitutional AI: Harmlessness from AI feedback. arXiv:2212.08073.
+Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? FAccT 2021, 610-623.
+Boulamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. Proceedings of Machine Learning Research, 81, 1-15.
+Council of Europe. (2024). Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225).
+Dignum, V. (2019). Responsible Artificial Intelligence: How to Develop and Use AI in a Responsible Way. Springer.
+European Union. (2024). Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence.
+Eubanks, V. (2018). Automating Inequality. St. Martin's Press.
+Floridi, L. (2004). On the morality of artificial agents. Minds and Machines, 14(3), 349-379.
+Floridi, L., Cowls, J., Beltrametti, M., Chatila, R., Chazerand, P., Dignum, V., Luetge, C., Madelin, R., Pagallo, U., Rossi, F., Schafer, B., Valcke, P., & Vayena, E. (2018). AI4People - An ethical framework for a good AI society. Minds and Machines, 28(4), 689-707.
+Frankfurt, H. (1971). Freedom of the will and the concept of a person. The Journal of Philosophy, 68(1), 5-20.
+Gärdenfors, P. (2000). Conceptual Spaces: The Geometry of Thought. MIT Press.
+Google. (2026). Safety settings - Gemini API documentation.
+Google. (2026). Safety and factuality guidance - Gemini API documentation.
+Jobin, A., Ienca, M., & Vayena, E. (2019). The global landscape of AI ethics guidelines. Nature Machine Intelligence, 1, 389-399.
+ISO/IEC. (2023). ISO/IEC 42001:2023 Information technology - Artificial intelligence - Management system.
+Jonas, H. (1984). The Imperative of Responsibility. University of Chicago Press.
+Kant, I. (2012). Groundwork of the Metaphysics of Morals (M. Gregor & J. Timmermann, Trans.). Cambridge University Press.
+Meta. (2025). Llama Guard 4 model card.
+Meta. (2025). Meta Llama Guard 1/2/3 model card documentation.
+Mittelstadt, B. D., Allo, P., Taddeo, M., Wachter, S., & Floridi, L. (2016). The ethics of algorithms: Mapping the debate. Big Data & Society, 3(2), 1-21.
+Ministério da Ciência, Tecnologia e Inovação. (2025). Plano Brasileiro de Inteligência Artificial (PBIA): IA para o bem de todos.
+Moor, J. H. (2006). The nature, importance, and difficulty of machine ethics. IEEE Intelligent Systems, 21(4), 18-21.
+NIST. (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1.
+NIST. (2024). Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile. NIST AI 600-1.
+OECD. (2024a). OECD AI Principles.
+OECD. (2024b). Report on the Recommendation of the Council on Artificial Intelligence. C/MIN(2024)17.
+OpenAI. (2026). Moderation - API documentation.
+OpenAI. (2026). Safety best practices - API documentation.
+Peirce, C. S. (1931-1958). Collected Papers of Charles Sanders Peirce (Vols. 1-8). Harvard University Press.
+Ross, W. D. (2002). The Right and the Good. Clarendon Press.
+UNESCO. (2021). Recommendation on the Ethics of Artificial Intelligence.
+UNESCO. (2023a). Readiness assessment methodology: A tool of the Recommendation on the Ethics of Artificial Intelligence.
+UNESCO. (2023b). Ethical impact assessment: A tool of the Recommendation on the Ethics of Artificial Intelligence.
+Vallor, S. (2016). Technology and the Virtues. Oxford University Press.
+Wallach, W., & Allen, C. (2008). Moral Machines: Teaching Robots Right from Wrong. Oxford University Press.
+W3C. (2009). SKOS Simple Knowledge Organization System Reference.
+W3C. (2012). OWL 2 Web Ontology Language Document Overview (Second Edition).
+W3C. (2014). RDF 1.1 Concepts and Abstract Syntax.
+W3C. (2013). PROV-O: The PROV Ontology.
+W3C. (2017). Shapes Constraint Language (SHACL).
+Williams, R., Miceli, M., Gebru, T., & Wachter, S. (2022). From transparency to accountability of intelligent systems. Data & Policy, 4, e49.
+Zagzebski, L. T. (1996). Virtues of the Mind. Cambridge University Press.
+Zuboff, S. (2019). The Age of Surveillance Capitalism. PublicAffairs.

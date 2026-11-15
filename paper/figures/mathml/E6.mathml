@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mrow><mi>S</mi></mrow><mrow><mn>3</mn></mrow></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>T</mi><mi>∈</mi><mi>T</mi></mrow></munder><mrow><msub><mrow><mi>β</mi></mrow><mrow><mi>T</mi></mrow></msub><mi>δ</mi><mo>(</mo><mi>T</mi><mo>)</mo></mrow><mo>,</mo><mi>  </mi><munder><mo>∑</mo><mrow><mi>T</mi></mrow></munder><mrow><msub><mrow><mi>β</mi></mrow><mrow><mi>T</mi></mrow></msub></mrow><mo>=</mo><mn>1</mn></math>

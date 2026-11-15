@@ -1,0 +1,317 @@
+{
+  "checks": [
+    {
+      "claim": "schema triples in ontology modules",
+      "paper_value": 8394,
+      "artifact_value": 8394,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "instance triples",
+      "paper_value": 1888317,
+      "artifact_value": 1888317,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "triples validated over the full corpus",
+      "paper_value": 2014563,
+      "artifact_value": 2014563,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "SHACL violations on the full corpus",
+      "paper_value": 0,
+      "artifact_value": 0,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "invalid fixtures detected",
+      "paper_value": 76,
+      "artifact_value": 76,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "mirror max abs difference",
+      "paper_value": 1.63e-12,
+      "artifact_value": 1.630917623174355e-12,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "lattice slots",
+      "paper_value": 15,
+      "artifact_value": 15,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "registry divergences",
+      "paper_value": 0,
+      "artifact_value": 0,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "cases",
+      "paper_value": 1520,
+      "artifact_value": 1520,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "confrontations",
+      "paper_value": 183920,
+      "artifact_value": 183920,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "ABSTAIN (E29) in corpus",
+      "paper_value": 14703,
+      "artifact_value": 14703,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "norm conflicts",
+      "paper_value": 88,
+      "artifact_value": 88,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "chain links retaining critical duty",
+      "paper_value": 268,
+      "artifact_value": 268,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B14 case variance share",
+      "paper_value": 0.9807,
+      "artifact_value": 0.9807,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B14 profile variance share",
+      "paper_value": 0.008,
+      "artifact_value": 0.008,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B14 interaction share",
+      "paper_value": 0.0113,
+      "artifact_value": 0.0113,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B14 mixed verdict cases",
+      "paper_value": 235,
+      "artifact_value": 235,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B15 facets requiring accountable layer",
+      "paper_value": 32,
+      "artifact_value": 32,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B15 chain-worst verdict changes",
+      "paper_value": 127,
+      "artifact_value": 127,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B16 full kappa",
+      "paper_value": 0.4681,
+      "artifact_value": 0.4681,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B16 no structure kappa",
+      "paper_value": 0.4688,
+      "artifact_value": 0.4688,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B16 mean Aa full",
+      "paper_value": 0.2886,
+      "artifact_value": 0.2886,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B16 mean Aa no structure",
+      "paper_value": 0.3827,
+      "artifact_value": 0.3827,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B8 probes",
+      "paper_value": 2064,
+      "artifact_value": 2064,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B8 assertions",
+      "paper_value": 7815,
+      "artifact_value": 7815,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "unanimous stratum kappa",
+      "paper_value": 0.6955,
+      "artifact_value": 0.6955,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "unanimous stratum size",
+      "paper_value": 87134,
+      "artifact_value": 87134,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "holdout kappa fitted",
+      "paper_value": 0.4834,
+      "artifact_value": 0.4834,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "guards all K kappa",
+      "paper_value": 0.1234,
+      "artifact_value": 0.1234,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "delta flips",
+      "paper_value": 33800,
+      "artifact_value": 33800,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "identical beta pairs",
+      "paper_value": 8,
+      "artifact_value": 8,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "chebyshev beta pairs",
+      "paper_value": 26,
+      "artifact_value": 26,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "lambda vs beta mass deviation",
+      "paper_value": 0.1348,
+      "artifact_value": 0.1348,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B17 probes",
+      "paper_value": 13680,
+      "artifact_value": 13680,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B17 abstain fires at 0.70",
+      "paper_value": 1520,
+      "artifact_value": 1520,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "B17 anti-gaming mean Aa change",
+      "paper_value": 0.3419,
+      "artifact_value": 0.3419,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "manifest artefacts",
+      "paper_value": 74,
+      "artifact_value": 74,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "manifest runs",
+      "paper_value": 20,
+      "artifact_value": 20,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "full-corpus mirror covers 183,920 confrontations",
+      "paper_value": 183920,
+      "artifact_value": 183920,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "full-corpus mirror max difference is 0",
+      "paper_value": 0.0,
+      "artifact_value": 0.0,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "full-corpus mirror verdict divergences",
+      "paper_value": 0,
+      "artifact_value": 0,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "paper states the full-corpus mirror result",
+      "paper_value": 1,
+      "artifact_value": 1,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "mirror runtime quoted in the paper equals the manifest record",
+      "paper_value": 63.42,
+      "artifact_value": 63.42,
+      "match": true,
+      "delta": 0.0
+    },
+    {
+      "claim": "manifest git_rev resolves to a real commit",
+      "paper_value": 0,
+      "artifact_value": 0,
+      "match": true,
+      "delta": 0.0
+    }
+  ],
+  "divergences": [],
+  "n_checks": 44,
+  "n_divergences": 0,
+  "literal_strings_in_paper": {},
+  "pass": true
+}

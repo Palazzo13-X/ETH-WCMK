@@ -1,0 +1,202 @@
+{
+  "battery": "B1 - formal core invariants",
+  "samples": 20000,
+  "seed": 7,
+  "geometry": {
+    "proposition1_unit_edge": 1.6329931618554523,
+    "circumradius_of_edge1_tetrahedron": 0.6123724356957945,
+    "metric_ratio_d_induced_over_d_total_variation": {
+      "observed": [
+        1.1547,
+        1.6307
+      ],
+      "theoretical": [
+        1.1547,
+        2.3094
+      ]
+    },
+    "barycentric_volume_shares_are_exact": [
+      0.4,
+      0.3,
+      0.2,
+      0.1
+    ]
+  },
+  "v2_paper_form": {
+    "violations": {
+      "risk_floor": 3111,
+      "monotonicity": 7
+    },
+    "examples": {
+      "risk_floor": [
+        0.9615362776761233,
+        0.884192827198217,
+        0.034009347386115746
+      ],
+      "monotonicity": [
+        [
+          0.11798745512398573,
+          0.052562153709462676,
+          0.5783529651941571,
+          0.25109742597239443
+        ],
+        [
+          0.30379623195562633,
+          0.07225841269251689,
+          0.19570071149355894,
+          0.4282446438582979
+        ],
+        [
+          0.2985049938140541,
+          0.001157073364757116,
+          0.34717448244446686,
+          0.353163450376722
+        ],
+        0.7869192623443169,
+        0.7832594335976908
+      ]
+    },
+    "stats": {
+      "cases": 20000,
+      "veto_present": 10016,
+      "veto_present_but_adequacy_high": 9459
+    }
+  },
+  "v3_hierarchical_deficit": {
+    "violations": {},
+    "examples": {},
+    "stats": {
+      "cases": 20000,
+      "veto_present": 10016,
+      "veto_present_but_adequacy_high": 1229
+    }
+  },
+  "invariants_checked": [
+    "bounds",
+    "perfect_adequacy",
+    "risk_band",
+    "risk_floor",
+    "veto_guard",
+    "monotonicity_no_free_lunch",
+    "volume_degeneracy",
+    "hier_deficit_monotone",
+    "hier_weakest_link",
+    "balance_bounds",
+    "amgm_volume_balance",
+    "shares_equal_profile"
+  ],
+  "worked_example": [
+    {
+      "profile": "Balanced",
+      "a": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "Aa": 0.8036,
+      "delta": [
+        0.0,
+        0.0,
+        0.2857,
+        0.0
+      ],
+      "penalty": 0.1964,
+      "R_r": 0.1479,
+      "veto": false,
+      "decision": "conditional",
+      "decision_Aa_only": "conditional"
+    },
+    {
+      "profile": "Capable but unaccountable",
+      "a": [
+        0.2,
+        0.45,
+        0.15,
+        0.2
+      ],
+      "Aa": 0.5321,
+      "delta": [
+        0.0,
+        0.0,
+        0.5714,
+        0.0
+      ],
+      "penalty": 0.4679,
+      "R_r": 0.3107,
+      "veto": true,
+      "decision": "prohibit",
+      "decision_Aa_only": "prohibit"
+    },
+    {
+      "profile": "Normatively strong, weak on means",
+      "a": [
+        0.2,
+        0.15,
+        0.45,
+        0.2
+      ],
+      "Aa": 0.92,
+      "delta": [
+        0.0,
+        0.4,
+        0.0,
+        0.0
+      ],
+      "penalty": 0.08,
+      "R_r": 0.078,
+      "veto": false,
+      "decision": "allow",
+      "decision_Aa_only": "allow"
+    },
+    {
+      "profile": "Intent-only (aspiring)",
+      "a": [
+        0.5,
+        0.15,
+        0.2,
+        0.15
+      ],
+      "Aa": 0.4536,
+      "delta": [
+        0.0,
+        0.4,
+        0.4286,
+        0.25
+      ],
+      "penalty": 0.5464,
+      "R_r": 0.3578,
+      "veto": false,
+      "decision": "prohibit",
+      "decision_Aa_only": "prohibit"
+    },
+    {
+      "profile": "Vetoed but compensable",
+      "a": [
+        0.3,
+        0.3,
+        0.35,
+        0.05
+      ],
+      "Aa": 0.5106,
+      "delta": [
+        0.0,
+        0.0,
+        0.0,
+        0.75
+      ],
+      "penalty": 0.4894,
+      "R_r": 0.3236,
+      "veto": true,
+      "decision": "prohibit",
+      "decision_Aa_only": "prohibit"
+    }
+  ],
+  "conclusion": {
+    "v2_risk_floor_violations": 3111,
+    "v2_monotonicity_violations": 7,
+    "v3_violations": 0,
+    "compensation_hides_veto_v2_pct": 94.44,
+    "compensation_hides_veto_v3_pct": 12.27
+  }
+}

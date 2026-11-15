@@ -1,0 +1,116 @@
+{
+  "corpus": "corpus_v6",
+  "pairs": 183920,
+  "holdout": "domains TB, TS, RS, DS (never used in the fit) and all 320 layer-B narratives",
+  "held_out_domain_pairs": 56144,
+  "train_domain_pairs": 127776,
+  "layerB_pairs": 38720,
+  "kappa_fitted_holdout": 0.4834,
+  "kappa_fitted_in_sample": 0.4618,
+  "kappa_default_holdout": 0.2025,
+  "kappa_default_in_sample": 0.2518,
+  "transfer_gap": -0.0215,
+  "fitted_vs_default_on_holdout": 0.2809,
+  "layerB_transfer": {
+    "kappa_fitted": 0.6617,
+    "kappa_default": 0.3745
+  },
+  "by_domain": {
+    "DS": {
+      "n": 14036,
+      "split": "holdout",
+      "kappa_fitted": 0.536,
+      "kappa_default": 0.2755
+    },
+    "ED": {
+      "n": 14157,
+      "split": "train",
+      "kappa_fitted": 0.5542,
+      "kappa_default": 0.2016
+    },
+    "FI": {
+      "n": 14278,
+      "split": "train",
+      "kappa_fitted": 0.3642,
+      "kappa_default": 0.2606
+    },
+    "GP": {
+      "n": 14157,
+      "split": "train",
+      "kappa_fitted": 0.4049,
+      "kappa_default": 0.2251
+    },
+    "IC": {
+      "n": 14278,
+      "split": "train",
+      "kappa_fitted": 0.4245,
+      "kappa_default": 0.3188
+    },
+    "IM": {
+      "n": 14157,
+      "split": "train",
+      "kappa_fitted": 0.493,
+      "kappa_default": 0.1901
+    },
+    "JS": {
+      "n": 14278,
+      "split": "train",
+      "kappa_fitted": 0.4599,
+      "kappa_default": 0.3399
+    },
+    "MA": {
+      "n": 14036,
+      "split": "train",
+      "kappa_fitted": 0.5829,
+      "kappa_default": 0.236
+    },
+    "PD": {
+      "n": 14157,
+      "split": "train",
+      "kappa_fitted": 0.4788,
+      "kappa_default": 0.2609
+    },
+    "RS": {
+      "n": 14036,
+      "split": "holdout",
+      "kappa_fitted": 0.5256,
+      "kappa_default": 0.1872
+    },
+    "SA": {
+      "n": 14278,
+      "split": "train",
+      "kappa_fitted": 0.4288,
+      "kappa_default": 0.2479
+    },
+    "TB": {
+      "n": 14036,
+      "split": "holdout",
+      "kappa_fitted": 0.4039,
+      "kappa_default": 0.1157
+    },
+    "TS": {
+      "n": 14036,
+      "split": "holdout",
+      "kappa_fitted": 0.4584,
+      "kappa_default": 0.2196
+    }
+  },
+  "abstain_rate_fitted": 0.0799,
+  "abstain_rate_default": 0.0799,
+  "mean_adequacy_fitted": 0.2886,
+  "mean_adequacy_default": 0.2825,
+  "verdict_distribution_fitted": {
+    "PROHIBIT": 153048,
+    "REVIEW_REQUIRED": 15188,
+    "ALLOW_WITH_GUARDS": 869,
+    "ABSTAIN": 14702,
+    "ALLOW": 113
+  },
+  "verdict_distribution_default": {
+    "REVIEW_REQUIRED": 83102,
+    "ABSTAIN": 14702,
+    "PROHIBIT": 86008,
+    "ALLOW_WITH_GUARDS": 108
+  },
+  "domains_where_default_beats_fitted": []
+}

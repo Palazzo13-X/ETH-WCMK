@@ -1,0 +1,92 @@
+NOTE: no subset present; validating the full regenerated instance graph
+instance graph parsed: 1919283 triples from instances.ttl
+SHACL modules vs v4 shapes: conforms=True violations=0 (0.3 s)
+SHACL instances vs v4 shapes: conforms=True violations=0 (54.0 s)
+SHACL instances vs v6 shapes: conforms=True violations=0 (27.9 s)
+invalid fixtures invalid_examples.ttl (73 fixtures): 63/63 caught, 63 attributed to the intended shape
+invalid fixtures invalid_examples_v6.ttl (12 E30 fixtures): 13/13 caught, 13 attributed to the intended shape
+  query 0.0 s :: SELECT ?n WHERE { ?n a eth:Norm . OPTIONAL { ?n eth:instrument ?i } FILTER(!bound(?i)) }
+  sparql every Norm has a normative instrument: rows=0 (0.0 s)
+  query 0.0 s :: SELECT ?cf WHERE { ?cf a eth:NormConflict . OPTIONAL { ?cf eth:firstNorm ?a } OPTIONAL { ?
+  sparql every NormConflict names both norms and a resolution strategy: rows=0 (0.0 s)
+  query 0.0 s :: SELECT ?cf WHERE { ?cf a eth:NormConflict . OPTIONAL { ?cf eth:conflictPriority ?p } OPTIO
+  sparql every conflict pair carries a priority engine or is flagged unresolved: rows=0 (0.0 s)
+  query 0.0 s :: SELECT ?cf ?r ?s WHERE { ?cf a eth:NormConflict ; eth:conflictResolved ?r ; eth:conflictSt
+  query 0.2 s :: SELECT DISTINCT ?link WHERE { ?link a eth:ChainLink ; eth:delegateAgent ?a ; eth:delegated
+  sparql no duty is delegated to an agent forbidden to carry it: rows=0 (0.2 s)
+  query 0.0 s :: SELECT ?n WHERE { ?n a eth:Prohibition . OPTIONAL { ?n eth:targetsPillar ?p } FILTER(!boun
+  sparql every Prohibition targets a pillar: rows=0 (0.0 s)
+  query 0.3 s :: SELECT ?ch WHERE { ?ch a eth:DelegationChain . OPTIONAL { ?ch eth:fallbackForChain ?f } FI
+  sparql every delegation chain declares a fallback policy: rows=0 (0.3 s)
+  query 0.8 s :: SELECT ?b WHERE { ?b a eth:GuardFailure ; eth:observedAtGuard ?o ; eth:guardFloor ?g . FIL
+  sparql no declared GuardFailure is at or above its floor: rows=0 (0.8 s)
+  query 0.5 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:confrontationCase ?case ; eth:confrontation
+  sparql every Confrontation references an existing EthicalCase and Profile: rows=0 (0.5 s)
+  query 0.3 s :: SELECT ?c ?aa ?ratio ?bar ?stake ?mg ?cal WHERE { ?c a eth:Confrontation ; eth:decision et
+  query 0.0 s :: SELECT ?c WHERE { ?c eth:hardVetoPillar ?p }
+  query 0.0 s :: SELECT ?cal ?pm ?rp ?cpg ?pnm ?psm WHERE { ?cal eth:prohibitMargin ?pm ; eth:ratioProhibit
+  query 0.1 s :: SELECT ?c ?count WHERE { ?c a eth:Confrontation ; eth:guardFailureCount ?count }
+  query 0.0 s :: SELECT ?f WHERE { ?f a eth:Facet ; eth:betaW ?w ; eth:betaC ?c ; eth:betaM ?m ; eth:betaK 
+  sparql every facet's beta weights sum to 1: rows=0 (0.0 s)
+  query 0.0 s :: SELECT ?term (SUM(?w) AS ?total) (COUNT(?slot) AS ?slots) WHERE { ?slot eth:belongsToTerm 
+  sparql lattice slot weights sum to 1 inside each structural term: rows=0 (0.0 s)
+  query 0.5 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:structuralTermS2 ?s2 ; eth:structuralTermS3
+  sparql the hierarchy S4 <= S3 <= S2 holds for every confrontation: rows=0 (0.5 s)
+  query 0.3 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:adequacyRaw ?raw ; eth:adequacy ?aa . FILTE
+  sparql stored adequacy never exceeds raw adequacy: rows=0 (0.3 s)
+  query 0.5 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:adequacyLow ?lo ; eth:adequacy ?aa ; eth:ad
+  sparql the adequacy band is ordered: adequacyLow <= adequacy <= adequacyHigh: rows=0 (0.5 s)
+  query 0.7 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:stakesWeighted ?s ; eth:failureProbability 
+  sparql risk quantities stay inside their declared ranges: rows=0 (0.7 s)
+  query 0.0 s :: SELECT ?cal WHERE { ?cal a eth:Calibration ; eth:lamSum ?l ; eth:muSum ?m . FILTER(ABS(?l 
+  sparql declared lam and mu sums equal 1: rows=0 (0.0 s)
+  query 0.0 s :: SELECT ?p WHERE { VALUES (?p ?lamProp) { (eth:pillar_W eth:lamW) (eth:pillar_C eth:lamC) (
+  sparql each pillar's vertex-slot weight equals the calibration lambda: rows=0 (0.0 s)
+  query 0.4 s :: SELECT ?link (COUNT(?p) AS ?n) WHERE { ?link a eth:ChainLink ; eth:delegatedPillar ?p } GR
+  sparql no chain link delegates more than the four pillars: rows=0 (0.4 s)
+  query 0.0 s :: SELECT ?pillar (COUNT(?f) AS ?n) WHERE { VALUES (?pillar ?betaProp) { (eth:pillar_W eth:be
+  sparql every pillar is touched by at least one facet with a non-zero beta: rows=0 (0.0 s)
+  query 0.0 s :: SELECT ?f WHERE { ?f a eth:Facet ; eth:hardGuard true ; eth:guardMin ?g FILTER(?g < 0 || ?
+  sparql the guard floor of every guarded facet is within [0,1] and its requirement is above it: rows=0 (0.0 s)
+  query 0.9 s :: SELECT ?c WHERE { ?c a eth:Confrontation . OPTIONAL { ?c eth:structuralTermS2 ?s2 } OPTION
+  sparql no confrontation is missing the structural terms or the decision bar: rows=0 (0.9 s)
+  query 0.7 s :: SELECT ?c WHERE { ?c a eth:Confrontation . OPTIONAL { ?c eth:coverage ?cv } OPTIONAL { ?c 
+  sparql no confrontation has coverage or reviewNeed outside [0,1]: rows=0 (0.7 s)
+  query 0.4 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:coverage ?cv ; eth:decision ?d FILTER(?cv <
+  sparql every confrontation with declared coverage below the gate abstains (E26'): rows=0 (0.4 s)
+  query 0.1 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:coverage ?cv ; eth:decision eth:Decision_AB
+  sparql no coverage-abstaining confrontation carries an adequacy literal (D5.8): rows=0 (0.1 s)
+  query 0.5 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:structuralTermS2 ?s2 ; eth:structuralTermS3
+  sparql no confrontation violates S2 >= S3 >= S4 (Proposition 1, measured on the graph): rows=0 (0.5 s)
+  query 0.0 s :: SELECT ?f WHERE { ?f a eth:Facet . ?f eth:betaW ?w . ?f eth:betaC ?c . ?f eth:betaM ?m . ?
+  sparql no canonical duty spans all four pillars: the cell has no facet-level witness: rows=0 (0.0 s)
+  query 0.2 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:crossPillarDuty ?p FILTER(?p < 0 || ?p > 1)
+  sparql every recorded cross-pillar duty exposure lies in [0,1]: rows=0 (0.2 s)
+  query 0.2 s :: SELECT ?link WHERE { ?link a eth:ChainLink ; eth:delegateAgent ?a ; eth:delegatedPillar ?p
+  sparql no chain link delegates a pillar the delegate is forbidden to carry: rows=0 (0.2 s)
+  query 0.3 s :: SELECT ?link WHERE { ?link a eth:ChainLink . FILTER NOT EXISTS { ?link eth:delegatedPillar
+  sparql every chain link declares at least one delegated pillar: rows=0 (0.3 s)
+  query 0.0 s :: SELECT ?link WHERE { ?link a eth:ChainLink ; eth:criticalDutyDelegated false }
+  sparql chain links where the case's critical duty is retained at the delegating layer (E28 retention, reported not penalised): rows=268 (0.0 s)
+  query 0.3 s :: SELECT ?c WHERE { ?c a eth:Confrontation ; eth:declaredStakesSum ?s FILTER(?s > 2.1 + 1e-9
+  sparql confrontations whose declaredStakesSum exceeds the declared ceiling 2.1: rows=0 (0.3 s)
+  query 0.2 s :: SELECT ?c ?case ?domain ?decision ?layer WHERE { ?c a eth:Confrontation ; eth:confrontatio
+  query 2.3 s :: SELECT ?c ?case ?profile ?calId ?dom ?sev ?rev ?pr ?hor ?UE ?Rc ?exposure ?conflict ?evide
+  query 0.9 s :: SELECT ?c ?f ?v ?conf WHERE { VALUES ?c { <https://ethwcmk.org/case#CONF_ETHCASE-A-1037_AG
+  query 0.7 s :: SELECT ?c ?f ?r WHERE { VALUES ?c { <https://ethwcmk.org/case#CONF_ETHCASE-A-1037_AGENT_de
+  query 0.7 s :: SELECT ?c ?f ?compl ?str ?cap WHERE { VALUES ?c { <https://ethwcmk.org/case#CONF_ETHCASE-A
+======================================================================
+GATE G4' verdict: PASS
+triples: modules 8509 instances 1919283 total validated 1927780
+instantiated confrontations: 3755
+SHACL v4 shapes on instances: 0 violations; v6 shapes: 0 ; modules: 0
+invalid fixtures caught: 76 / 76 attributed to the intended shape: 76
+SPARQL checks: 42 (deontic: 15 ) all pass: True
+failed checks: []
+mirror global max abs diff: 1.614153255502515e-12
+verdict mismatches: {'python_ladder_vs_rdf': 0, 'core_decide_vs_rdf': 0, 'python_ladder_vs_core_decide': 0}
+lattice slots: 15 by kind: {'vertex': 4, 'edge': 6, 'face': 4, 'cell': 1} sums to one: True
+registry mismatches: 0
+seconds: 302.0
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r5/ontology_v4_2_validation.json
+======================================================================

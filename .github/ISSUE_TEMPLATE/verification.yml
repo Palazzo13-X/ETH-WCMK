@@ -1,0 +1,45 @@
+---
+name: Reproduction / verification
+description: Something in the repository does not reproduce
+title: "[verify] "
+labels: ["verification"]
+body:
+  - type: markdown
+    value: |
+      ETH-WCMK numbers are traceable. Include the artefact and the revision,
+      otherwise the report cannot be acted on.
+  - type: input
+    id: revision
+    attributes:
+      label: Git revision
+      description: "run: git rev-parse HEAD"
+      placeholder: "e.g. 280863c"
+    required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python and dependency versions
+      description: "run: python3 -V && pip freeze | grep -E 'rdflib|pyshacl|numpy|pytest'"
+    required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command run
+      placeholder: |
+        python3 _analysis/run_all_batteries.py --round r5
+        python3 -m pytest _analysis/formal_core/tests -q
+    required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs observed
+      placeholder: |
+        Expected (from manifest_r5.json): S2≥S3≥S4 for all 220,400 pairs.
+        Observed: …
+    required: true
+  - type: textarea
+    id: artefact
+    attributes:
+      label: Artefact and its SHA-256
+      description: The file you produced and the manifest entry it should match.
+      render: text

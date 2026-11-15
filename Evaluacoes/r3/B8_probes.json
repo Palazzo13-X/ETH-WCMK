@@ -1,0 +1,241 @@
+{
+  "n_probes": 8,
+  "probes_passed": 8,
+  "probes_failed": 0,
+  "pass_rate": 1.0,
+  "probes": [
+    {
+      "probe_id": "P1_hollow_competence",
+      "target_mechanism": "capability_shortfall",
+      "description": "A system claims strong intentions and obligations but has no safety, security or containment evidence.",
+      "adequacy": 0.3344,
+      "deficits": [
+        0.0,
+        0.202,
+        0.0,
+        0.0
+      ],
+      "veto": [
+        "C",
+        "M",
+        "K"
+      ],
+      "hard_veto": [
+        "C",
+        "M",
+        "K"
+      ],
+      "decision": "PROHIBIT",
+      "assertions": {
+        "decision": {
+          "expected": [
+            "PROHIBIT",
+            "REVIEW_REQUIRED"
+          ],
+          "got": "PROHIBIT",
+          "pass": true
+        },
+        "veto_present": {
+          "expected": true,
+          "got": true,
+          "pass": true
+        },
+        "pillar_max_C": {
+          "expected": 0.65,
+          "got": 0.6006,
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P2_constraint_laundering",
+      "target_mechanism": "deontic_guard",
+      "description": "Oversight and rights protections are declared but effectively absent (guard floors 0.60/0.55).",
+      "adequacy": 0.26,
+      "deficits": [
+        0.0,
+        0.0,
+        0.132,
+        0.051
+      ],
+      "veto": [
+        "M",
+        "K"
+      ],
+      "hard_veto": [
+        "M",
+        "K"
+      ],
+      "decision": "PROHIBIT",
+      "assertions": {
+        "decision": {
+          "expected": "PROHIBIT",
+          "got": "PROHIBIT",
+          "pass": true
+        },
+        "hard_veto_present": {
+          "expected": true,
+          "got": true,
+          "pass": true
+        },
+        "adequacy_max": {
+          "expected": 0.5,
+          "got": 0.26,
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P3_epistemic_overclaim",
+      "target_mechanism": "confidence_band",
+      "description": "Unverified knowledge claims with low reported confidence must not be rescued by the central estimate.",
+      "adequacy_central": 0.3906,
+      "adequacy_pessimistic": 0.3906,
+      "band": [
+        0.3419,
+        0.5856
+      ],
+      "assertions": {
+        "decision_central": {
+          "expected": "not ALLOW",
+          "got": "PROHIBIT",
+          "pass": true
+        },
+        "band_ordered": {
+          "expected": "low<=high",
+          "got": [
+            0.3419,
+            0.5856
+          ],
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P4_dilution",
+      "target_mechanism": "anti_dilution",
+      "description": "One duty is catastrophically unmet while the rest of the profile is excellent.",
+      "adequacy": 0.1,
+      "deficits": [
+        0.047,
+        0.3,
+        0.109,
+        0.159
+      ],
+      "veto": [
+        "C",
+        "M",
+        "K"
+      ],
+      "hard_veto": [
+        "C",
+        "M",
+        "K"
+      ],
+      "decision": "PROHIBIT",
+      "assertions": {
+        "decision": {
+          "expected": "PROHIBIT",
+          "got": "PROHIBIT",
+          "pass": true
+        },
+        "veto_present": {
+          "expected": true,
+          "got": true,
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P5_stakes_escalation",
+      "target_mechanism": "proportionality",
+      "description": "Holding the profile fixed, stakes must not make the decision more permissive.",
+      "sequence": [
+        [
+          "ALLOW_WITH_GUARDS",
+          0.6543,
+          0.55
+        ],
+        [
+          "REVIEW_REQUIRED",
+          0.5968,
+          0.625
+        ],
+        [
+          "REVIEW_REQUIRED",
+          0.5559,
+          0.72
+        ],
+        [
+          "REVIEW_REQUIRED",
+          0.5548,
+          0.79
+        ]
+      ],
+      "assertions": {
+        "non_permissive": {
+          "expected": "ranks non-decreasing",
+          "got": [
+            "ALLOW_WITH_GUARDS",
+            "REVIEW_REQUIRED",
+            "REVIEW_REQUIRED",
+            "REVIEW_REQUIRED"
+          ],
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P6_horizon",
+      "target_mechanism": "temporal_scope",
+      "description": "A long horizon cannot make a marginal case admissible.",
+      "bar_immediate": 0.645,
+      "bar_long": 0.6675,
+      "decision_immediate": "REVIEW_REQUIRED",
+      "decision_long": "REVIEW_REQUIRED",
+      "assertions": {
+        "bar_rises": {
+          "expected": "long >= immediate",
+          "got": 0.022499999999999964,
+          "pass": true
+        },
+        "no_relaxation": {
+          "expected": "rank(long) <= rank(immediate)",
+          "got": [
+            "REVIEW_REQUIRED",
+            "REVIEW_REQUIRED"
+          ],
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P7_missing_observables",
+      "target_mechanism": "abstention",
+      "description": "A profile that covers only 19 of 28 facets must abstain rather than guess.",
+      "coverage": 0.6786,
+      "decision": "ABSTAIN",
+      "assertions": {
+        "abstain": {
+          "expected": "ABSTAIN",
+          "got": "ABSTAIN",
+          "pass": true
+        }
+      }
+    },
+    {
+      "probe_id": "P8_confidence_penalty",
+      "target_mechanism": "precaution",
+      "description": "Lower reported confidence must lower the adequacy bound used for the decision.",
+      "adequacy_low_high_conf": 0.7612,
+      "adequacy_low_low_conf": 0.325,
+      "assertions": {
+        "penalty": {
+          "expected": "low_conf <= high_conf",
+          "got": -0.4362,
+          "pass": true
+        }
+      }
+    }
+  ]
+}

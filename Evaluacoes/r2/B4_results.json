@@ -1,0 +1,47 @@
+{
+  "n_valid_draws": 2048,
+  "rejected_invalid_draws": 6047,
+  "response_mean": 0.4886,
+  "response_std": 0.0295,
+  "sobol_first_order": {
+    "lam_W": 0.05,
+    "lam_C": 0.0622,
+    "lam_M": 0.0442,
+    "gamma": 0.0243,
+    "eta": 0.0111,
+    "omega": 0.0127,
+    "rho": 0.0071,
+    "theta": 0.7991
+  },
+  "sobol_sum_first_order": 1.0107,
+  "morris_mean_abs_elementary_effect": {
+    "lam_W": 0.1138,
+    "lam_C": 0.1571,
+    "lam_M": 0.0235,
+    "gamma": 0.2624,
+    "eta": 0.2423,
+    "omega": 0.3107,
+    "rho": 0.1865,
+    "theta": 0.0387
+  },
+  "ranking_sobol": [
+    "theta",
+    "lam_C",
+    "lam_W",
+    "lam_M",
+    "gamma",
+    "omega",
+    "eta",
+    "rho"
+  ],
+  "ranking_morris": [
+    "omega",
+    "gamma",
+    "eta",
+    "rho",
+    "lam_C",
+    "lam_W",
+    "theta",
+    "lam_M"
+  ]
+}

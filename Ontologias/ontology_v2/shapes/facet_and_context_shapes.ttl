@@ -1,0 +1,280 @@
+@prefix decision: <https://ethwcmk.org/ontology/decision/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/shapes/AgencyProfileShape> a sh:NodeShape ;
+    sh:property [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:shapeKnow ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:shapeMust ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:shapeWant ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:shapeCan ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:completeness ],
+        [ sh:maxInclusive 4.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:magnitude ] ;
+    sh:targetClass eth:AgencyProfile .
+
+<https://ethwcmk.org/ontology/shapes/CalibrationShape> a sh:NodeShape ;
+    sh:property [ sh:maxInclusive 0.3 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:delta ],
+        [ sh:maxInclusive 0.3 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:hardVetoDelta ],
+        [ sh:maxInclusive 0.3 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:omega ],
+        [ sh:maxInclusive 0.5 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:rho ],
+        [ sh:maxInclusive 0.3 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:gamma ],
+        [ sh:maxInclusive 0.3 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:eta ] ;
+    sh:targetClass eth:Calibration .
+
+<https://ethwcmk.org/ontology/shapes/ConfrontationShape> a sh:NodeShape ;
+    sh:property [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:levelKnow ],
+        [ sh:in [ a rdf:List ;
+                    rdf:first decision:ABSTAIN ;
+                    rdf:rest [ rdf:first decision:PROHIBIT ;
+                            rdf:rest [ rdf:first decision:REVIEW_REQUIRED ;
+                                    rdf:rest [ rdf:first decision:ALLOW_WITH_GUARDS ;
+                                            rdf:rest [ rdf:first decision:ALLOW ;
+                                                    rdf:rest [ rdf:rest () ] ] ] ] ] ] ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:decisionOf ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:levelMust ],
+        [ sh:minInclusive 0.0 ;
+            sh:path eth:structuralTermInterior ],
+        [ sh:minInclusive 0.0 ;
+            sh:path eth:riskFloor ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:assessedBy ],
+        [ sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:residualRisk ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:concernsCase ],
+        [ sh:minInclusive 0.0 ;
+            sh:path eth:structuralTermTriple ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:levelCan ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:usesCalibration ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:levelWant ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:adequacy ],
+        [ sh:minInclusive 0.0 ;
+            sh:path eth:structuralTermPair ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:pillarDeficit ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:adequacyRaw ] ;
+    sh:targetClass eth:Confrontation .
+
+<https://ethwcmk.org/ontology/shapes/CriticalityShape> a sh:NodeShape ;
+    sh:property [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:criticalityOfFacet ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCardinality 1 ;
+            sh:maxInclusive 5 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 1 ;
+            sh:path eth:criticalityLevel ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:criticalityInDomain ] ;
+    sh:targetClass eth:FacetDomainCriticality .
+
+<https://ethwcmk.org/ontology/shapes/DecisionShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:integer ;
+            sh:maxCardinality 1 ;
+            sh:maxInclusive 4 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0 ;
+            sh:path eth:permissivenessRank ] ;
+    sh:targetClass eth:Decision .
+
+<https://ethwcmk.org/ontology/shapes/DomainShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:domainCode ;
+            sh:pattern "^[A-Z]{2}$" ] ;
+    sh:targetClass eth:Domain .
+
+<https://ethwcmk.org/ontology/shapes/EthicalCaseShape> a sh:NodeShape ;
+    sh:property [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:epistemicUncertainty ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:hasDomain ],
+        [ sh:maxCardinality 4 ;
+            sh:minCardinality 1 ;
+            sh:path eth:criticalPillar ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:contextualRisk ],
+        [ sh:in [ a rdf:List ;
+                    rdf:first <https://ethwcmk.org/ontology/prudential/standard> ;
+                    rdf:rest [ rdf:first <https://ethwcmk.org/ontology/prudential/elevated> ;
+                            rdf:rest [ rdf:first <https://ethwcmk.org/ontology/prudential/maximum> ;
+                                    rdf:rest [ rdf:rest () ] ] ] ] ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:hasPrudentialMode ],
+        [ sh:in [ a rdf:List ;
+                    rdf:first <https://ethwcmk.org/ontology/severity/low> ;
+                    rdf:rest [ rdf:first <https://ethwcmk.org/ontology/severity/medium> ;
+                            rdf:rest [ rdf:first <https://ethwcmk.org/ontology/severity/high> ;
+                                    rdf:rest [ rdf:first <https://ethwcmk.org/ontology/severity/critical> ;
+                                            rdf:rest [ rdf:rest () ] ] ] ] ] ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:hasSeverity ],
+        [ sh:in [ a rdf:List ;
+                    rdf:first <https://ethwcmk.org/ontology/reversibility/reversible> ;
+                    rdf:rest [ rdf:first <https://ethwcmk.org/ontology/reversibility/partially_irreversible> ;
+                            rdf:rest [ rdf:first <https://ethwcmk.org/ontology/reversibility/irreversible> ;
+                                    rdf:rest [ rdf:rest () ] ] ] ] ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:hasReversibility ] ;
+    sh:targetClass eth:EthicalCase .
+
+<https://ethwcmk.org/ontology/shapes/FacetLevelShape> a sh:NodeShape ;
+    sh:property [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:levelOfFacet ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:observedLevel ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:confidence ] ;
+    sh:targetClass eth:FacetLevel .
+
+<https://ethwcmk.org/ontology/shapes/FacetRequirementShape> a sh:NodeShape ;
+    sh:property [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:requiresFacet ],
+        [ sh:maxCardinality 1 ;
+            sh:maxInclusive 1.0 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:requirementValue ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:requirementForCase ] ;
+    sh:targetClass eth:FacetRequirement .
+
+<https://ethwcmk.org/ontology/shapes/FacetShape> a sh:NodeShape ;
+    sh:property [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:betaMust ],
+        [ sh:datatype xsd:string ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:facetCode ;
+            sh:pattern "^[WCMK][0-9]$" ],
+        [ sh:datatype xsd:boolean ;
+            sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:hasGuard ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:source ],
+        [ sh:maxCardinality 1 ;
+            sh:minCardinality 1 ;
+            sh:path eth:aggregationPolicy ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:betaCan ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:betaWant ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:facetWeight ],
+        [ sh:maxInclusive 1.0 ;
+            sh:minInclusive 0.0 ;
+            sh:path eth:betaKnow ] ;
+    sh:targetClass eth:Facet .
+
+<https://ethwcmk.org/ontology/shapes/GuardShape> a sh:NodeShape ;
+    sh:property [ sh:maxInclusive 0.9 ;
+            sh:minInclusive 0.3 ;
+            sh:path eth:guardMin ] ;
+    sh:targetClass eth:Facet .
+
+<https://ethwcmk.org/ontology/shapes/PillarShape> a sh:NodeShape ;
+    sh:property [ sh:datatype xsd:integer ;
+            sh:maxCardinality 1 ;
+            sh:maxInclusive 3 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 0 ;
+            sh:path eth:pillarIndex ] ;
+    sh:targetClass eth:Pillar .
+
+<https://ethwcmk.org/ontology/shapes/SlotShape> a sh:NodeShape ;
+    sh:property [ sh:maxCardinality 4 ;
+            sh:minCardinality 1 ;
+            sh:path eth:slotInvolves ],
+        [ sh:datatype xsd:integer ;
+            sh:maxCardinality 1 ;
+            sh:maxInclusive 4 ;
+            sh:minCardinality 1 ;
+            sh:minInclusive 1 ;
+            sh:path eth:slotArity ] ;
+    sh:targetClass eth:RelationalSlot .
+

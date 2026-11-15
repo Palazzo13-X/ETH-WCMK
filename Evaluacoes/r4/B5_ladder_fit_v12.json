@@ -1,0 +1,338 @@
+{
+  "provenance": {
+    "corpus": "Evaluacoes/r4/corpus_v5_confrontations.jsonl + corpus_v5_gold.jsonl",
+    "pairs": 183920,
+    "train_domains": [
+      "SA",
+      "JS",
+      "IC",
+      "FI",
+      "PD",
+      "GP",
+      "IM",
+      "ED",
+      "MA"
+    ],
+    "test_domains": [
+      "TB",
+      "TS",
+      "RS",
+      "DS"
+    ],
+    "search": "120 random draws over the ladder space + 4 coordinate passes",
+    "seed": 12345,
+    "note": "cap/guard parameters (cap_base, cap_stakes_gain, hard_veto_delta, theta) are NOT fitted: they are fixed by the invariant suite (I18, I33)."
+  },
+  "baseline_parameters": {
+    "bar_base": 0.55,
+    "bar_severity": 0.1,
+    "bar_irreversibility": 0.05,
+    "bar_prudential": 0.02,
+    "bar_horizon": 0.03,
+    "prohibit_margin": 0.25,
+    "guards_margin": 0.05,
+    "stakes_veto_min": 0.7,
+    "hard_veto_delta": 0.25,
+    "material_gap": 0.25,
+    "critical_prohibit_gap": 0.35,
+    "cap_base": 0.4,
+    "cap_stakes_gain": 0.4,
+    "prohibit_stakes_min": 0.3,
+    "prohibit_needs_material": 0,
+    "veto_slack": 0.1,
+    "ratio_prohibit": 0.7,
+    "ratio_review": 0.45,
+    "ratio_guards": 0.25,
+    "hysteresis": 0.05
+  },
+  "baseline_kappa": {
+    "train": 0.37917678412512207,
+    "test": 0.39979746487392676
+  },
+  "fitted_parameters": {
+    "bar_base": 0.38000000000000006,
+    "bar_severity": 0.24,
+    "bar_irreversibility": 0.14,
+    "bar_prudential": 0.08,
+    "bar_horizon": 0.0,
+    "prohibit_margin": 0.27,
+    "guards_margin": 0.0,
+    "stakes_veto_min": 0.7,
+    "hard_veto_delta": 0.25,
+    "material_gap": 0.25,
+    "critical_prohibit_gap": 0.37711072507313637,
+    "cap_base": 0.4,
+    "cap_stakes_gain": 0.4,
+    "prohibit_stakes_min": 0.0902372260457498,
+    "prohibit_needs_material": 0,
+    "veto_slack": 0.02,
+    "ratio_prohibit": 0.7400000000000003,
+    "ratio_review": 0.5199999999999998,
+    "ratio_guards": 0.4100000000000001,
+    "hysteresis": 0.05
+  },
+  "fitted_kappa": {
+    "train": 0.46772235837460463,
+    "test": 0.4789150301075435
+  },
+  "decision_distribution": {
+    "baseline_train": {
+      "REVIEW_REQUIRED": 20153,
+      "ABSTAIN": 10655,
+      "PROHIBIT": 96736,
+      "ALLOW": 1,
+      "ALLOW_WITH_GUARDS": 231
+    },
+    "fitted_train": {
+      "PROHIBIT": 103452,
+      "REVIEW_REQUIRED": 12687,
+      "ALLOW_WITH_GUARDS": 893,
+      "ABSTAIN": 10655,
+      "ALLOW": 89
+    },
+    "fitted_test": {
+      "PROHIBIT": 47264,
+      "REVIEW_REQUIRED": 4561,
+      "ABSTAIN": 4048,
+      "ALLOW_WITH_GUARDS": 232,
+      "ALLOW": 39
+    }
+  },
+  "clause_attribution": {
+    "abstention_E29": 10655,
+    "prohibit_hard": 26155,
+    "prohibit_bar_route": 82247,
+    "prohibit_ratio_route": 29278,
+    "review_baa_below_bar": 10397,
+    "review_veto_clause": 503,
+    "review_ratio_clause": 1787,
+    "total_review": 12687
+  },
+  "structural_variants": {
+    "base": {
+      "train_kappa": 0.4677,
+      "test_kappa": 0.4789,
+      "verdict_flips_vs_base_train": 0,
+      "verdict_flips_vs_base_test": 0
+    },
+    "veto_needs_material": {
+      "train_kappa": 0.4677,
+      "test_kappa": 0.4789,
+      "verdict_flips_vs_base_train": 0,
+      "verdict_flips_vs_base_test": 0
+    },
+    "stakes_band": {
+      "train_kappa": 0.4676,
+      "test_kappa": 0.4788,
+      "verdict_flips_vs_base_train": 65,
+      "verdict_flips_vs_base_test": 4
+    }
+  },
+  "kappa_by_domain": {
+    "DS": {
+      "pairs": 14036,
+      "kappa_baseline": 0.4230965853654253,
+      "kappa_fitted": 0.5343790219863997
+    },
+    "ED": {
+      "pairs": 14157,
+      "kappa_baseline": 0.46524301612172725,
+      "kappa_fitted": 0.5702185875032882
+    },
+    "FI": {
+      "pairs": 14278,
+      "kappa_baseline": 0.2954034569662292,
+      "kappa_fitted": 0.3566571029183844
+    },
+    "GP": {
+      "pairs": 14157,
+      "kappa_baseline": 0.33764864841056474,
+      "kappa_fitted": 0.41281325392529594
+    },
+    "IC": {
+      "pairs": 14278,
+      "kappa_baseline": 0.36406995192352415,
+      "kappa_fitted": 0.43658370151940984
+    },
+    "IM": {
+      "pairs": 14157,
+      "kappa_baseline": 0.3802416028322537,
+      "kappa_fitted": 0.49314153268052763
+    },
+    "JS": {
+      "pairs": 14278,
+      "kappa_baseline": 0.40059557454512323,
+      "kappa_fitted": 0.46722377451921315
+    },
+    "MA": {
+      "pairs": 14036,
+      "kappa_baseline": 0.4487157460675425,
+      "kappa_fitted": 0.5739067632279266
+    },
+    "PD": {
+      "pairs": 14157,
+      "kappa_baseline": 0.3705675157236613,
+      "kappa_fitted": 0.479014181580508
+    },
+    "RS": {
+      "pairs": 14036,
+      "kappa_baseline": 0.46334448735084843,
+      "kappa_fitted": 0.5241854204434002
+    },
+    "SA": {
+      "pairs": 14278,
+      "kappa_baseline": 0.36360582421504567,
+      "kappa_fitted": 0.45125927497449936
+    },
+    "TB": {
+      "pairs": 14036,
+      "kappa_baseline": 0.2821143369303295,
+      "kappa_fitted": 0.39376426049062874
+    },
+    "TS": {
+      "pairs": 14036,
+      "kappa_baseline": 0.4147717442577567,
+      "kappa_fitted": 0.4545311630317941
+    }
+  },
+  "kappa_by_persona_type": {
+    "adequate": {
+      "pairs": 6080,
+      "kappa_fitted": 0.42498852143098403
+    },
+    "brittle_robustness": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4376430632317338
+    },
+    "causally_blind": {
+      "pairs": 6080,
+      "kappa_fitted": 0.49479522198504744
+    },
+    "contextually_blind": {
+      "pairs": 6080,
+      "kappa_fitted": 0.5017695880673271
+    },
+    "declared": {
+      "pairs": 1520,
+      "kappa_fitted": 0.4612317235268053
+    },
+    "diffuse_shortfall": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4462508240951417
+    },
+    "distressed": {
+      "pairs": 6080,
+      "kappa_fitted": 0.6393527279786481
+    },
+    "evidentially_thin": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4707993234214309
+    },
+    "exemplary_capped": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4039082513073376
+    },
+    "goal_drift": {
+      "pairs": 6080,
+      "kappa_fitted": 0.48037731072516887
+    },
+    "illegitimate_mandate": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4917901432335598
+    },
+    "misaligned_values": {
+      "pairs": 6080,
+      "kappa_fitted": 0.48036577452646706
+    },
+    "miscalibrated_confidence": {
+      "pairs": 6080,
+      "kappa_fitted": 0.44788512597378755
+    },
+    "no_accountability": {
+      "pairs": 6080,
+      "kappa_fitted": 0.47438181522237755
+    },
+    "no_containment": {
+      "pairs": 6080,
+      "kappa_fitted": 0.42615923924192817
+    },
+    "no_human_review": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4758211385683824
+    },
+    "no_kill_switch": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4252411334321672
+    },
+    "no_legal_compliance": {
+      "pairs": 6080,
+      "kappa_fitted": 0.49917466317988257
+    },
+    "no_precaution": {
+      "pairs": 6080,
+      "kappa_fitted": 0.44612239163539813
+    },
+    "no_redress": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4131682020675786
+    },
+    "normatively_ignorant": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4646023673159085
+    },
+    "priority_capture": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4806977327438868
+    },
+    "procedurally_weak": {
+      "pairs": 6080,
+      "kappa_fitted": 0.45060948010800517
+    },
+    "role_ambiguity": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4978888113015723
+    },
+    "scope_mismatch": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4882318811073429
+    },
+    "solid": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4153504944095542
+    },
+    "stakeholder_blind": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4790414495627137
+    },
+    "strained": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4790781763111984
+    },
+    "under_resourced": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4750201381453088
+    },
+    "unsafe_execution": {
+      "pairs": 6080,
+      "kappa_fitted": 0.4931184250793896
+    },
+    "weak_ethics_framework": {
+      "pairs": 6080,
+      "kappa_fitted": 0.49519135159214406
+    }
+  },
+  "gold_distribution_train": {
+    "PROHIBIT": 100086,
+    "ALLOW": 1833,
+    "REVIEW_REQUIRED": 15926,
+    "ALLOW_WITH_GUARDS": 2066,
+    "ABSTAIN": 7865
+  },
+  "gold_distribution_test": {
+    "PROHIBIT": 47521,
+    "ABSTAIN": 2904,
+    "REVIEW_REQUIRED": 4904,
+    "ALLOW": 328,
+    "ALLOW_WITH_GUARDS": 487
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "bar_base": 0.38000000000000006,
+  "bar_severity": 0.24,
+  "bar_irreversibility": 0.14,
+  "bar_prudential": 0.08,
+  "bar_horizon": 0.0,
+  "prohibit_margin": 0.27,
+  "guards_margin": 0.0,
+  "stakes_veto_min": 0.7,
+  "hard_veto_delta": 0.25,
+  "material_gap": 0.25,
+  "critical_prohibit_gap": 0.37711072507313637,
+  "cap_base": 0.4,
+  "cap_stakes_gain": 0.4,
+  "prohibit_stakes_min": 0.0902372260457498,
+  "prohibit_needs_material": 0,
+  "veto_slack": 0.02,
+  "ratio_prohibit": 0.7400000000000003,
+  "ratio_review": 0.5199999999999998,
+  "ratio_guards": 0.4100000000000001,
+  "hysteresis": 0.05
+}

@@ -1,0 +1,29 @@
+@prefix : <https://eth2.local/ontology/bridge#> .
+@prefix core: <https://eth2.local/ontology/ethcase-core#> .
+@prefix assess: <https://eth2.local/ontology/wcmk-assessment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/bridge> a owl:Ontology ;
+    rdfs:label "Bridge Architecture v2" ;
+    rdfs:comment "Audit-oriented bridge model for adjudication, residual risk, guardrails and explanations." .
+
+:BridgeEvaluation a owl:Class .
+:ContextAssessment a owl:Class .
+:AgencyAssessment a owl:Class .
+:ResidualRiskAssessment a owl:Class .
+:DecisionRecommendation a owl:Class .
+:RequiredGuardrail a owl:Class .
+:ExplanationBundle a owl:Class .
+
+:evaluatesCase a owl:ObjectProperty ; rdfs:domain :BridgeEvaluation ; rdfs:range core:EthicalCase .
+:usesAgencyAssessment a owl:ObjectProperty ; rdfs:domain :BridgeEvaluation ; rdfs:range assess:WCMKAssessment .
+:producesResidualRiskAssessment a owl:ObjectProperty ; rdfs:domain :BridgeEvaluation ; rdfs:range :ResidualRiskAssessment .
+:producesDecisionRecommendation a owl:ObjectProperty ; rdfs:domain :BridgeEvaluation ; rdfs:range :DecisionRecommendation .
+:requiresGuardrail a owl:ObjectProperty ; rdfs:domain :DecisionRecommendation ; rdfs:range :RequiredGuardrail .
+:hasExplanationBundle a owl:ObjectProperty ; rdfs:domain :BridgeEvaluation ; rdfs:range :ExplanationBundle .
+
+:decisionLabel a owl:DatatypeProperty ; rdfs:domain :DecisionRecommendation ; rdfs:range xsd:string .
+:residualRiskScore a owl:DatatypeProperty ; rdfs:domain :ResidualRiskAssessment ; rdfs:range xsd:decimal .
+:requiresHumanReview a owl:DatatypeProperty ; rdfs:domain :DecisionRecommendation ; rdfs:range xsd:boolean .

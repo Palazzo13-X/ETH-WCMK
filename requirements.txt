@@ -1,0 +1,8 @@
+# ETH-WCMK reproducibility environment (verified versions used in rodada 2/3)
+rdflib>=7.6
+pyshacl>=0.40
+numpy>=2.0
+pytest>=9.0
+
+# optional
+# ollama   (local LLM profiling, battery B6)

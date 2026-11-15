@@ -1,0 +1,513 @@
+{
+  "pairs": 183920,
+  "exact_agreement_rate": 0.4997,
+  "mean_rank_gap_model_minus_gold": 0.2241,
+  "top_divergences": [
+    {
+      "pair": "REVIEW_REQUIRED -> PROHIBIT",
+      "n": 53431,
+      "share_of_pairs": 0.2905
+    },
+    {
+      "pair": "PROHIBIT -> REVIEW_REQUIRED",
+      "n": 12042,
+      "share_of_pairs": 0.0655
+    },
+    {
+      "pair": "REVIEW_REQUIRED -> ALLOW_WITH_GUARDS",
+      "n": 5861,
+      "share_of_pairs": 0.0319
+    },
+    {
+      "pair": "ALLOW_WITH_GUARDS -> PROHIBIT",
+      "n": 4950,
+      "share_of_pairs": 0.0269
+    },
+    {
+      "pair": "REVIEW_REQUIRED -> ALLOW",
+      "n": 3942,
+      "share_of_pairs": 0.0214
+    },
+    {
+      "pair": "REVIEW_REQUIRED -> ABSTAIN",
+      "n": 2661,
+      "share_of_pairs": 0.0145
+    },
+    {
+      "pair": "ALLOW_WITH_GUARDS -> REVIEW_REQUIRED",
+      "n": 2634,
+      "share_of_pairs": 0.0143
+    },
+    {
+      "pair": "ABSTAIN -> PROHIBIT",
+      "n": 1985,
+      "share_of_pairs": 0.0108
+    },
+    {
+      "pair": "PROHIBIT -> ABSTAIN",
+      "n": 1025,
+      "share_of_pairs": 0.0056
+    },
+    {
+      "pair": "PROHIBIT -> ALLOW_WITH_GUARDS",
+      "n": 937,
+      "share_of_pairs": 0.0051
+    },
+    {
+      "pair": "ALLOW_WITH_GUARDS -> ALLOW",
+      "n": 768,
+      "share_of_pairs": 0.0042
+    },
+    {
+      "pair": "ABSTAIN -> REVIEW_REQUIRED",
+      "n": 753,
+      "share_of_pairs": 0.0041
+    }
+  ],
+  "model_REVIEW_gold_PROHIBIT": {
+    "n": 53431,
+    "stakes": {
+      "mean": 0.4738,
+      "p25": 0.375,
+      "p75": 0.6
+    },
+    "material_gap": {
+      "mean": 0.4897,
+      "share_ge_critical_gap_0.35": 0.683
+    },
+    "adequacy_low_vs_bar": {
+      "mean_aa_low": 0.5916,
+      "mean_bar": 0.6541,
+      "share_aa_low_above_bar": 0.2653,
+      "share_aa_low_below_bar_but_above_margin": 0.7117
+    },
+    "risk_ratio": {
+      "mean": 0.5768,
+      "share_ge_0.70": 0.0707,
+      "share_ge_0.45": 0.8852
+    },
+    "veto": {
+      "share_any_veto": 0.4834,
+      "share_hard_veto": 0.0
+    },
+    "gold_route": {
+      "escalation by duty-floor rules alone": 11005,
+      "escalation needs procedural facts (counterfactual drops to review)": 40505,
+      "kernel K1/K2 (categorical duty below floor)": 1921
+    },
+    "model_route": {
+      "proportionality gate: stakes < prohibit_stakes_min": 9218,
+      "guard veto triggered but stakes < stakes_veto_min": 25830,
+      "categorical gate passed; adequacy above bar-margin and ratio < 0.70": 44207,
+      "categorical gate passed but ladder did not fire (should not happen)": 6
+    },
+    "prohibitions_that_depend_on_procedural_facts_only": 40505,
+    "share_of_prohibitions_dependent_on_procedural_facts": 0.7581,
+    "prohibitions_with_no_duty_below_any_floor": 2,
+    "fact_rules_firing_in_this_bucket": {
+      "B5": 21096,
+      "B2": 17115,
+      "A5": 16732,
+      "C10": 15864,
+      "A2": 15643,
+      "C8": 15583,
+      "C1": 14526,
+      "A6": 14017,
+      "C2": 12518,
+      "A4": 12445,
+      "B6": 12445,
+      "C9": 10579,
+      "C7": 10241,
+      "A3": 8855,
+      "C5": 7282,
+      "A7": 6916,
+      "C4": 6302
+    },
+    "all_rules_firing_in_this_bucket": {
+      "B5": 21096,
+      "B2": 17115,
+      "A5": 16732,
+      "C10": 15864,
+      "A2": 15643,
+      "C8": 15583,
+      "C1": 14526,
+      "A6": 14017,
+      "B7": 13146,
+      "C2": 12518,
+      "A4": 12445,
+      "B6": 12445,
+      "C9": 10579,
+      "C7": 10241,
+      "A3": 8855,
+      "A10": 7556,
+      "C5": 7282,
+      "A7": 6916,
+      "C4": 6302,
+      "A9": 5108,
+      "A8": 4218,
+      "C15": 3691,
+      "C12": 3678,
+      "B3": 3390,
+      "B1": 3298,
+      "C13": 3126,
+      "C14": 1977,
+      "B4": 1807,
+      "A11": 453,
+      "C6": 381,
+      "A1": 11,
+      "C11": 1
+    },
+    "divergent_pairs_by_persona_type": {
+      "brittle_robustness": 3454,
+      "no_human_review": 3305,
+      "evidentially_thin": 3280,
+      "no_accountability": 3262,
+      "normatively_ignorant": 3220,
+      "procedurally_weak": 3053,
+      "scope_mismatch": 2765,
+      "stakeholder_blind": 2759,
+      "priority_capture": 2678,
+      "under_resourced": 2659,
+      "goal_drift": 2437,
+      "causally_blind": 2426,
+      "contextually_blind": 2171,
+      "weak_ethics_framework": 2109,
+      "illegitimate_mandate": 1791,
+      "role_ambiguity": 1786,
+      "misaligned_values": 1649,
+      "no_legal_compliance": 1371,
+      "strained": 1240,
+      "diffuse_shortfall": 1188,
+      "adequate": 822,
+      "distressed": 610,
+      "solid": 605,
+      "declared": 499,
+      "unsafe_execution": 364,
+      "no_redress": 335,
+      "no_kill_switch": 334,
+      "no_containment": 334,
+      "no_precaution": 334,
+      "miscalibrated_confidence": 334,
+      "exemplary_capped": 257
+    },
+    "divergent_pairs_by_domain": {
+      "TB": 5010,
+      "IM": 4986,
+      "ED": 4971,
+      "MA": 4830,
+      "DS": 4364,
+      "FI": 4277,
+      "PD": 4054,
+      "RS": 3994,
+      "TS": 3861,
+      "GP": 3799,
+      "SA": 3426,
+      "JS": 3008,
+      "IC": 2851
+    },
+    "divergent_pairs_by_layer": {
+      "A": 43108,
+      "B": 10323
+    },
+    "examples": [
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "AGENT-declared",
+        "domain": "SA",
+        "persona_type": "declared",
+        "stakes": 0.1125,
+        "aa_low": 0.0304,
+        "bar": 0.575,
+        "ratio": 0.8911,
+        "material_gap": 0.7819,
+        "kernel_rule": "K3",
+        "panels": [
+          "PROHIBIT",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-strained-unverified-015",
+        "domain": "SA",
+        "persona_type": "strained",
+        "stakes": 0.1125,
+        "aa_low": 0.3108,
+        "bar": 0.575,
+        "ratio": 0.6895,
+        "material_gap": 0.5142,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "REVIEW_REQUIRED"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-distressed-baseline-016",
+        "domain": "SA",
+        "persona_type": "distressed",
+        "stakes": 0.1125,
+        "aa_low": 0.3597,
+        "bar": 0.575,
+        "ratio": 0.6507,
+        "material_gap": 0.4631,
+        "kernel_rule": "K3",
+        "panels": [
+          "PROHIBIT",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-distressed-degraded-017",
+        "domain": "SA",
+        "persona_type": "distressed",
+        "stakes": 0.1125,
+        "aa_low": 0.2797,
+        "bar": 0.575,
+        "ratio": 0.708,
+        "material_gap": 0.5387,
+        "kernel_rule": "K3",
+        "panels": [
+          "PROHIBIT",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-distressed-optimistic-018",
+        "domain": "SA",
+        "persona_type": "distressed",
+        "stakes": 0.1125,
+        "aa_low": 0.2605,
+        "bar": 0.575,
+        "ratio": 0.7222,
+        "material_gap": 0.5458,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "REVIEW_REQUIRED"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-distressed-unverified-019",
+        "domain": "SA",
+        "persona_type": "distressed",
+        "stakes": 0.1125,
+        "aa_low": 0.2199,
+        "bar": 0.575,
+        "ratio": 0.7502,
+        "material_gap": 0.6046,
+        "kernel_rule": "K3",
+        "panels": [
+          "PROHIBIT",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-stakeholder_blind-unverified-035",
+        "domain": "SA",
+        "persona_type": "stakeholder_blind",
+        "stakes": 0.1125,
+        "aa_low": 0.5173,
+        "bar": 0.575,
+        "ratio": 0.5246,
+        "material_gap": 0.7105,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "REVIEW_REQUIRED"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-unsafe_execution-baseline-048",
+        "domain": "SA",
+        "persona_type": "unsafe_execution",
+        "stakes": 0.1125,
+        "aa_low": 0.373,
+        "bar": 0.575,
+        "ratio": 0.7486,
+        "material_gap": 0.696,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-unsafe_execution-degraded-049",
+        "domain": "SA",
+        "persona_type": "unsafe_execution",
+        "stakes": 0.1125,
+        "aa_low": 0.2772,
+        "bar": 0.575,
+        "ratio": 0.8,
+        "material_gap": 0.7366,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-unsafe_execution-optimistic-050",
+        "domain": "SA",
+        "persona_type": "unsafe_execution",
+        "stakes": 0.1125,
+        "aa_low": 0.2498,
+        "bar": 0.575,
+        "ratio": 0.8082,
+        "material_gap": 0.7363,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-unsafe_execution-unverified-051",
+        "domain": "SA",
+        "persona_type": "unsafe_execution",
+        "stakes": 0.1125,
+        "aa_low": 0.2038,
+        "bar": 0.575,
+        "ratio": 0.8332,
+        "material_gap": 0.7566,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      },
+      {
+        "case_id": "ETHCASE-A-0000",
+        "persona": "PERSONA-brittle_robustness-optimistic-058",
+        "domain": "SA",
+        "persona_type": "brittle_robustness",
+        "stakes": 0.1125,
+        "aa_low": 0.5944,
+        "bar": 0.575,
+        "ratio": 0.477,
+        "material_gap": 0.6609,
+        "kernel_rule": "K3",
+        "panels": [
+          "REVIEW_REQUIRED",
+          "ALLOW_WITH_GUARDS",
+          "PROHIBIT"
+        ],
+        "fact_rules": [
+          "B5",
+          "C10"
+        ],
+        "counterfactual_consensus": "PROHIBIT"
+      }
+    ]
+  },
+  "model_PROHIBIT_gold_REVIEW": {
+    "n": 12042,
+    "stakes": {
+      "mean": 0.6029
+    },
+    "material_gap": {
+      "mean": 0.5705,
+      "share_ge_0.35": 0.9135
+    },
+    "adequacy_low": {
+      "mean": 0.4538,
+      "share_below_bar": 0.9875
+    },
+    "risk_ratio": {
+      "mean": 0.6739,
+      "share_ge_0.70": 0.4379
+    },
+    "hard_veto_share": 0.2148,
+    "gold_kernel_rule": {
+      "K3": 6284,
+      "K4": 5758
+    },
+    "panels_deescalated_by_allowance_rules": 6968,
+    "allowance_rule_counts": {
+      "B5": 4482,
+      "A10": 2433,
+      "C12": 1025,
+      "B4": 491,
+      "B8": 267,
+      "B3": 34,
+      "C11": 23
+    }
+  },
+  "note_on_interpretation": "The panels' prohibition route is deliberately not the ladder's: the kernel uses declared duty floors and observable procedural infrastructure (appeal channel, notice, consent, audit, remedy period). The ladder uses adequacy against a stakes-scaled bar and a risk ratio. Where they disagree the model is usually more permissive, because no facet in the ontology measures the procedural fact the instruments name."
+}

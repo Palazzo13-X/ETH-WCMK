@@ -1,0 +1,556 @@
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/> a owl:Ontology ;
+    rdfs:label "ETH-WCMK ontology v2"@en ;
+    rdfs:comment "Consolidated namespace replacing eth2.local/ontology, ethwcmk.org/ontology and eth2.ai/ontology. Facets are individuals; the tetrahedron is a relational index (face lattice of the 3-simplex), not a metric state space."@en .
+
+eth:adequacy a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "adequacy"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:adequacyRaw a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "adequacyRaw"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:aggregationPolicy a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "aggregationPolicy"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range eth:AggregationPolicy .
+
+eth:alignedWithPillar a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "alignedWithPillar"@en ;
+    rdfs:domain eth:RelationalSlot ;
+    rdfs:range eth:Pillar .
+
+eth:assessedBy a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "assessedBy"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range eth:AgencyProfile .
+
+eth:barBase a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "barBase"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:barIrreversibility a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "barIrreversibility"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:barPrudential a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "barPrudential"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:barSeverity a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "barSeverity"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:betaCan a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "betaCan"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:decimal .
+
+eth:betaKnow a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "betaKnow"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:decimal .
+
+eth:betaMust a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "betaMust"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:decimal .
+
+eth:betaWant a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "betaWant"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:decimal .
+
+eth:completeness a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "completeness"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range xsd:decimal .
+
+eth:concernsCase a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "concernsCase"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range eth:EthicalCase .
+
+eth:confidence a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "confidence"@en ;
+    rdfs:domain eth:FacetLevel ;
+    rdfs:range xsd:decimal .
+
+eth:contextualRisk a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "contextualRisk"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range xsd:decimal .
+
+eth:contributedBy a owl:ObjectProperty ;
+    rdfs:label "contributedBy"@en ;
+    rdfs:domain eth:Pillar ;
+    rdfs:range eth:Facet .
+
+eth:criticalPillar a owl:ObjectProperty ;
+    rdfs:label "criticalPillar"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range eth:Pillar .
+
+eth:criticalityInDomain a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "criticalityInDomain"@en ;
+    rdfs:domain eth:FacetDomainCriticality ;
+    rdfs:range eth:Domain .
+
+eth:criticalityLevel a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "criticalityLevel"@en ;
+    rdfs:domain eth:FacetDomainCriticality ;
+    rdfs:range xsd:integer .
+
+eth:criticalityOfFacet a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "criticalityOfFacet"@en ;
+    rdfs:domain eth:FacetDomainCriticality ;
+    rdfs:range eth:Facet .
+
+eth:decisionOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "decisionOf"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range eth:Decision .
+
+eth:delta a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "delta"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:domainCode a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "domainCode"@en ;
+    rdfs:domain eth:Domain ;
+    rdfs:range xsd:string .
+
+eth:edgeWeight a owl:DatatypeProperty ;
+    rdfs:label "edgeWeight"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:epistemicUncertainty a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "epistemicUncertainty"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range xsd:decimal .
+
+eth:eta a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "eta"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:faceWeight a owl:DatatypeProperty ;
+    rdfs:label "faceWeight"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:facetCode a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "facetCode"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:string .
+
+eth:facetDeficit a owl:DatatypeProperty ;
+    rdfs:label "facetDeficit"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:facetWeight a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "facetWeight"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:decimal .
+
+eth:gamma a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "gamma"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:guardMin a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "guardMin"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:decimal .
+
+eth:guardsMargin a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "guardsMargin"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:hardVetoDelta a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "hardVetoDelta"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:hasDomain a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "hasDomain"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range eth:Domain .
+
+eth:hasFacetLevel a owl:ObjectProperty ;
+    rdfs:label "hasFacetLevel"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range eth:FacetLevel .
+
+eth:hasGuard a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "hasGuard"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:boolean .
+
+eth:hasPrudentialMode a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "hasPrudentialMode"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range eth:PrudentialMode .
+
+eth:hasReversibility a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "hasReversibility"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range eth:ReversibilityGrade .
+
+eth:hasSeverity a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "hasSeverity"@en ;
+    rdfs:domain eth:EthicalCase ;
+    rdfs:range eth:SeverityBand .
+
+eth:irreversibilityValue a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "irreversibilityValue"@en ;
+    rdfs:domain eth:ReversibilityGrade ;
+    rdfs:range xsd:decimal .
+
+eth:lambdaCan a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "lambdaCan"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:lambdaKnow a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "lambdaKnow"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:lambdaMust a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "lambdaMust"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:lambdaWant a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "lambdaWant"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:levelCan a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "levelCan"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:levelKnow a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "levelKnow"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:levelMust a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "levelMust"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:levelOfFacet a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "levelOfFacet"@en ;
+    rdfs:domain eth:FacetLevel ;
+    rdfs:range eth:Facet .
+
+eth:levelWant a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "levelWant"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:magnitude a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "magnitude"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range xsd:decimal .
+
+eth:observedLevel a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "observedLevel"@en ;
+    rdfs:domain eth:FacetLevel ;
+    rdfs:range xsd:decimal .
+
+eth:omega a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "omega"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:penaltyBudget a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "penaltyBudget"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:permissivenessRank a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "permissivenessRank"@en ;
+    rdfs:domain eth:Decision ;
+    rdfs:range xsd:integer .
+
+eth:pillarDeficit a owl:DatatypeProperty ;
+    rdfs:label "pillarDeficit"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:pillarIndex a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "pillarIndex"@en ;
+    rdfs:domain eth:Pillar ;
+    rdfs:range xsd:integer .
+
+eth:prohibitMargin a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "prohibitMargin"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:prudentialValue a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "prudentialValue"@en ;
+    rdfs:domain eth:PrudentialMode ;
+    rdfs:range xsd:decimal .
+
+eth:requirementForCase a owl:ObjectProperty ;
+    rdfs:label "requirementForCase"@en ;
+    rdfs:domain eth:FacetRequirement ;
+    rdfs:range eth:EthicalCase .
+
+eth:requirementValue a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "requirementValue"@en ;
+    rdfs:domain eth:FacetRequirement ;
+    rdfs:range xsd:decimal .
+
+eth:requiresFacet a owl:ObjectProperty ;
+    rdfs:label "requiresFacet"@en ;
+    rdfs:domain eth:FacetRequirement ;
+    rdfs:range eth:Facet .
+
+eth:residualRisk a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "residualRisk"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:rho a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "rho"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:riskFloor a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "riskFloor"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:severityValue a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "severityValue"@en ;
+    rdfs:domain eth:SeverityBand ;
+    rdfs:range xsd:decimal .
+
+eth:shapeCan a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "shapeCan"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range xsd:decimal .
+
+eth:shapeKnow a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "shapeKnow"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range xsd:decimal .
+
+eth:shapeMust a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "shapeMust"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range xsd:decimal .
+
+eth:shapeWant a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "shapeWant"@en ;
+    rdfs:domain eth:AgencyProfile ;
+    rdfs:range xsd:decimal .
+
+eth:slotArity a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "slotArity"@en ;
+    rdfs:domain eth:RelationalSlot ;
+    rdfs:range xsd:integer .
+
+eth:slotInvolves a owl:ObjectProperty ;
+    rdfs:label "slotInvolves"@en ;
+    rdfs:domain eth:RelationalSlot ;
+    rdfs:range eth:Pillar .
+
+eth:source a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "source"@en ;
+    rdfs:domain eth:Facet ;
+    rdfs:range xsd:string .
+
+eth:structuralTermInterior a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "structuralTermInterior"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:structuralTermPair a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "structuralTermPair"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:structuralTermTriple a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "structuralTermTriple"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range xsd:decimal .
+
+eth:usesCalibration a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "usesCalibration"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range eth:Calibration .
+
+eth:vetoPillar a owl:ObjectProperty ;
+    rdfs:label "vetoPillar"@en ;
+    rdfs:domain eth:Confrontation ;
+    rdfs:range eth:Pillar .
+
+eth:vetoThresholdCan a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "vetoThresholdCan"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:vetoThresholdKnow a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "vetoThresholdKnow"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:vetoThresholdMust a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "vetoThresholdMust"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:vetoThresholdWant a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "vetoThresholdWant"@en ;
+    rdfs:domain eth:Calibration ;
+    rdfs:range xsd:decimal .
+
+eth:AggregationPolicy a owl:Class ;
+    rdfs:label "AggregationPolicy"@en .
+
+eth:PrudentialMode a owl:Class ;
+    rdfs:label "PrudentialMode"@en .
+
+eth:ReversibilityGrade a owl:Class ;
+    rdfs:label "ReversibilityGrade"@en .
+
+eth:SeverityBand a owl:Class ;
+    rdfs:label "SeverityBand"@en .
+
+eth:Decision a owl:Class ;
+    rdfs:label "Decision"@en .
+
+eth:Domain a owl:Class ;
+    rdfs:label "Domain"@en .
+
+eth:FacetDomainCriticality a owl:Class ;
+    rdfs:label "FacetDomainCriticality"@en .
+
+eth:FacetRequirement a owl:Class ;
+    rdfs:label "FacetRequirement"@en ;
+    owl:disjointWith eth:FacetLevel .
+
+eth:RelationalSlot a owl:Class ;
+    rdfs:label "RelationalSlot"@en ;
+    owl:disjointWith eth:Facet .
+
+eth:FacetLevel a owl:Class ;
+    rdfs:label "FacetLevel"@en .
+
+eth:Pillar a owl:Class ;
+    rdfs:label "Pillar"@en ;
+    owl:disjointWith eth:Facet .
+
+eth:AgencyProfile a owl:Class ;
+    rdfs:label "AgencyProfile"@en .
+
+eth:EthicalCase a owl:Class ;
+    rdfs:label "EthicalCase"@en ;
+    owl:disjointWith eth:AgencyProfile .
+
+eth:Facet a owl:Class ;
+    rdfs:label "Facet"@en ;
+    owl:disjointWith eth:Decision .
+
+eth:Confrontation a owl:Class ;
+    rdfs:label "Confrontation"@en ;
+    owl:disjointWith eth:Calibration .
+
+eth:Calibration a owl:Class ;
+    rdfs:label "Calibration"@en .
+

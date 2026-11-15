@@ -1,0 +1,323 @@
+{
+  "variants": [
+    {
+      "variant": "abs_theta_0.45",
+      "mode": "absolute",
+      "veto_share_overall": 0.6828,
+      "cap_binds_share": 0.6282,
+      "hard_veto_share": 0.3624,
+      "veto_share_by_severity": {
+        "low": 0.4931,
+        "medium": 0.6736,
+        "high": 0.7644,
+        "critical": 0.8
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.511,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.194,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1513,
+        "PROHIBIT": 0.5892
+      },
+      "gold_kappa_mean": 0.0186,
+      "gold_kappa_min": -0.0127,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "abs_theta_0.55",
+      "mode": "absolute",
+      "veto_share_overall": 0.4976,
+      "cap_binds_share": 0.4526,
+      "hard_veto_share": 0.1543,
+      "veto_share_by_severity": {
+        "low": 0.2661,
+        "medium": 0.4725,
+        "high": 0.5981,
+        "critical": 0.6536
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5296,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.2412,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1622,
+        "PROHIBIT": 0.5312
+      },
+      "gold_kappa_mean": 0.0175,
+      "gold_kappa_min": -0.0169,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "abs_theta_0.60",
+      "mode": "absolute",
+      "veto_share_overall": 0.3624,
+      "cap_binds_share": 0.3283,
+      "hard_veto_share": 0.0621,
+      "veto_share_by_severity": {
+        "low": 0.165,
+        "medium": 0.3436,
+        "high": 0.4433,
+        "critical": 0.4978
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5413,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.3048,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1638,
+        "PROHIBIT": 0.466
+      },
+      "gold_kappa_mean": 0.0225,
+      "gold_kappa_min": -0.0239,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "abs_theta_0.65",
+      "mode": "absolute",
+      "veto_share_overall": 0.2354,
+      "cap_binds_share": 0.2212,
+      "hard_veto_share": 0.0621,
+      "veto_share_by_severity": {
+        "low": 0.0889,
+        "medium": 0.2258,
+        "high": 0.2983,
+        "critical": 0.3286
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.552,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.3365,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1647,
+        "PROHIBIT": 0.4333
+      },
+      "gold_kappa_mean": 0.0229,
+      "gold_kappa_min": -0.0248,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "abs_theta_0.70",
+      "mode": "absolute",
+      "veto_share_overall": 0.1543,
+      "cap_binds_share": 0.1462,
+      "hard_veto_share": 0.0621,
+      "veto_share_by_severity": {
+        "low": 0.0433,
+        "medium": 0.1353,
+        "high": 0.2058,
+        "critical": 0.2328
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5609,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.3556,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1652,
+        "PROHIBIT": 0.4138
+      },
+      "gold_kappa_mean": 0.0222,
+      "gold_kappa_min": -0.0248,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "abs_theta_0.75",
+      "mode": "absolute",
+      "veto_share_overall": 0.0611,
+      "cap_binds_share": 0.0611,
+      "hard_veto_share": 0.0621,
+      "veto_share_by_severity": {
+        "low": 0.0217,
+        "medium": 0.0525,
+        "high": 0.0744,
+        "critical": 0.0958
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5705,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.3634,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1652,
+        "PROHIBIT": 0.4059
+      },
+      "gold_kappa_mean": 0.0218,
+      "gold_kappa_min": -0.0248,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "abs_theta_0.80",
+      "mode": "absolute",
+      "veto_share_overall": 0.0322,
+      "cap_binds_share": 0.0322,
+      "hard_veto_share": 0.0621,
+      "veto_share_by_severity": {
+        "low": 0.0058,
+        "medium": 0.0333,
+        "high": 0.0431,
+        "critical": 0.0464
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5751,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.3634,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1652,
+        "PROHIBIT": 0.4059
+      },
+      "gold_kappa_mean": 0.0218,
+      "gold_kappa_min": -0.0248,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "rel_phi_0.40",
+      "mode": "relative",
+      "veto_share_overall": 0.8325,
+      "cap_binds_share": 0.7747,
+      "hard_veto_share": 0.7992,
+      "veto_share_by_severity": {
+        "low": 0.83,
+        "medium": 0.8333,
+        "high": 0.8333,
+        "critical": 0.8333
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.4965,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.0618,
+        "ALLOW_WITH_GUARDS": 0.076,
+        "ALLOW": 0.063,
+        "PROHIBIT": 0.7992
+      },
+      "gold_kappa_mean": 0.023,
+      "gold_kappa_min": 0.0,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "rel_phi_0.50",
+      "mode": "relative",
+      "veto_share_overall": 0.8193,
+      "cap_binds_share": 0.7615,
+      "hard_veto_share": 0.6651,
+      "veto_share_by_severity": {
+        "low": 0.7806,
+        "medium": 0.83,
+        "high": 0.8333,
+        "critical": 0.8333
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.4978,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.1542,
+        "ALLOW_WITH_GUARDS": 0.0867,
+        "ALLOW": 0.0655,
+        "PROHIBIT": 0.6936
+      },
+      "gold_kappa_mean": 0.0198,
+      "gold_kappa_min": -0.023,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "rel_phi_0.55",
+      "mode": "relative",
+      "veto_share_overall": 0.7992,
+      "cap_binds_share": 0.741,
+      "hard_veto_share": 0.52,
+      "veto_share_by_severity": {
+        "low": 0.7272,
+        "medium": 0.805,
+        "high": 0.8311,
+        "critical": 0.8333
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.4999,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.1814,
+        "ALLOW_WITH_GUARDS": 0.1037,
+        "ALLOW": 0.0655,
+        "PROHIBIT": 0.6494
+      },
+      "gold_kappa_mean": 0.0173,
+      "gold_kappa_min": -0.023,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "rel_phi_0.60",
+      "mode": "relative",
+      "veto_share_overall": 0.754,
+      "cap_binds_share": 0.6953,
+      "hard_veto_share": 0.3877,
+      "veto_share_by_severity": {
+        "low": 0.6533,
+        "medium": 0.7489,
+        "high": 0.7981,
+        "critical": 0.8158
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5044,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.1941,
+        "ALLOW_WITH_GUARDS": 0.1246,
+        "ALLOW": 0.0655,
+        "PROHIBIT": 0.6158
+      },
+      "gold_kappa_mean": 0.0177,
+      "gold_kappa_min": -0.0204,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "rel_phi_0.65",
+      "mode": "relative",
+      "veto_share_overall": 0.6651,
+      "cap_binds_share": 0.6127,
+      "hard_veto_share": 0.2658,
+      "veto_share_by_severity": {
+        "low": 0.5444,
+        "medium": 0.6556,
+        "high": 0.7189,
+        "critical": 0.7417
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5125,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.2244,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1359,
+        "PROHIBIT": 0.5742
+      },
+      "gold_kappa_mean": 0.018,
+      "gold_kappa_min": -0.0169,
+      "gold_kappa_max": 0.1546
+    },
+    {
+      "variant": "no_veto_compensatory_only",
+      "mode": "none",
+      "veto_share_overall": 0.0,
+      "cap_binds_share": 0.0,
+      "hard_veto_share": 0.0,
+      "veto_share_by_severity": {
+        "low": 0.0,
+        "medium": 0.0,
+        "high": 0.0,
+        "critical": 0.0
+      },
+      "veto_monotone_in_severity": true,
+      "mean_adequacy": 0.5824,
+      "decision_distribution": {
+        "REVIEW_REQUIRED": 0.3683,
+        "ALLOW": 0.0655,
+        "ALLOW_WITH_GUARDS": 0.1652,
+        "PROHIBIT": 0.401
+      },
+      "gold_kappa_mean": 0.0215,
+      "gold_kappa_min": -0.0248,
+      "gold_kappa_max": 0.1546
+    }
+  ],
+  "gold_rule_decisions": {
+    "ABSTAIN": 9,
+    "ALLOW": 30,
+    "REVIEW_REQUIRED": 39,
+    "ALLOW_WITH_GUARDS": 12,
+    "PROHIBIT": 30
+  }
+}

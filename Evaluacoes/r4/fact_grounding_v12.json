@@ -1,0 +1,226 @@
+{
+  "pairs": 182400,
+  "cases_with_fact_grounding": 1520,
+  "fact_to_facet_map": {
+    "logs_available": "M6",
+    "independent_audit": "M6",
+    "appeal_channel": "M7",
+    "remedy_days": "M7",
+    "containment_exercised": "C7",
+    "worker_consulted": "W3",
+    "prior_incident": "C6",
+    "affected_can_exit": "C3"
+  },
+  "unanchored_facts": {
+    "consent_obtained": [
+      "M1/W3",
+      "consent of affected parties has no facet"
+    ],
+    "notice_given": [
+      "--",
+      "notice / explainability to the affected party has no facet"
+    ],
+    "human_review_channel": [
+      "--",
+      "human-in-the-loop review channel has no facet"
+    ],
+    "sunset_review": [
+      "--",
+      "periodic review / sunset clause has no facet"
+    ],
+    "data_minimised": [
+      "--",
+      "data minimisation / purpose limitation has no facet"
+    ],
+    "affected_include_minors": [
+      "--",
+      "protection of minors as a distinct duty has no facet"
+    ],
+    "affected_people": [
+      "exposure E12'",
+      "scale of those affected enters only through exposure"
+    ]
+  },
+  "grounding_events": {
+    "logs_available->M6": 72306,
+    "remedy_days->M7": 73510,
+    "worker_consulted->W3": 94807,
+    "prior_incident->C6": 55620,
+    "affected_can_exit->C3": 99130,
+    "appeal_channel->M7": 86580,
+    "independent_audit->M6": 54692,
+    "containment_exercised->C7": 87116
+  },
+  "without_grounding": {
+    "kappa": 0.1979,
+    "agreement": 0.4888,
+    "decisions": {
+      "ALLOW_WITH_GUARDS": 11142,
+      "REVIEW_REQUIRED": 94620,
+      "ALLOW": 103,
+      "ABSTAIN": 9254,
+      "PROHIBIT": 67281
+    },
+    "mean_adequacy": 0.6357
+  },
+  "with_grounding": {
+    "kappa": 0.4009,
+    "agreement": 0.8027,
+    "decisions": {
+      "ALLOW_WITH_GUARDS": 379,
+      "REVIEW_REQUIRED": 28097,
+      "ABSTAIN": 14824,
+      "PROHIBIT": 139100
+    },
+    "mean_adequacy": 0.4222
+  },
+  "grounded_model_vs_stored_gold": {
+    "kappa": 0.261,
+    "agreement": 0.6518,
+    "share_of_gold_verdicts_changed_by_grounding": 0.2459
+  },
+  "confusion_after": [
+    [
+      [
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      130776
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "PROHIBIT"
+      ],
+      21654
+    ],
+    [
+      [
+        "ABSTAIN",
+        "ABSTAIN"
+      ],
+      10404
+    ],
+    [
+      [
+        "PROHIBIT",
+        "REVIEW_REQUIRED"
+      ],
+      7654
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "REVIEW_REQUIRED"
+      ],
+      5184
+    ],
+    [
+      [
+        "ABSTAIN",
+        "PROHIBIT"
+      ],
+      3982
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "ALLOW_WITH_GUARDS"
+      ],
+      634
+    ],
+    [
+      [
+        "ABSTAIN",
+        "REVIEW_REQUIRED"
+      ],
+      432
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "ALLOW"
+      ],
+      428
+    ],
+    [
+      [
+        "PROHIBIT",
+        "ALLOW_WITH_GUARDS"
+      ],
+      413
+    ]
+  ],
+  "confusion_before": [
+    [
+      [
+        "REVIEW_REQUIRED",
+        "PROHIBIT"
+      ],
+      54856
+    ],
+    [
+      [
+        "PROHIBIT",
+        "PROHIBIT"
+      ],
+      54378
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "REVIEW_REQUIRED"
+      ],
+      27535
+    ],
+    [
+      [
+        "PROHIBIT",
+        "REVIEW_REQUIRED"
+      ],
+      11002
+    ],
+    [
+      [
+        "ABSTAIN",
+        "ABSTAIN"
+      ],
+      6394
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "ALLOW_WITH_GUARDS"
+      ],
+      5820
+    ],
+    [
+      [
+        "ALLOW_WITH_GUARDS",
+        "PROHIBIT"
+      ],
+      5468
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "ALLOW"
+      ],
+      3744
+    ],
+    [
+      [
+        "ALLOW_WITH_GUARDS",
+        "REVIEW_REQUIRED"
+      ],
+      3299
+    ],
+    [
+      [
+        "REVIEW_REQUIRED",
+        "ABSTAIN"
+      ],
+      2665
+    ]
+  ]
+}

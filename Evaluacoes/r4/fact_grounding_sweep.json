@@ -1,0 +1,72 @@
+{
+  "sample_personas": 30,
+  "cases": 1520,
+  "pairs": 45600,
+  "results": {
+    "0.0": {
+      "kappa_vs_panel_on_same_observations": 0.1568,
+      "kappa_vs_stored_panel": 0.0866,
+      "agreement_vs_panel_same_obs": 0.3959,
+      "mean_adequacy": 0.6789,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 11491,
+        "REVIEW_REQUIRED": 20643,
+        "ALLOW": 89,
+        "ABSTAIN": 1503,
+        "PROHIBIT": 11874
+      }
+    },
+    "0.25": {
+      "kappa_vs_panel_on_same_observations": 0.1635,
+      "kappa_vs_stored_panel": 0.0907,
+      "agreement_vs_panel_same_obs": 0.4072,
+      "mean_adequacy": 0.6675,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 9661,
+        "REVIEW_REQUIRED": 22188,
+        "ALLOW": 65,
+        "ABSTAIN": 1729,
+        "PROHIBIT": 11957
+      }
+    },
+    "0.5": {
+      "kappa_vs_panel_on_same_observations": 0.2078,
+      "kappa_vs_stored_panel": 0.1542,
+      "agreement_vs_panel_same_obs": 0.4851,
+      "mean_adequacy": 0.5955,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 2728,
+        "REVIEW_REQUIRED": 23893,
+        "ABSTAIN": 2841,
+        "PROHIBIT": 16134,
+        "ALLOW": 4
+      }
+    },
+    "0.75": {
+      "kappa_vs_panel_on_same_observations": 0.2815,
+      "kappa_vs_stored_panel": 0.2782,
+      "agreement_vs_panel_same_obs": 0.6136,
+      "mean_adequacy": 0.5249,
+      "decisions": {
+        "REVIEW_REQUIRED": 16680,
+        "ALLOW_WITH_GUARDS": 1191,
+        "ABSTAIN": 3383,
+        "PROHIBIT": 24345,
+        "ALLOW": 1
+      }
+    },
+    "1.0": {
+      "kappa_vs_panel_on_same_observations": 0.4127,
+      "kappa_vs_stored_panel": 0.397,
+      "agreement_vs_panel_same_obs": 0.7677,
+      "mean_adequacy": 0.4429,
+      "decisions": {
+        "REVIEW_REQUIRED": 8644,
+        "ALLOW_WITH_GUARDS": 858,
+        "ABSTAIN": 3584,
+        "PROHIBIT": 32513,
+        "ALLOW": 1
+      }
+    }
+  }
+}

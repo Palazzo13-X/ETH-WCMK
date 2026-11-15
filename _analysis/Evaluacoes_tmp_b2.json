@@ -1,0 +1,154 @@
+[
+  {
+    "label": "facetas WCMK",
+    "data": "wcmk_extracted/wcmk/wcmk-facets.ttl",
+    "shapes": "wcmk_extracted/wcmk/wcmk-facets.shacl.ttl",
+    "conforms": null,
+    "error": "A shape defined as a PropertyShape must include one `sh:path` property.\nFor reference, see https://www.w3.org/TR/shacl/#property-shapes",
+    "n_violations": 0,
+    "n_violation_triples": 0,
+    "report": "",
+    "violations": []
+  },
+  {
+    "label": "vocabulario WCMK (auto-valid)",
+    "data": "wcmk_extracted/wcmk/wcmk-profile.ttl",
+    "shapes": "wcmk_extracted/wcmk/wcmk-profile.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "bridge (auto-valid)",
+    "data": "wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+    "shapes": "wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "exemplo de scoring VALIDO",
+    "data": "wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-valid.ttl",
+    "shapes": "wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "exemplo de scoring INVALIDO",
+    "data": "wcmk_extracted/wcmk/bridge-wcmkplus-scoring-example-invalid.ttl",
+    "shapes": "wcmk_extracted/wcmk/bridge-wcmkplus.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "assessment WCMK",
+    "data": "wcmk_extracted/wcmk/wcmk-assessment.ttl",
+    "shapes": "wcmk_extracted/wcmk/wcmk-assessment.shacl.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "instancia de perfil",
+    "data": "wcmk_extracted/wcmk/wcmk-instance.ttl",
+    "shapes": "wcmk_extracted/wcmk/wcmk-instance.shacl.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "nucleo ETHCASE (auto-valid)",
+    "data": "eth_extracted/eth/ethcase-core.ttl",
+    "shapes": "eth_extracted/eth/ethcase-core.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "analise ETHCASE (auto-valid)",
+    "data": "eth_extracted/eth/ethcase-analysis.ttl",
+    "shapes": "eth_extracted/eth/ethcase-analysis.ttl",
+    "conforms": true,
+    "n_violations": 0,
+    "n_violation_triples": 2,
+    "violations": [
+      "Conforms: True"
+    ],
+    "report": "Validation Report\nConforms: True\n"
+  },
+  {
+    "label": "requisitos por faceta",
+    "data": "eth_extracted/eth/ethcase-facet-requirements.ttl",
+    "shapes": "eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+    "conforms": false,
+    "n_violations": 11,
+    "n_violation_triples": 106,
+    "violations": [
+      "Conforms: False",
+      "Results (11):",
+      "Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):",
+      "\tSeverity: sh:Violation"
+    ],
+    "report": "Validation Report\nConforms: False\nResults (11):\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:CriticalInfraCausalKnowledgeRule\n\tValue Node: wcmkf:CausalKnowledge\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:CriticalInfraSafeExecutabilityRule\n\tValue Node: wcmkf:SafeExecutability\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:HealthControllabilityRule\n\tValue Node: wcmkf:Controllability\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:HealthNormativeKnowledgeRule\n\tValue Node: wcmkf:NormativeKnowledge\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:HealthPrudentialObligationRule\n\tValue Node: wcmkf:PrudentialObligation\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:InformationMediaProvenanceRule\n\tValue Node: wcmkf:ProvenanceAwareness\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:JusticeAccountabilityRule\n\tValue Node: wcmkf:AccountabilityObligation\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:JusticeContextualKnowledgeRule\n\tValue Node: wcmkf:ContextualKnowledge\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:JusticeLegalObligationRule\n\tValue Node: wcmkf:LegalObligation\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:PrivacyNormativeKnowledgeRule\n\tValue Node: wcmkf:NormativeKnowledge\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"RequirementDerivationRule must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:targetsFacet ]\n\tFocus Node: efr:PrivacyStakeholderRegardRule\n\tValue Node: wcmkf:StakeholderRegard\n\tResult Path: efr:targetsFacet\n\tMessage: RequirementDerivationRule must target exactly one facet.\n"
+  },
+  {
+    "label": "exemplo de requisitos VALIDO",
+    "data": "eth_extracted/eth/ethcase-facet-requirements-example-valid.ttl",
+    "shapes": "eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+    "conforms": false,
+    "n_violations": 13,
+    "n_violation_triples": 154,
+    "violations": [
+      "Conforms: False",
+      "Results (13):",
+      "Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):",
+      "\tSeverity: sh:Violation"
+    ],
+    "report": "Validation Report\nConforms: False\nResults (13):\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PriorityTier ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must declare exactly one priority tier.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:priorityTier ]\n\tFocus Node: ex:req_health_control\n\tValue Node: efr:PRIORITY_CRITICAL\n\tResult Path: efr:priorityTier\n\tMessage: DerivedFacetRequirement must declare exactly one priority tier.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PriorityTier ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must declare exactly one priority tier.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:priorityTier ]\n\tFocus Node: ex:req_health_normative\n\tValue Node: efr:PRIORITY_CORE\n\tResult Path: efr:priorityTier\n\tMessage: DerivedFacetRequirement must declare exactly one priority tier.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PriorityTier ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must declare exactly one priority tier.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:priorityTier ]\n\tFocus Node: ex:req_health_prudential\n\tValue Node: efr:PRIORITY_CRITICAL\n\tResult Path: efr:priorityTier\n\tMessage: DerivedFacetRequirement must declare exactly one priority tier.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PrudentialMode ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must declare exactly one prudential mode.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesPrudentialMode ]\n\tFocus Node: ex:case_req_profile_health_01\n\tValue Node: efr:PRUDENTIAL_ELEVATED\n\tResult Path: efr:usesPrudentialMode\n\tMessage: CaseRequirementProfile must declare exactly one prudential mode.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementAggregationProfile ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must declare exactly one aggregation profile.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesAggregationProfile ]\n\tFocus Node: ex:case_req_profile_health_01\n\tValue Node: efr:ConservativeRequirementAggregation\n\tResult Path: efr:usesAggregationProfile\n\tMessage: CaseRequirementProfile must declare exactly one aggregation profile.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementDerivationRule ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must point to exactly one derivation rule.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:derivedByRule ]\n\tFocus Node: ex:req_health_control\n\tValue Node: efr:HealthControllabilityRule\n\tResult Path: efr:derivedByRule\n\tMessage: DerivedFacetRequirement must point to exactly one derivation rule.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementDerivationRule ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must point to exactly one derivation rule.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:derivedByRule ]\n\tFocus Node: ex:req_health_normative\n\tValue Node: efr:HealthNormativeKnowledgeRule\n\tResult Path: efr:derivedByRule\n\tMessage: DerivedFacetRequirement must point to exactly one derivation rule.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementDerivationRule ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must point to exactly one derivation rule.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:derivedByRule ]\n\tFocus Node: ex:req_health_prudential\n\tValue Node: efr:HealthPrudentialObligationRule\n\tResult Path: efr:derivedByRule\n\tMessage: DerivedFacetRequirement must point to exactly one derivation rule.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:SeverityBand ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must declare exactly one severity band.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesSeverityBand ]\n\tFocus Node: ex:case_req_profile_health_01\n\tValue Node: efr:SEVERITY_HIGH\n\tResult Path: efr:usesSeverityBand\n\tMessage: CaseRequirementProfile must declare exactly one severity band.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:DomainProfile ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must use exactly one domain profile.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesDomainProfile ]\n\tFocus Node: ex:case_req_profile_health_01\n\tValue Node: wcmkf:HealthDomainProfile\n\tResult Path: efr:usesDomainProfile\n\tMessage: CaseRequirementProfile must use exactly one domain profile.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path wcmkf:requiresFacet ]\n\tFocus Node: ex:req_health_control\n\tValue Node: wcmkf:Controllability\n\tResult Path: wcmkf:requiresFacet\n\tMessage: DerivedFacetRequirement must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path wcmkf:requiresFacet ]\n\tFocus Node: ex:req_health_normative\n\tValue Node: wcmkf:NormativeKnowledge\n\tResult Path: wcmkf:requiresFacet\n\tMessage: DerivedFacetRequirement must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path wcmkf:requiresFacet ]\n\tFocus Node: ex:req_health_prudential\n\tValue Node: wcmkf:PrudentialObligation\n\tResult Path: wcmkf:requiresFacet\n\tMessage: DerivedFacetRequirement must target exactly one facet.\n"
+  },
+  {
+    "label": "exemplo de requisitos INVALIDO",
+    "data": "eth_extracted/eth/ethcase-facet-requirements-example-invalid.ttl",
+    "shapes": "eth_extracted/eth/ethcase-facet-requirements.shacl.ttl",
+    "conforms": false,
+    "n_violations": 16,
+    "n_violation_triples": 212,
+    "violations": [
+      "Conforms: False",
+      "Results (16):",
+      "Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):",
+      "\tSeverity: sh:Violation"
+    ],
+    "report": "Validation Report\nConforms: False\nResults (16):\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PriorityTier ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must declare exactly one priority tier.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:priorityTier ]\n\tFocus Node: ex:req_privacy_bad_1\n\tValue Node: efr:PRIORITY_CRITICAL\n\tResult Path: efr:priorityTier\n\tMessage: DerivedFacetRequirement must declare exactly one priority tier.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PriorityTier ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must declare exactly one priority tier.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:priorityTier ]\n\tFocus Node: ex:req_privacy_bad_2\n\tValue Node: efr:PRIORITY_SUPPORTING\n\tResult Path: efr:priorityTier\n\tMessage: DerivedFacetRequirement must declare exactly one priority tier.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementAggregationProfile ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must declare exactly one aggregation profile.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesAggregationProfile ]\n\tFocus Node: ex:case_req_profile_privacy_01\n\tValue Node: efr:BalancedRequirementAggregation\n\tResult Path: efr:usesAggregationProfile\n\tMessage: CaseRequirementProfile must declare exactly one aggregation profile.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementDerivationRule ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must point to exactly one derivation rule.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:derivedByRule ]\n\tFocus Node: ex:req_privacy_bad_1\n\tValue Node: efr:PrivacyNormativeKnowledgeRule\n\tResult Path: efr:derivedByRule\n\tMessage: DerivedFacetRequirement must point to exactly one derivation rule.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:RequirementDerivationRule ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must point to exactly one derivation rule.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:derivedByRule ]\n\tFocus Node: ex:req_privacy_bad_2\n\tValue Node: efr:PrivacyStakeholderRegardRule\n\tResult Path: efr:derivedByRule\n\tMessage: DerivedFacetRequirement must point to exactly one derivation rule.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:SeverityBand ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must declare exactly one severity band.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesSeverityBand ]\n\tFocus Node: ex:case_req_profile_privacy_01\n\tValue Node: efr:SEVERITY_HIGH\n\tResult Path: efr:usesSeverityBand\n\tMessage: CaseRequirementProfile must declare exactly one severity band.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:DomainProfile ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must use exactly one domain profile.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesDomainProfile ]\n\tFocus Node: ex:case_req_profile_privacy_01\n\tValue Node: wcmkf:PrivacyDataDomainProfile\n\tResult Path: efr:usesDomainProfile\n\tMessage: CaseRequirementProfile must use exactly one domain profile.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path wcmkf:requiresFacet ]\n\tFocus Node: ex:req_privacy_bad_1\n\tValue Node: wcmkf:StakeholderRegard\n\tResult Path: wcmkf:requiresFacet\n\tMessage: DerivedFacetRequirement must target exactly one facet.\nConstraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class wcmkf:Facet ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"DerivedFacetRequirement must target exactly one facet.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path wcmkf:requiresFacet ]\n\tFocus Node: ex:req_privacy_bad_2\n\tValue Node: wcmkf:StakeholderRegard\n\tResult Path: wcmkf:requiresFacet\n\tMessage: DerivedFacetRequirement must target exactly one facet.\nConstraint Violation in MaxInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MaxInclusiveConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:datatype xsd:decimal ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:maxInclusive Literal(\"0.5\", datatype=xsd:decimal) ; sh:message Literal(\"prudentialDelta must be in [0,0.5].\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:minInclusive Literal(\"0\", datatype=xsd:integer) ; sh:path efr:prudentialDelta ]\n\tFocus Node: ex:req_privacy_bad_1\n\tValue Node: Literal(\"0.60\", datatype=xsd:decimal)\n\tResult Path: efr:prudentialDelta\n\tMessage: prudentialDelta must be in [0,0.5].\nConstraint Violation in MaxInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MaxInclusiveConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:datatype xsd:decimal ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:maxInclusive Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"derivedWeight must be in [0,1].\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:minInclusive Literal(\"0\", datatype=xsd:integer) ; sh:path efr:derivedWeight ]\n\tFocus Node: ex:req_privacy_bad_1\n\tValue Node: Literal(\"1.30\", datatype=xsd:decimal)\n\tResult Path: efr:derivedWeight\n\tMessage: derivedWeight must be in [0,1].\nConstraint Violation in MaxInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MaxInclusiveConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:datatype xsd:decimal ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:maxInclusive Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"minimumRequiredLevel must be in [0,1].\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:minInclusive Literal(\"0\", datatype=xsd:integer) ; sh:path wcmkf:minimumRequiredLevel ]\n\tFocus Node: ex:req_privacy_bad_1\n\tValue Node: Literal(\"1.10\", datatype=xsd:decimal)\n\tResult Path: wcmkf:minimumRequiredLevel\n\tMessage: minimumRequiredLevel must be in [0,1].\nConstraint Violation in MaxInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MaxInclusiveConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:datatype xsd:decimal ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:maxInclusive Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"requirementCoverage must be a decimal in [0,1].\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:minInclusive Literal(\"0\", datatype=xsd:integer) ; sh:path efr:requirementCoverage ]\n\tFocus Node: ex:case_req_profile_privacy_01\n\tValue Node: Literal(\"1.20\", datatype=xsd:decimal)\n\tResult Path: efr:requirementCoverage\n\tMessage: requirementCoverage must be a decimal in [0,1].\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:class efr:PrudentialMode ; sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"CaseRequirementProfile must declare exactly one prudential mode.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path efr:usesPrudentialMode ]\n\tFocus Node: ex:case_req_profile_privacy_01\n\tResult Path: efr:usesPrudentialMode\n\tMessage: CaseRequirementProfile must declare exactly one prudential mode.\nConstraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: efr:CaseRequirementProfileShape\n\tFocus Node: ex:case_req_profile_privacy_01\n\tValue Node: ex:case_req_profile_privacy_01\n\tSource Constraint: [ sh:message Literal(\"derivedRequirementCount must equal the number of hasDerivedRequirement links.\", lang=en) ; sh:select Literal(\"\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#>\nPREFIX efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#>\n            SELECT $this WHERE {\n              $this efr:derivedRequirementCount ?declared .\n              {\n                SELECT $this (COUNT(?req) AS ?actual)\n                WHERE { $this efr:hasDerivedRequirement ?req . }\n                GROUP BY $this\n              }\n              FILTER(xsd:integer(?declared) != xsd:integer(?actual))\n            }\n        \") ]\n\tMessage: derivedRequirementCount must equal the number of hasDerivedRequirement links.\nConstraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: efr:DerivedFacetRequirementShape\n\tFocus Node: ex:req_privacy_bad_2\n\tValue Node: ex:req_privacy_bad_2\n\tSource Constraint: [ sh:message Literal(\"minimumRequiredLevel should be at least baseRequiredLevel and no more than baseRequiredLevel + prudentialDelta + 0.15.\", lang=en) ; sh:select Literal(\"\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#>\nPREFIX efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#>\n            SELECT $this WHERE {\n              $this wcmkf:minimumRequiredLevel ?m ;\n                    efr:baseRequiredLevel ?b ;\n                    efr:prudentialDelta ?d .\n              FILTER( xsd:decimal(?m) < xsd:decimal(?b) || xsd:decimal(?m) > (xsd:decimal(?b) + xsd:decimal(?d) + 0.15) )\n            }\n        \") ]\n\tMessage: minimumRequiredLevel should be at least baseRequiredLevel and no more than baseRequiredLevel + prudentialDelta + 0.15.\n"
+  }
+]

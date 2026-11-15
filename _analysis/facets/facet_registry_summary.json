@@ -1,0 +1,41 @@
+{
+  "n_facets": 26,
+  "n_single_pillar": 8,
+  "n_shared_2": 18,
+  "n_shared_3plus": 0,
+  "pillars": {
+    "W": 8,
+    "C": 11,
+    "M": 16,
+    "K": 9
+  },
+  "beta_mass_per_pillar": {
+    "W": 4.8,
+    "C": 6.0,
+    "M": 9.1,
+    "K": 6.1
+  },
+  "guards": [
+    "W2",
+    "W6",
+    "C3",
+    "C6",
+    "M1",
+    "M4",
+    "K6"
+  ],
+  "new_facets": [
+    "W6",
+    "K8"
+  ],
+  "criticality_distribution": {
+    "2": 134,
+    "3": 46,
+    "4": 158
+  },
+  "mean_criticality": 3.07,
+  "domains_with_no_critical_facet": [],
+  "facets_critical_in_no_domain": [],
+  "facets_critical_in_all_13_domains": [],
+  "problems": []
+}

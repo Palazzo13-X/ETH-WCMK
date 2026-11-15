@@ -1,0 +1,28 @@
+{
+  "n_pairs": 1440,
+  "spearman_adequacy_vs_panelB_shortfall": -0.8598,
+  "spearman_adequacy_vs_panelA_critical_gap_count": -0.8793,
+  "spearman_adequacy_vs_max_facet_gap": -0.7735,
+  "n_confrontations_boundary_analysis": 16000,
+  "share_within_0.05_of_a_boundary": 0.3074,
+  "share_within_0.10_of_a_boundary": 0.5609,
+  "median_distance_to_nearest_boundary": 0.0854,
+  "noise_stability_by_sd": {
+    "sd_0.02": {
+      "decision_stability": 0.9767,
+      "mean_abs_rank_change": 0.0233
+    },
+    "sd_0.05": {
+      "decision_stability": 0.9404,
+      "mean_abs_rank_change": 0.0596
+    },
+    "sd_0.1": {
+      "decision_stability": 0.8879,
+      "mean_abs_rank_change": 0.1121
+    },
+    "sd_0.15": {
+      "decision_stability": 0.8254,
+      "mean_abs_rank_change": 0.1767
+    }
+  }
+}

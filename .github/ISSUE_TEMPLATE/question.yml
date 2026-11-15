@@ -1,0 +1,17 @@
+name: Question
+description: Ask how a mechanism, gate or artefact works.
+title: "Q: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Which part of the model, ontology or artefact are you asking about?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Version, round (r2–r5), and the artefact you are looking at.

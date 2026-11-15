@@ -1,0 +1,36 @@
+@prefix : <https://eth2.local/ontology/ethsvc-llm#> .
+@prefix core: <https://eth2.local/ontology/ethcase-core#> .
+@prefix bridge: <https://eth2.local/ontology/bridge#> .
+@prefix assess: <https://eth2.local/ontology/wcmk-assessment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/ethsvc-llm> a owl:Ontology ;
+    rdfs:label "ETHSVC-LLM" ;
+    rdfs:comment "Second-layer service ontology for auditable LLM-supported runs." .
+
+:ServiceRun a owl:Class .
+:ModelInvocation a owl:Class .
+:ToolInvocation a owl:Class .
+:RetrievalRun a owl:Class .
+:PromptTemplate a owl:Class .
+:StructuredOutputSchema a owl:Class .
+:EvidenceSource a owl:Class .
+:GroundingResult a owl:Class .
+:ConfidenceEstimate a owl:Class .
+:ReviewTask a owl:Class .
+:HumanOverride a owl:Class .
+
+:analyzesCase a owl:ObjectProperty ; rdfs:domain :ServiceRun ; rdfs:range core:EthicalCase .
+:proposesAgencyAssessment a owl:ObjectProperty ; rdfs:domain :ServiceRun ; rdfs:range assess:WCMKAssessment .
+:retrievesNormativeSources a owl:ObjectProperty ; rdfs:domain :RetrievalRun ; rdfs:range :EvidenceSource .
+:supportsBridgeEvaluation a owl:ObjectProperty ; rdfs:domain :ServiceRun ; rdfs:range bridge:BridgeEvaluation .
+:requiresReview a owl:ObjectProperty ; rdfs:domain :ServiceRun ; rdfs:range :ReviewTask .
+:producedStructuredOutput a owl:ObjectProperty ; rdfs:domain :ServiceRun ; rdfs:range :StructuredOutputSchema .
+
+:serviceName a owl:DatatypeProperty ; rdfs:domain :ServiceRun ; rdfs:range xsd:string .
+:modelName a owl:DatatypeProperty ; rdfs:domain :ModelInvocation ; rdfs:range xsd:string .
+:promptVersion a owl:DatatypeProperty ; rdfs:domain :PromptTemplate ; rdfs:range xsd:string .
+:confidenceScore a owl:DatatypeProperty ; rdfs:domain :ConfidenceEstimate ; rdfs:range xsd:decimal .
+:reviewOutcome a owl:DatatypeProperty ; rdfs:domain :ReviewTask ; rdfs:range xsd:string .

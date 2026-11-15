@@ -1,0 +1,101 @@
+{
+ "battery": "B16_kappa_by_stratum",
+ "question": "How much of the model-panel disagreement is the disagreement between the normative lenses themselves?",
+ "generated_at": "2026-11-09T18:31:42.356248+00:00",
+ "source": "Evaluacoes/r5/corpus_v7_confrontations.jsonl (corpus v7, canonical beta of v13)",
+ "pairs": 220400,
+ "kappa_model_vs_consensus_overall": 0.5336,
+ "by_domain": {
+  "TS": {
+   "pairs": 16820,
+   "kappa_model_vs_consensus": 0.611
+  },
+  "ED": {
+   "pairs": 16965,
+   "kappa_model_vs_consensus": 0.6103
+  },
+  "RS": {
+   "pairs": 16820,
+   "kappa_model_vs_consensus": 0.5877
+  },
+  "MA": {
+   "pairs": 16820,
+   "kappa_model_vs_consensus": 0.5684
+  },
+  "DS": {
+   "pairs": 16820,
+   "kappa_model_vs_consensus": 0.5511
+  },
+  "PD": {
+   "pairs": 16965,
+   "kappa_model_vs_consensus": 0.5463
+  },
+  "JS": {
+   "pairs": 17110,
+   "kappa_model_vs_consensus": 0.5351
+  },
+  "IC": {
+   "pairs": 17110,
+   "kappa_model_vs_consensus": 0.5203
+  },
+  "IM": {
+   "pairs": 16965,
+   "kappa_model_vs_consensus": 0.505
+  },
+  "GP": {
+   "pairs": 16965,
+   "kappa_model_vs_consensus": 0.5022
+  },
+  "SA": {
+   "pairs": 17110,
+   "kappa_model_vs_consensus": 0.4791
+  },
+  "TB": {
+   "pairs": 16820,
+   "kappa_model_vs_consensus": 0.479
+  },
+  "FI": {
+   "pairs": 17110,
+   "kappa_model_vs_consensus": 0.4624
+  }
+ },
+ "by_coverage": {
+  "below_gate": {
+   "pairs": 18240,
+   "kappa_model_vs_consensus": 1.0
+  },
+  "full_canon_33": {
+   "pairs": 183920,
+   "kappa_model_vs_consensus": 0.3832
+  },
+  "partial": {
+   "pairs": 18240,
+   "kappa_model_vs_consensus": 0.3293
+  }
+ },
+ "by_stratum": {
+  "unanimous": {
+   "pairs": 112179,
+   "kappa_model_vs_consensus": 0.8167,
+   "exact_agreement": 0.915
+  },
+  "majority": {
+   "pairs": 95611,
+   "kappa_model_vs_consensus": 0.1371,
+   "exact_agreement": 0.6656
+  },
+  "contested": {
+   "pairs": 12610,
+   "kappa_model_vs_consensus": 0.0526,
+   "exact_agreement": 0.5977
+  }
+ },
+ "panel_spread_histogram_ranks": {
+  "3": 31429,
+  "0": 112179,
+  "1": 9141,
+  "2": 66528,
+  "4": 1123
+ },
+ "reading": "\u03ba no estrato un\u00e2nime \u00e9 o n\u00famero que o modelo pode defender sem disputa normativa; no estrato contestado, la divergencia es la de las lentes, no la del modelo."
+}

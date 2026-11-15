@@ -1,0 +1,52 @@
+{
+  "corpus": "corpus_v6",
+  "calibration": "fitted B5 v12",
+  "variants": {
+    "full": {
+      "pairs": 183920,
+      "kappa_5class": 0.4681,
+      "kappa_3band": 0.298,
+      "agreement": 0.8308,
+      "mean_adequacy_low": 0.2886,
+      "decision_distribution": {
+        "PROHIBIT": 153048,
+        "REVIEW_REQUIRED": 15188,
+        "ALLOW_WITH_GUARDS": 869,
+        "ABSTAIN": 14702,
+        "ALLOW": 113
+      },
+      "delta_kappa_vs_full": 0.0
+    },
+    "one_hot_beta": {
+      "pairs": 183920,
+      "kappa_5class": 0.187,
+      "kappa_3band": 0.1456,
+      "agreement": 0.5231,
+      "mean_adequacy_low": 0.4829,
+      "decision_distribution": {
+        "PROHIBIT": 81225,
+        "ALLOW_WITH_GUARDS": 3605,
+        "REVIEW_REQUIRED": 91400,
+        "ABSTAIN": 7578,
+        "ALLOW": 112
+      },
+      "delta_kappa_vs_full": -0.2811
+    },
+    "critical_floor": {
+      "pairs": 183920,
+      "kappa_5class": 0.4343,
+      "kappa_3band": 0.2012,
+      "agreement": 0.8373,
+      "mean_adequacy_low": 0.2349,
+      "decision_distribution": {
+        "PROHIBIT": 161084,
+        "ALLOW_WITH_GUARDS": 446,
+        "REVIEW_REQUIRED": 7696,
+        "ABSTAIN": 14667,
+        "ALLOW": 27
+      },
+      "delta_kappa_vs_full": -0.0338
+    }
+  },
+  "reading": "If kappa drops under one_hot_beta, the shared-beta term is doing real work: a duty that spans pillars is being counted where it belongs. If kappa does not change, beta sharing is decorative and the tetrahedral structure is ornament."
+}

@@ -1,0 +1,34 @@
+NOTE: no subset present; validating the full regenerated instance graph
+instance graph parsed: 1893019 triples from instances.ttl
+Traceback (most recent call last):
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1399, in <module>
+    main()
+    ~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1273, in main
+    checks = consistency_checks(full_graph)
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 269, in consistency_checks
+    add("conflictStatus agrees with conflictResolved", "deontic",
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        """SELECT ?cf WHERE { ?cf a eth:NormConflict ; eth:conflictResolved ?r ; eth:conflictStatus ?s .
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           BIND(if(?r = true, "resolved", "unresolved") AS ?expected)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           FILTER(?s <> ?expected) }""")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 248, in add
+    r = rows(full, query)
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 110, in rows
+    return [r.asdict() for r in graph.query(PREFIXES + query)]
+                                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/graph.py", line 1742, in query
+    return result(processor.query(query_object, initBindings, initNs, **kwargs))  # type: ignore[arg-type]
+                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/sparql/processor.py", line 144, in query
+    strOrQuery = translateQuery(parseQuery(strOrQuery), base, initNs)
+                                ~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/plugins/sparql/parser.py", line 1556, in parseQuery
+    return Query.parse_string(q, parse_all=True)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pyparsing/core.py", line 1346, in parse_string
+    raise exc.with_traceback(None)
+pyparsing.exceptions.ParseException: Expected SelectQuery, found 'FILTER'  (at char 580), (line:12, col:12)

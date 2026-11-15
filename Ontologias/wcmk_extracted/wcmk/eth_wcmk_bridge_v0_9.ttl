@@ -1,0 +1,24 @@
+@prefix brg: <https://eth2.ai/ontology/bridge#> .
+@prefix svc: <https://eth2.ai/ontology/ethsvc-llm#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+brg: a owl:Ontology ;
+  rdfs:label "ETH2 bridge ontology v0.9"@en ;
+  rdfs:comment "Bridge adjudication with persisted audience explanations, review worker hooks and normative artifact cache."@en .
+
+brg:BridgeEvaluation a owl:Class .
+brg:DecisionRecommendation a owl:Class .
+brg:ResidualRiskAssessment a owl:Class .
+brg:ThresholdSnapshot a owl:Class .
+brg:GuardrailRequirement a owl:Class .
+brg:AudienceExplanation a owl:Class .
+
+brg:usesNormativeArtifact a owl:ObjectProperty ; rdfs:domain brg:BridgeEvaluation ; rdfs:range svc:NormativeArtifact .
+brg:hasThresholdSnapshot a owl:ObjectProperty ; rdfs:domain brg:BridgeEvaluation ; rdfs:range brg:ThresholdSnapshot .
+brg:requiresReviewTask a owl:ObjectProperty ; rdfs:domain brg:BridgeEvaluation ; rdfs:range svc:ReviewTask .
+brg:explainedByServiceRun a owl:ObjectProperty ; rdfs:domain brg:BridgeEvaluation ; rdfs:range svc:ServiceRun .
+brg:hasAudienceExplanation a owl:ObjectProperty ; rdfs:domain brg:BridgeEvaluation ; rdfs:range svc:ExplanationArtifact .
+brg:decisionCode a owl:DatatypeProperty .
+brg:residualRiskScore a owl:DatatypeProperty .
+brg:reviewRequired a owl:DatatypeProperty .

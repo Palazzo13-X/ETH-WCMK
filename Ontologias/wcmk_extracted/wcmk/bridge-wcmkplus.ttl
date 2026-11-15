@@ -1,0 +1,192 @@
+@prefix : <https://ethwcmk.org/ontology/bridge#> .
+@prefix bridge: <https://ethwcmk.org/ontology/bridge#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/bridge-wcmkplus>
+    a owl:Ontology ;
+    rdfs:label "ETH-WCMK Bridge+ Ontology (Draft v0.2)"@en , "Ontologia Bridge+ ETH-WCMK (rascunho v0.2)"@pt-BR ;
+    rdfs:comment "Bridge layer connecting facetized ethical-case requirements to facetized WCMK agency assessments and confrontation outcomes."@en ,
+                 "Camada bridge que conecta requisitos facetados do caso ético às avaliações facetadas de agência WCMK e aos resultados da confrontação."@pt-BR ;
+    owl:versionInfo "0.2-draft" ;
+    owl:imports <https://ethwcmk.org/ontology/wcmk-facets> , prov: , skos: .
+
+#################################################################
+# Main classes
+#################################################################
+
+bridge:BridgeConfrontation a owl:Class ;
+    rdfs:label "Bridge confrontation"@en , "Confrontação bridge"@pt-BR ;
+    rdfs:comment "A confrontation event or analytical object comparing one ethical case with one facetized agency profile."@en ;
+    rdfs:subClassOf prov:Activity .
+
+bridge:FacetComparison a owl:Class ;
+    rdfs:label "Facet comparison"@en , "Comparação de faceta"@pt-BR ;
+    rdfs:comment "Local comparison between one required facet level and one observed facet assessment."@en ;
+    rdfs:subClassOf prov:Entity .
+
+bridge:AggregateOutcome a owl:Class ;
+    rdfs:label "Aggregate outcome"@en , "Resultado agregado"@pt-BR ;
+    rdfs:comment "Aggregate result of a confrontation, including combined deficit, coverage adequacy and candidate action."@en ;
+    rdfs:subClassOf prov:Entity .
+
+bridge:BridgeDomainCalibrationProfile a owl:Class ;
+    rdfs:label "Bridge domain calibration profile"@en , "Perfil de calibragem bridge por domínio"@pt-BR ;
+    rdfs:comment "Domain-specific thresholds and bridge weighting conventions used in confrontation."@en ;
+    rdfs:subClassOf wcmkf:DomainProfile .
+
+bridge:DecisionVocabulary a skos:ConceptScheme ;
+    skos:prefLabel "Bridge decision vocabulary"@en ;
+    skos:prefLabel "Vocabulário de decisão do bridge"@pt-BR .
+
+#################################################################
+# Controlled concepts
+#################################################################
+
+bridge:ALLOW a skos:Concept ; skos:inScheme bridge:DecisionVocabulary ; skos:prefLabel "ALLOW"@en .
+bridge:ALLOW_WITH_WARNING a skos:Concept ; skos:inScheme bridge:DecisionVocabulary ; skos:prefLabel "ALLOW_WITH_WARNING"@en .
+bridge:ALLOW_WITH_GUARDS a skos:Concept ; skos:inScheme bridge:DecisionVocabulary ; skos:prefLabel "ALLOW_WITH_GUARDS"@en .
+bridge:RESTRICT a skos:Concept ; skos:inScheme bridge:DecisionVocabulary ; skos:prefLabel "RESTRICT"@en .
+bridge:BLOCK a skos:Concept ; skos:inScheme bridge:DecisionVocabulary ; skos:prefLabel "BLOCK"@en .
+bridge:REVIEW_REQUIRED a skos:Concept ; skos:inScheme bridge:DecisionVocabulary ; skos:prefLabel "REVIEW_REQUIRED"@en .
+
+#################################################################
+# Object properties
+#################################################################
+
+bridge:confrontsCase a owl:ObjectProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range eth:EthicalCase ;
+    rdfs:label "confronts case"@en , "confronta caso"@pt-BR .
+
+bridge:confrontsProfile a owl:ObjectProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range wcmkf:FacetizedAgencyProfile ;
+    rdfs:label "confronts profile"@en , "confronta perfil"@pt-BR .
+
+bridge:usesDomainCalibration a owl:ObjectProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range bridge:BridgeDomainCalibrationProfile ;
+    rdfs:label "uses domain calibration"@en , "usa calibragem de domínio"@pt-BR .
+
+bridge:hasFacetComparison a owl:ObjectProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range bridge:FacetComparison ;
+    rdfs:label "has facet comparison"@en , "tem comparação de faceta"@pt-BR .
+
+bridge:hasAggregateOutcome a owl:ObjectProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range bridge:AggregateOutcome ;
+    rdfs:label "has aggregate outcome"@en , "tem resultado agregado"@pt-BR .
+
+bridge:comparisonForFacet a owl:ObjectProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range wcmkf:Facet ;
+    rdfs:label "comparison for facet"@en , "comparação para faceta"@pt-BR .
+
+bridge:usesRequirement a owl:ObjectProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range wcmkf:FacetRequirement ;
+    rdfs:label "uses requirement"@en , "usa requisito"@pt-BR .
+
+bridge:usesAssessment a owl:ObjectProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range wcmkf:FacetAssessment ;
+    rdfs:label "uses assessment"@en , "usa avaliação"@pt-BR .
+
+bridge:producesDeficit a owl:ObjectProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range wcmkf:FacetDeficit ;
+    rdfs:label "produces deficit"@en , "produz déficit"@pt-BR .
+
+bridge:decisionConcept a owl:ObjectProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range skos:Concept ;
+    rdfs:label "decision concept"@en , "conceito de decisão"@pt-BR .
+
+#################################################################
+# Datatype properties
+#################################################################
+
+bridge:derivedRcNorm a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "derived Rc_norm"@en .
+
+bridge:derivedAgencyAdequacy a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "derived agency adequacy"@en .
+
+bridge:derivedResidualRisk a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "derived residual risk"@en .
+
+bridge:decisionRegion a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range xsd:string ;
+    rdfs:label "decision region"@en .
+
+bridge:recommendedAction a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeConfrontation ;
+    rdfs:range xsd:string ;
+    rdfs:label "recommended action"@en .
+
+bridge:coverageAdequacy a owl:DatatypeProperty ;
+    rdfs:domain bridge:AggregateOutcome ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "coverage adequacy"@en .
+
+bridge:aggregateDeficit a owl:DatatypeProperty ;
+    rdfs:domain bridge:AggregateOutcome ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "aggregate deficit"@en .
+
+bridge:criticalDeficitCount a owl:DatatypeProperty ;
+    rdfs:domain bridge:AggregateOutcome ;
+    rdfs:range xsd:integer ;
+    rdfs:label "critical deficit count"@en .
+
+bridge:requiresGuardrail a owl:DatatypeProperty ;
+    rdfs:domain bridge:AggregateOutcome ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "requires guardrail"@en .
+
+bridge:comparisonStatus a owl:DatatypeProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range xsd:string ;
+    rdfs:label "comparison status"@en .
+
+bridge:localWeight a owl:DatatypeProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "local weight"@en .
+
+bridge:localCriticality a owl:DatatypeProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range xsd:string ;
+    rdfs:label "local criticality"@en .
+
+bridge:isBlockingFacet a owl:DatatypeProperty ;
+    rdfs:domain bridge:FacetComparison ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "is blocking facet"@en .
+
+bridge:thresholdRcHi a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeDomainCalibrationProfile ;
+    rdfs:range xsd:decimal .
+
+bridge:thresholdAaAllow a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeDomainCalibrationProfile ;
+    rdfs:range xsd:decimal .
+
+bridge:thresholdAaGuards a owl:DatatypeProperty ;
+    rdfs:domain bridge:BridgeDomainCalibrationProfile ;
+    rdfs:range xsd:decimal .

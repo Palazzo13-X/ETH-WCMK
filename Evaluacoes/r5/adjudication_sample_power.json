@@ -1,0 +1,11 @@
+{
+  "n_cases": 120,
+  "kappa_model_vs_panel_consensus": 0.2067,
+  "standard_error": 0.0482,
+  "ci95": [
+    0.1123,
+    0.3012
+  ],
+  "n_needed_for_half_width_0.05_at_kappa_0.60": 25,
+  "note": "with 120 cases the 95% CI is +/- a few points; the audit packet is a first probe of the human ceiling, not a replacement for the corpus"
+}

@@ -1,0 +1,88 @@
+{
+  "fitted_parameters": {
+    "bar_base": 0.55,
+    "bar_severity": 0.1,
+    "prohibit_margin": 0.25,
+    "guards_margin": 0.05,
+    "stakes_veto_min": 0.7,
+    "hard_veto_delta": 0.25,
+    "material_gap": 0.25,
+    "critical_prohibit_gap": 0.35,
+    "cap_base": 0.4,
+    "cap_stakes_gain": 0.4,
+    "ratio_prohibit": 0.7,
+    "ratio_review": 0.45,
+    "ratio_guards": 0.25,
+    "prohibit_stakes_min": 0.3,
+    "prohibit_needs_material": 0,
+    "veto_slack": 0.1
+  },
+  "objective": 0.5387,
+  "grid_size": 5971968,
+  "vectorised_vs_reference_mismatches": 0,
+  "train": {
+    "n": 840,
+    "kappa_model_vs_gold": 0.4496,
+    "exact_match": 0.6286,
+    "partial_credit": 0.8006,
+    "intent_agreement": 0.6988,
+    "mean_adequacy": 0.5706,
+    "prohibit_share": 0.4286,
+    "distribution": {
+      "PROHIBIT": 360,
+      "REVIEW_REQUIRED": 333,
+      "ALLOW_WITH_GUARDS": 58,
+      "ALLOW": 89
+    }
+  },
+  "held_out_test_layerA": {
+    "n": 680,
+    "kappa_model_vs_gold": 0.415,
+    "exact_match": 0.6176,
+    "partial_credit": 0.7956,
+    "intent_agreement": 0.7088,
+    "mean_adequacy": 0.579,
+    "prohibit_share": 0.3853,
+    "distribution": {
+      "PROHIBIT": 262,
+      "REVIEW_REQUIRED": 304,
+      "ALLOW_WITH_GUARDS": 38,
+      "ALLOW": 76
+    }
+  },
+  "held_out_layerB_narratives": {
+    "n": 320,
+    "kappa_model_vs_gold": 0.4083,
+    "exact_match": 0.6156,
+    "partial_credit": 0.7953,
+    "intent_agreement": 0.7172,
+    "mean_adequacy": 0.5885,
+    "prohibit_share": 0.3531,
+    "distribution": {
+      "PROHIBIT": 113,
+      "REVIEW_REQUIRED": 148,
+      "ALLOW_WITH_GUARDS": 22,
+      "ALLOW": 37
+    }
+  },
+  "unfitted_reference_v10": {
+    "n": 840,
+    "kappa_model_vs_gold": 0.2629,
+    "exact_match": 0.4452,
+    "partial_credit": 0.6982,
+    "intent_agreement": 0.6393,
+    "mean_adequacy": 0.4806,
+    "prohibit_share": 0.6738,
+    "distribution": {
+      "PROHIBIT": 566,
+      "REVIEW_REQUIRED": 135,
+      "ALLOW_WITH_GUARDS": 68,
+      "ALLOW": 71
+    }
+  },
+  "targets": {
+    "kappa_model_vs_gold": 0.6,
+    "intent_agreement": 0.7
+  },
+  "notes": "Only the decision ladder is fitted; theta stays at the B3-calibrated (0.65, 0.60, 0.60, 0.65) and bar_irreversibility/bar_prudential/bar_horizon stay at the v10 values (0.05, 0.02, 0.03). Decisions are taken on the pessimistic adequacy bound (E25-E26)."
+}

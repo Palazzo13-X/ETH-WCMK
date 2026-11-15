@@ -1,0 +1,51 @@
+{
+  "battery": "B14",
+  "question": "risk as a property of the case or of the case x profile pair",
+  "confrontations": 183920,
+  "cases": 1520,
+  "profiles": 121,
+  "grand_mean_R_r": 0.4027,
+  "variance_decomposition": {
+    "case": 0.9807,
+    "profile": 0.008,
+    "interaction_case_x_profile": 0.0113
+  },
+  "per_case_risk_spread": {
+    "mean": 0.0775,
+    "median": 0.0597,
+    "p90": 0.1572,
+    "max": 0.5497,
+    "cases_with_spread_above_1": 0
+  },
+  "verdict_agreement_inside_case": {
+    "cases_with_mixed_verdicts": 235,
+    "share": 0.1546,
+    "distribution_of_verdict_sets": {
+      "PROHIBIT": 1017,
+      "PROHIBIT|REVIEW_REQUIRED": 200,
+      "REVIEW_REQUIRED": 146,
+      "ABSTAIN": 113,
+      "ALLOW_WITH_GUARDS|PROHIBIT|REVIEW_REQUIRED": 25,
+      "ABSTAIN|PROHIBIT|REVIEW_REQUIRED": 5,
+      "ABSTAIN|REVIEW_REQUIRED": 4,
+      "ALLOW_WITH_GUARDS|REVIEW_REQUIRED": 4
+    }
+  },
+  "agency_can_change_the_outcome": {
+    "rescuable_cases": 225,
+    "structural_cases_all_profiles_prohibit": 1017,
+    "cases_no_risk_at_all": 56
+  },
+  "false_safety": {
+    "cases_mean_below_0.30_but_a_profile_above_1.00": 0,
+    "share": 0.0
+  },
+  "tier_mean_risk": {
+    "baseline": 0.3862,
+    "declared": 0.388,
+    "degraded": 0.4012,
+    "optimistic": 0.4113,
+    "unverified": 0.4126
+  },
+  "implication": "The magnitude of the risk is overwhelmingly a property of the duty and the context (case term), not of the agent: the profile term explains under 1% of the variance. But the decision is a threshold, and thresholds are sensitive to the profile: 15.5% of cases change verdict across the 121 profiles of the same case. Risk is structural; admissibility is agential."
+}

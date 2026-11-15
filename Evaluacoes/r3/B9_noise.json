@@ -1,0 +1,32 @@
+{
+  "sigma_0.02": {
+    "decision_flip_rate": 0.095,
+    "mean_abs_adequacy_change": 0.0118,
+    "p95_abs_adequacy_change": 0.034
+  },
+  "sigma_0.05": {
+    "decision_flip_rate": 0.09,
+    "mean_abs_adequacy_change": 0.0273,
+    "p95_abs_adequacy_change": 0.0779
+  },
+  "sigma_0.10": {
+    "decision_flip_rate": 0.085,
+    "mean_abs_adequacy_change": 0.0583,
+    "p95_abs_adequacy_change": 0.1797
+  },
+  "sigma_0.15": {
+    "decision_flip_rate": 0.15,
+    "mean_abs_adequacy_change": 0.1041,
+    "p95_abs_adequacy_change": 0.277
+  },
+  "sigma_0.20": {
+    "decision_flip_rate": 0.2025,
+    "mean_abs_adequacy_change": 0.1491,
+    "p95_abs_adequacy_change": 0.3724
+  },
+  "central_vs_pessimistic_decision_divergence": 0.3,
+  "pessimistic_decision_flip_rate_sigma_0.05": 0.055,
+  "pessimistic_decision_flip_rate_sigma_0.10": 0.14,
+  "pessimistic_decision_flip_rate_sigma_0.20": 0.25,
+  "n_cases": 400
+}

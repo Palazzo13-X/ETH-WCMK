@@ -1,0 +1,1272 @@
+{
+ "generated_at": "2026-11-13T15:08:48.907491+00:00",
+ "documents": [
+  "paper",
+  "report"
+ ],
+ "checks": 177,
+ "passed": 177,
+ "failed": [],
+ "numbers_not_found_in_artifacts": [
+  {
+   "document": "report",
+   "token": "25.930.740",
+   "value": 25930740.0,
+   "context": "a infere \u2014 n\u00e3o p\u00f4de ser executada nesta m\u00e1quina: o processo residente de infer\u00eancia ocupa 25.930.740 KB de RSS (resident set size, a mem\u00f3ria ocupada pelo processo) de um total de 30.951 MB; "
+  },
+  {
+   "document": "report",
+   "token": "30.951",
+   "value": 30951.0,
+   "context": " 25.930.740 KB de RSS (resident set size, a mem\u00f3ria ocupada pelo processo) de um total de 30.951 MB; uma resposta de 60 tokens (unidade de texto que o modelo gera) levou 141,9 s, cerca d"
+  },
+  {
+   "document": "report",
+   "token": "2.370",
+   "value": 2370.0,
+   "context": "u 141,9 s, cerca de 0,4 token/s efetivo, e a chamada com o prompt completo de 33 facetas (2.370 caracteres, num_predict 1.400: o limite de tokens que o motor se compromete a gerar) ultr"
+  }
+ ],
+ "distinct_unmatched": 3,
+ "detail": [
+  {
+   "claim": "confrontations in corpus v7",
+   "document": "paper",
+   "artifact_value": 220400,
+   "found_in_document": "220,400",
+   "pass": true
+  },
+  {
+   "claim": "abstentions below the coverage gate",
+   "document": "paper",
+   "artifact_value": 18240,
+   "found_in_document": "18,240",
+   "pass": true
+  },
+  {
+   "claim": "pairs with the full canon",
+   "document": "paper",
+   "artifact_value": 183920,
+   "found_in_document": "183,920",
+   "pass": true
+  },
+  {
+   "claim": "coverage gate value 0.70",
+   "document": "paper",
+   "artifact_value": 0.7,
+   "found_in_document": "0.70",
+   "pass": true
+  },
+  {
+   "claim": "kappa baseline against the rubric",
+   "document": "paper",
+   "artifact_value": 0.5336,
+   "found_in_document": "0.5336",
+   "pass": true
+  },
+  {
+   "claim": "kappa unanimous stratum",
+   "document": "paper",
+   "artifact_value": 0.8167,
+   "found_in_document": "0.8167",
+   "pass": true
+  },
+  {
+   "claim": "kappa majority stratum",
+   "document": "paper",
+   "artifact_value": 0.1371,
+   "found_in_document": "0.1371",
+   "pass": true
+  },
+  {
+   "claim": "kappa contested stratum",
+   "document": "paper",
+   "artifact_value": 0.0526,
+   "found_in_document": "0.0526",
+   "pass": true
+  },
+  {
+   "claim": "pairs unanimous stratum",
+   "document": "paper",
+   "artifact_value": 112179,
+   "found_in_document": "112,179",
+   "pass": true
+  },
+  {
+   "claim": "highest domain kappa (TS)",
+   "document": "paper",
+   "artifact_value": 0.611,
+   "found_in_document": "0.6110",
+   "pass": true
+  },
+  {
+   "claim": "second highest domain (ED)",
+   "document": "paper",
+   "artifact_value": 0.6103,
+   "found_in_document": "0.6103",
+   "pass": true
+  },
+  {
+   "claim": "lowest domain kappa (FI)",
+   "document": "paper",
+   "artifact_value": 0.4624,
+   "found_in_document": "0.4624",
+   "pass": true
+  },
+  {
+   "claim": "health domain kappa (SA)",
+   "document": "paper",
+   "artifact_value": 0.4791,
+   "found_in_document": "0.4791",
+   "pass": true
+  },
+  {
+   "claim": "telecom domain kappa (TB)",
+   "document": "paper",
+   "artifact_value": 0.479,
+   "found_in_document": "0.4790.",
+   "pass": true
+  },
+  {
+   "claim": "panel-vs-panel kappa A-C",
+   "document": "paper",
+   "artifact_value": 0.6447,
+   "found_in_document": "0.6447,",
+   "pass": true
+  },
+  {
+   "claim": "panel-vs-panel kappa A-B",
+   "document": "paper",
+   "artifact_value": 0.3533,
+   "found_in_document": "0.3533",
+   "pass": true
+  },
+  {
+   "claim": "panel-vs-panel kappa B-C",
+   "document": "paper",
+   "artifact_value": 0.3153,
+   "found_in_document": "0.3153,",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V1 floors x1.10",
+   "document": "paper",
+   "artifact_value": 0.5507,
+   "found_in_document": "0.5507",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V2 floors x0.90",
+   "document": "paper",
+   "artifact_value": 0.525,
+   "found_in_document": "0.5250.",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V6 consensus = lens B only",
+   "document": "paper",
+   "artifact_value": 0.3324,
+   "found_in_document": "0.3324",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V8 coverage gate 0.80",
+   "document": "paper",
+   "artifact_value": 0.6005,
+   "found_in_document": "0.6005",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V10 gap mode assume_breach",
+   "document": "paper",
+   "artifact_value": 0.2974,
+   "found_in_document": "0.2974",
+   "pass": true
+  },
+  {
+   "claim": "baseline kappa of the mechanism battery",
+   "document": "paper",
+   "artifact_value": 0.4028,
+   "found_in_document": "0.4028",
+   "pass": true
+  },
+  {
+   "claim": "oversight inferred from facts kappa",
+   "document": "paper",
+   "artifact_value": 0.4106,
+   "found_in_document": "0.4106",
+   "pass": true
+  },
+  {
+   "claim": "delta of oversight mechanism",
+   "document": "paper",
+   "artifact_value": 0.0078,
+   "found_in_document": "0.0078",
+   "pass": true
+  },
+  {
+   "claim": "CI of oversight delta lower",
+   "document": "paper",
+   "artifact_value": 0.0057,
+   "found_in_document": "0.0057",
+   "pass": true
+  },
+  {
+   "claim": "revised beta canon kappa",
+   "document": "paper",
+   "artifact_value": 0.4047,
+   "found_in_document": "0.4047",
+   "pass": true
+  },
+  {
+   "claim": "pairs in the mechanism battery",
+   "document": "paper",
+   "artifact_value": 130680,
+   "found_in_document": "130,680",
+   "pass": true
+  },
+  {
+   "claim": "ablation baseline kappa",
+   "document": "paper",
+   "artifact_value": 0.4633,
+   "found_in_document": "0.4633",
+   "pass": true
+  },
+  {
+   "claim": "all guards removed kappa",
+   "document": "paper",
+   "artifact_value": 0.1399,
+   "found_in_document": "0.1399",
+   "pass": true
+  },
+  {
+   "claim": "guards delta",
+   "document": "paper",
+   "artifact_value": -0.3234,
+   "found_in_document": "0.3234,",
+   "pass": true
+  },
+  {
+   "claim": "collapse to primary pillar kappa",
+   "document": "paper",
+   "artifact_value": 0.2691,
+   "found_in_document": "0.2691",
+   "pass": true
+  },
+  {
+   "claim": "collapse delta",
+   "document": "paper",
+   "artifact_value": -0.1942,
+   "found_in_document": "0.1942",
+   "pass": true
+  },
+  {
+   "claim": "largest single-guard delta",
+   "document": "paper",
+   "artifact_value": 0.0042,
+   "found_in_document": "0.0042",
+   "pass": true
+  },
+  {
+   "claim": "pairs tested for grounding",
+   "document": "paper",
+   "artifact_value": 43210,
+   "found_in_document": "43,210",
+   "pass": true
+  },
+  {
+   "claim": "pairs with a contradicting fact",
+   "document": "paper",
+   "artifact_value": 42464,
+   "found_in_document": "42,464",
+   "pass": true
+  },
+  {
+   "claim": "share with contradicting fact",
+   "document": "paper",
+   "artifact_value": 0.9827,
+   "found_in_document": "98.27",
+   "pass": true
+  },
+  {
+   "claim": "caps applied",
+   "document": "paper",
+   "artifact_value": 224097,
+   "found_in_document": "224,097",
+   "pass": true
+  },
+  {
+   "claim": "mean excess over cap",
+   "document": "paper",
+   "artifact_value": 0.3611,
+   "found_in_document": "0.3611.",
+   "pass": true
+  },
+  {
+   "claim": "verdicts changed by grounding",
+   "document": "paper",
+   "artifact_value": 18898,
+   "found_in_document": "18,898",
+   "pass": true
+  },
+  {
+   "claim": "review to prohibition moves",
+   "document": "paper",
+   "artifact_value": 15153,
+   "found_in_document": "15,153",
+   "pass": true
+  },
+  {
+   "claim": "kappa without grounding",
+   "document": "paper",
+   "artifact_value": 0.2463,
+   "found_in_document": "0.2463",
+   "pass": true
+  },
+  {
+   "claim": "kappa with grounding",
+   "document": "paper",
+   "artifact_value": 0.5526,
+   "found_in_document": "0.5526",
+   "pass": true
+  },
+  {
+   "claim": "adversarial probes",
+   "document": "paper",
+   "artifact_value": 2064,
+   "found_in_document": "2,064",
+   "pass": true
+  },
+  {
+   "claim": "probe assertions",
+   "document": "paper",
+   "artifact_value": 7815,
+   "found_in_document": "7,815",
+   "pass": true
+  },
+  {
+   "claim": "probe pass rate",
+   "document": "paper",
+   "artifact_value": 1.0,
+   "found_in_document": "1",
+   "pass": true
+  },
+  {
+   "claim": "mirror maximum absolute difference",
+   "document": "paper",
+   "artifact_value": 0.0,
+   "found_in_document": "0.0.",
+   "pass": true
+  },
+  {
+   "claim": "mirror runtime",
+   "document": "paper",
+   "artifact_value": 121.87,
+   "found_in_document": "121.87",
+   "pass": true
+  },
+  {
+   "claim": "mirror confrontations",
+   "document": "paper",
+   "artifact_value": 220400,
+   "found_in_document": "220,400",
+   "pass": true
+  },
+  {
+   "claim": "ontology validated triples",
+   "document": "paper",
+   "artifact_value": 1927780,
+   "found_in_document": "1,927,780",
+   "pass": true
+  },
+  {
+   "claim": "SHACL node shapes",
+   "document": "paper",
+   "artifact_value": 34,
+   "found_in_document": "34",
+   "pass": true
+  },
+  {
+   "claim": "SHACL violations",
+   "document": "paper",
+   "artifact_value": 0,
+   "found_in_document": "0.0.",
+   "pass": true
+  },
+  {
+   "claim": "invalid fixtures detected",
+   "document": "paper",
+   "artifact_value": 76,
+   "found_in_document": "76",
+   "pass": true
+  },
+  {
+   "claim": "ontology mirror max difference",
+   "document": "paper",
+   "artifact_value": 1.614153255502515e-12,
+   "found_in_document": "0.0.",
+   "pass": true
+  },
+  {
+   "claim": "declared mirror tolerance",
+   "document": "paper",
+   "artifact_value": 1e-06,
+   "found_in_document": "1 \u00d7 10\u207b\u2076",
+   "pass": true
+  },
+  {
+   "claim": "ontology validation runtime",
+   "document": "paper",
+   "artifact_value": 301.9,
+   "found_in_document": "301.9",
+   "pass": true
+  },
+  {
+   "claim": "manifest artefacts",
+   "document": "paper",
+   "artifact_value": 51,
+   "found_in_document": "51",
+   "pass": true
+  },
+  {
+   "claim": "manifest tracked bytes",
+   "document": "paper",
+   "artifact_value": 65.86,
+   "found_in_document": "65.86",
+   "pass": true
+  },
+  {
+   "claim": "flip rate at sigma 0.02",
+   "document": "paper",
+   "artifact_value": 0.0132,
+   "found_in_document": "1.32",
+   "pass": true
+  },
+  {
+   "claim": "flip rate at sigma 0.2",
+   "document": "paper",
+   "artifact_value": 0.0856,
+   "found_in_document": "8.56",
+   "pass": true
+  },
+  {
+   "claim": "restrictive shift at sigma 0.2",
+   "document": "paper",
+   "artifact_value": 0.0815,
+   "found_in_document": "0.0815",
+   "pass": true
+  },
+  {
+   "claim": "permissive shift at sigma 0.2",
+   "document": "paper",
+   "artifact_value": 0.0041,
+   "found_in_document": "0.0041",
+   "pass": true
+  },
+  {
+   "claim": "restrictive-to-permissive ratio at sigma 0.2 (19.9, written as twenty times)",
+   "document": "paper",
+   "artifact_value": 19.9,
+   "found_in_document": "twenty times as often",
+   "pass": true
+  },
+  {
+   "claim": "tracked cases in the trajectory",
+   "document": "paper",
+   "artifact_value": 20436,
+   "found_in_document": "20,436",
+   "pass": true
+  },
+  {
+   "claim": "verdict changes in the trajectory",
+   "document": "paper",
+   "artifact_value": 7461,
+   "found_in_document": "7,461",
+   "pass": true
+  },
+  {
+   "claim": "oscillations",
+   "document": "paper",
+   "artifact_value": 103,
+   "found_in_document": "103",
+   "pass": true
+  },
+  {
+   "claim": "hysteresis blocked transitions",
+   "document": "paper",
+   "artifact_value": 6382,
+   "found_in_document": "6,382",
+   "pass": true
+  },
+  {
+   "claim": "risk variance from the case",
+   "document": "paper",
+   "artifact_value": 0.9807,
+   "found_in_document": "98.07",
+   "pass": true
+  },
+  {
+   "claim": "risk variance from the profile",
+   "document": "paper",
+   "artifact_value": 0.008,
+   "found_in_document": "0.80",
+   "pass": true
+  },
+  {
+   "claim": "risk variance interaction",
+   "document": "paper",
+   "artifact_value": 0.0113,
+   "found_in_document": "1.13",
+   "pass": true
+  },
+  {
+   "claim": "cases with mixed verdicts share",
+   "document": "paper",
+   "artifact_value": 0.1546,
+   "found_in_document": "15.46",
+   "pass": true
+  },
+  {
+   "claim": "rescuable cases by agency",
+   "document": "paper",
+   "artifact_value": 225,
+   "found_in_document": "225",
+   "pass": true
+  },
+  {
+   "claim": "holdout kappa",
+   "document": "paper",
+   "artifact_value": 0.4834,
+   "found_in_document": "0.4834",
+   "pass": true
+  },
+  {
+   "claim": "in-sample kappa",
+   "document": "paper",
+   "artifact_value": 0.4618,
+   "found_in_document": "0.4618",
+   "pass": true
+  },
+  {
+   "claim": "transfer gap",
+   "document": "paper",
+   "artifact_value": -0.0215,
+   "found_in_document": "0.0215.",
+   "pass": true
+  },
+  {
+   "claim": "duties delegable without accountability",
+   "document": "paper",
+   "artifact_value": 1,
+   "found_in_document": "1.",
+   "pass": true
+  },
+  {
+   "claim": "share of canon needing accountability",
+   "document": "paper",
+   "artifact_value": 0.9697,
+   "found_in_document": "96.97",
+   "pass": true
+  },
+  {
+   "claim": "worst delegate verdict changes",
+   "document": "paper",
+   "artifact_value": 127,
+   "found_in_document": "127,",
+   "pass": true
+  },
+  {
+   "claim": "worst delegate bottleneck C",
+   "document": "paper",
+   "artifact_value": 905,
+   "found_in_document": "905",
+   "pass": true
+  },
+  {
+   "claim": "baseline adequacy without the veto cap",
+   "document": "paper",
+   "artifact_value": 0.1464,
+   "found_in_document": "0.1464",
+   "pass": true
+  },
+  {
+   "claim": "baseline majority class",
+   "document": "paper",
+   "artifact_value": 0.0,
+   "found_in_document": "0.0000",
+   "pass": true
+  },
+  {
+   "claim": "baseline uncalibrated ladder",
+   "document": "paper",
+   "artifact_value": 0.2025,
+   "found_in_document": "0.2025",
+   "pass": true
+  },
+  {
+   "claim": "facets in the canon",
+   "document": "paper",
+   "artifact_value": 33,
+   "found_in_document": "33",
+   "pass": true
+  },
+  {
+   "claim": "hard guards",
+   "document": "paper",
+   "artifact_value": 12,
+   "found_in_document": "0.12",
+   "pass": true
+  },
+  {
+   "claim": "lattice slots",
+   "document": "paper",
+   "artifact_value": 15,
+   "found_in_document": "0.15.",
+   "pass": true
+  },
+  {
+   "claim": "lattice incidences",
+   "document": "paper",
+   "artifact_value": 108,
+   "found_in_document": "108",
+   "pass": true
+  },
+  {
+   "claim": "derived marginal at canonical beta (1/6)",
+   "document": "paper",
+   "artifact_value": 0.16666666666666666,
+   "found_in_document": "1/6",
+   "pass": true
+  },
+  {
+   "claim": "invariant tests",
+   "document": "paper",
+   "artifact_value": 0,
+   "found_in_document": "0.0.",
+   "pass": true
+  },
+  {
+   "claim": "confrontations in corpus v7",
+   "document": "report",
+   "artifact_value": 220400,
+   "found_in_document": "220.400",
+   "pass": true
+  },
+  {
+   "claim": "abstentions below the coverage gate",
+   "document": "report",
+   "artifact_value": 18240,
+   "found_in_document": "18.240",
+   "pass": true
+  },
+  {
+   "claim": "pairs with the full canon",
+   "document": "report",
+   "artifact_value": 183920,
+   "found_in_document": "183.920,",
+   "pass": true
+  },
+  {
+   "claim": "coverage gate value 0.70",
+   "document": "report",
+   "artifact_value": 0.7,
+   "found_in_document": "70",
+   "pass": true
+  },
+  {
+   "claim": "kappa baseline against the rubric",
+   "document": "report",
+   "artifact_value": 0.5336,
+   "found_in_document": "0,5336",
+   "pass": true
+  },
+  {
+   "claim": "kappa unanimous stratum",
+   "document": "report",
+   "artifact_value": 0.8167,
+   "found_in_document": "0,8167",
+   "pass": true
+  },
+  {
+   "claim": "kappa majority stratum",
+   "document": "report",
+   "artifact_value": 0.1371,
+   "found_in_document": "0,1371",
+   "pass": true
+  },
+  {
+   "claim": "kappa contested stratum",
+   "document": "report",
+   "artifact_value": 0.0526,
+   "found_in_document": "0,0526",
+   "pass": true
+  },
+  {
+   "claim": "pairs unanimous stratum",
+   "document": "report",
+   "artifact_value": 112179,
+   "found_in_document": "112.179",
+   "pass": true
+  },
+  {
+   "claim": "highest domain kappa (TS)",
+   "document": "report",
+   "artifact_value": 0.611,
+   "found_in_document": "0,6110",
+   "pass": true
+  },
+  {
+   "claim": "second highest domain (ED)",
+   "document": "report",
+   "artifact_value": 0.6103,
+   "found_in_document": "0,6103",
+   "pass": true
+  },
+  {
+   "claim": "lowest domain kappa (FI)",
+   "document": "report",
+   "artifact_value": 0.4624,
+   "found_in_document": "0,4624,",
+   "pass": true
+  },
+  {
+   "claim": "health domain kappa (SA)",
+   "document": "report",
+   "artifact_value": 0.4791,
+   "found_in_document": "0,4791",
+   "pass": true
+  },
+  {
+   "claim": "telecom domain kappa (TB)",
+   "document": "report",
+   "artifact_value": 0.479,
+   "found_in_document": "0,4790.",
+   "pass": true
+  },
+  {
+   "claim": "panel-vs-panel kappa A-C",
+   "document": "report",
+   "artifact_value": 0.6447,
+   "found_in_document": "0,6447,",
+   "pass": true
+  },
+  {
+   "claim": "panel-vs-panel kappa A-B",
+   "document": "report",
+   "artifact_value": 0.3533,
+   "found_in_document": "0,3533,",
+   "pass": true
+  },
+  {
+   "claim": "panel-vs-panel kappa B-C",
+   "document": "report",
+   "artifact_value": 0.3153,
+   "found_in_document": "0,3153",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V1 floors x1.10",
+   "document": "report",
+   "artifact_value": 0.5507,
+   "found_in_document": "0,5507",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V2 floors x0.90",
+   "document": "report",
+   "artifact_value": 0.525,
+   "found_in_document": "0,5250",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V6 consensus = lens B only",
+   "document": "report",
+   "artifact_value": 0.3324,
+   "found_in_document": "0,3324",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V8 coverage gate 0.80",
+   "document": "report",
+   "artifact_value": 0.6005,
+   "found_in_document": "0,6005",
+   "pass": true
+  },
+  {
+   "claim": "rubric variant V10 gap mode assume_breach",
+   "document": "report",
+   "artifact_value": 0.2974,
+   "found_in_document": "0,2974.",
+   "pass": true
+  },
+  {
+   "claim": "baseline kappa of the mechanism battery",
+   "document": "report",
+   "artifact_value": 0.4028,
+   "found_in_document": "0.4028",
+   "pass": true
+  },
+  {
+   "claim": "oversight inferred from facts kappa",
+   "document": "report",
+   "artifact_value": 0.4106,
+   "found_in_document": "0.4106",
+   "pass": true
+  },
+  {
+   "claim": "delta of oversight mechanism",
+   "document": "report",
+   "artifact_value": 0.0078,
+   "found_in_document": "0,0078,",
+   "pass": true
+  },
+  {
+   "claim": "CI of oversight delta lower",
+   "document": "report",
+   "artifact_value": 0.0057,
+   "found_in_document": "0,0057",
+   "pass": true
+  },
+  {
+   "claim": "revised beta canon kappa",
+   "document": "report",
+   "artifact_value": 0.4047,
+   "found_in_document": "0.4047",
+   "pass": true
+  },
+  {
+   "claim": "pairs in the mechanism battery",
+   "document": "report",
+   "artifact_value": 130680,
+   "found_in_document": "130.680",
+   "pass": true
+  },
+  {
+   "claim": "ablation baseline kappa",
+   "document": "report",
+   "artifact_value": 0.4633,
+   "found_in_document": "0,4633",
+   "pass": true
+  },
+  {
+   "claim": "all guards removed kappa",
+   "document": "report",
+   "artifact_value": 0.1399,
+   "found_in_document": "0,1399",
+   "pass": true
+  },
+  {
+   "claim": "guards delta",
+   "document": "report",
+   "artifact_value": -0.3234,
+   "found_in_document": "0,3234",
+   "pass": true
+  },
+  {
+   "claim": "collapse to primary pillar kappa",
+   "document": "report",
+   "artifact_value": 0.2691,
+   "found_in_document": "0,2691",
+   "pass": true
+  },
+  {
+   "claim": "collapse delta",
+   "document": "report",
+   "artifact_value": -0.1942,
+   "found_in_document": "0,1942",
+   "pass": true
+  },
+  {
+   "claim": "largest single-guard delta",
+   "document": "report",
+   "artifact_value": 0.0042,
+   "found_in_document": "0,0042",
+   "pass": true
+  },
+  {
+   "claim": "pairs tested for grounding",
+   "document": "report",
+   "artifact_value": 43210,
+   "found_in_document": "43.210",
+   "pass": true
+  },
+  {
+   "claim": "pairs with a contradicting fact",
+   "document": "report",
+   "artifact_value": 42464,
+   "found_in_document": "42.464",
+   "pass": true
+  },
+  {
+   "claim": "share with contradicting fact",
+   "document": "report",
+   "artifact_value": 0.9827,
+   "found_in_document": "98,27",
+   "pass": true
+  },
+  {
+   "claim": "caps applied",
+   "document": "report",
+   "artifact_value": 224097,
+   "found_in_document": "224.097",
+   "pass": true
+  },
+  {
+   "claim": "mean excess over cap",
+   "document": "report",
+   "artifact_value": 0.3611,
+   "found_in_document": "0,3611.",
+   "pass": true
+  },
+  {
+   "claim": "verdicts changed by grounding",
+   "document": "report",
+   "artifact_value": 18898,
+   "found_in_document": "18.898",
+   "pass": true
+  },
+  {
+   "claim": "review to prohibition moves",
+   "document": "report",
+   "artifact_value": 15153,
+   "found_in_document": "15.153",
+   "pass": true
+  },
+  {
+   "claim": "kappa without grounding",
+   "document": "report",
+   "artifact_value": 0.2463,
+   "found_in_document": "0,2463",
+   "pass": true
+  },
+  {
+   "claim": "kappa with grounding",
+   "document": "report",
+   "artifact_value": 0.5526,
+   "found_in_document": "0,5526",
+   "pass": true
+  },
+  {
+   "claim": "adversarial probes",
+   "document": "report",
+   "artifact_value": 2064,
+   "found_in_document": "2.064",
+   "pass": true
+  },
+  {
+   "claim": "probe assertions",
+   "document": "report",
+   "artifact_value": 7815,
+   "found_in_document": "7.815",
+   "pass": true
+  },
+  {
+   "claim": "probe pass rate",
+   "document": "report",
+   "artifact_value": 1.0,
+   "found_in_document": "1,0",
+   "pass": true
+  },
+  {
+   "claim": "mirror maximum absolute difference",
+   "document": "report",
+   "artifact_value": 0.0,
+   "found_in_document": "0.0.",
+   "pass": true
+  },
+  {
+   "claim": "mirror runtime",
+   "document": "report",
+   "artifact_value": 121.87,
+   "found_in_document": "121,87",
+   "pass": true
+  },
+  {
+   "claim": "mirror confrontations",
+   "document": "report",
+   "artifact_value": 220400,
+   "found_in_document": "220.400",
+   "pass": true
+  },
+  {
+   "claim": "ontology validated triples",
+   "document": "report",
+   "artifact_value": 1927780,
+   "found_in_document": "1.927.780",
+   "pass": true
+  },
+  {
+   "claim": "SHACL node shapes",
+   "document": "report",
+   "artifact_value": 34,
+   "found_in_document": "34",
+   "pass": true
+  },
+  {
+   "claim": "SHACL violations",
+   "document": "report",
+   "artifact_value": 0,
+   "found_in_document": "0",
+   "pass": true
+  },
+  {
+   "claim": "invalid fixtures detected",
+   "document": "report",
+   "artifact_value": 76,
+   "found_in_document": "76",
+   "pass": true
+  },
+  {
+   "claim": "ontology mirror max difference",
+   "document": "report",
+   "artifact_value": 1.614153255502515e-12,
+   "found_in_document": "0.0.",
+   "pass": true
+  },
+  {
+   "claim": "declared mirror tolerance",
+   "document": "report",
+   "artifact_value": 1e-06,
+   "found_in_document": "1\u00d710\u207b\u2076",
+   "pass": true
+  },
+  {
+   "claim": "ontology validation runtime",
+   "document": "report",
+   "artifact_value": 301.9,
+   "found_in_document": "301,9",
+   "pass": true
+  },
+  {
+   "claim": "manifest artefacts",
+   "document": "report",
+   "artifact_value": 51,
+   "found_in_document": "51",
+   "pass": true
+  },
+  {
+   "claim": "manifest tracked bytes",
+   "document": "report",
+   "artifact_value": 65.86,
+   "found_in_document": "65,86",
+   "pass": true
+  },
+  {
+   "claim": "flip rate at sigma 0.02",
+   "document": "report",
+   "artifact_value": 0.0132,
+   "found_in_document": "1,32",
+   "pass": true
+  },
+  {
+   "claim": "flip rate at sigma 0.2",
+   "document": "report",
+   "artifact_value": 0.0856,
+   "found_in_document": "8,56",
+   "pass": true
+  },
+  {
+   "claim": "restrictive shift at sigma 0.2",
+   "document": "report",
+   "artifact_value": 0.0815,
+   "found_in_document": "0,0815",
+   "pass": true
+  },
+  {
+   "claim": "permissive shift at sigma 0.2",
+   "document": "report",
+   "artifact_value": 0.0041,
+   "found_in_document": "0,0041",
+   "pass": true
+  },
+  {
+   "claim": "restrictive-to-permissive ratio at sigma 0.2 (19.9, written as twenty times)",
+   "document": "report",
+   "artifact_value": 19.9,
+   "found_in_document": "vinte vezes mais",
+   "pass": true
+  },
+  {
+   "claim": "tracked cases in the trajectory",
+   "document": "report",
+   "artifact_value": 20436,
+   "found_in_document": "20.436",
+   "pass": true
+  },
+  {
+   "claim": "verdict changes in the trajectory",
+   "document": "report",
+   "artifact_value": 7461,
+   "found_in_document": "7.461",
+   "pass": true
+  },
+  {
+   "claim": "oscillations",
+   "document": "report",
+   "artifact_value": 103,
+   "found_in_document": "103",
+   "pass": true
+  },
+  {
+   "claim": "hysteresis blocked transitions",
+   "document": "report",
+   "artifact_value": 6382,
+   "found_in_document": "6.382",
+   "pass": true
+  },
+  {
+   "claim": "risk variance from the case",
+   "document": "report",
+   "artifact_value": 0.9807,
+   "found_in_document": "98,07",
+   "pass": true
+  },
+  {
+   "claim": "risk variance from the profile",
+   "document": "report",
+   "artifact_value": 0.008,
+   "found_in_document": "0,80",
+   "pass": true
+  },
+  {
+   "claim": "risk variance interaction",
+   "document": "report",
+   "artifact_value": 0.0113,
+   "found_in_document": "1,13",
+   "pass": true
+  },
+  {
+   "claim": "cases with mixed verdicts share",
+   "document": "report",
+   "artifact_value": 0.1546,
+   "found_in_document": "15,46",
+   "pass": true
+  },
+  {
+   "claim": "rescuable cases by agency",
+   "document": "report",
+   "artifact_value": 225,
+   "found_in_document": "225",
+   "pass": true
+  },
+  {
+   "claim": "holdout kappa",
+   "document": "report",
+   "artifact_value": 0.4834,
+   "found_in_document": "0,4834",
+   "pass": true
+  },
+  {
+   "claim": "in-sample kappa",
+   "document": "report",
+   "artifact_value": 0.4618,
+   "found_in_document": "0,4618",
+   "pass": true
+  },
+  {
+   "claim": "transfer gap",
+   "document": "report",
+   "artifact_value": -0.0215,
+   "found_in_document": "0,0215.",
+   "pass": true
+  },
+  {
+   "claim": "narrative layer kappa fitted",
+   "document": "report",
+   "artifact_value": 0.6617,
+   "found_in_document": "0,6617",
+   "pass": true
+  },
+  {
+   "claim": "duties delegable without accountability",
+   "document": "report",
+   "artifact_value": 1,
+   "found_in_document": "1",
+   "pass": true
+  },
+  {
+   "claim": "share of canon needing accountability",
+   "document": "report",
+   "artifact_value": 0.9697,
+   "found_in_document": "96,97",
+   "pass": true
+  },
+  {
+   "claim": "worst delegate verdict changes",
+   "document": "report",
+   "artifact_value": 127,
+   "found_in_document": "127,",
+   "pass": true
+  },
+  {
+   "claim": "worst delegate bottleneck C",
+   "document": "report",
+   "artifact_value": 905,
+   "found_in_document": "905",
+   "pass": true
+  },
+  {
+   "claim": "baseline adequacy without the veto cap",
+   "document": "report",
+   "artifact_value": 0.1464,
+   "found_in_document": "0.1464",
+   "pass": true
+  },
+  {
+   "claim": "baseline majority class",
+   "document": "report",
+   "artifact_value": 0.0,
+   "found_in_document": "0.000",
+   "pass": true
+  },
+  {
+   "claim": "baseline uncalibrated ladder",
+   "document": "report",
+   "artifact_value": 0.2025,
+   "found_in_document": "0.2025",
+   "pass": true
+  },
+  {
+   "claim": "facets in the canon",
+   "document": "report",
+   "artifact_value": 33,
+   "found_in_document": "33",
+   "pass": true
+  },
+  {
+   "claim": "hard guards",
+   "document": "report",
+   "artifact_value": 12,
+   "found_in_document": "12",
+   "pass": true
+  },
+  {
+   "claim": "lattice slots",
+   "document": "report",
+   "artifact_value": 15,
+   "found_in_document": "15",
+   "pass": true
+  },
+  {
+   "claim": "lattice incidences",
+   "document": "report",
+   "artifact_value": 108,
+   "found_in_document": "108",
+   "pass": true
+  },
+  {
+   "claim": "derived marginal at canonical beta (1/6)",
+   "document": "report",
+   "artifact_value": 0.16666666666666666,
+   "found_in_document": "1/6",
+   "pass": true
+  },
+  {
+   "claim": "invariant tests",
+   "document": "report",
+   "artifact_value": 0,
+   "found_in_document": "0",
+   "pass": true
+  }
+ ]
+}

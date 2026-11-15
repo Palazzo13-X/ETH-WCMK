@@ -1,0 +1,9 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix arch: <https://example.org/eth2/arch#> .
+
+arch:EthcaseCoreShape a sh:NodeShape ;
+  sh:targetClass arch:CoreCase ;
+  sh:property [ sh:path arch:caseId ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:title ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path arch:domain ; sh:minCount 1 ; sh:datatype xsd:string ] .

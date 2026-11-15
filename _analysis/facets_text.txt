@@ -1,0 +1,822 @@
+Catálogo WCMK+ de Facetas
+Especificação rica para extensão do núcleo ontológico ETH-WCMK
+Definições semânticas, observáveis, regras de agregação, criticidade por domínio e desenho ontológico
+Documento de trabalho técnicoBaseado na evolução matemática tetraédrica do projeto e na proposta de extensão facetada WCMK+.
+Objetivo
+Consolidar uma extensão rica do WCMK como catálogo canônico de facetas, preservando a projeção para o tetraedro e preparando a futura ontologia wcmk-facets.ttl, os shapes de validação e a confrontação ETHCASE × WCMK.
+
+1. Propósito e princípios de desenho
+Este catálogo define uma extensão rica do núcleo WCMK sem substituir o tetraedro canônico. O objetivo é aumentar a expressividade semântica, a capacidade de calibração por domínio e a auditabilidade da confrontação entre caso ético e perfil de agência.
+Princípios adotados: i) núcleo estável; ii) facetas projetáveis para W, C, M e K; iii) combinação de agregação compensatória e não compensatória; iv) criticidade dependente de domínio; v) acoplamento explícito com proveniência, validação e perfis setoriais.
+O tetraedro permanece como representação mínima e comparável da agência ética.
+As facetas enriquecem cada vértice com granularidade suficiente para avaliação, explicação e calibração.
+Nem toda faceta é plenamente compensável; em especial, camadas normativas, prudenciais e de incerteza devem admitir overrides.
+2. Arquitetura conceitual do WCMK+
+A figura a seguir apresenta a arquitetura geral da extensão. No centro permanece o núcleo tetraédrico canônico, responsável pela comparabilidade histórica e pela projeção dos indicadores agregados. Ao redor, surgem os quatro conjuntos facetados — Want, Can, Must e Know — que tornam a ontologia mais expressiva e permitem confrontações mais finas entre ETHCASE e perfis WCMK.
+
+Figura 1 — WCMK+ como extensão facetada do núcleo tetraédrico.
+A representação mostra que a expansão não rompe a estrutura canônica. Em vez disso, a ontologia passa a operar em camadas: facetas internas alimentam agregações controladas, que por sua vez projetam novamente para W, C, M e K. O resultado é uma arquitetura mais adequada para calibração, explicabilidade e governança.
+3. Domínios de referência para criticidade
+Para evitar descrições vagas, o catálogo usa um conjunto estável de domínios de referência. A criticidade de cada faceta é expressa em termos dos domínios em que ela tende a ser especialmente material.
+Sigla
+Domínio
+Sigla
+Domínio
+Observação
+SA
+Saúde
+JS
+Justiça e Segurança
+riscos de dano direto e irreversível
+IC
+Infraestrutura Crítica
+FI
+Finanças
+dependência de confiabilidade e contenção
+PD
+Privacidade e Dados
+GP
+Governança Pública
+forte componente normativo e accountability
+IM
+Informação e Mídia
+ED
+Educação
+efeitos distributivos, cognitivos e sociais
+TB
+Trabalho
+MA
+Meio Ambiente e Energia
+impactos institucionais e sistêmicos
+Esses domínios funcionam como referência de criticidade, não como taxonomia fechada. A calibragem concreta do projeto pode especializá-los ou subdividi-los sem alterar a estrutura do catálogo.
+4. Visão geral do catálogo facetado
+A Tabela 1 sintetiza as 24 facetas propostas. Ela serve como índice canônico do catálogo e mostra, para cada elemento, sua função central e os domínios em que tende a adquirir maior materialidade regulatória, prudencial ou operacional.
+Código
+Faceta
+Função central
+Domínios críticos
+W1
+Orientação finalística
+Que fim prático o agente está perseguindo neste caso?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Governança Pública
+W2
+Alinhamento axiológico
+O fim perseguido é compatível com os valores éticos e institucionais pertinentes?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Privacidade e Dados, Governança Pública
+W3
+Consideração de stakeholders
+Quem entra no horizonte moral do agente ao decidir?
+Saúde, Justiça e Segurança, Privacidade e Dados, Governança Pública, Informação e Mídia
+W4
+Disciplina de prioridades
+Como o agente ordena objetivos concorrentes sob tensão ética?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Privacidade e Dados, Finanças
+W5
+Estabilidade intencional
+A orientação do agente permanece coerente sob variação contextual?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados
+C1
+Capacidade funcional
+O agente consegue executar a tarefa requerida?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças
+C2
+Robustez
+O desempenho se mantém sob ruído, variação e inputs adversos?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Informação e Mídia
+C3
+Controlabilidade
+O agente pode ser contido, interrompido, ajustado e auditado durante ou após a ação?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados, Governança Pública
+C4
+Adequação de escopo
+A competência do agente é adequada ao domínio, ao caso e ao papel?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados
+C5
+Suficiência de recursos
+Há meios informacionais, computacionais, temporais e organizacionais suficientes?
+Infraestrutura Crítica, Saúde, Finanças, Governança Pública
+C6
+Executabilidade segura
+A ação pode ser executada sem produzir risco desproporcional?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados
+M1
+Obrigação legal
+Quais deveres jurídicos vinculam a ação do agente?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados, Governança Pública
+M2
+Obrigação de policy institucional
+Quais políticas internas, protocolos e normas organizacionais se aplicam?
+Finanças, Privacidade e Dados, Governança Pública, Infraestrutura Crítica, Saúde
+M3
+Obrigação por princípio ético
+Quais princípios éticos materiais devem orientar o caso?
+Saúde, Justiça e Segurança, Privacidade e Dados, Governança Pública, Informação e Mídia
+M4
+Obrigação prudencial
+Que cautela adicional o caso exige pela sua gravidade, ambiguidade ou irreversibilidade?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados
+M5
+Obrigação de papel
+Quais deveres decorrem do papel específico do agente no sistema sociotécnico?
+Governança Pública, Justiça e Segurança, Saúde, Finanças, Infraestrutura Crítica
+M6
+Obrigação de accountability
+A decisão pode ser rastreada, explicada e atribuída?
+Finanças, Privacidade e Dados, Governança Pública, Saúde, Justiça e Segurança
+K1
+Conhecimento evidencial
+Quais fatos relevantes o agente conhece com base em evidência disponível?
+Saúde, Finanças, Justiça e Segurança, Privacidade e Dados, Governança Pública
+K2
+Conhecimento contextual
+O agente compreende o domínio, a situação e as circunstâncias relevantes?
+Saúde, Justiça e Segurança, Privacidade e Dados, Governança Pública, Infraestrutura Crítica
+K3
+Conhecimento normativo
+O agente sabe quais normas, políticas e princípios se aplicam?
+Saúde, Justiça e Segurança, Finanças, Privacidade e Dados, Governança Pública
+K4
+Conhecimento procedural
+O agente sabe como agir corretamente, em que sequência e com quais controles?
+Saúde, Justiça e Segurança, Finanças, Governança Pública, Infraestrutura Crítica
+K5
+Conhecimento causal
+O agente entende os efeitos possíveis de sua ação, inclusive efeitos de segunda ordem?
+Infraestrutura Crítica, Governança Pública, Justiça e Segurança, Saúde, Meio Ambiente e Energia
+K6
+Metaconhecimento e consciência de incerteza
+O agente sabe o que não sabe e reconhece limites epistêmicos?
+Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados
+K7
+Consciência de proveniência
+O agente sabe de onde vêm suas evidências, regras e justificativas?
+Privacidade e Dados, Finanças, Governança Pública, Saúde, Justiça e Segurança
+A visão de conjunto deixa clara a distribuição semântica do modelo: Want concentra orientação e ordenação de fins; Can concentra competência, robustez e governabilidade da execução; Must concentra a normatividade estratificada; e Know concentra suficiência epistêmica, procedimental e de proveniência.
+5. Catálogo de Want (W): orientação prática e estrutura teleológica
+Want deixa de ser lido como um desejo antropomórfico e passa a ser interpretado como a orientação prática do agente. Suas facetas capturam o fim perseguido, o alinhamento axiológico, o horizonte moral considerado e a disciplina de prioridades sob tensão ética.
+A tabela-resumo abaixo organiza as facetas deste vértice, indicando a pergunta orientadora de cada uma e o seu papel dominante na agregação para o escalar canônico correspondente.
+Código
+Faceta
+Pergunta orientadora
+Papel na agregação
+W1
+Orientação finalística
+Que fim prático o agente está perseguindo neste caso?
+Composicional. Pode receber peso alto em domínios em que a definição do fim é parte do próprio risco, mas raramente deve operar como override isolado.
+W2
+Alinhamento axiológico
+O fim perseguido é compatível com os valores éticos e institucionais pertinentes?
+Parcialmente não compensatória em domínios sensíveis. Pode gerar penalidade quando metas eficientes colidem com dignidade, justiça ou segurança.
+W3
+Consideração de stakeholders
+Quem entra no horizonte moral do agente ao decidir?
+Composicional com penalidade quando stakeholders críticos ficam fora do modelo decisório.
+W4
+Disciplina de prioridades
+Como o agente ordena objetivos concorrentes sob tensão ética?
+Forte impacto em confrontação. Em domínios críticos deve aproximar-se de uma política lexicográfica ou de pisos prudenciais.
+W5
+Estabilidade intencional
+A orientação do agente permanece coerente sob variação contextual?
+Penalidade de instabilidade. Pode ser moderada por contexto exploratório, mas não em contextos de alto risco.
+Em conjunto, essas facetas mostram que o vértice canônico não é um bloco opaco. Ele funciona como projeção sintética de uma microestrutura semântica que pode ser calibrada e auditada sem perder comparabilidade com o tetraedro original.
+W1. Orientação finalística (Goal Orientation)
+Função no modelo. Direção teleológica imediata da ação: qual objetivo operacional e social é priorizado pelo agente ao responder ao caso.
+Pergunta orientadora
+Que fim prático o agente está perseguindo neste caso?
+Observáveis sugeridos
+objetivo declarado; função do sistema; prompt ou policy de tarefa; metas implícitas inferidas da saída; métricas-alvo do serviço.
+Regra de agregação
+Composicional. Pode receber peso alto em domínios em que a definição do fim é parte do próprio risco, mas raramente deve operar como override isolado.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Governança Pública. Média: Privacidade e Dados, Informação e Mídia, Educação, Trabalho.
+Classe ontológica sugerida
+wcmk:GoalOrientation
+Propriedades centrais
+wcmk:hasStatedGoal, wcmk:hasOperationalTarget, wcmk:projectsToCoreVertex wcmk:Want
+Risco quando insuficiente
+finalidade imprópria, drift teleológico, otimização local sem consideração do bem protegido.
+Leitura de projeto. Ancorar por domínio em taxonomias de finalidade permitida/proibida e por perfil institucional.
+W2. Alinhamento axiológico (Value Alignment)
+Função no modelo. Compatibilidade da orientação do agente com valores explicitados pelo projeto, pela organização e pelo contexto normativo.
+Pergunta orientadora
+O fim perseguido é compatível com os valores éticos e institucionais pertinentes?
+Observáveis sugeridos
+aderência a princípios; coerência com PBIA/UNESCO/OECD; distância entre objetivo instrumental e valores declarados.
+Regra de agregação
+Parcialmente não compensatória em domínios sensíveis. Pode gerar penalidade quando metas eficientes colidem com dignidade, justiça ou segurança.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Privacidade e Dados, Governança Pública. Média: Finanças, Informação e Mídia, Educação, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:ValueAlignment
+Propriedades centrais
+wcmk:alignedWithValue, wcmk:violatesValue, wcmk:hasAlignmentScore
+Risco quando insuficiente
+agente eficaz, porém orientado por valores inadequados ou incompletos.
+Leitura de projeto. Usar matrizes de princípios por domínio e pesos reforçados para direitos fundamentais.
+W3. Consideração de stakeholders (Stakeholder Regard)
+Função no modelo. Amplitude e qualidade da consideração dos afetados relevantes, incluindo usuários, terceiros, grupos vulneráveis e externalidades sistêmicas.
+Pergunta orientadora
+Quem entra no horizonte moral do agente ao decidir?
+Observáveis sugeridos
+referência a partes afetadas; cobertura de grupos vulneráveis; tratamento de externalidades; análise de impactos indiretos.
+Regra de agregação
+Composicional com penalidade quando stakeholders críticos ficam fora do modelo decisório.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Privacidade e Dados, Governança Pública, Informação e Mídia. Média: Finanças, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:StakeholderRegard
+Propriedades centrais
+wcmk:considersStakeholder, wcmk:omitsStakeholder, wcmk:hasStakeholderCoverage
+Risco quando insuficiente
+miopia moral, externalização de dano e invisibilidade de grupos afetados.
+Leitura de projeto. Mapear stakeholders por domínio e exigir cobertura mínima em casos multiator.
+W4. Disciplina de prioridades (Priority Discipline)
+Função no modelo. Capacidade de priorizar fins quando há conflito entre eficiência, segurança, privacidade, justiça, explicabilidade ou outros bens protegidos.
+Pergunta orientadora
+Como o agente ordena objetivos concorrentes sob tensão ética?
+Observáveis sugeridos
+regras de precedência; resolução de trade-offs; comportamento sob conflito entre objetivos; justificativas de prioridade.
+Regra de agregação
+Forte impacto em confrontação. Em domínios críticos deve aproximar-se de uma política lexicográfica ou de pisos prudenciais.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Privacidade e Dados, Finanças. Média: Governança Pública, Informação e Mídia, Educação, Trabalho.
+Classe ontológica sugerida
+wcmk:PriorityDiscipline
+Propriedades centrais
+wcmk:hasPriorityRule, wcmk:ranksObjectiveAbove, wcmk:hasTradeoffPolicy
+Risco quando insuficiente
+colisão desordenada de objetivos; maximização oportunista; degradação de bens não instrumentais.
+Leitura de projeto. Calibrar com perfis setoriais e regras de precedência explícitas.
+W5. Estabilidade intencional (Intentional Stability)
+Função no modelo. Persistência da direção prática legítima ao longo do tempo, da sessão ou de mudanças moderadas nas condições do caso.
+Pergunta orientadora
+A orientação do agente permanece coerente sob variação contextual?
+Observáveis sugeridos
+variância de metas em cenários próximos; sensibilidade a prompts adversários; consistência longitudinal.
+Regra de agregação
+Penalidade de instabilidade. Pode ser moderada por contexto exploratório, mas não em contextos de alto risco.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados. Média: Governança Pública, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:IntentionalStability
+Propriedades centrais
+wcmk:hasStabilityScore, wcmk:driftsUnderPerturbation
+Risco quando insuficiente
+mudança oportunista do fim, prompt hijacking axiológico, oscilação de orientação.
+Leitura de projeto. Medir por baterias de contraste e sensibilidade contextual.
+6. Catálogo de Can (C): capacidade efetiva sob restrições reais
+Can não se reduz a potência técnica bruta. No catálogo proposto, ele descreve a capacidade realizável sob controle, escopo legítimo, recursos suficientes e executabilidade segura.
+A tabela-resumo abaixo organiza as facetas deste vértice, indicando a pergunta orientadora de cada uma e o seu papel dominante na agregação para o escalar canônico correspondente.
+Código
+Faceta
+Pergunta orientadora
+Papel na agregação
+C1
+Capacidade funcional
+O agente consegue executar a tarefa requerida?
+Componente basal de C. Compensável apenas parcialmente.
+C2
+Robustez
+O desempenho se mantém sob ruído, variação e inputs adversos?
+Penalidade forte quando a tarefa é sensível a falhas raras porém graves.
+C3
+Controlabilidade
+O agente pode ser contido, interrompido, ajustado e auditado durante ou após a ação?
+Quase não compensatória em domínios críticos; baixa C3 deve gerar guarda ou restrição.
+C4
+Adequação de escopo
+A competência do agente é adequada ao domínio, ao caso e ao papel?
+Penalidade de desajuste. Deve reduzir fortemente Aa quando o caso excede o escopo.
+C5
+Suficiência de recursos
+Há meios informacionais, computacionais, temporais e organizacionais suficientes?
+Composicional; ganha peso quando restrições de recurso degradam segurança ou justiça.
+C6
+Executabilidade segura
+A ação pode ser executada sem produzir risco desproporcional?
+Faceta crítica de decisão; pode atuar como gate adicional em alto risco.
+Em conjunto, essas facetas mostram que o vértice canônico não é um bloco opaco. Ele funciona como projeção sintética de uma microestrutura semântica que pode ser calibrada e auditada sem perder comparabilidade com o tetraedro original.
+C1. Capacidade funcional (Functional Capability)
+Função no modelo. Capacidade efetiva de produzir a ação ou resposta pretendida com desempenho suficiente para o caso.
+Pergunta orientadora
+O agente consegue executar a tarefa requerida?
+Observáveis sugeridos
+taxa de sucesso; cobertura funcional; precisão operacional; completude de execução.
+Regra de agregação
+Componente basal de C. Compensável apenas parcialmente.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças. Média: Privacidade e Dados, Governança Pública, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:FunctionalCapability
+Propriedades centrais
+wcmk:hasCapabilityScore, wcmk:canExecuteTask
+Risco quando insuficiente
+incapacidade prática mascarada por boa intenção ou bom discurso normativo.
+Leitura de projeto. Derivar de benchmarks e testes de capacidade por tipo de caso.
+C2. Robustez (Robustness)
+Função no modelo. Estabilidade funcional diante de perturbações, distribuição variável, incompletude e tentativas de exploração.
+Pergunta orientadora
+O desempenho se mantém sob ruído, variação e inputs adversos?
+Observáveis sugeridos
+sensibilidade a ruído; testes adversariais; degradação fora da distribuição; estabilidade por amostra.
+Regra de agregação
+Penalidade forte quando a tarefa é sensível a falhas raras porém graves.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Informação e Mídia. Média: Privacidade e Dados, Governança Pública, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:Robustness
+Propriedades centrais
+wcmk:resistsPerturbation, wcmk:hasRobustnessScore
+Risco quando insuficiente
+erro escalável e comportamento imprevisível em cenários limítrofes.
+Leitura de projeto. Usar baterias de contraste, near-ties e estresse distribuído.
+C3. Controlabilidade (Controllability)
+Função no modelo. Grau em que a ação do agente permanece sob supervisão, contenção e reversibilidade operacional.
+Pergunta orientadora
+O agente pode ser contido, interrompido, ajustado e auditado durante ou após a ação?
+Observáveis sugeridos
+kill switch; aprovação humana; logs; reversão; granularidade de controle; pontos de intervenção.
+Regra de agregação
+Quase não compensatória em domínios críticos; baixa C3 deve gerar guarda ou restrição.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados, Governança Pública. Média: Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:Controllability
+Propriedades centrais
+wcmk:hasInterventionPoint, wcmk:isReversible, wcmk:hasAuditTrail
+Risco quando insuficiente
+ação tecnicamente forte, porém sem freio ou sem governança.
+Leitura de projeto. Modelar thresholds prudenciais e overrides por impacto potencial.
+C4. Adequação de escopo (Scope Adequacy)
+Função no modelo. Correspondência entre o envelope de competência do agente e a classe de problemas que lhe é delegada.
+Pergunta orientadora
+A competência do agente é adequada ao domínio, ao caso e ao papel?
+Observáveis sugeridos
+match entre domínio do caso e perfil do agente; limites declarados; especialização requerida; out-of-scope detection.
+Regra de agregação
+Penalidade de desajuste. Deve reduzir fortemente Aa quando o caso excede o escopo.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados. Média: Governança Pública, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:ScopeAdequacy
+Propriedades centrais
+wcmk:appliesToDomain, wcmk:withinDeclaredScope, wcmk:outOfScopeFor
+Risco quando insuficiente
+uso indevido de agente generalista em caso altamente especializado.
+Leitura de projeto. Ancorar em perfis setoriais e matriz caso × perfil WCMK.
+C5. Suficiência de recursos (Resource Sufficiency)
+Função no modelo. Disponibilidade de recursos para executar a ação de forma competente e prudente.
+Pergunta orientadora
+Há meios informacionais, computacionais, temporais e organizacionais suficientes?
+Observáveis sugeridos
+tempo de resposta; acesso a bases; orçamento de computação; disponibilidade humana; contexto organizacional.
+Regra de agregação
+Composicional; ganha peso quando restrições de recurso degradam segurança ou justiça.
+Criticidade por domínio
+Alta: Infraestrutura Crítica, Saúde, Finanças, Governança Pública. Média: Privacidade e Dados, Justiça e Segurança, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:ResourceSufficiency
+Propriedades centrais
+wcmk:hasResourceBudget, wcmk:hasTimeBudget, wcmk:hasDataAccessLevel
+Risco quando insuficiente
+respostas precárias por falta de meios, cobertura ou janela temporal.
+Leitura de projeto. Normalizar por tipo de serviço e criticidade temporal do domínio.
+C6. Executabilidade segura (Safe Executability)
+Função no modelo. Condição de poder agir mantendo níveis aceitáveis de segurança operacional e contenção de dano.
+Pergunta orientadora
+A ação pode ser executada sem produzir risco desproporcional?
+Observáveis sugeridos
+simulações de falha; testes de segurança; taxa de reversibilidade; impacto potencial de execução.
+Regra de agregação
+Faceta crítica de decisão; pode atuar como gate adicional em alto risco.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados. Média: Governança Pública, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:SafeExecutability
+Propriedades centrais
+wcmk:isSafeToExecute, wcmk:hasExecutionRiskScore
+Risco quando insuficiente
+capacidade de fazer algo que não deveria ser executado naquele contexto.
+Leitura de projeto. Integrar com Rc_norm e matrizes de dano potencial.
+7. Catálogo de Must (M): normatividade estratificada e prudência
+Must concentra as camadas normativas que vinculam a ação do agente. A decomposição evita colapsar em um único escalar o que, na prática, vem de fontes jurídicas, institucionais, éticas, prudenciais e de responsabilidade.
+A tabela-resumo abaixo organiza as facetas deste vértice, indicando a pergunta orientadora de cada uma e o seu papel dominante na agregação para o escalar canônico correspondente.
+Código
+Faceta
+Pergunta orientadora
+Papel na agregação
+M1
+Obrigação legal
+Quais deveres jurídicos vinculam a ação do agente?
+Não compensatória quando a violação legal é material; pode gerar override.
+M2
+Obrigação de policy institucional
+Quais políticas internas, protocolos e normas organizacionais se aplicam?
+Compensável apenas parcialmente; baixo M2 deve acionar guarda de governança.
+M3
+Obrigação por princípio ético
+Quais princípios éticos materiais devem orientar o caso?
+Peso elevado em casos com lacuna legal ou policy insuficiente.
+M4
+Obrigação prudencial
+Que cautela adicional o caso exige pela sua gravidade, ambiguidade ou irreversibilidade?
+Fortemente não compensatória em casos críticos; candidata natural a override prudencial.
+M5
+Obrigação de papel
+Quais deveres decorrem do papel específico do agente no sistema sociotécnico?
+Penalidade de autoridade indevida ou omissão de papel.
+M6
+Obrigação de accountability
+A decisão pode ser rastreada, explicada e atribuída?
+Pode operar como pré-condição em ambientes regulados.
+Em conjunto, essas facetas mostram que o vértice canônico não é um bloco opaco. Ele funciona como projeção sintética de uma microestrutura semântica que pode ser calibrada e auditada sem perder comparabilidade com o tetraedro original.
+M1. Obrigação legal (Legal Obligation)
+Função no modelo. Conjunto de exigências legais e regulatórias diretamente aplicáveis ao caso e ao agente.
+Pergunta orientadora
+Quais deveres jurídicos vinculam a ação do agente?
+Observáveis sugeridos
+leis; regulamentos; standards mandatórios; obrigações setoriais; regimes de responsabilidade.
+Regra de agregação
+Não compensatória quando a violação legal é material; pode gerar override.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados, Governança Pública. Média: Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:LegalObligation
+Propriedades centrais
+wcmk:subjectToLaw, wcmk:hasLegalRequirement, wcmk:violatesLegalConstraint
+Risco quando insuficiente
+ilegalidade material, sanção regulatória e perda de legitimidade sistêmica.
+Leitura de projeto. Mapear regras por jurisdição, domínio e papel institucional.
+M2. Obrigação de policy institucional (Institutional Policy Obligation)
+Função no modelo. Conjunto de deveres derivados da governança interna, compliance e protocolos de operação.
+Pergunta orientadora
+Quais políticas internas, protocolos e normas organizacionais se aplicam?
+Observáveis sugeridos
+policy corporativa; playbooks; regras de escalonamento; restrições contratuais; fluxos de autorização.
+Regra de agregação
+Compensável apenas parcialmente; baixo M2 deve acionar guarda de governança.
+Criticidade por domínio
+Alta: Finanças, Privacidade e Dados, Governança Pública, Infraestrutura Crítica, Saúde. Média: Justiça e Segurança, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:InstitutionalPolicyObligation
+Propriedades centrais
+wcmk:subjectToPolicy, wcmk:hasProtocolRequirement, wcmk:requiresApprovalFrom
+Risco quando insuficiente
+desalinhamento entre operação e governança formal.
+Leitura de projeto. Ingerir políticas como artefatos normativos versionados.
+M3. Obrigação por princípio ético (Ethical Principle Obligation)
+Função no modelo. Deveres de justiça, não maleficência, dignidade, proporcionalidade, transparência e benefício social.
+Pergunta orientadora
+Quais princípios éticos materiais devem orientar o caso?
+Observáveis sugeridos
+princípios violados ou respeitados; justificabilidade; balanceamento de danos e benefícios; linguagem moral explícita.
+Regra de agregação
+Peso elevado em casos com lacuna legal ou policy insuficiente.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Privacidade e Dados, Governança Pública, Informação e Mídia. Média: Finanças, Educação, Trabalho, Meio Ambiente e Energia, Infraestrutura Crítica.
+Classe ontológica sugerida
+wcmk:EthicalPrincipleObligation
+Propriedades centrais
+wcmk:requiresPrinciple, wcmk:satisfiesPrinciple, wcmk:principleConflictWith
+Risco quando insuficiente
+conformidade formal sem legitimidade ética substantiva.
+Leitura de projeto. Usar matriz de princípios por domínio e severidade.
+M4. Obrigação prudencial (Prudential Obligation)
+Função no modelo. Dever de prudência contextual, intensificado por risco alto, incerteza, dano severo ou irreversível.
+Pergunta orientadora
+Que cautela adicional o caso exige pela sua gravidade, ambiguidade ou irreversibilidade?
+Observáveis sugeridos
+escalonamento; fallback para humano; necessidade de dupla checagem; limiar de confiança; postponement rules.
+Regra de agregação
+Fortemente não compensatória em casos críticos; candidata natural a override prudencial.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados. Média: Governança Pública, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:PrudentialObligation
+Propriedades centrais
+wcmk:requiresPrudentialGuard, wcmk:hasEscalationCondition, wcmk:requiresHumanReview
+Risco quando insuficiente
+agir cedo demais, com pouco saber ou pouca contenção.
+Leitura de projeto. Derivar de Rc_norm, incerteza efetiva e potencial de dano.
+M5. Obrigação de papel (Role Obligation)
+Função no modelo. Responsabilidades associadas ao papel funcional do agente, inclusive limites de autoridade e escopo de decisão.
+Pergunta orientadora
+Quais deveres decorrem do papel específico do agente no sistema sociotécnico?
+Observáveis sugeridos
+papel do agente; cadeia decisória; alçada; dever de encaminhar; obrigação de registrar ou consultar.
+Regra de agregação
+Penalidade de autoridade indevida ou omissão de papel.
+Criticidade por domínio
+Alta: Governança Pública, Justiça e Segurança, Saúde, Finanças, Infraestrutura Crítica. Média: Privacidade e Dados, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:RoleObligation
+Propriedades centrais
+wcmk:hasInstitutionalRole, wcmk:mayDecideAbout, wcmk:mustEscalateTo
+Risco quando insuficiente
+ultrapassar competência ou falhar em acionar instâncias adequadas.
+Leitura de projeto. Modelar papéis organizacionais e competências delegadas.
+M6. Obrigação de accountability (Accountability Obligation)
+Função no modelo. Dever de fornecer trilha auditável, justificativa e mecanismos de responsabilização ex post.
+Pergunta orientadora
+A decisão pode ser rastreada, explicada e atribuída?
+Observáveis sugeridos
+logs; proveniência; explicação; justificativa; registro de aprovação; reprodutibilidade do fluxo.
+Regra de agregação
+Pode operar como pré-condição em ambientes regulados.
+Criticidade por domínio
+Alta: Finanças, Privacidade e Dados, Governança Pública, Saúde, Justiça e Segurança. Média: Infraestrutura Crítica, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:AccountabilityObligation
+Propriedades centrais
+wcmk:hasAuditRequirement, wcmk:hasProvenanceRequirement, wcmk:isExplainableAtLevel
+Risco quando insuficiente
+decisão opaca, contestação impossível e dificuldade de reparação.
+Leitura de projeto. Amarrar a PROV-O, logs operacionais e níveis de explicabilidade.
+8. Catálogo de Know (K): suficiência epistêmica e consciência de limite
+Know é a parte epistemicamente mais rica do modelo. Ele inclui conhecimento factual, contextual, normativo, procedural e causal, além da consciência de incerteza e da proveniência dos insumos que sustentam a decisão.
+A tabela-resumo abaixo organiza as facetas deste vértice, indicando a pergunta orientadora de cada uma e o seu papel dominante na agregação para o escalar canônico correspondente.
+Código
+Faceta
+Pergunta orientadora
+Papel na agregação
+K1
+Conhecimento evidencial
+Quais fatos relevantes o agente conhece com base em evidência disponível?
+Basal de K; queda severa quando há evidência insuficiente ou desatualizada.
+K2
+Conhecimento contextual
+O agente compreende o domínio, a situação e as circunstâncias relevantes?
+Muito influente na confrontação caso × perfil; baixo K2 tende a reduzir fortemente Aa.
+K3
+Conhecimento normativo
+O agente sabe quais normas, políticas e princípios se aplicam?
+Pode tornar-se quase não compensatório em áreas reguladas.
+K4
+Conhecimento procedural
+O agente sabe como agir corretamente, em que sequência e com quais controles?
+Complementa C; sua ausência reduz executabilidade prudente.
+K5
+Conhecimento causal
+O agente entende os efeitos possíveis de sua ação, inclusive efeitos de segunda ordem?
+Ganha peso em políticas públicas, segurança e infraestrutura.
+K6
+Metaconhecimento e consciência de incerteza
+O agente sabe o que não sabe e reconhece limites epistêmicos?
+Candidata a gate prudencial. Baixa K6 deve penalizar fortemente Aa.
+K7
+Consciência de proveniência
+O agente sabe de onde vêm suas evidências, regras e justificativas?
+Fundamental para accountability e revisão ex post.
+Em conjunto, essas facetas mostram que o vértice canônico não é um bloco opaco. Ele funciona como projeção sintética de uma microestrutura semântica que pode ser calibrada e auditada sem perder comparabilidade com o tetraedro original.
+K1. Conhecimento evidencial (Evidential Knowledge)
+Função no modelo. Conhecimento factual sustentado por dados, documentos, observações ou registros confiáveis.
+Pergunta orientadora
+Quais fatos relevantes o agente conhece com base em evidência disponível?
+Observáveis sugeridos
+evidências consultadas; qualidade das fontes; atualização dos dados; suporte documental.
+Regra de agregação
+Basal de K; queda severa quando há evidência insuficiente ou desatualizada.
+Criticidade por domínio
+Alta: Saúde, Finanças, Justiça e Segurança, Privacidade e Dados, Governança Pública. Média: Infraestrutura Crítica, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:EvidentialKnowledge
+Propriedades centrais
+wcmk:groundedInEvidence, wcmk:hasEvidenceQualityScore, wcmk:usesCurrentData
+Risco quando insuficiente
+decisão apoiada em dado incompleto, obsoleto ou não verificável.
+Leitura de projeto. Ponderar qualidade, recência e completude das fontes.
+K2. Conhecimento contextual (Contextual Knowledge)
+Função no modelo. Entendimento do contexto semântico e pragmático do caso, incluindo dinâmicas temporais, sensibilidade do domínio e situação concreta.
+Pergunta orientadora
+O agente compreende o domínio, a situação e as circunstâncias relevantes?
+Observáveis sugeridos
+referência correta ao domínio; leitura de circunstâncias; compreensão de exceções; sensibilidade temporal.
+Regra de agregação
+Muito influente na confrontação caso × perfil; baixo K2 tende a reduzir fortemente Aa.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Privacidade e Dados, Governança Pública, Infraestrutura Crítica. Média: Finanças, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:ContextualKnowledge
+Propriedades centrais
+wcmk:understandsDomainContext, wcmk:recognizesTemporalScope, wcmk:detectsCaseSpecificNuance
+Risco quando insuficiente
+aplicação cega de regra ou capacidade fora de contexto.
+Leitura de projeto. Derivar de features do ethcase e de testes de sensibilidade semântica.
+K3. Conhecimento normativo (Normative Knowledge)
+Função no modelo. Conhecimento das restrições legais, institucionais e éticas pertinentes ao caso.
+Pergunta orientadora
+O agente sabe quais normas, políticas e princípios se aplicam?
+Observáveis sugeridos
+citação correta de norma; adequação da regra; distinção entre lei, policy e princípio; detecção de conflito normativo.
+Regra de agregação
+Pode tornar-se quase não compensatório em áreas reguladas.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Finanças, Privacidade e Dados, Governança Pública. Média: Infraestrutura Crítica, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:NormativeKnowledge
+Propriedades centrais
+wcmk:knowsApplicableNorm, wcmk:distinguishesNormLayer, wcmk:detectsNormConflict
+Risco quando insuficiente
+boa resposta factual com falha normativa material.
+Leitura de projeto. Usar corpora normativos curados e avaliação por cenário.
+K4. Conhecimento procedural (Procedural Knowledge)
+Função no modelo. Saber operacional sobre procedimentos, passos, protocolos e fluxos de decisão.
+Pergunta orientadora
+O agente sabe como agir corretamente, em que sequência e com quais controles?
+Observáveis sugeridos
+respeito a workflow; sequência adequada; checkpoints; encaminhamento correto; consulta a humano quando necessário.
+Regra de agregação
+Complementa C; sua ausência reduz executabilidade prudente.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Finanças, Governança Pública, Infraestrutura Crítica. Média: Privacidade e Dados, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:ProceduralKnowledge
+Propriedades centrais
+wcmk:knowsProcedure, wcmk:followsWorkflow, wcmk:knowsEscalationPath
+Risco quando insuficiente
+erro de sequência, omissão de etapas e execução insegura.
+Leitura de projeto. Avaliar com casos multi-step e testes de fluxo.
+K5. Conhecimento causal (Causal Knowledge)
+Função no modelo. Compreensão de consequências prováveis, encadeamentos causais e externalidades sistêmicas.
+Pergunta orientadora
+O agente entende os efeitos possíveis de sua ação, inclusive efeitos de segunda ordem?
+Observáveis sugeridos
+antecipação de dano; análise de segunda ordem; menção a feedback loops; visão de longo prazo.
+Regra de agregação
+Ganha peso em políticas públicas, segurança e infraestrutura.
+Criticidade por domínio
+Alta: Infraestrutura Crítica, Governança Pública, Justiça e Segurança, Saúde, Meio Ambiente e Energia. Média: Finanças, Privacidade e Dados, Informação e Mídia, Educação, Trabalho.
+Classe ontológica sugerida
+wcmk:CausalKnowledge
+Propriedades centrais
+wcmk:anticipatesConsequence, wcmk:modelsSecondOrderEffect, wcmk:hasCausalCoverage
+Risco quando insuficiente
+ação localmente correta com dano sistêmico ou retardado.
+Leitura de projeto. Incluir cenários de externalidade e efeitos indiretos.
+K6. Metaconhecimento e consciência de incerteza (Meta-Knowledge / Uncertainty Awareness)
+Função no modelo. Capacidade de representar desconhecimento, baixa confiança, ambiguidade e necessidade de escalonamento.
+Pergunta orientadora
+O agente sabe o que não sabe e reconhece limites epistêmicos?
+Observáveis sugeridos
+scores de confiança; pedidos de informação adicional; fallback; reconhecimento explícito de limitação.
+Regra de agregação
+Candidata a gate prudencial. Baixa K6 deve penalizar fortemente Aa.
+Criticidade por domínio
+Alta: Saúde, Justiça e Segurança, Infraestrutura Crítica, Finanças, Privacidade e Dados. Média: Governança Pública, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:UncertaintyAwareness
+Propriedades centrais
+wcmk:hasConfidenceScore, wcmk:recognizesUnknown, wcmk:requestsAdditionalEvidence
+Risco quando insuficiente
+superconfiança, improvisação e alucinação operacional.
+Leitura de projeto. Ligar a métricas de calibração, abstention e thresholds de revisão.
+K7. Consciência de proveniência (Provenance Awareness)
+Função no modelo. Capacidade de manter ligação com a origem, a cadeia de transformação e a confiabilidade dos insumos usados na decisão.
+Pergunta orientadora
+O agente sabe de onde vêm suas evidências, regras e justificativas?
+Observáveis sugeridos
+linhagem de dado; referência de fonte; versão de policy; trilha de transformação; autor de regra.
+Regra de agregação
+Fundamental para accountability e revisão ex post.
+Criticidade por domínio
+Alta: Privacidade e Dados, Finanças, Governança Pública, Saúde, Justiça e Segurança. Média: Infraestrutura Crítica, Informação e Mídia, Educação, Trabalho, Meio Ambiente e Energia.
+Classe ontológica sugerida
+wcmk:ProvenanceAwareness
+Propriedades centrais
+wcmk:hasSourceTrace, wcmk:hasPolicyVersion, prov:wasDerivedFrom
+Risco quando insuficiente
+incapacidade de explicar ou contestar a base da decisão.
+Leitura de projeto. Amarrar a PROV-O e ao pipeline de ingestão/normalização.
+9. Integração matemática com o tetraedro ético
+A extensão facetada não substitui o espaço tetraédrico da agência ética. Ela o refina. As expressões seguintes mostram como as facetas são agregadas, projetadas de volta ao núcleo e então usadas na confrontação ETHCASE × WCMK.
+Primeiro, a extensão facetada deve sempre admitir uma projeção explícita para o núcleo canônico. Essa projeção preserva comparabilidade, continuidade histórica e interpretabilidade geométrica.
+
+O significado da projeção é disciplinar: nenhuma faceta existe solta. Cada elemento interno precisa apontar para W, C, M ou K, de modo que o modelo expandido possa sempre ser lido pelo tetraedro e pelos indicadores agregados.
+Em seguida, os quatro vértices canônicos passam a ser calculados como agregações controladas de suas facetas internas. A agregação não precisa ser idêntica para todos os vértices: Want e parte de Can admitem maior compensação, ao passo que Must e Know exigem pisos, penalidades ou overrides em cenários críticos.
+Vértice
+Estratégia dominante
+Observação
+W
+média ponderada disciplinada
+compensa parcialmente, mas sofre penalidade por instabilidade ou prioridade inadequada
+C
+média com penalidades prudenciais
+controlabilidade, escopo e executabilidade segura não devem ser mascarados
+M
+agregação híbrida com overrides
+obrigações legais e prudenciais podem atuar como gates
+K
+média com penalidade de incerteza
+metaconhecimento e proveniência reduzem superconfiança e alucinação operacional
+A tabela mostra por que a extensão facetada melhora o modelo. Ela permite tratar certos déficits como materialmente graves, em vez de diluí-los em médias excessivamente compensatórias.
+Uma forma sintética de representar a nova agência agregada é a seguinte.
+
+O termo κ(c,a) concentra penalidades por incerteza efetiva, conflito normativo, instabilidade intencional e inconsistência entre facetas. Ele funciona como correção prudencial da agência média.
+A confrontação ETHCASE × WCMK ganha resolução adicional quando o caso passa a exigir requisitos por faceta. Em vez de comparar apenas um risco contextual com uma agência global, o modelo passa a identificar déficits específicos entre aquilo que o caso requer e aquilo que o perfil do agente efetivamente oferece.
+
+O déficit total é um somatório ponderado por materialidade contextual. Na prática, isso permite afirmar não apenas que um agente é insuficiente, mas em que facetas específicas ele falha para aquele caso: por exemplo, prudência, conhecimento normativo ou controlabilidade.
+Por fim, o risco residual pode ser recalculado com base na agência confrontada, agora mais sensível às facetas críticas.
+
+Essa representação preserva a ideia central do projeto: o risco residual não desaparece, mas se torna mais interpretável e calibrável quando a agência do agente é descrita em termos internamente estruturados.
+10. Desenho ontológico modular para implementação
+A extensão rica deve ser implementada como módulo ontológico adicional, e não como ruptura do núcleo. A arquitetura mais robusta é a de um conjunto de ontologias acopladas por importação, complementadas por shapes de validação e modelos de proveniência.
+Módulo
+Papel
+Conteúdo principal
+wcmk-core.ttl
+núcleo estável
+classes Want, Can, Must, Know; vetor canônico; perfis agregados
+wcmk-facets.ttl
+extensão semântica
+24 facetas, relações de projeção para vértices e metadados semânticos
+wcmk-domain-profiles.ttl
+especialização setorial
+pesos, criticidades, thresholds e perfis WCMK por domínio
+bridge-wcmkplus.ttl
+confrontação caso × perfil
+requisitos do caso, déficits facetados e justificativas
+wcmk-shapes.ttl
+validação estrutural
+completude mínima, cardinalidades, faixas numéricas e coerência
+wcmk-prov.ttl
+linhagem e accountability
+fontes, versões, transformações, calibrações e derivações
+Essa modularização é importante porque separa estabilidade canônica de experimentação semântica. O núcleo continua pequeno e explicável; a inovação acontece nas extensões, nos perfis de domínio e na governança dos dados que calibram o sistema.
+As classes e propriedades mínimas recomendadas para a camada facetada são apresentadas na tabela seguinte.
+Elemento
+Tipo
+Uso recomendado
+wcmk:Facet
+classe abstrata
+superclasse comum de toda faceta semântica
+wcmk:WantFacet / CanFacet / MustFacet / KnowFacet
+classes
+particionamento superior das facetas
+wcmk:FacetScore
+classe
+valor observado ou inferido de uma faceta em dado caso ou perfil
+wcmk:FacetRequirement
+classe
+nível requerido por faceta para um tipo de caso
+wcmk:FacetDeficit
+classe
+déficit entre requisito do caso e capacidade do agente
+wcmk:hasFacet
+propriedade
+liga perfil WCMK a suas facetas
+wcmk:hasFacetScore
+propriedade
+associa faceta a valor ou evidência
+wcmk:projectsToCoreVertex
+propriedade
+liga faceta ao vértice W, C, M ou K
+wcmk:isCriticalInDomain
+propriedade
+marca criticidade por domínio
+wcmk:derivedFromCalibrationRun
+propriedade
+amarra faceta ao processo de calibragem
+prov:wasDerivedFrom
+propriedade
+proveniência de fonte, regra ou transformação
+O mapeamento sugere um desenho ontológico de baixo atrito: classes abstratas organizam a taxonomia, propriedades de projeção preservam o nexo com o tetraedro e propriedades de proveniência garantem auditabilidade dos scores e thresholds.
+11. Esboço de serialização TTL e regras SHACL
+O catálogo pode ser serializado em Turtle de maneira relativamente direta. O exemplo abaixo mostra o padrão recomendado para declarar uma faceta, sua projeção para o vértice canônico e sua criticidade setorial.
+@prefix wcmk: <https://eth.example.org/wcmk#> .@prefix prov: <http://www.w3.org/ns/prov#> .wcmk:PrudentialObligation a wcmk:MustFacet ;    wcmk:projectsToCoreVertex wcmk:Must ;    wcmk:isCriticalInDomain wcmk:HealthDomain, wcmk:JusticeSecurityDomain ;    wcmk:hasAggregationPolicy wcmk:NonCompensatoryGate ;    wcmk:requiresHumanReview true .
+No nível de validação, a principal preocupação é garantir completude mínima, faixas numéricas válidas e coerência entre facetas, perfis e requisitos do caso. Abaixo está um esboço resumido de shape para controle de score e projeção.
+wcmk:FacetScoreShape a sh:NodeShape ;    sh:targetClass wcmk:FacetScore ;    sh:property [        sh:path wcmk:hasNumericScore ;        sh:datatype xsd:decimal ;        sh:minInclusive 0 ;        sh:maxInclusive 1 ;    ] ;    sh:property [        sh:path wcmk:projectsToCoreVertex ;        sh:minCount 1 ;        sh:maxCount 1 ;    ] .
+Os exemplos deixam claro que a extensão pode ser introduzida incrementalmente. Primeiro, publica-se a taxonomia e o mapeamento de projeção; depois, entram os scores, os shapes e, por fim, os perfis de domínio e as regras de confronto.
+12. Impactos esperados da extensão WCMK+
+A adoção do catálogo produz efeitos positivos claros, mas também aumenta o custo de modelagem e calibração. Por isso, a estratégia recomendada é incremental e orientada por domínio.
+Eixo
+Ganho esperado
+Risco ou custo
+Expressividade
+descrever déficits específicos e não apenas agência média
+maior complexidade terminológica
+Calibração
+ajustar pesos e thresholds por faceta e domínio
+necessidade de datasets e revisões mais ricos
+Explicabilidade
+justificar decisões por facetas críticas
+risco de excesso de detalhe para usuários finais
+Governança
+melhorar proveniência, accountability e revisão ex post
+maior custo de integração com pipeline
+Comparabilidade
+preservada pela projeção para WCMK
+depende de regras estáveis de agregação
+O impacto mais importante é científico: o WCMK deixa de aparecer como um conjunto de quatro escalares excessivamente compactos e passa a ser reconhecido como uma estrutura canônica sustentada por microcomponentes semanticamente distintos.
+13. Roteiro de implementação sugerido
+Publicar o catálogo conceitual WCMK+ como documento canônico, congelando definições, códigos e nomes das 24 facetas.
+Criar a ontologia wcmk-facets.ttl com classes, propriedades de projeção e metadados mínimos.
+Introduzir wcmk-shapes.ttl para completar validações básicas de score, cardinalidade e criticidade por domínio.
+Especializar perfis setoriais em wcmk-domain-profiles.ttl, começando por saúde, justiça e privacidade.
+Adaptar a confrontação ETHCASE × WCMK para operar com requisitos por faceta e déficit facetado.
+Recalibrar Aa, Rr e recomendações de ação mantendo projeção para o tetraedro canônico.
+Esse roteiro permite incorporar a riqueza semântica de forma ordenada. Ele evita ruptura do modelo atual e preserva a capacidade de comparar resultados antigos com novas medições facetadas.
+14. Conclusão
+O catálogo WCMK+ proposto neste documento oferece uma decomposição rica, porém disciplinada, dos vértices Want, Can, Must e Know. Seu valor não está em substituir o tetraedro, mas em tornar seu conteúdo semântico mais auditável, calibrável e aplicável à confrontação entre ETHCASE e perfis de agência ética.
+A principal tese operacional do catálogo é que a agência ética computável ganha poder explicativo quando cada vértice canônico passa a ser tratado como projeção de facetas observáveis, calibráveis e ontologicamente mapeáveis. Com isso, torna-se possível afirmar não apenas que um agente é mais ou menos adequado, mas em que aspectos específicos ele satisfaz — ou falha em satisfazer — os requisitos impostos pelo caso.
+Como próximo passo, este catálogo já permite a redação direta de um rascunho de wcmk-facets.ttl, acompanhado de shapes de validação e de uma matriz inicial de criticidade por domínio.

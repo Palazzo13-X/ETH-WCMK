@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+authors:
+  - family-names: "Palazzo"
+    given-names: "Luiz M. M."
+    orcid: "https://orcid.org/0009-0008-0833-3463"
+  - family-names: "Vanzin"
+    given-names: "Tarcísio"
+    orcid: "https://orcid.org/0000-0001-8121-8398"
+title: "ETH-WCMK: a formally verified core and a SHACL-valid ontology for auditing delegated ethical agency"
+version: "13.0.0"
+date-released: 2026-11-13
+repository-code: "https://github.com/Palazzo13-X/ETH-WCMK"
+# After the transfer to the ETH-WCMK organisation this becomes
+# https://github.com/ETH-WCMK/ETH-WCMK, which is the URL cited in the paper.
+license: "MIT"
+keywords:
+  - "AI ethics"
+  - "deontic logic"
+  - "SHACL"
+  - "RDF"
+  - "auditability"
+  - "governance"
+  - "reproducibility"
+# Licences are split: code MIT, model/ontologies/corpora/text CC BY-SA 4.0 (see NOTICE).
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Palazzo"
+      given-names: "Luiz M. M."
+      orcid: "https://orcid.org/0009-0008-0833-3463"
+    - family-names: "Vanzin"
+      given-names: "Tarcísio"
+      orcid: "https://orcid.org/0000-0001-8121-8398"
+  title: "ETH-WCMK v14: a formally verified core and a SHACL-valid ontology for auditing delegated ethical agency"
+  year: 2026
+  note: "Preprint. To be deposited on arXiv (cs.CY; cs.AI)."
+  repository-code: "https://github.com/Palazzo13-X/ETH-WCMK"
+  # add once available:
+  # doi: "10.48550/arXiv.XXXXX"
+  # doi: "10.5281/zenodo.XXXXXXX"

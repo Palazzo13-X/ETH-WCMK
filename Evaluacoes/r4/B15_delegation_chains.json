@@ -1,0 +1,107 @@
+{
+  "battery": "B15",
+  "question": "E28: who can carry a duty, and what happens when it is delegated",
+  "cases": 1520,
+  "capability_definition_facet_level": {
+    "facets_carryable_by_model_or_operator": 1,
+    "facets_only_the_accountable_layer_can_carry": 32,
+    "share_of_canon_requiring_accountability": 0.9697,
+    "note": "a facet is delegable only if every pillar it feeds is exercisable by the delegate; with 33 facets, only C1 (pure capability) is"
+  },
+  "capability_definition_pillar_level": {
+    "W": [
+      "system"
+    ],
+    "C": [
+      "system",
+      "model",
+      "operator"
+    ],
+    "M": [
+      "system"
+    ],
+    "K": [
+      "system",
+      "model",
+      "operator"
+    ]
+  },
+  "declared_baseline": {
+    "mean_adequacy_low": 0.3358,
+    "mean_R_r": 0.388,
+    "verdict_distribution": {
+      "PROHIBIT": 1097,
+      "REVIEW_REQUIRED": 289,
+      "ALLOW_WITH_GUARDS": 13,
+      "ALLOW": 0,
+      "ABSTAIN": 121
+    }
+  },
+  "layer_means": {
+    "system": {
+      "adequacy_low": 0.2872,
+      "R_r": 0.4029,
+      "n": 60800
+    },
+    "model": {
+      "adequacy_low": 0.2885,
+      "R_r": 0.4026,
+      "n": 60800
+    },
+    "operator": {
+      "adequacy_low": 0.2889,
+      "R_r": 0.403,
+      "n": 60800
+    }
+  },
+  "chain_with_best_delegate": {
+    "verdict_changes_vs_declared": 0,
+    "transition_kinds": {},
+    "mean_adequacy": 0.3358,
+    "mean_R_r": 0.388,
+    "verdict_distribution": {
+      "REVIEW_REQUIRED": 289,
+      "PROHIBIT": 1097,
+      "ABSTAIN": 121,
+      "ALLOW_WITH_GUARDS": 13
+    }
+  },
+  "chain_with_worst_delegate": {
+    "verdict_changes_vs_declared": 127,
+    "transition_kinds": {
+      "epistemic (abstention appears or disappears)": 6,
+      "stricter": 121
+    },
+    "mean_adequacy": 0.2893,
+    "mean_R_r": 0.4067,
+    "verdict_distribution": {
+      "REVIEW_REQUIRED": 178,
+      "ABSTAIN": 127,
+      "PROHIBIT": 1215
+    },
+    "bottleneck_pillar_counts": {
+      "C": 905,
+      "M": 262,
+      "K": 213,
+      "W": 140
+    }
+  },
+  "agreement_with_the_gold_lens": {
+    "declared_verdict_vs_its_own_gold": 0.372,
+    "chain_best_delegate_vs_gold_of_that_delegate": 0.3818,
+    "chain_worst_delegate_vs_gold_of_that_delegate": 0.4067,
+    "chain_worst_delegate_vs_gold_of_the_declaring_agent": 0.2878
+  },
+  "spread_decided_by_the_executor": {
+    "mean_gap_best_minus_worst_delegate": 0.0465,
+    "max_gap": 0.4533
+  },
+  "naive_weakest_link_ignoring_capability": {
+    "verdict_changes_vs_declared": 154
+  },
+  "duty_retention_E28": {
+    "cases_whose_critical_pillars_include_W_or_M": 1352,
+    "share": 0.8895,
+    "consequence": "the critical duty cannot be transferred to the executing layer; the fallback policy is not optional but structurally required"
+  }
+}

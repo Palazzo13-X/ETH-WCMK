@@ -1,0 +1,93 @@
+{
+  "method": "Latin-hypercube Monte-Carlo, first-order Sobol by corrected conditional variance; Morris screening for total-order/interaction",
+  "n_samples": 8192,
+  "bins": 16,
+  "panel_size": 60,
+  "seed": 20261102,
+  "mean_adequacy_across_samples": 0.537595971883138,
+  "sd_adequacy": 0.03726469792418576,
+  "outputs": {
+    "mean_adequacy": {
+      "mean": 0.537595971883138,
+      "sd": 0.03726469792418576,
+      "first_order": {
+        "lam_W": 0.0,
+        "lam_C": 0.0,
+        "lam_M": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta_W": 0.0,
+        "theta_C": 0.6085236066799877,
+        "theta_M": 0.08355038555402894,
+        "theta_K": 0.06288978273065574,
+        "bar_base": 0.0,
+        "bar_severity": 0.0
+      },
+      "first_order_sum": 0.7549637749646724
+    },
+    "mean_permissiveness": {
+      "mean": 1.4999308268229168,
+      "sd": 0.12219757031804714,
+      "first_order": {
+        "lam_W": 0.0,
+        "lam_C": 0.0,
+        "lam_M": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta_W": 0.0,
+        "theta_C": 0.45811020493104293,
+        "theta_M": 0.07113410759819293,
+        "theta_K": 0.03413139595156841,
+        "bar_base": 0.014177944869076281,
+        "bar_severity": 0.0
+      },
+      "first_order_sum": 0.5775536533498805
+    },
+    "veto_rate": {
+      "mean": 0.4027364095052084,
+      "sd": 0.08997653452823563,
+      "first_order": {
+        "lam_W": 0.0,
+        "lam_C": 0.0,
+        "lam_M": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta_W": 0.0,
+        "theta_C": 0.5412312287739578,
+        "theta_M": 0.08806296911328663,
+        "theta_K": 0.14220861986814654,
+        "bar_base": 0.0,
+        "bar_severity": 0.0
+      },
+      "first_order_sum": 0.771502817755391
+    },
+    "hard_veto_rate": {
+      "mean": 0.24478556315104164,
+      "sd": 0.07564804388005995,
+      "first_order": {
+        "lam_W": 0.0,
+        "lam_C": 0.0,
+        "lam_M": 0.0,
+        "gamma": 0.0,
+        "eta": 0.0,
+        "omega": 0.0,
+        "rho": 0.0,
+        "delta": 0.0,
+        "theta_W": 0.0,
+        "theta_C": 0.44545005806843535,
+        "theta_M": 0.19766878962844303,
+        "theta_K": 0.09490294464144139,
+        "bar_base": 0.0,
+        "bar_severity": 0.0
+      },
+      "first_order_sum": 0.73802179233831
+written: /home/luiz/Documentos/Strata/Shared/Evaluacoes/r3/B6_sensitivity_v11.json

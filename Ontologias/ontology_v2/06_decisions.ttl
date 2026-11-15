@@ -1,0 +1,51 @@
+@prefix decision: <https://ethwcmk.org/ontology/decision/> .
+@prefix eth: <https://ethwcmk.org/ontology/eth/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+decision:ABSTAIN a owl:NamedIndividual,
+        eth:Decision ;
+    rdfs:label "ABSTAIN"@en ;
+    owl:differentFrom decision:ALLOW,
+        decision:ALLOW_WITH_GUARDS,
+        decision:PROHIBIT,
+        decision:REVIEW_REQUIRED ;
+    eth:permissivenessRank 0 .
+
+decision:ALLOW a owl:NamedIndividual,
+        eth:Decision ;
+    rdfs:label "ALLOW"@en ;
+    owl:differentFrom decision:ABSTAIN,
+        decision:ALLOW_WITH_GUARDS,
+        decision:PROHIBIT,
+        decision:REVIEW_REQUIRED ;
+    eth:permissivenessRank 4 .
+
+decision:ALLOW_WITH_GUARDS a owl:NamedIndividual,
+        eth:Decision ;
+    rdfs:label "ALLOW_WITH_GUARDS"@en ;
+    owl:differentFrom decision:ABSTAIN,
+        decision:ALLOW,
+        decision:PROHIBIT,
+        decision:REVIEW_REQUIRED ;
+    eth:permissivenessRank 3 .
+
+decision:PROHIBIT a owl:NamedIndividual,
+        eth:Decision ;
+    rdfs:label "PROHIBIT"@en ;
+    owl:differentFrom decision:ABSTAIN,
+        decision:ALLOW,
+        decision:ALLOW_WITH_GUARDS,
+        decision:REVIEW_REQUIRED ;
+    eth:permissivenessRank 1 .
+
+decision:REVIEW_REQUIRED a owl:NamedIndividual,
+        eth:Decision ;
+    rdfs:label "REVIEW_REQUIRED"@en ;
+    owl:differentFrom decision:ABSTAIN,
+        decision:ALLOW,
+        decision:ALLOW_WITH_GUARDS,
+        decision:PROHIBIT ;
+    eth:permissivenessRank 2 .
+

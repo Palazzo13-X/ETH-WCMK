@@ -1,0 +1,87 @@
+
+=== B16_structural_ablation ===
+full           κ=0.4681 Δ=+0.0000 agree=0.8308 Aa=0.2886
+no_S2          κ=0.4678 Δ=-0.0003 agree=0.8274 Aa=0.3484
+no_S3          κ=0.4686 Δ=+0.0005 agree=0.8297 Aa=0.3110
+no_S4          κ=0.4688 Δ=+0.0007 agree=0.8303 Aa=0.3007
+no_structure   κ=0.4688 Δ=+0.0007 agree=0.8262 Aa=0.3827
+
+
+=== B16_structural_ablation ===
+full           κ=0.4681 Δ=+0.0000 agree=0.8308 Aa=0.2886
+no_S2          κ=0.4678 Δ=-0.0003 agree=0.8274 Aa=0.3484
+no_S3          κ=0.4686 Δ=+0.0005 agree=0.8297 Aa=0.3110
+no_S4          κ=0.4688 Δ=+0.0007 agree=0.8303 Aa=0.3007
+no_structure   κ=0.4688 Δ=+0.0007 agree=0.8262 Aa=0.3827
+
+merging 16 previous run records with 2 new ones
+{
+  "B10_sobol.json": "7e49ea62f4937473",
+  "B11_ablation.json": "38347a991234f5a9",
+  "B11_shared_beta.json": "c892baf9affc637e",
+  "B12_temporal_v12.json": "a7f47cb1b3ad61f1",
+  "B13_transfer.json": "4bf3de03e7b5f93d",
+  "B13_transfer_v12.json": "214e7606250bc183",
+  "B14_case_profile_risk.json": "02e83e3828d5199f",
+  "B15_delegation_chains.json": "d1a20bbb1f987ce2",
+  "B16_structural_ablation.json": "d4aa1a4c6b5d2a15",
+  "B5_ladder_fit_v12.json": "bd4c7923cc5f6893",
+  "B6_llm_profile.json": "53adc4b3c180ec0c",
+  "B6_llm_raw.jsonl": "a1a81ee01435be54",
+  "B7_baselines.json": "73cccd4022a0888e",
+  "B7_baselines_v12.json": "debc30c6dc2dd3e4",
+  "B8_probes.json": "454d045c497b0963",
+  "B9_noise_v12.json": "ac7b85f5d627eb28",
+  "ablation_beta_check.json": "37edca053198a90a",
+  "b10log.txt": "4cf324553175b9ad",
+  "b11log.txt": "8360a563b6c442ae",
+  "b11sharedlog.txt": "4250f539bb3a2290",
+  "b13log.txt": "7ccadb962999dddd",
+  "b16_run_log.txt": "e3b0c44298fc1c14",
+  "b6log.txt": "fb4337068f030ebb",
+  "b7log.txt": "5f246cc2233b2b5e",
+  "b7log2.txt": "7da0910155581af3",
+  "b9b12log.txt": "eb773d27bad7377c",
+  "corpus_v5_audit_sample.csv": "2f4d4ecaaa8dea5e",
+  "corpus_v5_calibration_sensitivity.json": "9514a37602a991a5",
+  "corpus_v5_confrontations.jsonl": "f2212475c114e9fc",
+  "corpus_v5_confusion_analysis.json": "a2b7dc6606954fda",
+  "corpus_v5_coverage.json": "29c6248c34e633be",
+  "corpus_v5_coverage_verified.json": "f3b019d886277dad",
+  "corpus_v5_gold.jsonl": "896e19ebc6bc9d68",
+  "corpus_v5_layerA.jsonl": "566e521284aaf43e",
+  "corpus_v5_layerB.jsonl": "22ffa9060a072c26",
+  "corpus_v5_personas.jsonl": "04b5719b546f2fb5",
+  "corpus_v6_audit_sample.csv": "373dbc366b43b3ce",
+  "corpus_v6_confrontations.jsonl": "052e2eb2ab87836f",
+  "corpus_v6_coverage.json": "b9e122f8004cd422",
+  "corpus_v6_gold.jsonl": "a4802ee4535039a4",
+  "corpus_v6_layerA.jsonl": "fc4e5a08e5144e02",
+  "corpus_v6_layerB.jsonl": "3990d52982bc0de6",
+  "corpus_v6_personas.jsonl": "04b5719b546f2fb5",
+  "delta_v12.json": "bae07144c1a39ddf",
+  "facet_review_stats.json": "71ebea7a389a6983",
+  "fact_grounding_sweep.json": "a98314f3c3cc604f",
+  "fact_grounding_v12.json": "61669c125dd3ae50",
+  "fitlog.txt": "a1d2810e29b9ff1a",
+  "gen_v6_log.txt": "46780b6c9113b6d0",
+  "guard_experiment.json": "f90e86f8b98c563a",
+  "guardlog.txt": "a700c60de218f6e8",
+  "kappa_by_consensus.json": "438944fccda05497",
+  "kappalog.txt": "a44550fa9e1cff7d",
+  "ladder_calibration_v12.json": "bead1756da1d684c",
+  "manifest_r4.json": "20224c6cf21925ae",
+  "ontology_full_log.txt": "ca76bc24e2c2bf63",
+  "ontology_full_validation.json": "d6fb165f6e75115a",
+  "ontology_subset_stats.json": "a874ef598a026dc0",
+  "ontology_v4_validation.json": "792823a9234f51c5",
+  "ontologylog.txt": "3a1ca1509a5f8728",
+  "ontologylog2.txt": "af18f1186b95c5ad",
+  "ontologylog3.txt": "fd24a4dfad98885a",
+  "ontologylog4.txt": "e3b0c44298fc1c14",
+  "ontologylog5.txt": "3b1d2ba93af4577b",
+  "ontologylog6.txt": "dfe27ce82ecfc301",
+  "ontologylog7.txt": "8b0971a92cc89f12",
+  "pipeline_log.txt": "4f22853727f71ffb",
+  "procedural_facet_ablation.json": "29e0d483c7498a47"
+}

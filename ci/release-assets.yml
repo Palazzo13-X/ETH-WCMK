@@ -1,0 +1,22 @@
+name: Data assets
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  checksum:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python scripts/make_data_manifest.py --check
+      - run: python scripts/audit_repo.py --json > repo-audit.json
+      - name: Attach the audit to the release
+        run: |
+          gh release upload "${{ github.ref_name }}" repo-audit.json --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}

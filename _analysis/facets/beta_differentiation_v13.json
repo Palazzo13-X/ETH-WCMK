@@ -1,0 +1,13 @@
+{
+  "_comment": "D5.5 candidate revision: break the beta-ties that make facets arithmetically indistinguishable inside a pillar (26 pairs with ||delta beta||_inf < 0.12, 8 pairs identical). Each change is justified by the duty's semantic anchor, not by a fitting procedure; R3 (every non-zero beta >= 0.15) is respected. Tested by B20 before adoption.",
+  "W6": [0.45, 0.0, 0.55, 0.0],
+  "C2": [0.0, 0.70, 0.15, 0.15],
+  "C5": [0.0, 0.60, 0.15, 0.25],
+  "M2": [0.0, 0.15, 0.70, 0.15],
+  "M4": [0.0, 0.25, 0.55, 0.20],
+  "M10": [0.25, 0.0, 0.60, 0.15],
+  "K1": [0.0, 0.15, 0.15, 0.70],
+  "K2": [0.0, 0.30, 0.20, 0.50],
+  "K5": [0.35, 0.15, 0.0, 0.50],
+  "K7": [0.0, 0.15, 0.25, 0.60]
+}

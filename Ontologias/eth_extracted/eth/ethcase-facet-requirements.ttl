@@ -1,0 +1,320 @@
+@prefix : <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix efr: <https://ethwcmk.org/ontology/ethcase-facet-requirements#> .
+@prefix eth: <https://ethwcmk.org/ontology/ethcase#> .
+@prefix wcmkf: <https://ethwcmk.org/ontology/wcmk-facets#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ethwcmk.org/ontology/ethcase-facet-requirements>
+    a owl:Ontology ;
+    rdfs:label "ETHCASE Facet Requirements Ontology (Draft v0.3)"@en , "Ontologia de Requisitos de Facetas do ETHCASE (rascunho v0.3)"@pt-BR ;
+    rdfs:comment "Derives facet-level requirement profiles from ethical-case attributes, severity and prudential conditions, to support ETHCASE × WCMK+ confrontation."@en ,
+                 "Deriva perfis de requisitos no nível de facetas a partir de atributos do caso ético, severidade e prudência, para apoiar a confrontação ETHCASE × WCMK+."@pt-BR ;
+    owl:versionInfo "0.3-draft" ;
+    owl:imports <https://ethwcmk.org/ontology/wcmk-facets> , prov: , skos: .
+
+#################################################################
+# Placeholder ETHCASE terms (to be aligned with canonical ethcase)
+#################################################################
+
+eth:EthicalCase a owl:Class .
+eth:Domain a owl:Class .
+eth:RiskBand a owl:Class .
+eth:TemporalScope a owl:Class .
+eth:hasDomain a owl:ObjectProperty ; rdfs:domain eth:EthicalCase ; rdfs:range eth:Domain .
+eth:hasRiskBand a owl:ObjectProperty ; rdfs:domain eth:EthicalCase ; rdfs:range eth:RiskBand .
+eth:hasTemporalScope a owl:ObjectProperty ; rdfs:domain eth:EthicalCase ; rdfs:range eth:TemporalScope .
+eth:hasNormalizedRiskScore a owl:DatatypeProperty ; rdfs:domain eth:EthicalCase ; rdfs:range xsd:decimal .
+eth:hasPrudentialFlag a owl:DatatypeProperty ; rdfs:domain eth:EthicalCase ; rdfs:range xsd:boolean .
+eth:hasHumanImpact a owl:DatatypeProperty ; rdfs:domain eth:EthicalCase ; rdfs:range xsd:string .
+eth:hasIrreversibility a owl:DatatypeProperty ; rdfs:domain eth:EthicalCase ; rdfs:range xsd:string .
+eth:hasDataSensitivity a owl:DatatypeProperty ; rdfs:domain eth:EthicalCase ; rdfs:range xsd:string .
+
+#################################################################
+# Main classes
+#################################################################
+
+efr:CaseRequirementProfile a owl:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Case requirement profile"@en , "Perfil de requisitos do caso"@pt-BR ;
+    rdfs:comment "Facet-level requirement profile derived from one ethical case, domain assumptions and prudential conditions."@en .
+
+efr:DerivedFacetRequirement a owl:Class ;
+    rdfs:subClassOf wcmkf:FacetRequirement ;
+    rdfs:label "Derived facet requirement"@en , "Requisito derivado de faceta"@pt-BR ;
+    rdfs:comment "Facet requirement produced by case-to-requirement derivation rules."@en .
+
+efr:RequirementDerivationRule a owl:Class ;
+    rdfs:subClassOf prov:Plan ;
+    rdfs:label "Requirement derivation rule"@en , "Regra de derivação de requisitos"@pt-BR ;
+    rdfs:comment "Rule template that maps case attributes to requirement levels, priorities and weights."@en .
+
+efr:RequirementAggregationProfile a owl:Class ;
+    rdfs:subClassOf prov:Plan ;
+    rdfs:label "Requirement aggregation profile"@en , "Perfil de agregação de requisitos"@pt-BR ;
+    rdfs:comment "Policy for assembling local facet requirements into a case requirement profile."@en .
+
+efr:SeverityBand a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Severity band"@en , "Faixa de severidade"@pt-BR .
+
+efr:PrudentialMode a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Prudential mode"@en , "Modo prudencial"@pt-BR .
+
+efr:PriorityTier a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Priority tier"@en , "Faixa de prioridade"@pt-BR .
+
+efr:RequirementVocabulary a skos:ConceptScheme ;
+    skos:prefLabel "Requirement derivation vocabulary"@en ;
+    skos:prefLabel "Vocabulário de derivação de requisitos"@pt-BR .
+
+#################################################################
+# Controlled concepts
+#################################################################
+
+efr:SEVERITY_LOW a efr:SeverityBand ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "SEVERITY_LOW"@en .
+efr:SEVERITY_MEDIUM a efr:SeverityBand ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "SEVERITY_MEDIUM"@en .
+efr:SEVERITY_HIGH a efr:SeverityBand ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "SEVERITY_HIGH"@en .
+efr:SEVERITY_CRITICAL a efr:SeverityBand ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "SEVERITY_CRITICAL"@en .
+
+efr:PRUDENTIAL_STANDARD a efr:PrudentialMode ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "PRUDENTIAL_STANDARD"@en .
+efr:PRUDENTIAL_ELEVATED a efr:PrudentialMode ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "PRUDENTIAL_ELEVATED"@en .
+efr:PRUDENTIAL_MAXIMUM a efr:PrudentialMode ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "PRUDENTIAL_MAXIMUM"@en .
+
+efr:PRIORITY_CORE a efr:PriorityTier ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "PRIORITY_CORE"@en .
+efr:PRIORITY_CRITICAL a efr:PriorityTier ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "PRIORITY_CRITICAL"@en .
+efr:PRIORITY_SUPPORTING a efr:PriorityTier ; skos:inScheme efr:RequirementVocabulary ; skos:prefLabel "PRIORITY_SUPPORTING"@en .
+
+efr:health_domain a eth:Domain ; skos:prefLabel "health"@en .
+efr:justice_security_domain a eth:Domain ; skos:prefLabel "justice_security"@en .
+efr:critical_infrastructure_domain a eth:Domain ; skos:prefLabel "critical_infrastructure"@en .
+efr:education_domain a eth:Domain ; skos:prefLabel "education"@en .
+efr:privacy_data_domain a eth:Domain ; skos:prefLabel "privacy_data"@en .
+efr:information_media_domain a eth:Domain ; skos:prefLabel "information_media"@en .
+
+#################################################################
+# Object properties
+#################################################################
+
+efr:derivedFromCase a owl:ObjectProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range eth:EthicalCase ;
+    rdfs:label "derived from case"@en , "derivado do caso"@pt-BR .
+
+efr:usesDomainProfile a owl:ObjectProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range wcmkf:DomainProfile ;
+    rdfs:label "uses domain profile"@en , "usa perfil de domínio"@pt-BR .
+
+efr:usesSeverityBand a owl:ObjectProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range efr:SeverityBand ;
+    rdfs:label "uses severity band"@en , "usa faixa de severidade"@pt-BR .
+
+efr:usesPrudentialMode a owl:ObjectProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range efr:PrudentialMode ;
+    rdfs:label "uses prudential mode"@en , "usa modo prudencial"@pt-BR .
+
+efr:usesAggregationProfile a owl:ObjectProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range efr:RequirementAggregationProfile ;
+    rdfs:label "uses aggregation profile"@en , "usa perfil de agregação"@pt-BR .
+
+efr:hasDerivedRequirement a owl:ObjectProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range efr:DerivedFacetRequirement ;
+    rdfs:label "has derived requirement"@en , "tem requisito derivado"@pt-BR .
+
+efr:derivedByRule a owl:ObjectProperty ;
+    rdfs:domain efr:DerivedFacetRequirement ;
+    rdfs:range efr:RequirementDerivationRule ;
+    rdfs:label "derived by rule"@en , "derivado por regra"@pt-BR .
+
+efr:priorityTier a owl:ObjectProperty ;
+    rdfs:domain efr:DerivedFacetRequirement ;
+    rdfs:range efr:PriorityTier ;
+    rdfs:label "priority tier"@en , "faixa de prioridade"@pt-BR .
+
+efr:applicableToDomain a owl:ObjectProperty ;
+    rdfs:domain efr:RequirementDerivationRule ;
+    rdfs:range wcmkf:DomainProfile ;
+    rdfs:label "applicable to domain"@en , "aplicável ao domínio"@pt-BR .
+
+efr:targetsFacet a owl:ObjectProperty ;
+    rdfs:domain efr:RequirementDerivationRule ;
+    rdfs:range wcmkf:Facet ;
+    rdfs:label "targets facet"@en , "alvo de faceta"@pt-BR .
+
+efr:recommendedPrudentialMode a owl:ObjectProperty ;
+    rdfs:domain efr:RequirementDerivationRule ;
+    rdfs:range efr:PrudentialMode ;
+    rdfs:label "recommended prudential mode"@en , "modo prudencial recomendado"@pt-BR .
+
+#################################################################
+# Datatype properties
+#################################################################
+
+efr:baseRequiredLevel a owl:DatatypeProperty ;
+    rdfs:domain efr:DerivedFacetRequirement ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "base required level"@en .
+
+efr:derivedWeight a owl:DatatypeProperty ;
+    rdfs:domain efr:DerivedFacetRequirement ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "derived weight"@en .
+
+efr:prudentialDelta a owl:DatatypeProperty ;
+    rdfs:domain efr:DerivedFacetRequirement ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "prudential delta"@en .
+
+efr:severityFloor a owl:DatatypeProperty ;
+    rdfs:domain efr:RequirementDerivationRule ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "severity floor"@en .
+
+efr:domainBaseWeight a owl:DatatypeProperty ;
+    rdfs:domain efr:RequirementDerivationRule ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "domain base weight"@en .
+
+efr:activationConditionNote a owl:DatatypeProperty ;
+    rdfs:domain efr:RequirementDerivationRule ;
+    rdfs:range xsd:string ;
+    rdfs:label "activation condition note"@en .
+
+efr:requirementCoverage a owl:DatatypeProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "requirement coverage"@en .
+
+efr:derivedRequirementCount a owl:DatatypeProperty ;
+    rdfs:domain efr:CaseRequirementProfile ;
+    rdfs:range xsd:integer ;
+    rdfs:label "derived requirement count"@en .
+
+#################################################################
+# Aggregation profiles and domain profiles
+#################################################################
+
+efr:ConservativeRequirementAggregation a efr:RequirementAggregationProfile ;
+    rdfs:label "Conservative requirement aggregation"@en ;
+    rdfs:comment "Biases requirements upward for critical domains and prudentially flagged cases."@en .
+
+efr:BalancedRequirementAggregation a efr:RequirementAggregationProfile ;
+    rdfs:label "Balanced requirement aggregation"@en .
+
+wcmkf:HealthDomainProfile a wcmkf:DomainProfile .
+wcmkf:JusticeSecurityDomainProfile a wcmkf:DomainProfile .
+wcmkf:CriticalInfrastructureDomainProfile a wcmkf:DomainProfile .
+wcmkf:EducationDomainProfile a wcmkf:DomainProfile .
+wcmkf:PrivacyDataDomainProfile a wcmkf:DomainProfile .
+wcmkf:InformationMediaDomainProfile a wcmkf:DomainProfile .
+
+#################################################################
+# Derivation rules (illustrative first draft)
+#################################################################
+
+efr:HealthPrudentialObligationRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:PrudentialObligation ;
+    efr:applicableToDomain wcmkf:HealthDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_MAXIMUM ;
+    efr:severityFloor "0.72"^^xsd:decimal ;
+    efr:domainBaseWeight "0.95"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when clinical stakes, vulnerability or irreversibility are high."@en .
+
+efr:HealthNormativeKnowledgeRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:NormativeKnowledge ;
+    efr:applicableToDomain wcmkf:HealthDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.68"^^xsd:decimal ;
+    efr:domainBaseWeight "0.90"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when domain-specific constraints and patient safety obligations apply."@en .
+
+efr:HealthControllabilityRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:Controllability ;
+    efr:applicableToDomain wcmkf:HealthDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.70"^^xsd:decimal ;
+    efr:domainBaseWeight "0.92"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when interventions require interruption, override or rollback capacity."@en .
+
+efr:JusticeLegalObligationRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:LegalObligation ;
+    efr:applicableToDomain wcmkf:JusticeSecurityDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_MAXIMUM ;
+    efr:severityFloor "0.74"^^xsd:decimal ;
+    efr:domainBaseWeight "0.96"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when liberty, coercion or enforcement consequences are possible."@en .
+
+efr:JusticeAccountabilityRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:AccountabilityObligation ;
+    efr:applicableToDomain wcmkf:JusticeSecurityDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.66"^^xsd:decimal ;
+    efr:domainBaseWeight "0.90"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when reviewability, contestability or traceability are necessary."@en .
+
+efr:JusticeContextualKnowledgeRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ContextualKnowledge ;
+    efr:applicableToDomain wcmkf:JusticeSecurityDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.65"^^xsd:decimal ;
+    efr:domainBaseWeight "0.86"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when context misreading may amplify injustice or disproportionality."@en .
+
+efr:CriticalInfraCausalKnowledgeRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:CausalKnowledge ;
+    efr:applicableToDomain wcmkf:CriticalInfrastructureDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_MAXIMUM ;
+    efr:severityFloor "0.73"^^xsd:decimal ;
+    efr:domainBaseWeight "0.93"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when cascading effects and systemic failure paths matter."@en .
+
+efr:CriticalInfraSafeExecutabilityRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:SafeExecutability ;
+    efr:applicableToDomain wcmkf:CriticalInfrastructureDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_MAXIMUM ;
+    efr:severityFloor "0.76"^^xsd:decimal ;
+    efr:domainBaseWeight "0.96"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when intervention failure may propagate to public safety or essential services."@en .
+
+efr:PrivacyNormativeKnowledgeRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:NormativeKnowledge ;
+    efr:applicableToDomain wcmkf:PrivacyDataDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.63"^^xsd:decimal ;
+    efr:domainBaseWeight "0.88"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when data sensitivity and purpose limitation are central."@en .
+
+efr:PrivacyStakeholderRegardRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:StakeholderRegard ;
+    efr:applicableToDomain wcmkf:PrivacyDataDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.61"^^xsd:decimal ;
+    efr:domainBaseWeight "0.82"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when third-party and downstream data subjects are materially affected."@en .
+
+efr:InformationMediaProvenanceRule a efr:RequirementDerivationRule ;
+    efr:targetsFacet wcmkf:ProvenanceAwareness ;
+    efr:applicableToDomain wcmkf:InformationMediaDomainProfile ;
+    efr:recommendedPrudentialMode efr:PRUDENTIAL_ELEVATED ;
+    efr:severityFloor "0.60"^^xsd:decimal ;
+    efr:domainBaseWeight "0.84"^^xsd:decimal ;
+    efr:activationConditionNote "Activate when content origin, trust and manipulation are salient."@en .
+
+#################################################################
+# Example mapping hints
+#################################################################
+
+efr:HealthPrudentialObligationRule prov:wasInfluencedBy wcmkf:HealthDomainProfile .
+efr:JusticeLegalObligationRule prov:wasInfluencedBy wcmkf:JusticeSecurityDomainProfile .
+efr:CriticalInfraCausalKnowledgeRule prov:wasInfluencedBy wcmkf:CriticalInfrastructureDomainProfile .

@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1394, in <module>
+    main()
+    ~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 1234, in main
+    modules, shapes_v4, shapes_v6, instances, invalid_v4, invalid_v6, per_module = load_graphs()
+                                                                                   ~~~~~~~~~~~^^
+  File "/home/luiz/Documentos/Strata/Shared/_analysis/ontology/validate_ontology_v4.py", line 130, in load_graphs
+    instances.parse(os.path.join(ONT, INSTANCE_FILE), format="turtle")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/graph.py", line 1625, in parse
+    source = create_input_source(
+        source=source,
+    ...<4 lines>...
+        format=format,
+    )
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/parser.py", line 732, in create_input_source
+    ) = _create_input_source_from_location(
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        file=file,
+        ^^^^^^^^^^
+    ...<2 lines>...
+        location=location,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/luiz/.local/lib/python3.14/site-packages/rdflib/parser.py", line 792, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/luiz/Documentos/Strata/Shared/Ontologias/ontology_v4/fixtures/instances_subset.ttl'

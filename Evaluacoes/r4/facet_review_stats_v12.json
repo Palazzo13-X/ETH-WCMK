@@ -1,0 +1,277 @@
+{
+  "registry": "canon v12 (33 facets)",
+  "n_facets": 33,
+  "registry_validation_errors": [],
+  "beta_rows_sum_to_one": true,
+  "facets_per_pillar": {
+    "W": 12,
+    "C": 25,
+    "M": 28,
+    "K": 19
+  },
+  "pillars_touched_distribution": {
+    "1": 1,
+    "2": 13,
+    "3": 19,
+    "4": 0
+  },
+  "pillar_beta_mass_share": {
+    "W": 0.1652,
+    "C": 0.2864,
+    "M": 0.3424,
+    "K": 0.2061
+  },
+  "pillar_declared_lambda": {
+    "W": 0.3,
+    "C": 0.25,
+    "M": 0.25,
+    "K": 0.2
+  },
+  "lambda_vs_beta_mass_max_deviation": 0.1348,
+  "guard_count": 12,
+  "guards_per_pillar": {
+    "W": 3,
+    "C": 8,
+    "M": 12,
+    "K": 8
+  },
+  "facets_with_observable": 33,
+  "inert_weight_field": "removed from core, registry, CSV and RDF (D4.17)",
+  "identical_beta_pairs": 8,
+  "identical_beta_pairs_list": [
+    [
+      "W3",
+      "W6",
+      [
+        0.6,
+        0.0,
+        0.4,
+        0.0
+      ]
+    ],
+    [
+      "C2",
+      "C5",
+      [
+        0.0,
+        0.8,
+        0.2,
+        0.0
+      ]
+    ],
+    [
+      "C3",
+      "C7",
+      [
+        0.0,
+        0.6,
+        0.2,
+        0.2
+      ]
+    ],
+    [
+      "M2",
+      "M4",
+      [
+        0.0,
+        0.2,
+        0.6,
+        0.2
+      ]
+    ],
+    [
+      "M2",
+      "M7",
+      [
+        0.0,
+        0.2,
+        0.6,
+        0.2
+      ]
+    ],
+    [
+      "M4",
+      "M7",
+      [
+        0.0,
+        0.2,
+        0.6,
+        0.2
+      ]
+    ],
+    [
+      "K1",
+      "K2",
+      [
+        0.0,
+        0.2,
+        0.2,
+        0.6
+      ]
+    ],
+    [
+      "K6",
+      "K7",
+      [
+        0.0,
+        0.2,
+        0.3,
+        0.5
+      ]
+    ]
+  ],
+  "near_duplicate_beta_pairs_0_to_0_12": 0,
+  "near_duplicate_beta_pairs_list": [],
+  "chebyshev_beta_pairs_lt_0_12": 26,
+  "chebyshev_beta_pairs_list": [
+    [
+      "W1",
+      "W4",
+      0.1
+    ],
+    [
+      "W2",
+      "W3",
+      0.1
+    ],
+    [
+      "W2",
+      "W6",
+      0.1
+    ],
+    [
+      "W3",
+      "W6",
+      0.0
+    ],
+    [
+      "C2",
+      "C4",
+      0.1
+    ],
+    [
+      "C2",
+      "C5",
+      0.0
+    ],
+    [
+      "C3",
+      "C6",
+      0.1
+    ],
+    [
+      "C3",
+      "C7",
+      0.0
+    ],
+    [
+      "C4",
+      "C5",
+      0.1
+    ],
+    [
+      "C6",
+      "C7",
+      0.1
+    ],
+    [
+      "M2",
+      "M4",
+      0.0
+    ],
+    [
+      "M2",
+      "M7",
+      0.0
+    ],
+    [
+      "M2",
+      "M8",
+      0.1
+    ],
+    [
+      "M3",
+      "M6",
+      0.1
+    ],
+    [
+      "M4",
+      "M7",
+      0.0
+    ],
+    [
+      "M4",
+      "M8",
+      0.1
+    ],
+    [
+      "M7",
+      "M8",
+      0.1
+    ],
+    [
+      "K1",
+      "K2",
+      0.0
+    ],
+    [
+      "K1",
+      "K6",
+      0.1
+    ],
+    [
+      "K1",
+      "K7",
+      0.1
+    ],
+    [
+      "K2",
+      "K6",
+      0.1
+    ],
+    [
+      "K2",
+      "K7",
+      0.1
+    ],
+    [
+      "K3",
+      "K6",
+      0.1
+    ],
+    [
+      "K3",
+      "K7",
+      0.1
+    ],
+    [
+      "K3",
+      "M8",
+      0.1
+    ],
+    [
+      "K6",
+      "K7",
+      0.0
+    ]
+  ],
+  "facets_with_flat_criticality": 0,
+  "mean_criticality_per_facet": 3.0909,
+  "criticality_mass_per_domain": {
+    "DS": 2.6667,
+    "ED": 2.6061,
+    "FI": 3.6061,
+    "GP": 3.5152,
+    "IC": 3.4545,
+    "IM": 2.4242,
+    "JS": 3.7576,
+    "MA": 2.4848,
+    "PD": 3.4545,
+    "RS": 2.8788,
+    "SA": 3.9697,
+    "TB": 2.697,
+    "TS": 2.6667
+  },
+  "share_of_beta_mass_in_single_pillar_facets": 0.0303,
+  "beta_above_floor_r3": 0
+}

@@ -1,0 +1,692 @@
+{
+  "verified_from": [
+    "corpus_v5_layerA.jsonl",
+    "corpus_v5_layerB.jsonl",
+    "corpus_v5_personas.jsonl",
+    "corpus_v5_gold.jsonl",
+    "corpus_v5_confrontations.jsonl"
+  ],
+  "seed_note": "all numbers recomputed from the artefacts, not from the generator's in-memory counters",
+  "cases": {
+    "layerA": 1200,
+    "layerB": 320,
+    "total": 1520
+  },
+  "personas": {
+    "instances": 120,
+    "concentrated_deficit_instances": 96,
+    "concentrated_deficit_types": 24,
+    "pillars_with_concentrated_deficit_type": [
+      "C",
+      "K",
+      "M",
+      "W"
+    ]
+  },
+  "pairs_adjudicated": 183920,
+  "pair_alignment": {
+    "keys_in_gold": 183920,
+    "keys_in_confrontations": 183920,
+    "pairs_missing_in_gold": 0,
+    "pairs_missing_in_confrontations": 0,
+    "stored_gold_consensus_mismatches": 0
+  },
+  "cases_by_layer": {
+    "A": 1200,
+    "B": 320
+  },
+  "cases_by_domain": {
+    "SA": 118,
+    "JS": 118,
+    "IC": 118,
+    "FI": 118,
+    "PD": 117,
+    "GP": 117,
+    "IM": 117,
+    "ED": 117,
+    "TB": 116,
+    "MA": 116,
+    "TS": 116,
+    "RS": 116,
+    "DS": 116
+  },
+  "cases_by_layer_domain": {
+    "A/SA": 93,
+    "A/JS": 93,
+    "A/IC": 93,
+    "A/FI": 93,
+    "A/PD": 92,
+    "A/GP": 92,
+    "A/IM": 92,
+    "A/ED": 92,
+    "A/TB": 92,
+    "A/MA": 92,
+    "A/TS": 92,
+    "A/RS": 92,
+    "A/DS": 92,
+    "B/SA": 25,
+    "B/JS": 25,
+    "B/IC": 25,
+    "B/FI": 25,
+    "B/PD": 25,
+    "B/GP": 25,
+    "B/IM": 25,
+    "B/ED": 25,
+    "B/TB": 24,
+    "B/MA": 24,
+    "B/TS": 24,
+    "B/RS": 24,
+    "B/DS": 24
+  },
+  "cases_by_severity": {
+    "low": 386,
+    "medium": 378,
+    "high": 378,
+    "critical": 378
+  },
+  "cases_by_layer_severity": {
+    "A/low": 300,
+    "A/medium": 300,
+    "A/high": 300,
+    "A/critical": 300,
+    "B/low": 86,
+    "B/medium": 78,
+    "B/high": 78,
+    "B/critical": 78
+  },
+  "cases_by_horizon": {
+    "immediate": 411,
+    "short": 387,
+    "long": 335,
+    "medium": 387
+  },
+  "cases_by_irreversibility": {
+    "reversible": 539,
+    "partially_irreversible": 515,
+    "irreversible": 466
+  },
+  "cases_by_prudential": {
+    "standard": 531,
+    "elevated": 520,
+    "maximum": 469
+  },
+  "cases_by_conflict_pattern": {
+    "none": 234,
+    "individual_collective": 234,
+    "innovation_precaution": 234,
+    "autonomy_benefit": 234,
+    "legal_ethical": 233,
+    "competition_care": 117,
+    "short_long": 117,
+    "transparency_efficacy": 117
+  },
+  "distinct_layerA_parameter_vectors": 1200,
+  "layerA_duplicate_vectors": 0,
+  "ambiguity": {
+    "norm_conflict_unresolved": 179,
+    "evidence_conflict": 126
+  },
+  "template_diversity": {
+    "consequence_types": 22,
+    "vulnerability_types": 2,
+    "norm_sets": 24,
+    "distinct_instrument_strings": 66
+  },
+  "adequacy": {
+    "n": 183920,
+    "mean": 0.6358,
+    "min": 0.0,
+    "max": 0.9581,
+    "p50": 0.6119,
+    "share_ge_0.999": 0.0,
+    "share_ge_0.99": 0.0
+  },
+  "decision_distribution": {
+    "REVIEW_REQUIRED": 93442,
+    "ALLOW_WITH_GUARDS": 9711,
+    "ALLOW": 83,
+    "ABSTAIN": 9342,
+    "PROHIBIT": 71342
+  },
+  "abstain": {
+    "total": 9342,
+    "epistemic_E29": 9342,
+    "coverage_gate": 0,
+    "share": 0.050794
+  },
+  "veto_rate": 0.609,
+  "hard_veto_rate": 0.1249,
+  "gold": {
+    "consensus_distribution": {
+      "PROHIBIT": 117499,
+      "ALLOW": 5033,
+      "REVIEW_REQUIRED": 43014,
+      "ALLOW_WITH_GUARDS": 7605,
+      "ABSTAIN": 10769
+    },
+    "unanimous_share": 0.4262,
+    "contested_share_spread_ge_1": 0.5738,
+    "kernel_only_count": 12173,
+    "kernel_only_share": 0.066186,
+    "kernel_only_gate_max_0.40": true,
+    "panel_kappa": {
+      "AB": 0.3561,
+      "AC": 0.4723,
+      "BC": 0.261
+    },
+    "rules": [
+      {
+        "id": "A1",
+        "fired_pairs": 2879,
+        "fired_distinct_cases": 439,
+        "changed_panel_verdict_pairs": 1314
+      },
+      {
+        "id": "A2",
+        "fired_pairs": 48884,
+        "fired_distinct_cases": 404,
+        "changed_panel_verdict_pairs": 38799
+      },
+      {
+        "id": "A3",
+        "fired_pairs": 22506,
+        "fired_distinct_cases": 186,
+        "changed_panel_verdict_pairs": 19496
+      },
+      {
+        "id": "A4",
+        "fired_pairs": 33638,
+        "fired_distinct_cases": 278,
+        "changed_panel_verdict_pairs": 26829
+      },
+      {
+        "id": "A5",
+        "fired_pairs": 54329,
+        "fired_distinct_cases": 449,
+        "changed_panel_verdict_pairs": 39970
+      },
+      {
+        "id": "A6",
+        "fired_pairs": 44891,
+        "fired_distinct_cases": 371,
+        "changed_panel_verdict_pairs": 32657
+      },
+      {
+        "id": "A7",
+        "fired_pairs": 19118,
+        "fired_distinct_cases": 158,
+        "changed_panel_verdict_pairs": 15401
+      },
+      {
+        "id": "A8",
+        "fired_pairs": 13367,
+        "fired_distinct_cases": 1431,
+        "changed_panel_verdict_pairs": 9614
+      },
+      {
+        "id": "A9",
+        "fired_pairs": 34461,
+        "fired_distinct_cases": 801,
+        "changed_panel_verdict_pairs": 14250
+      },
+      {
+        "id": "A11",
+        "fired_pairs": 864,
+        "fired_distinct_cases": 331,
+        "changed_panel_verdict_pairs": 823
+      },
+      {
+        "id": "A10",
+        "fired_pairs": 27803,
+        "fired_distinct_cases": 448,
+        "changed_panel_verdict_pairs": 17977
+      },
+      {
+        "id": "B1",
+        "fired_pairs": 14520,
+        "fired_distinct_cases": 120,
+        "changed_panel_verdict_pairs": 9236
+      },
+      {
+        "id": "B2",
+        "fired_pairs": 54571,
+        "fired_distinct_cases": 451,
+        "changed_panel_verdict_pairs": 34051
+      },
+      {
+        "id": "B3",
+        "fired_pairs": 8572,
+        "fired_distinct_cases": 144,
+        "changed_panel_verdict_pairs": 7018
+      },
+      {
+        "id": "B4",
+        "fired_pairs": 6655,
+        "fired_distinct_cases": 55,
+        "changed_panel_verdict_pairs": 4220
+      },
+      {
+        "id": "B5",
+        "fired_pairs": 66429,
+        "fired_distinct_cases": 549,
+        "changed_panel_verdict_pairs": 40460
+      },
+      {
+        "id": "B6",
+        "fired_pairs": 33638,
+        "fired_distinct_cases": 278,
+        "changed_panel_verdict_pairs": 22929
+      },
+      {
+        "id": "B7",
+        "fired_pairs": 46932,
+        "fired_distinct_cases": 439,
+        "changed_panel_verdict_pairs": 33242
+      },
+      {
+        "id": "B8",
+        "fired_pairs": 2319,
+        "fired_distinct_cases": 558,
+        "changed_panel_verdict_pairs": 1321
+      },
+      {
+        "id": "C1",
+        "fired_pairs": 41140,
+        "fired_distinct_cases": 340,
+        "changed_panel_verdict_pairs": 33997
+      },
+      {
+        "id": "C2",
+        "fired_pairs": 39325,
+        "fired_distinct_cases": 325,
+        "changed_panel_verdict_pairs": 32341
+      },
+      {
+        "id": "C3",
+        "fired_pairs": 1920,
+        "fired_distinct_cases": 426,
+        "changed_panel_verdict_pairs": 1678
+      },
+      {
+        "id": "C4",
+        "fired_pairs": 17787,
+        "fired_distinct_cases": 147,
+        "changed_panel_verdict_pairs": 14930
+      },
+      {
+        "id": "C5",
+        "fired_pairs": 21175,
+        "fired_distinct_cases": 175,
+        "changed_panel_verdict_pairs": 18089
+      },
+      {
+        "id": "C6",
+        "fired_pairs": 3478,
+        "fired_distinct_cases": 438,
+        "changed_panel_verdict_pairs": 2085
+      },
+      {
+        "id": "C7",
+        "fired_pairs": 29887,
+        "fired_distinct_cases": 247,
+        "changed_panel_verdict_pairs": 25192
+      },
+      {
+        "id": "C8",
+        "fired_pairs": 45738,
+        "fired_distinct_cases": 378,
+        "changed_panel_verdict_pairs": 38308
+      },
+      {
+        "id": "C9",
+        "fired_pairs": 28072,
+        "fired_distinct_cases": 232,
+        "changed_panel_verdict_pairs": 23578
+      },
+      {
+        "id": "C10",
+        "fired_pairs": 46585,
+        "fired_distinct_cases": 385,
+        "changed_panel_verdict_pairs": 39313
+      },
+      {
+        "id": "C11",
+        "fired_pairs": 1890,
+        "fired_distinct_cases": 159,
+        "changed_panel_verdict_pairs": 586
+      },
+      {
+        "id": "C12",
+        "fired_pairs": 14409,
+        "fired_distinct_cases": 198,
+        "changed_panel_verdict_pairs": 9424
+      },
+      {
+        "id": "C13",
+        "fired_pairs": 6648,
+        "fired_distinct_cases": 656,
+        "changed_panel_verdict_pairs": 5351
+      },
+      {
+        "id": "C14",
+        "fired_pairs": 4964,
+        "fired_distinct_cases": 880,
+        "changed_panel_verdict_pairs": 4300
+      },
+      {
+        "id": "C15",
+        "fired_pairs": 9662,
+        "fired_distinct_cases": 1431,
+        "changed_panel_verdict_pairs": 7989
+      }
+    ],
+    "rules_firing_on_ge_50_cases": 34,
+    "rules_total": 34
+  },
+  "model_vs_gold": {
+    "kappa_overall": 0.2035,
+    "kappa_declared_agent": 0.165,
+    "exact_match_rate": 0.4997,
+    "within_one_step_rate": 0.9224,
+    "mean_rank_gap": 0.5838,
+    "model_stricter_than_gold_rate": 0.1449,
+    "model_looser_than_gold_rate": 0.3555,
+    "spearman_Aa_vs_gold_rank": -0.042,
+    "confusion": {
+      "PROHIBIT -> PROHIBIT": 57122,
+      "REVIEW_REQUIRED -> PROHIBIT": 53431,
+      "REVIEW_REQUIRED -> REVIEW_REQUIRED": 27547,
+      "PROHIBIT -> REVIEW_REQUIRED": 12042,
+      "ABSTAIN -> ABSTAIN": 6463,
+      "REVIEW_REQUIRED -> ALLOW_WITH_GUARDS": 5861,
+      "ALLOW_WITH_GUARDS -> PROHIBIT": 4950,
+      "REVIEW_REQUIRED -> ALLOW": 3942,
+      "REVIEW_REQUIRED -> ABSTAIN": 2661,
+      "ALLOW_WITH_GUARDS -> REVIEW_REQUIRED": 2634,
+      "ABSTAIN -> PROHIBIT": 1985,
+      "PROHIBIT -> ABSTAIN": 1025,
+      "PROHIBIT -> ALLOW_WITH_GUARDS": 937,
+      "ALLOW_WITH_GUARDS -> ALLOW": 768,
+      "ABSTAIN -> REVIEW_REQUIRED": 753,
+      "ALLOW_WITH_GUARDS -> ALLOW_WITH_GUARDS": 741,
+      "ALLOW_WITH_GUARDS -> ABSTAIN": 618,
+      "PROHIBIT -> ALLOW": 216,
+      "ABSTAIN -> ALLOW": 83,
+      "ABSTAIN -> ALLOW_WITH_GUARDS": 58,
+      "ALLOW -> REVIEW_REQUIRED": 38,
+      "ALLOW -> ALLOW": 24,
+      "ALLOW -> PROHIBIT": 11,
+      "ALLOW -> ALLOW_WITH_GUARDS": 8,
+      "ALLOW -> ABSTAIN": 2
+    }
+  },
+  "kappa_by_persona_type": {
+    "declared": 0.165,
+    "exemplary_capped": 0.0007,
+    "solid": 0.0283,
+    "adequate": 0.1515,
+    "strained": 0.1513,
+    "distressed": 0.4268,
+    "diffuse_shortfall": 0.1616,
+    "misaligned_values": 0.2285,
+    "illegitimate_mandate": 0.2113,
+    "stakeholder_blind": 0.0635,
+    "goal_drift": 0.0667,
+    "priority_capture": 0.0705,
+    "no_kill_switch": 0.4282,
+    "unsafe_execution": 0.4415,
+    "no_containment": 0.4546,
+    "brittle_robustness": 0.0635,
+    "under_resourced": 0.0687,
+    "scope_mismatch": 0.0755,
+    "no_legal_compliance": 0.3347,
+    "no_human_review": 0.098,
+    "no_precaution": 0.4286,
+    "no_accountability": 0.0902,
+    "no_redress": 0.4276,
+    "weak_ethics_framework": 0.0744,
+    "role_ambiguity": 0.066,
+    "evidentially_thin": 0.0896,
+    "contextually_blind": 0.0987,
+    "normatively_ignorant": 0.0858,
+    "procedurally_weak": 0.0642,
+    "causally_blind": 0.0948,
+    "miscalibrated_confidence": 0.4286
+  },
+  "decision_distribution_by_persona_type": {
+    "declared": {
+      "REVIEW_REQUIRED": 888,
+      "ALLOW_WITH_GUARDS": 180,
+      "PROHIBIT": 355,
+      "ABSTAIN": 94,
+      "ALLOW": 3
+    },
+    "exemplary_capped": {
+      "ALLOW_WITH_GUARDS": 1154,
+      "REVIEW_REQUIRED": 3840,
+      "ALLOW": 63,
+      "PROHIBIT": 845,
+      "ABSTAIN": 178
+    },
+    "solid": {
+      "ALLOW_WITH_GUARDS": 721,
+      "REVIEW_REQUIRED": 4005,
+      "PROHIBIT": 1093,
+      "ALLOW": 4,
+      "ABSTAIN": 257
+    },
+    "adequate": {
+      "ALLOW_WITH_GUARDS": 315,
+      "REVIEW_REQUIRED": 3726,
+      "ABSTAIN": 365,
+      "PROHIBIT": 1674
+    },
+    "strained": {
+      "REVIEW_REQUIRED": 1834,
+      "ABSTAIN": 490,
+      "PROHIBIT": 3756
+    },
+    "distressed": {
+      "REVIEW_REQUIRED": 630,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4942
+    },
+    "diffuse_shortfall": {
+      "ALLOW_WITH_GUARDS": 59,
+      "REVIEW_REQUIRED": 3570,
+      "ABSTAIN": 399,
+      "PROHIBIT": 2052
+    },
+    "misaligned_values": {
+      "REVIEW_REQUIRED": 2411,
+      "PROHIBIT": 3491,
+      "ABSTAIN": 178
+    },
+    "illegitimate_mandate": {
+      "REVIEW_REQUIRED": 2585,
+      "PROHIBIT": 3320,
+      "ABSTAIN": 175
+    },
+    "stakeholder_blind": {
+      "ALLOW_WITH_GUARDS": 633,
+      "REVIEW_REQUIRED": 4202,
+      "PROHIBIT": 1070,
+      "ABSTAIN": 174,
+      "ALLOW": 1
+    },
+    "goal_drift": {
+      "ALLOW_WITH_GUARDS": 494,
+      "REVIEW_REQUIRED": 4301,
+      "PROHIBIT": 1105,
+      "ABSTAIN": 180
+    },
+    "priority_capture": {
+      "ALLOW_WITH_GUARDS": 472,
+      "REVIEW_REQUIRED": 4300,
+      "PROHIBIT": 1133,
+      "ABSTAIN": 175
+    },
+    "no_kill_switch": {
+      "REVIEW_REQUIRED": 600,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4972
+    },
+    "unsafe_execution": {
+      "REVIEW_REQUIRED": 600,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4972
+    },
+    "no_containment": {
+      "REVIEW_REQUIRED": 600,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4972
+    },
+    "brittle_robustness": {
+      "ALLOW_WITH_GUARDS": 572,
+      "REVIEW_REQUIRED": 4247,
+      "PROHIBIT": 1087,
+      "ABSTAIN": 174
+    },
+    "under_resourced": {
+      "ALLOW_WITH_GUARDS": 594,
+      "REVIEW_REQUIRED": 4291,
+      "PROHIBIT": 1018,
+      "ALLOW": 4,
+      "ABSTAIN": 173
+    },
+    "scope_mismatch": {
+      "ALLOW_WITH_GUARDS": 486,
+      "REVIEW_REQUIRED": 4319,
+      "PROHIBIT": 1095,
+      "ABSTAIN": 180
+    },
+    "no_legal_compliance": {
+      "REVIEW_REQUIRED": 1945,
+      "ABSTAIN": 508,
+      "PROHIBIT": 3627
+    },
+    "no_human_review": {
+      "ALLOW_WITH_GUARDS": 491,
+      "REVIEW_REQUIRED": 4339,
+      "PROHIBIT": 1043,
+      "ALLOW": 5,
+      "ABSTAIN": 202
+    },
+    "no_precaution": {
+      "REVIEW_REQUIRED": 600,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4972
+    },
+    "no_accountability": {
+      "ALLOW_WITH_GUARDS": 498,
+      "REVIEW_REQUIRED": 4303,
+      "PROHIBIT": 1075,
+      "ABSTAIN": 203,
+      "ALLOW": 1
+    },
+    "no_redress": {
+      "REVIEW_REQUIRED": 600,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4972
+    },
+    "weak_ethics_framework": {
+      "ALLOW_WITH_GUARDS": 493,
+      "REVIEW_REQUIRED": 4243,
+      "PROHIBIT": 1140,
+      "ABSTAIN": 203,
+      "ALLOW": 1
+    },
+    "role_ambiguity": {
+      "ALLOW_WITH_GUARDS": 535,
+      "REVIEW_REQUIRED": 4282,
+      "PROHIBIT": 1086,
+      "ABSTAIN": 177
+    },
+    "evidentially_thin": {
+      "ALLOW_WITH_GUARDS": 309,
+      "REVIEW_REQUIRED": 4375,
+      "PROHIBIT": 1121,
+      "ABSTAIN": 275
+    },
+    "contextually_blind": {
+      "ALLOW_WITH_GUARDS": 298,
+      "REVIEW_REQUIRED": 4369,
+      "ABSTAIN": 273,
+      "PROHIBIT": 1139,
+      "ALLOW": 1
+    },
+    "normatively_ignorant": {
+      "ALLOW_WITH_GUARDS": 387,
+      "REVIEW_REQUIRED": 4312,
+      "PROHIBIT": 1139,
+      "ABSTAIN": 242
+    },
+    "procedurally_weak": {
+      "ALLOW_WITH_GUARDS": 487,
+      "REVIEW_REQUIRED": 4296,
+      "PROHIBIT": 1062,
+      "ABSTAIN": 235
+    },
+    "causally_blind": {
+      "ALLOW_WITH_GUARDS": 533,
+      "REVIEW_REQUIRED": 4229,
+      "ABSTAIN": 276,
+      "PROHIBIT": 1042
+    },
+    "miscalibrated_confidence": {
+      "REVIEW_REQUIRED": 600,
+      "ABSTAIN": 508,
+      "PROHIBIT": 4972
+    }
+  },
+  "audit_sample": {
+    "rows": 120,
+    "decision_composition": {
+      "ABSTAIN": 24,
+      "ALLOW": 3,
+      "ALLOW_WITH_GUARDS": 26,
+      "PROHIBIT": 24,
+      "REVIEW_REQUIRED": 43
+    },
+    "domain_composition": {
+      "DS": 8,
+      "ED": 10,
+      "FI": 10,
+      "GP": 10,
+      "IC": 10,
+      "IM": 10,
+      "JS": 10,
+      "MA": 10,
+      "PD": 10,
+      "RS": 8,
+      "SA": 10,
+      "TB": 10,
+      "TS": 4
+    },
+    "empty_rater_cells": 360,
+    "status_marked_unadjudicated": true
+  },
+  "gates": {
+    "a_no_duplicate_layerA_parameter_vectors": true,
+    "b_share_adequacy_ge_0.999_below_0.05": true,
+    "c_concentrated_deficit_persona_type_per_pillar": true,
+    "d_at_least_15_rules_firing_on_50_plus_cases": true,
+    "e_abstain_fires_on_some_cases": true,
+    "f_all_artefacts_written_to_r4": true,
+    "gold_kernel_only_share_below_0.40": true,
+    "severity_low_used_in_layerA": true,
+    "all_13_domains_covered": true
+  },
+  "divergences_vs_coverage_json": [],
+  "gates_recomputed_from_verified_numbers": {
+    "a_no_duplicate_layerA_parameter_vectors": true,
+    "b_share_adequacy_ge_0.999_below_0.05": true,
+    "c_concentrated_deficit_persona_type_per_pillar": true,
+    "d_at_least_15_rules_firing_on_50_plus_cases": true,
+    "e_abstain_fires_on_some_cases": true,
+    "f_all_artefacts_written_to_r4": true,
+    "gold_kernel_only_share_below_0.40": true,
+    "severity_low_used_in_layerA": true,
+    "all_13_domains_covered": true
+  }
+}

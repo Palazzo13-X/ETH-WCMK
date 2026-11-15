@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>Φ</mi><mo>=</mo><mfrac><mrow><munder><mo>∑</mo><mrow><mi>f</mi></mrow></munder><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi>f</mi></mrow></msub><msub><mrow><mi>Δ</mi></mrow><mrow><mi>f</mi></mrow></msub></mrow></mrow><mrow><munder><mo>∑</mo><mrow><mi>f</mi></mrow></munder><mrow><msub><mrow><mi>c</mi></mrow><mrow><mi>f</mi></mrow></msub></mrow></mrow></mfrac></math>

@@ -1,0 +1,46 @@
+# ETH-WCMK — dual licence
+
+## Code — MIT
+
+Everything executable — `_analysis/formal_core/`, the generators, the batteries,
+the validators, the tests, the scripts — is under the MIT License:
+
+> Permission is hereby granted, free of charge, to any person obtaining a copy of
+> this software and associated documentation files (the "Software"), to deal in
+> the Software without restriction, including without limitation the rights to
+> use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+> the Software, and to permit persons to whom the Software is furnished to do so,
+> subject to the following conditions:
+>
+> The above copyright notice and this permission notice shall be included in all
+> copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+> FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+> COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+> AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+> WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Model, ontologies, corpora and text — CC BY-SA 4.0
+
+The conceptual model, the ontologies (`Ontologias/`), the facet registry
+(`_analysis/facets/`), the corpus definitions, the gate reports, the papers and
+the figures are under the Creative Commons Attribution-ShareAlike 4.0
+International licence: https://creativecommons.org/licenses/by-sa/4.0/
+
+## Attribution
+
+> Palazzo, L. M. M. & Vanzin, T. (2026). *ETH-WCMK: a formally verified core and
+> a SHACL-valid ontology for auditing delegated ethical agency* (v13.0.0).
+> https://github.com/ETH-WCMK/ETH-WCMK
+
+## Scope notes
+
+- Upstream normative instruments (UDHR, GDPR, WHO, FAIR, IEEE, OECD, ANPD) are
+  cited as sources of the rubric anchors. ETH-WCMK is a computational model of
+  delegated agency: it is not legal advice, not a compliance tool, and is not
+  endorsed by any of those bodies.
+- Evaluation rounds r2, r3 and r4 are read-only historical artefacts. A new
+  revision writes a new round directory; a frozen round is never edited.
+- SPDX identifier for the whole repository: `MIT AND CC-BY-SA-4.0`.

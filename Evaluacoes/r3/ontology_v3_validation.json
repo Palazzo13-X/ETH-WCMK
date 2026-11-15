@@ -1,0 +1,141 @@
+{
+  "graph": {
+    "triples": 843,
+    "files": [
+      "01_core.ttl",
+      "02_facets.ttl",
+      "03_deontic.ttl",
+      "04_agency.ttl",
+      "05_dynamics.ttl",
+      "06_calibration.ttl"
+    ],
+    "shacl_conformant": true,
+    "shacl_violations": 0
+  },
+  "sparql_checks": {
+    "V1_facet_count_28": {
+      "got": 28,
+      "pass": true
+    },
+    "V2_beta_weights_sum_to_one": {
+      "violations": 0,
+      "pass": true
+    },
+    "V3_at_most_three_pillars_per_facet": {
+      "violations": 0,
+      "pass": true
+    },
+    "V4_no_token_beta_below_0.15": {
+      "violations": 0,
+      "pass": true
+    },
+    "V5_every_facet_has_an_observable": {
+      "violations": 0,
+      "pass": true
+    },
+    "V6_13_domain_criticality_vector": {
+      "got": 28,
+      "pass": true
+    },
+    "V7_guard_implies_positive_floor": {
+      "violations": 0,
+      "pass": true
+    },
+    "V8_cross_pillar_facets_present": {
+      "got": 27,
+      "pass": true
+    },
+    "V9_face_lattice_15_slots": {
+      "got": 15,
+      "pass": true
+    },
+    "V10_slot_kinds_complete": {
+      "got": [
+        "cell",
+        "edge",
+        "face",
+        "vertex"
+      ],
+      "pass": true
+    },
+    "V11_lambda_sum_to_one": {
+      "got": 1.0,
+      "pass": true
+    },
+    "V12_edge_weights_sum_to_one": {
+      "got": 1.0,
+      "pass": true
+    },
+    "V13_face_weights_sum_to_one": {
+      "got": 1.0,
+      "pass": true
+    },
+    "V14_penalty_budget_within_0.35": {
+      "got": 0.3,
+      "budget": 0.35,
+      "pass": true
+    },
+    "V15_theta_within_bounds": {
+      "got": {
+        "W": 0.65,
+        "C": 0.6,
+        "M": 0.6,
+        "K": 0.65
+      },
+      "pass": true
+    },
+    "V16_five_ordered_decisions": {
+      "got": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pass": true
+    },
+    "V17_deontic_and_context_enumerations": {
+      "instruments": 15,
+      "conflicts": 7,
+      "horizons": 4,
+      "severity_bands": 4,
+      "reversibilities": 3,
+      "pass": true
+    },
+    "V18_structural_hierarchy_alpha_ge_third_of_faces": {
+      "violations": {},
+      "pass": true
+    },
+    "V19_confrontation_instances_bounded_and_decidable": {
+      "got": [
+        [
+          "https://ethwcmk.org/ontology#Decision_PROHIBIT",
+          0.32
+        ]
+      ],
+      "pass": true
+    },
+    "V20_every_facet_has_a_primary_pillar": {
+      "violations": 0,
+      "pass": true
+    }
+  },
+  "arithmetic_mirror": {
+    "max_beta_disagreement": 0.0,
+    "max_numeric_disagreement": 0.0,
+    "parameter_diffs": {
+      "adequacy": 0.0,
+      "adequacy_low": 0.0,
+      "adequacy_high": 0.0,
+      "stakes": 0.0,
+      "bar": 0.0
+    },
+    "decision_from_ttl_params": "PROHIBIT",
+    "pass": true
+  },
+  "all_checks_passed": true,
+  "limitations": [
+    "OWL DL completeness is approximated by SHACL + SPARQL (no DL reasoner available)",
+    "criticality vectors are derived by rule (catalogue + pillar salience), not by an expert panel"
+  ]
+}

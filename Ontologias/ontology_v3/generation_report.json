@@ -1,0 +1,11 @@
+{
+  "01_core.ttl": 5152,
+  "02_facets.ttl": 18451,
+  "03_deontic.ttl": 3644,
+  "04_agency.ttl": 1384,
+  "05_dynamics.ttl": 1468,
+  "06_calibration.ttl": 2092,
+  "shapes/ontology_shapes.ttl": 2351,
+  "fixtures/instances.ttl": 1431,
+  "calibration_source": "B5 two-stage fit against the hybrid gold standard"
+}

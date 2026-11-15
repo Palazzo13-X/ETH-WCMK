@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>i</mi><mi>r</mi><msub><mrow><mi>r</mi></mrow><mrow><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub><mo>(</mo><mi>E</mi><mo>)</mo><mo>=</mo><mi>i</mi><mi>r</mi><mi>r</mi><mo>(</mo><mi>E</mi><mo>)</mo><mrow><mo>[</mo><mn>1</mn><mo>−</mo><mn>0.45</mn><mo>·</mo><mi>O</mi><mo>(</mo><mi>E</mi><mo>)</mo><mo>]</mo></mrow><mo>,</mo><mi> </mi><mi>O</mi><mi>∈</mi><mn>0</mn><mo>,</mo><mn>0.2</mn><mo>,</mo><mn>0.5</mn><mo>,</mo><mn>0.8</mn></math>

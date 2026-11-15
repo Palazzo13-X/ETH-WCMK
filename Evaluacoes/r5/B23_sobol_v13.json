@@ -1,0 +1,766 @@
+{
+ "battery": "B23",
+ "question": "which v13 parameters actually move the model, and is the set-to-zero canon inert?",
+ "generated_at": "2026-11-09T16:33:30.698688+00:00",
+ "design": {
+  "N": 1024,
+  "D": 12,
+  "panel_cases": 12,
+  "morris_trajectories": 200,
+  "estimator": "paired Latin-hypercube swap (no scipy available)",
+  "parameters": [
+   {
+    "name": "zeta",
+    "lo": 0.0,
+    "hi": 0.1,
+    "canonical": 0.0
+   },
+   {
+    "name": "salience_adaptation",
+    "lo": 0.0,
+    "hi": 2.0,
+    "canonical": 0.0
+   },
+   {
+    "name": "coverage_gate",
+    "lo": 0.55,
+    "hi": 0.9,
+    "canonical": 0.7
+   },
+   {
+    "name": "oversight_attenuation",
+    "lo": 0.0,
+    "hi": 1.0,
+    "canonical": 0.45
+   },
+   {
+    "name": "gamma",
+    "lo": 0.0,
+    "hi": 0.3,
+    "canonical": 0.12
+   },
+   {
+    "name": "eta",
+    "lo": 0.0,
+    "hi": 0.15,
+    "canonical": 0.05
+   },
+   {
+    "name": "omega",
+    "lo": 0.0,
+    "hi": 0.1,
+    "canonical": 0.03
+   },
+   {
+    "name": "rho",
+    "lo": 0.0,
+    "hi": 0.25,
+    "canonical": 0.1
+   },
+   {
+    "name": "delta",
+    "lo": 0.0,
+    "hi": 0.15,
+    "canonical": 0.05
+   },
+   {
+    "name": "lam_C",
+    "lo": 0.1,
+    "hi": 0.45,
+    "canonical": 0.25
+   },
+   {
+    "name": "mu_C",
+    "lo": 0.05,
+    "hi": 0.55,
+    "canonical": 0.4
+   },
+   {
+    "name": "theta_base",
+    "lo": 0.45,
+    "hi": 0.75,
+    "canonical": 0.6
+   }
+  ]
+ },
+ "mean_outputs_at_canonical": {
+  "mean_adequacy": 0.37,
+  "mean_permissiveness": 1.25,
+  "abstention_rate": 0.0833,
+  "veto_rate": 1.0,
+  "hard_veto_rate": 0.0833,
+  "mean_residual_risk": 0.4347,
+  "mean_review_need": 0.2718
+ },
+ "mean_outputs_over_design": {
+  "mean_adequacy": 0.3184,
+  "mean_permissiveness": 1.0913,
+  "abstention_rate": 0.1584,
+  "veto_rate": 0.925,
+  "hard_veto_rate": 0.1073,
+  "mean_residual_risk": 0.399,
+  "mean_review_need": 0.2423
+ },
+ "sobol": {
+  "mean_adequacy": {
+   "variance": 0.001558,
+   "S1": {
+    "zeta": 0.0127,
+    "salience_adaptation": 0.0109,
+    "coverage_gate": 0.7485,
+    "oversight_attenuation": 0.0098,
+    "gamma": 0.1234,
+    "eta": 0.0126,
+    "omega": 0.0103,
+    "rho": 0.0511,
+    "delta": 0.0111,
+    "lam_C": 0.0495,
+    "mu_C": 0.0098,
+    "theta_base": 0.0098
+   },
+   "ST": {
+    "zeta": 0.9887,
+    "salience_adaptation": 0.9998,
+    "coverage_gate": 0.2724,
+    "oversight_attenuation": 1.0,
+    "gamma": 0.8077,
+    "eta": 0.968,
+    "omega": 0.9897,
+    "rho": 0.9339,
+    "delta": 0.9827,
+    "lam_C": 0.953,
+    "mu_C": 1.0,
+    "theta_base": 1.0
+   },
+   "S1_sum": 1.0592,
+   "ST_sum": 10.8959,
+   "top_ST": [
+    "oversight_attenuation",
+    "mu_C",
+    "theta_base",
+    "salience_adaptation"
+   ]
+  },
+  "mean_permissiveness": {
+   "variance": 0.026154,
+   "S1": {
+    "zeta": 0.022,
+    "salience_adaptation": 0.022,
+    "coverage_gate": 0.9637,
+    "oversight_attenuation": 0.0582,
+    "gamma": 0.022,
+    "eta": 0.022,
+    "omega": 0.022,
+    "rho": 0.022,
+    "delta": 0.022,
+    "lam_C": 0.022,
+    "mu_C": 0.022,
+    "theta_base": 0.022
+   },
+   "ST": {
+    "zeta": 1.0,
+    "salience_adaptation": 1.0,
+    "coverage_gate": 0.0697,
+    "oversight_attenuation": 0.9755,
+    "gamma": 1.0,
+    "eta": 1.0,
+    "omega": 1.0,
+    "rho": 1.0,
+    "delta": 1.0,
+    "lam_C": 1.0,
+    "mu_C": 1.0,
+    "theta_base": 1.0
+   },
+   "S1_sum": 1.2416,
+   "ST_sum": 11.0451,
+   "top_ST": [
+    "zeta",
+    "salience_adaptation",
+    "gamma",
+    "eta"
+   ]
+  },
+  "abstention_rate": {
+   "variance": 0.006279,
+   "S1": {
+    "zeta": 0.0311,
+    "salience_adaptation": 0.0311,
+    "coverage_gate": 1.0,
+    "oversight_attenuation": 0.0311,
+    "gamma": 0.0311,
+    "eta": 0.0311,
+    "omega": 0.0311,
+    "rho": 0.0311,
+    "delta": 0.0311,
+    "lam_C": 0.0311,
+    "mu_C": 0.0311,
+    "theta_base": 0.0311
+   },
+   "ST": {
+    "zeta": 1.0,
+    "salience_adaptation": 1.0,
+    "coverage_gate": 0.0311,
+    "oversight_attenuation": 1.0,
+    "gamma": 1.0,
+    "eta": 1.0,
+    "omega": 1.0,
+    "rho": 1.0,
+    "delta": 1.0,
+    "lam_C": 1.0,
+    "mu_C": 1.0,
+    "theta_base": 1.0
+   },
+   "S1_sum": 1.3426,
+   "ST_sum": 11.0311,
+   "top_ST": [
+    "zeta",
+    "salience_adaptation",
+    "oversight_attenuation",
+    "gamma"
+   ]
+  },
+  "veto_rate": {
+   "variance": 0.006279,
+   "S1": {
+    "zeta": 0.0311,
+    "salience_adaptation": 0.0311,
+    "coverage_gate": 1.0,
+    "oversight_attenuation": 0.0311,
+    "gamma": 0.0311,
+    "eta": 0.0311,
+    "omega": 0.0311,
+    "rho": 0.0311,
+    "delta": 0.0311,
+    "lam_C": 0.0311,
+    "mu_C": 0.0311,
+    "theta_base": 0.0311
+   },
+   "ST": {
+    "zeta": 1.0,
+    "salience_adaptation": 1.0,
+    "coverage_gate": 0.0311,
+    "oversight_attenuation": 1.0,
+    "gamma": 1.0,
+    "eta": 1.0,
+    "omega": 1.0,
+    "rho": 1.0,
+    "delta": 1.0,
+    "lam_C": 1.0,
+    "mu_C": 1.0,
+    "theta_base": 1.0
+   },
+   "S1_sum": 1.3426,
+   "ST_sum": 11.0311,
+   "top_ST": [
+    "zeta",
+    "salience_adaptation",
+    "oversight_attenuation",
+    "gamma"
+   ]
+  },
+  "hard_veto_rate": {
+   "variance": 0.002886,
+   "S1": {
+    "zeta": 0.0,
+    "salience_adaptation": 0.0,
+    "coverage_gate": 0.0,
+    "oversight_attenuation": 0.7012,
+    "gamma": 0.0,
+    "eta": 0.0,
+    "omega": 0.0,
+    "rho": 0.0,
+    "delta": 0.0,
+    "lam_C": 0.0,
+    "mu_C": 0.0,
+    "theta_base": 0.2622
+   },
+   "ST": {
+    "zeta": 1.0,
+    "salience_adaptation": 1.0,
+    "coverage_gate": 1.0,
+    "oversight_attenuation": 0.2692,
+    "gamma": 1.0,
+    "eta": 1.0,
+    "omega": 1.0,
+    "rho": 1.0,
+    "delta": 1.0,
+    "lam_C": 1.0,
+    "mu_C": 1.0,
+    "theta_base": 0.718
+   },
+   "S1_sum": 0.9634,
+   "ST_sum": 10.9873,
+   "top_ST": [
+    "zeta",
+    "salience_adaptation",
+    "coverage_gate",
+    "gamma"
+   ]
+  },
+  "mean_residual_risk": {
+   "variance": 0.001165,
+   "S1": {
+    "zeta": 0.0346,
+    "salience_adaptation": 0.0346,
+    "coverage_gate": 0.9773,
+    "oversight_attenuation": 0.0346,
+    "gamma": 0.0346,
+    "eta": 0.0346,
+    "omega": 0.0346,
+    "rho": 0.0346,
+    "delta": 0.0346,
+    "lam_C": 0.0346,
+    "mu_C": 0.0558,
+    "theta_base": 0.0346
+   },
+   "ST": {
+    "zeta": 1.0,
+    "salience_adaptation": 1.0,
+    "coverage_gate": 0.0505,
+    "oversight_attenuation": 1.0,
+    "gamma": 1.0,
+    "eta": 1.0,
+    "omega": 1.0,
+    "rho": 1.0,
+    "delta": 1.0,
+    "lam_C": 1.0,
+    "mu_C": 0.9741,
+    "theta_base": 1.0
+   },
+   "S1_sum": 1.3788,
+   "ST_sum": 11.0246,
+   "top_ST": [
+    "zeta",
+    "salience_adaptation",
+    "oversight_attenuation",
+    "gamma"
+   ]
+  },
+  "mean_review_need": {
+   "variance": 0.000637,
+   "S1": {
+    "zeta": 0.0199,
+    "salience_adaptation": 0.0201,
+    "coverage_gate": 0.9403,
+    "oversight_attenuation": 0.019,
+    "gamma": 0.0474,
+    "eta": 0.0174,
+    "omega": 0.019,
+    "rho": 0.0332,
+    "delta": 0.0217,
+    "lam_C": 0.0267,
+    "mu_C": 0.019,
+    "theta_base": 0.019
+   },
+   "ST": {
+    "zeta": 0.9972,
+    "salience_adaptation": 0.9999,
+    "coverage_gate": 0.0865,
+    "oversight_attenuation": 1.0,
+    "gamma": 0.9515,
+    "eta": 0.9918,
+    "omega": 0.9973,
+    "rho": 0.9827,
+    "delta": 0.9956,
+    "lam_C": 0.9895,
+    "mu_C": 1.0,
+    "theta_base": 1.0
+   },
+   "S1_sum": 1.2029,
+   "ST_sum": 10.992,
+   "top_ST": [
+    "oversight_attenuation",
+    "mu_C",
+    "theta_base",
+    "salience_adaptation"
+   ]
+  }
+ },
+ "morris": {
+  "mean_adequacy": {
+   "zeta": {
+    "mu_star": 0.0752,
+    "sigma": 0.0889
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0004,
+    "sigma": 0.0005
+   },
+   "coverage_gate": {
+    "mu_star": 0.1041,
+    "sigma": 0.1463
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "gamma": {
+    "mu_star": 0.0812,
+    "sigma": 0.1177
+   },
+   "eta": {
+    "mu_star": 0.0604,
+    "sigma": 0.1049
+   },
+   "omega": {
+    "mu_star": 0.0536,
+    "sigma": 0.0867
+   },
+   "rho": {
+    "mu_star": 0.0527,
+    "sigma": 0.0825
+   },
+   "delta": {
+    "mu_star": 0.0532,
+    "sigma": 0.0634
+   },
+   "lam_C": {
+    "mu_star": 0.0409,
+    "sigma": 0.0473
+   },
+   "mu_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "theta_base": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   }
+  },
+  "mean_permissiveness": {
+   "zeta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "coverage_gate": {
+    "mu_star": 0.481,
+    "sigma": 0.6748
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.0442,
+    "sigma": 0.0606
+   },
+   "gamma": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "eta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "omega": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "rho": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "delta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "lam_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "mu_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "theta_base": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   }
+  },
+  "abstention_rate": {
+   "zeta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "coverage_gate": {
+    "mu_star": 0.2405,
+    "sigma": 0.3374
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "gamma": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "eta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "omega": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "rho": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "delta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "lam_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "mu_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "theta_base": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   }
+  },
+  "veto_rate": {
+   "zeta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "coverage_gate": {
+    "mu_star": 0.2405,
+    "sigma": 0.3374
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "gamma": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "eta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "omega": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "rho": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "delta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "lam_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "mu_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "theta_base": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   }
+  },
+  "hard_veto_rate": {
+   "zeta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "coverage_gate": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.085,
+    "sigma": 0.1044
+   },
+   "gamma": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "eta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "omega": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "rho": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "delta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "lam_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "mu_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "theta_base": {
+    "mu_star": 0.1389,
+    "sigma": 0.1959
+   }
+  },
+  "mean_residual_risk": {
+   "zeta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "coverage_gate": {
+    "mu_star": 0.102,
+    "sigma": 0.1432
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "gamma": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "eta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "omega": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "rho": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "delta": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "lam_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "mu_C": {
+    "mu_star": 0.0188,
+    "sigma": 0.022
+   },
+   "theta_base": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   }
+  },
+  "mean_review_need": {
+   "zeta": {
+    "mu_star": 0.0242,
+    "sigma": 0.0287
+   },
+   "salience_adaptation": {
+    "mu_star": 0.0002,
+    "sigma": 0.0003
+   },
+   "coverage_gate": {
+    "mu_star": 0.0745,
+    "sigma": 0.1046
+   },
+   "oversight_attenuation": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "gamma": {
+    "mu_star": 0.026,
+    "sigma": 0.0379
+   },
+   "eta": {
+    "mu_star": 0.0195,
+    "sigma": 0.034
+   },
+   "omega": {
+    "mu_star": 0.0174,
+    "sigma": 0.0284
+   },
+   "rho": {
+    "mu_star": 0.0171,
+    "sigma": 0.027
+   },
+   "delta": {
+    "mu_star": 0.0171,
+    "sigma": 0.0206
+   },
+   "lam_C": {
+    "mu_star": 0.0124,
+    "sigma": 0.0143
+   },
+   "mu_C": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   },
+   "theta_base": {
+    "mu_star": 0.0,
+    "sigma": 0.0
+   }
+  }
+ },
+ "inert_check": {
+  "zeta_total_order": {
+   "mean_adequacy": 0.9887,
+   "mean_permissiveness": 1.0,
+   "abstention_rate": 1.0,
+   "veto_rate": 1.0,
+   "hard_veto_rate": 1.0,
+   "mean_residual_risk": 1.0,
+   "mean_review_need": 0.9972
+  },
+  "salience_total_order": {
+   "mean_adequacy": 0.9998,
+   "mean_permissiveness": 1.0,
+   "abstention_rate": 1.0,
+   "veto_rate": 1.0,
+   "hard_veto_rate": 1.0,
+   "mean_residual_risk": 1.0,
+   "mean_review_need": 0.9999
+  },
+  "note": "the canon sets zeta = 0 and s = 0; ST_i measures the variance attributable to the parameter across its declared range, not at the canonical point. A parameter with ST > 0 is not inert in principle, only inert at the declared value - which is why the value has to be declared, not assumed."
+ },
+ "runtime_seconds": 200.7,
+ "interpretation": {
+  "method": "Morris elementary-effects screening (200 trajectories x 4 elementary steps, 1024 evaluations) plus paired Latin-hypercube Sobol (N=1024, M=2, 2048 evaluations) over the 12-dimensional v13 calibration space, evaluated on 12 real corpus cases spanning 13 domains and 5 decision outcomes.",
+  "reading_rule": "With a 12-case panel and step-function outputs (decision boundaries, guards), total-order indices saturate near 1. S1 and the Morris mu/sigma are the reportable quantities; ST ~ 1 with S1 ~ 0 means the parameter acts through interactions with the thresholds, not as a main effect.",
+  "key_findings": {
+   "coverage_gate": "largest first-order effect on mean adequacy (S1 = 0.749) and on abstention/permissiveness (S1 = 1.0): the dominant tuning knob, which is why it was moved from an implicit constant to a declared parameter (I44).",
+   "gamma": "second largest (S1 = 0.123 on mean adequacy): the epistemic-penalty weight is the main lever among the penalty terms.",
+   "zeta": "measurable effect (Morris mu 0.075 on adequacy, S1 = 0.013) but negative on agreement (kappa -0.0013 at 0.05, -0.0030 at 0.10): rejected as a decision input, kept as a diagnostic.",
+   "salience_adaptation_s": "Morris mu 0.0004, S1 ~ 0.03 via interactions only: empirically inert, consistent with kappa <= 0 for s = 0.5/1.0/2.0. s = 0 stays canonical.",
+   "oversight_attenuation": "no first-order effect on mean adequacy (mu 0.0) but the dominant driver of hard-veto rate (S1 = 0.701): oversight changes how strongly irreversibility blocks, not the adequacy score.",
+   "theta_base_mu_C": "near-zero first-order effects on continuous outputs; they act only through guard thresholds (theta_base Morris mu 0.139 on hard-veto rate)."
+  },
+  "nonlinearity_note": "Sum of S1 over the 12 parameters is below 1 for every output: the model is dominated by threshold interactions rather than additive parameter effects. This is a property of the decision ladder, and it is why calibration evidence in the paper is reported as paired-bootstrap kappa differences, not as sensitivity coefficients."
+ }
+}

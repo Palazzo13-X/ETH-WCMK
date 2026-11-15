@@ -1,0 +1,1212 @@
+{
+ "generated_at": "2026-11-11T15:05:22.222179+00:00",
+ "paper": "_analysis/PAPER_v13.md",
+ "checks": 166,
+ "passed": 166,
+ "verified_by_explicit_pattern": 127,
+ "verified_by_value_in_paper": 39,
+ "failed": [],
+ "checks_detail": [
+  {
+   "claim": "220.400 confrontaciones",
+   "paper_value": 220400.0,
+   "artifact_value": 220400,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " s = 0,5/1,0/2,0 \u2192 \u0394\u03ba \u22120,0001/\u22120,0002/\u22120,0003; \u03b6 = 0,05/0,10 \u2192 \u22120,0013/\u22120,0030.  Valida\u00e7\u00e3o: **69 testes de invariantes** (I1\u2013I44) passando; **2.064 probes advers\u00e1rios / 7.815 asser\u00e7\u00f5es / taxa 1,000** re-executados contra o n\u00facleo v13; espelho aritm\u00e9tico das **220.400 confronta\u00e7\u00f5es** do corpus v7 com **diff m\u00e1ximo 0,0** e 0 diverg\u00eancias de veredito; ontologia v4.2 (1.919.283 tri"
+  },
+  {
+   "claim": "1.520 casos",
+   "paper_value": 1520.0,
+   "artifact_value": 1520,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "144 personas / 36 tipos",
+   "paper_value": 144.0,
+   "artifact_value": 144,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa media 0,3551",
+   "paper_value": 0.3551,
+   "artifact_value": 0.3551,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa mediana 0,3462",
+   "paper_value": 0.3462,
+   "artifact_value": 0.3462,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa max 0,9508",
+   "paper_value": 0.9508,
+   "artifact_value": 0.9508,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "PROHIBIT 152.439",
+   "paper_value": 152439.0,
+   "artifact_value": 152439,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "REVIEW 32.996",
+   "paper_value": 32996.0,
+   "artifact_value": 32996,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "ABSTAIN 34.615 total",
+   "paper_value": 34615.0,
+   "artifact_value": 34615,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "ABSTAIN = 16.375 + 18.240",
+   "paper_value": 34615.0,
+   "artifact_value": 34615,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "44 exige que seja declar\u00e1vel (perfil de 23/33 deveres abst\u00e9m com gate 0,70 e n\u00e3o abst\u00e9m com gate 0,60; gate inv\u00e1lido \u21d2 erro). **E29 (epist\u00eamica):** `(norm_conflict \u2260 none \u2228 evidence_conflict) \u2227 U_E \u2265 0,60 \u2227 \u2113_K \u2264 0,65` \u21d2 ABSTAIN. No corpus v7: ABSTAIN total **34.615** = 16.375 epist\u00eamicas + 18.240 por cobertura (15,71% dos pares). D4.37, que mostrava 0 disparos naturais, est\u00e1 s"
+  },
+  {
+   "claim": "veto 90,6%",
+   "paper_value": 90.6,
+   "artifact_value": 90.60000000000001,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "hard veto 13,45%",
+   "paper_value": 13.45,
+   "artifact_value": 13.450000000000001,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa global 0,5336",
+   "paper_value": 0.5336,
+   "artifact_value": 0.5336,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "concordancia exacta 0,7886",
+   "paper_value": 0.7886,
+   "artifact_value": 0.7886,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Psi media 0,1703",
+   "paper_value": 0.1703,
+   "artifact_value": 0.17030386343012788,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "review_need media 0,2659",
+   "paper_value": 0.2659,
+   "artifact_value": 0.26587601602691097,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "regimes none 67.715",
+   "paper_value": 67715.0,
+   "artifact_value": 67715,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "regimes on_the_loop 91.640",
+   "paper_value": 91640.0,
+   "artifact_value": 91640,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "regimes in_the_loop 61.045",
+   "paper_value": 61045.0,
+   "artifact_value": 61045,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "unanimidad 50,9%",
+   "paper_value": 50.9,
+   "artifact_value": 50.9,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " \u00e9 a \u00fanica leitura coerente com E26\u2032, e est\u00e1 testada como invariante (I43).  Total: **34 regras**, todas disparando em \u2265 50 casos (m\u00ednimo 290 pares, m\u00e1ximo 101.221). Consenso = rank mediano com desempate precautor (spread \u2265 2 \u21d2 mais restritivo). Unanimidade **50,9%**; spread \u2265 1: 49,1%. Kernel-only: 31.279 pares (14,19%) \u2014 abaixo do gate de 40% exigido pelo plano. \u03ba entre pain\u00e9"
+  },
+  {
+   "claim": "kernel-only 14,19%",
+   "paper_value": 14.19,
+   "artifact_value": 14.191899999999999,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "gap de verificacion 36.480 pares",
+   "paper_value": 36480.0,
+   "artifact_value": 36480,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa defer 0,8085",
+   "paper_value": 0.8085,
+   "artifact_value": 0.8085,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa assume-breach 0,0801",
+   "paper_value": 0.0801,
+   "artifact_value": 0.0801,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "panel kappa A-B 0,3533",
+   "paper_value": 0.3533,
+   "artifact_value": 0.3533,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "panel kappa A-C 0,6447",
+   "paper_value": 0.6447,
+   "artifact_value": 0.6447,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "panel kappa B-C 0,3153",
+   "paper_value": 0.3153,
+   "artifact_value": 0.3153,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa estrato un\u00e2nime (corpus completo) 0,8167",
+   "paper_value": 0.8167,
+   "artifact_value": 0.8167,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "pares estrato un\u00e2nime 112.179",
+   "paper_value": 112179.0,
+   "artifact_value": 112179,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " 0 diverg\u00eancias de veredito; ontologia v4.2 (1.919.283 triplos de inst\u00e2ncia) SHACL-conforme. O resultado emp\u00edrico central \u00e9 **\u03ba = 0,5336** contra o consenso do painel normativo (v6: 0,4681, protocolo id\u00eantico), **0,8167** no estrato em que o painel \u00e9 un\u00e2nime (112.179 pares), **0,1371** no de maioria e **0,0526** no contestado (`Evaluacoes/r5/kappa_by_stratum_v13.json`). O gate "
+  },
+  {
+   "claim": "kappa estrato maioria 0,1371",
+   "paper_value": 0.1371,
+   "artifact_value": 0.1371,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa estrato contestado 0,0526",
+   "paper_value": 0.0526,
+   "artifact_value": 0.0526,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa global (mesmo artefacto) 0,5336",
+   "paper_value": 0.5336,
+   "artifact_value": 0.5336,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03ba estrato unanimous na amostra B20 canonical",
+   "paper_value": 0.7348,
+   "artifact_value": 0.7348,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03ba estrato majority na amostra B20 canonical",
+   "paper_value": 0.1254,
+   "artifact_value": 0.1254,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03ba estrato contested na amostra B20 canonical",
+   "paper_value": 0.0402,
+   "artifact_value": 0.0402,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa por dom\u00ednio TS",
+   "paper_value": 0.611,
+   "artifact_value": 0.611,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa por dom\u00ednio ED",
+   "paper_value": 0.6103,
+   "artifact_value": 0.6103,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa por dom\u00ednio FI",
+   "paper_value": 0.4624,
+   "artifact_value": 0.4624,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "pares abaixo do gate de cobertura 18.240",
+   "paper_value": 18240.0,
+   "artifact_value": 18240,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u0394\u03ba supervisi\u00f3n +0,0078",
+   "paper_value": 0.0078,
+   "artifact_value": 0.0078,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "**Saber quem vigia altera o peso do dever, n\u00e3o a etiqueta moral.** A supervis\u00e3o reduz a irreversibilidade *efetiva* do resultado (E11c\u2032) e eleva o requisito sobre M9 quando n\u00e3o existe canal humano (REQ_MISSING_OVERSIGHT = 0,08). Novidade mensurada da rodada: +0,0078 \u03ba.  ---  ## 2. O modelo  ### 2.1 Quatro pilares, por defini\u00e7\u00e3o  `p \u2208 {W, C, M, K}` (querer, poder, dever, saber) "
+  },
+  {
+   "claim": "\u0394\u03ba \u03b2 +0,0019",
+   "paper_value": 0.0019,
+   "artifact_value": 0.0019,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u0394\u03ba \u03b2+sup +0,0094",
+   "paper_value": 0.0094,
+   "artifact_value": 0.0094,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03b6=0,05 delta (B21, 48.000)",
+   "paper_value": 0.0013,
+   "artifact_value": -0.0013,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " n\u00e3o assumidos.** \u03bb(E) (sali\u00eancia do caso) e \u03a8 (exposi\u00e7\u00e3o de dever entre pilares, coeficiente \u03b6) foram implementados, testados e **mantidos desativados** porque o efeito medido \u00e9 nulo ou negativo: s = 0,5/1,0/2,0 \u2192 \u0394\u03ba \u22120,0001/\u22120,0002/\u22120,0003; \u03b6 = 0,05/0,10 \u2192 \u22120,0013/\u22120,0030.  Valida\u00e7\u00e3o: **69 testes de invariantes** (I1\u2013I44) passando; **2.064 probes advers\u00e1rios / 7.815 asser\u00e7\u00f5es"
+  },
+  {
+   "claim": "\u03b6=0,05 delta (corpus completo)",
+   "paper_value": -0.0028,
+   "artifact_value": -0.0028,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03b6=0,10 delta (400-caso)",
+   "paper_value": 0.0,
+   "artifact_value": -0.0036,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "fato (E30), 16.475 registros de falha de guarda.  Novidades v4.2: `eth:OversightRegime` (5 regimes, sh:in sobre 5 IRIs) em todo caso; `eth:reviewNeed`, `eth:crossPillarDuty` (Edge/Face) e `eth:caseSalienceW..K` nas confronta\u00e7\u00f5es; `cal:crossPillarCoefficient = 0,0`, `cal:salienceAdaptation = 0,0`, `cal:oversightAttenuation = 0,45`, `cal:coverageGate = 0,70` declarados no addendu"
+  },
+  {
+   "claim": "\u03b6=0,10 delta (corpus)",
+   "paper_value": -0.0059,
+   "artifact_value": -0.0059,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03bb(E) s=0,5 \u22120,0001 (canonical check)",
+   "paper_value": 0.0001,
+   "artifact_value": -0.0001,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "blind por pilar W/C/K, boundary_low 0,697, sparse, minimal).  ### 2.10 Sali\u00eancia do caso \u03bb(E) (E4\u2032, D5.2)  `\u03bb_p(E) = \u03bb_p\u00b7q_p^s / \u03a3_q \u03bb_q\u00b7q_q^s`, sempre \u03a3\u03bb(E) = 1; s = 0 \u21d2 identidade (I37). Medido (`B20_canonical_beta_check.json`, 130.680 pares): s = 0,5 \u2192 \u0394\u03ba \u22120,0001; s = 1,0 \u2192 \u22120,0002; s = 2,0 \u2192 \u22120,0003; Aa m\u00e9dia cai de 0,3523 a 0,3483. **s = 0 \u00e9 can\u00f4nico**; o grau de liberdade"
+  },
+  {
+   "claim": "\u03bb(E) s=2,0 \u22120,0003 (canonical check)",
+   "paper_value": 0.0003,
+   "artifact_value": -0.0003,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "697, sparse, minimal).  ### 2.10 Sali\u00eancia do caso \u03bb(E) (E4\u2032, D5.2)  `\u03bb_p(E) = \u03bb_p\u00b7q_p^s / \u03a3_q \u03bb_q\u00b7q_q^s`, sempre \u03a3\u03bb(E) = 1; s = 0 \u21d2 identidade (I37). Medido (`B20_canonical_beta_check.json`, 130.680 pares): s = 0,5 \u2192 \u0394\u03ba \u22120,0001; s = 1,0 \u2192 \u22120,0002; s = 2,0 \u2192 \u22120,0003; Aa m\u00e9dia cai de 0,3523 a 0,3483. **s = 0 \u00e9 can\u00f4nico**; o grau de liberdade fica declarado porque um corpus human"
+  },
+  {
+   "claim": "Aa \u03bb s=0 canonical 0,3523",
+   "paper_value": 0.3523,
+   "artifact_value": 0.3523,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa \u03bb s=2 canonical 0,3483",
+   "paper_value": 0.3483,
+   "artifact_value": 0.3483,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "Sali\u00eancia do caso \u03bb(E) (E4\u2032, D5.2)  `\u03bb_p(E) = \u03bb_p\u00b7q_p^s / \u03a3_q \u03bb_q\u00b7q_q^s`, sempre \u03a3\u03bb(E) = 1; s = 0 \u21d2 identidade (I37). Medido (`B20_canonical_beta_check.json`, 130.680 pares): s = 0,5 \u2192 \u0394\u03ba \u22120,0001; s = 1,0 \u2192 \u22120,0002; s = 2,0 \u2192 \u22120,0003; Aa m\u00e9dia cai de 0,3523 a 0,3483. **s = 0 \u00e9 can\u00f4nico**; o grau de liberdade fica declarado porque um corpus humano futuro pode justific\u00e1-lo. A hip"
+  },
+  {
+   "claim": "\u03ba sin guardas 0,1399",
+   "paper_value": 0.1399,
+   "artifact_value": 0.1399,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "de controle/rendi\u00e7\u00e3o com participa\u00e7\u00e3o sim\u00e9trica de M e K, e a distin\u00e7\u00e3o est\u00e1 nos observ\u00e1veis (kill switch vs exit right) e nos fatos que os ancoram.  **Abla\u00e7\u00e3o do \u03b2 (B21, 400 casos \u00d7 120 personas, bootstrap pareado 200):** retirar as 12 guardas \u2192 \u03ba 0,4633 \u2192 **0,1399** (\u0394\u03ba \u22120,3234, IC95 [\u22120,3306; \u22120,3147]) e Aa m\u00e9dia sobe de 0,3516 a 0,6153. Colapsar os deveres multi-pilares ao "
+  },
+  {
+   "claim": "\u0394\u03ba sin guardas \u22120,3234",
+   "paper_value": -0.3234,
+   "artifact_value": -0.3234,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa sin guardas 0,6153",
+   "paper_value": 0.6153,
+   "artifact_value": 0.6153,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "\u00e1 nos observ\u00e1veis (kill switch vs exit right) e nos fatos que os ancoram.  **Abla\u00e7\u00e3o do \u03b2 (B21, 400 casos \u00d7 120 personas, bootstrap pareado 200):** retirar as 12 guardas \u2192 \u03ba 0,4633 \u2192 **0,1399** (\u0394\u03ba \u22120,3234, IC95 [\u22120,3306; \u22120,3147]) e Aa m\u00e9dia sobe de 0,3516 a 0,6153. Colapsar os deveres multi-pilares ao pilar prim\u00e1rio (destruir o compartilhamento) \u2192 \u03ba **0,2691** (\u0394\u03ba \u22120,1942, IC"
+  },
+  {
+   "claim": "\u03ba pilar primario 0,2691",
+   "paper_value": 0.2691,
+   "artifact_value": 0.2691,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u0394\u03ba pilar primario \u22120,1942",
+   "paper_value": -0.1942,
+   "artifact_value": -0.1942,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa pilar primario 0,5627",
+   "paper_value": 0.5627,
+   "artifact_value": 0.5627,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "|\u0394\u03ba| guarda individual \u2264 0,0042",
+   "paper_value": 0.0042,
+   "artifact_value": 0.0042,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "C7 \u22120,0042",
+   "paper_value": 0.0042,
+   "artifact_value": -0.0042,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "5 [\u22120,3306; \u22120,3147]) e Aa m\u00e9dia sobe de 0,3516 a 0,6153. Colapsar os deveres multi-pilares ao pilar prim\u00e1rio (destruir o compartilhamento) \u2192 \u03ba **0,2691** (\u0394\u03ba \u22120,1942, IC95 [\u22120,2025; \u22120,1831]) e Aa m\u00e9dia sobe a 0,5627. Retirar uma guarda isolada altera \u03ba em \u2264 0,0042 (C7 \u22120,0042; M9 \u22120,0024; M7 \u22120,0020; M8 \u22120,0012; M1 \u22120,0012; W6 +0,0014; M10 +0,0013). Leitura honesta: **o siste"
+  },
+  {
+   "claim": "M9 \u22120,0024",
+   "paper_value": 0.0024,
+   "artifact_value": -0.0024,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "Aa m\u00e9dia sobe de 0,3516 a 0,6153. Colapsar os deveres multi-pilares ao pilar prim\u00e1rio (destruir o compartilhamento) \u2192 \u03ba **0,2691** (\u0394\u03ba \u22120,1942, IC95 [\u22120,2025; \u22120,1831]) e Aa m\u00e9dia sobe a 0,5627. Retirar uma guarda isolada altera \u03ba em \u2264 0,0042 (C7 \u22120,0042; M9 \u22120,0024; M7 \u22120,0020; M8 \u22120,0012; M1 \u22120,0012; W6 +0,0014; M10 +0,0013). Leitura honesta: **o sistema \u00e9 robusto a cada guar"
+  },
+  {
+   "claim": "98,27% de pares con contradicci\u00f3n",
+   "paper_value": 98.27,
+   "artifact_value": 98.27,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "224.097 caps",
+   "paper_value": 224097.0,
+   "artifact_value": 224097,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "exceso medio 0,3611",
+   "paper_value": 0.3611,
+   "artifact_value": 0.3611,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "18.898 vereditos cambian",
+   "paper_value": 18898.0,
+   "artifact_value": 18898,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "43,74% flips",
+   "paper_value": 43.74,
+   "artifact_value": 43.74,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa con E30 0,3633",
+   "paper_value": 0.3633,
+   "artifact_value": 0.3633,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Aa sin E30 0,6481",
+   "paper_value": 0.6481,
+   "artifact_value": 0.6481,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03ba con E30 0,5526",
+   "paper_value": 0.5526,
+   "artifact_value": 0.5526,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u03ba sin E30 0,2463",
+   "paper_value": 0.2463,
+   "artifact_value": 0.2463,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "\u0394\u03ba E30 +0,3062",
+   "paper_value": 0.3062,
+   "artifact_value": 0.3062,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "REVIEW\u2192PROHIBIT 15.153",
+   "paper_value": 15153.0,
+   "artifact_value": 15153,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "S1 coverage_gate 0,749",
+   "paper_value": 0.749,
+   "artifact_value": 0.7485,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "S1 gamma 0,123",
+   "paper_value": 0.123,
+   "artifact_value": 0.1234,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Morris \u03bc* s = 0,0004",
+   "paper_value": 0.0004,
+   "artifact_value": 0.0004,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "S1 oversight hard_veto 0,701",
+   "paper_value": 0.701,
+   "artifact_value": 0.7012,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "Morris \u03bc* \u03b6 0,075",
+   "paper_value": 0.075,
+   "artifact_value": 0.0752,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B23 runtime 200,7 s",
+   "paper_value": 200.7,
+   "artifact_value": 200.7,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "mirror 220.400 recomputadas",
+   "paper_value": 220400.0,
+   "artifact_value": 220400,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "mirror diff max 0,0",
+   "paper_value": 0.0,
+   "artifact_value": 0.0,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "mirror 0 diverg\u00eancias de veredito",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "mirror runtime 121,87 s",
+   "paper_value": 121.87,
+   "artifact_value": 121.87,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 2.064 probes",
+   "paper_value": 2064.0,
+   "artifact_value": 2064,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 7.815 asser\u00e7\u00f5es",
+   "paper_value": 7815.0,
+   "artifact_value": 7815,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "plementados, testados e **mantidos desativados** porque o efeito medido \u00e9 nulo ou negativo: s = 0,5/1,0/2,0 \u2192 \u0394\u03ba \u22120,0001/\u22120,0002/\u22120,0003; \u03b6 = 0,05/0,10 \u2192 \u22120,0013/\u22120,0030.  Valida\u00e7\u00e3o: **69 testes de invariantes** (I1\u2013I44) passando; **2.064 probes advers\u00e1rios / 7.815 asser\u00e7\u00f5es / taxa 1,000** re-executados contra o n\u00facleo v13; espelho aritm\u00e9tico das **220.400 confronta\u00e7\u00f5es** do co"
+  },
+  {
+   "claim": "B8 pass 1,000",
+   "paper_value": 1.0,
+   "artifact_value": 1.0,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " **mantidos desativados** porque o efeito medido \u00e9 nulo ou negativo: s = 0,5/1,0/2,0 \u2192 \u0394\u03ba \u22120,0001/\u22120,0002/\u22120,0003; \u03b6 = 0,05/0,10 \u2192 \u22120,0013/\u22120,0030.  Valida\u00e7\u00e3o: **69 testes de invariantes** (I1\u2013I44) passando; **2.064 probes advers\u00e1rios / 7.815 asser\u00e7\u00f5es / taxa 1,000** re-executados contra o n\u00facleo v13; espelho aritm\u00e9tico das **220.400 confronta\u00e7\u00f5es** do corpus v7 com **diff m\u00e1xi"
+  },
+  {
+   "claim": "33 facetas",
+   "paper_value": 33.0,
+   "artifact_value": 33,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "12 guardas duras",
+   "paper_value": 12.0,
+   "artifact_value": 12,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "pares \u03b2 id\u00e9nticos = 1",
+   "paper_value": 1.0,
+   "artifact_value": 1,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "sa a ser **derivada** de \u03b2 como marginal do ret\u00edculo, \u03b1_e = (1/3) \u03a3_{f \u2283 e} \u03b2_f. Com \u03b2_f = 1/4, \u03b1_e = 1/6 \u2014 os valores exatos da calibra\u00e7\u00e3o v10\u2013v12, de modo que **nenhum n\u00famero publicado muda**. Proposi\u00e7\u00e3o 1 demonstrada e testada no grid completo {0, 0.05, \u2026, 1}\u2074 (I34). 2. **\u03b2 diferenciado (D5.5).** Dez facetas reequilibradas. Pares de facetas com vetores \u03b2 id\u00eanticos: **8 \u2192 1**"
+  },
+  {
+   "claim": "1 uni-pilar",
+   "paper_value": 1.0,
+   "artifact_value": 1,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "10 bi-pilares",
+   "paper_value": 10.0,
+   "artifact_value": 10,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "22 tri-pilares",
+   "paper_value": 22.0,
+   "artifact_value": 22,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "0 quadripilares",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "1.919.283 triplos",
+   "paper_value": 1919283.0,
+   "artifact_value": 1919283,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "50.160 requisitos de faceta",
+   "paper_value": 50160.0,
+   "artifact_value": 50160,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "169.950 observa\u00e7\u00f5es",
+   "paper_value": 169950.0,
+   "artifact_value": 169950,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "21.280 ancoragens de fato",
+   "paper_value": 21280.0,
+   "artifact_value": 21280,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "16.475 registros de falha de guarda",
+   "paper_value": 16475.0,
+   "artifact_value": 16475,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "144 personas + 1 autodeclarado",
+   "paper_value": 145.0,
+   "artifact_value": 145,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "os (24 inst\u00e2ncias) declaram apenas parte do canon \u2014 entre **9 e 33** dos 33 deveres \u2014, com `declared_facets` expl\u00edcitos e `omit` declarado. Teto efetivo 0,95, 0 personas acima (`personas_exceeding_cap = 0`). Total de confronta\u00e7\u00f5es: **220.400** = 1.520 casos \u00d7 145 perfis (144 personas + o perfil `AGENT-declared`), todas adjudicadas.  Estratos de cobertura: 183.920 pares com cano"
+  },
+  {
+   "claim": "SHACL v4 sobre inst\u00e2ncias: 0 viola\u00e7\u00f5es",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "/0,10 \u2192 \u22120,0013/\u22120,0030.  Valida\u00e7\u00e3o: **69 testes de invariantes** (I1\u2013I44) passando; **2.064 probes advers\u00e1rios / 7.815 asser\u00e7\u00f5es / taxa 1,000** re-executados contra o n\u00facleo v13; espelho aritm\u00e9tico das **220.400 confronta\u00e7\u00f5es** do corpus v7 com **diff m\u00e1ximo 0,0** e 0 diverg\u00eancias de veredito; ontologia v4.2 (1.919.283 triplos de inst\u00e2ncia) SHACL-conforme. O resultado emp\u00edrico"
+  },
+  {
+   "claim": "SHACL v6 sobre inst\u00e2ncias: 0 viola\u00e7\u00f5es tras a correcci\u00f3n",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "/0,10 \u2192 \u22120,0013/\u22120,0030.  Valida\u00e7\u00e3o: **69 testes de invariantes** (I1\u2013I44) passando; **2.064 probes advers\u00e1rios / 7.815 asser\u00e7\u00f5es / taxa 1,000** re-executados contra o n\u00facleo v13; espelho aritm\u00e9tico das **220.400 confronta\u00e7\u00f5es** do corpus v7 com **diff m\u00e1ximo 0,0** e 0 diverg\u00eancias de veredito; ontologia v4.2 (1.919.283 triplos de inst\u00e2ncia) SHACL-conforme. O resultado emp\u00edrico"
+  },
+  {
+   "claim": "76 fixtures inv\u00e1lidos detectados e atribu\u00eddos",
+   "paper_value": 76.0,
+   "artifact_value": 76,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "s); shapes v6 **0 viola\u00e7\u00f5es** (27,91 s); m\u00f3dulos 0 (0,26 s). As 1.520 viola\u00e7\u00f5es que as shapes v6 daviam antes eram um bug de forma (`sh:in` com literais string em vez de IRIs, D5.11), n\u00e3o uma incompatibilidade do modelo. Fixtures intencionalmente inv\u00e1lidos: **76/76** detectados e **76/76** atribu\u00eddos \u00e0 shape esperada (1.246 viola\u00e7\u00f5es no grafo inv\u00e1lido) \u2014 a contraprova do gate. "
+  },
+  {
+   "claim": "1.246 viola\u00e7\u00f5es nos fixtures inv\u00e1lidos",
+   "paper_value": 1246.0,
+   "artifact_value": 1246,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "403 confronta\u00e7\u00f5es no espelho da ontologia",
+   "paper_value": 403.0,
+   "artifact_value": 403,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "diff m\u00e1ximo do espelho RDF",
+   "paper_value": 1.61e-12,
+   "artifact_value": 1.614153255502515e-12,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "espelho dentro da precisi\u00f3n declarada",
+   "paper_value": 1.0,
+   "artifact_value": 1,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "rfis (144 personas + o perfil `AGENT-declared`), todas adjudicadas.  Estratos de cobertura: 183.920 pares com canon completo; 18.240 com declara\u00e7\u00e3o parcial (todos abaixo do gate, completeness < 0,70); \u03ba modelo\u2194painel **0,3832** (full), **0,3293** (partial), **1,0000** (below gate \u2014 o modelo abst\u00e9m e o rubric tamb\u00e9m abst\u00e9m por V1).  **Massa de criticidade por dom\u00ednio (corpus v7)"
+  },
+  {
+   "claim": "excedente E30 dentro da precisi\u00f3n de almacenamento declarada",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " n\u00famero do corpus depende de estado n\u00e3o reproduz\u00edvel.  ### 8.10 Baselines, transfer\u00eancia e ajuste (hist\u00f3ricos v12, preservados)  Baselines (B7, 56.144 pares de holdout): modelo 0,4834; melhor baseline BL5 \"Aa sem cap de veto\" 0,1464; pior BL13 \"sempre REVIEW\" 0,0000; margem +0,337. Transfer\u00eancia (B13): \u03ba holdout 0,4834 vs in-sample 0,4618; camada B 0,6617 vs 0,3745 declarado; `"
+  },
+  {
+   "claim": "15 slots do face lattice",
+   "paper_value": 15.0,
+   "artifact_value": 15,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "0 diverg\u00eancias de veredito RDF vs escada",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "registry: 0 desencontros",
+   "paper_value": 0.0,
+   "artifact_value": 0,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "42 verifica\u00e7\u00f5es SPARQL/Python",
+   "paper_value": 42.0,
+   "artifact_value": 42,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "de forma (`sh:in` com literais string em vez de IRIs, D5.11), n\u00e3o uma incompatibilidade do modelo. Fixtures intencionalmente inv\u00e1lidos: **76/76** detectados e **76/76** atribu\u00eddos \u00e0 shape esperada (1.246 viola\u00e7\u00f5es no grafo inv\u00e1lido) \u2014 a contraprova do gate. **42 verifica\u00e7\u00f5es SPARQL/Python (15 deontol\u00f3gicas) passam todas**: \u03b1_e = (1/3)\u03a3_{face\u2283edge} \u03b2_f; regime de supervis\u00e3o igua"
+  },
+  {
+   "claim": "15 delas deontol\u00f3gicas",
+   "paper_value": 15.0,
+   "artifact_value": 15,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "todas as verifica\u00e7\u00f5es passam",
+   "paper_value": 42.0,
+   "artifact_value": 42,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "de forma (`sh:in` com literais string em vez de IRIs, D5.11), n\u00e3o uma incompatibilidade do modelo. Fixtures intencionalmente inv\u00e1lidos: **76/76** detectados e **76/76** atribu\u00eddos \u00e0 shape esperada (1.246 viola\u00e7\u00f5es no grafo inv\u00e1lido) \u2014 a contraprova do gate. **42 verifica\u00e7\u00f5es SPARQL/Python (15 deontol\u00f3gicas) passam todas**: \u03b1_e = (1/3)\u03a3_{face\u2283edge} \u03b2_f; regime de supervis\u00e3o igua"
+  },
+  {
+   "claim": "runtime de validaci\u00f3n 301,9 s",
+   "paper_value": 301.9,
+   "artifact_value": 301.9,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "gate G4' PASS",
+   "paper_value": 1.0,
+   "artifact_value": 1,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "rfis (144 personas + o perfil `AGENT-declared`), todas adjudicadas.  Estratos de cobertura: 183.920 pares com canon completo; 18.240 com declara\u00e7\u00e3o parcial (todos abaixo do gate, completeness < 0,70); \u03ba modelo\u2194painel **0,3832** (full), **0,3293** (partial), **1,0000** (below gate \u2014 o modelo abst\u00e9m e o rubric tamb\u00e9m abst\u00e9m por V1).  **Massa de criticidade por dom\u00ednio (corpus v7)"
+  },
+  {
+   "claim": "308.466 bytes de m\u00f3dulos",
+   "paper_value": 308466.0,
+   "artifact_value": 308466,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "criticidade agressiva (400 casos): kappa variante",
+   "paper_value": 0.4466,
+   "artifact_value": 0.4466,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "criticidade agressiva (400 casos): delta kappa",
+   "paper_value": -0.0147,
+   "artifact_value": -0.0147,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "criticidade agressiva (400 casos): CI inferior",
+   "paper_value": 0.0179,
+   "artifact_value": -0.0179,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "ompensa\u00e7\u00e3o \u00e9 uma propriedade do desenho, n\u00e3o de uma faceta.  **D5.7 \u2014 rebalanceamento de criticidade (rejeitado).** Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,002"
+  },
+  {
+   "claim": "criticidade agressiva (400 casos): CI superior",
+   "paper_value": 0.0116,
+   "artifact_value": -0.0116,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "o \u00e9 uma propriedade do desenho, n\u00e3o de uma faceta.  **D5.7 \u2014 rebalanceamento de criticidade (rejeitado).** Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; var"
+  },
+  {
+   "claim": "criticidade agressiva (400 casos): kappa baseline",
+   "paper_value": 0.4613,
+   "artifact_value": 0.4613,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "criticidade mild cap-3 (859 casos): kappa variante",
+   "paper_value": 0.4308,
+   "artifact_value": 0.4308,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "eamento de criticidade (rejeitado).** Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4281,"
+  },
+  {
+   "claim": "criticidade mild cap-3 (859 casos): delta kappa",
+   "paper_value": 0.005,
+   "artifact_value": -0.005,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "ticidade (rejeitado).** Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4281, **\u0394\u03ba \u22120,0077 "
+  },
+  {
+   "claim": "criticidade mild cap-3 (859 casos): CI inferior",
+   "paper_value": 0.0072,
+   "artifact_value": -0.0072,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "itado).** Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4281, **\u0394\u03ba \u22120,0077 IC95 [\u22120,0095;"
+  },
+  {
+   "claim": "criticidade mild cap-3 (859 casos): CI superior",
+   "paper_value": 0.0022,
+   "artifact_value": -0.0022,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4281, **\u0394\u03ba \u22120,0077 IC95 [\u22120,0095; \u22120,0058]"
+  },
+  {
+   "claim": "criticidade mild cap-3 (859 casos): kappa baseline",
+   "paper_value": 0.4358,
+   "artifact_value": 0.4358,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": " rebalanceamento de criticidade (rejeitado).** Eleva a criticidade de TB/TS/IM ao n\u00edvel de SA/JS. Medidas: variante agressiva (400 casos, 48.400 pares) \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 "
+  },
+  {
+   "claim": "criticidade targeted TB/TS/IM (859 casos): kappa variante",
+   "paper_value": 0.4281,
+   "artifact_value": 0.4281,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "criticidade targeted TB/TS/IM (859 casos): delta kappa",
+   "paper_value": -0.0077,
+   "artifact_value": -0.0077,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "criticidade targeted TB/TS/IM (859 casos): CI inferior",
+   "paper_value": 0.0095,
+   "artifact_value": -0.0095,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": ") \u03ba 0,4613 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4281, **\u0394\u03ba \u22120,0077 IC95 [\u22120,0095; \u22120,0058]**. As three s\u00e3o negativas e significantes: D4.18 permanece rejeitada. Artefactos: `B20_variant_eval_ful"
+  },
+  {
+   "claim": "criticidade targeted TB/TS/IM (859 casos): CI superior",
+   "paper_value": 0.0058,
+   "artifact_value": -0.0058,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "3 \u2192 0,4466, **\u0394\u03ba \u22120,0147 IC95 [\u22120,0179; \u22120,0116]**; variante mild cap-3 (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4308, **\u0394\u03ba \u22120,0050 IC95 [\u22120,0072; \u22120,0022]**; variante targeted TB/TS/IM (859 casos, 103.939 pares) \u03ba 0,4358 \u2192 0,4281, **\u0394\u03ba \u22120,0077 IC95 [\u22120,0095; \u22120,0058]**. As three s\u00e3o negativas e significantes: D4.18 permanece rejeitada. Artefactos: `B20_variant_eval_full.json`, "
+  },
+  {
+   "claim": "criticidade targeted TB/TS/IM (859 casos): kappa baseline",
+   "paper_value": 0.4358,
+   "artifact_value": 0.4358,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "69 testes de invariante",
+   "paper_value": 69.0,
+   "artifact_value": 69,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa cobertura full 0,3832",
+   "paper_value": 0.3832,
+   "artifact_value": 0.3832,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa cobertura partial 0,3293",
+   "paper_value": 0.3293,
+   "artifact_value": 0.3293,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "kappa cobertura abaixo do gate 1,0000",
+   "paper_value": 1.0,
+   "artifact_value": 1.0,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "pares com canon completo 183.920",
+   "paper_value": 183920.0,
+   "artifact_value": 183920,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 n\u00e3o-compensaci\u00f3n 1.536 probes",
+   "paper_value": 1536.0,
+   "artifact_value": 1536,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "tura declarado e validado (I44).  ### 8.2 Probes advers\u00e1rios (B8)  **2.064 probes, 7.815 asser\u00e7\u00f5es, taxa de passagem 1,000** re-executados contra o n\u00facleo v13 (`Evaluacoes/r5/B8_probes_reverified_v13.json`, gerado por `run_battery_B8_v13.py`): n\u00e3o-compensa\u00e7\u00e3o 1.536 (pillar_cap, cap_active, gap_removed, no_allow, cada 1.536/1.536; hard_veto 384/384), d\u00e9ficit cr\u00edtico 132 (4 asser"
+  },
+  {
+   "claim": "B8 d\u00e9ficit cr\u00edtico 132 probes",
+   "paper_value": 132.0,
+   "artifact_value": 132,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 monotonicidade 99 probes",
+   "paper_value": 99.0,
+   "artifact_value": 99,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 absten\u00e7\u00e3o 132 probes",
+   "paper_value": 132.0,
+   "artifact_value": 132,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 histerese 165 probes",
+   "paper_value": 165.0,
+   "artifact_value": 165,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 asser\u00e7\u00e3o hard_veto 384",
+   "paper_value": 384.0,
+   "artifact_value": 384,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B8 absten\u00e7\u00e3o dispara 66/66",
+   "paper_value": 66.0,
+   "artifact_value": 66,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "bytes dos m\u00f3dulos RDF 308.466",
+   "paper_value": 308466.0,
+   "artifact_value": 308466,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "instances.ttl 64.242.382 bytes",
+   "paper_value": 64242382.0,
+   "artifact_value": 64242382,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "triplos de inst\u00e2ncia 1.919.283",
+   "paper_value": 1919283.0,
+   "artifact_value": 1919283,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "triplos totais validados 1.927.780",
+   "paper_value": 1927780.0,
+   "artifact_value": 1927780,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "runtime validaci\u00f3n ontol\u00f3gica 301,9 s",
+   "paper_value": 301.9,
+   "artifact_value": 301.9,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "manifest 46 artefactos",
+   "paper_value": 47.0,
+   "artifact_value": 47,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "rified_v13.json`, `mirror_full_corpus_v13.json`, `ontology_v4_2_validation.json`, `kappa_by_stratum_v13.json`, `adjudication_packet_blind.csv`, `adjudication_packet_key.csv`, `adjudication_sample_power.json`, `B26_rubric_sensitivity.json`, `manifest_r5.json` (47 artefactos, 21 execu\u00e7\u00f5es com duraci\u00f3n, 65,37 MB, SHA-256 de cada arquivo e rev de git), `paper_consistency_check_v13."
+  },
+  {
+   "claim": "manifest 20 execu\u00e7\u00f5es registradas",
+   "paper_value": 21.0,
+   "artifact_value": 21,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "fixtures/instances.ttl` (64.242.382 bytes), somando **1.927.780 triplos validados** com os 8.509 dos m\u00f3dulos \u2014 1.520 casos, 5.150 perfis, 3.755 confronta\u00e7\u00f5es instanciadas (amostra estratificada), 1520 cadeias, 50.160 requisitos de faceta, 169.950 observa\u00e7\u00f5es, 21.280 ancoragens de fato (E30), 16.475 registros de falha de guarda.  Novidades v4.2: `eth:OversightRegime` (5 regimes,"
+  },
+  {
+   "claim": "manifest 65,3 MB rastreados",
+   "paper_value": 65.37,
+   "artifact_value": 65.373028,
+   "pass": true,
+   "verified_by": "value stated in the paper",
+   "context": "json`, `ontology_v4_2_validation.json`, `kappa_by_stratum_v13.json`, `adjudication_packet_blind.csv`, `adjudication_packet_key.csv`, `adjudication_sample_power.json`, `B26_rubric_sensitivity.json`, `manifest_r5.json` (47 artefactos, 21 execu\u00e7\u00f5es com duraci\u00f3n, 65,37 MB, SHA-256 de cada arquivo e rev de git), `paper_consistency_check_v13.json` (verificador paper \u2194 artefatos). N\u00fac"
+  },
+  {
+   "claim": "B26 kappa baseline 0,5336",
+   "paper_value": 0.5336,
+   "artifact_value": 0.5336,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V1 floors x1.10 kappa 0,5507",
+   "paper_value": 0.5507,
+   "artifact_value": 0.5507,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V1 delta +0,0171",
+   "paper_value": 0.0171,
+   "artifact_value": 0.0171,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V2 floors x0.90 kappa 0,5250",
+   "paper_value": 0.525,
+   "artifact_value": 0.525,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V3 categorical=3 kappa 0,5085",
+   "paper_value": 0.5085,
+   "artifact_value": 0.5085,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V4 all categorical kappa 0,5461",
+   "paper_value": 0.5461,
+   "artifact_value": 0.5461,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V5 lens A kappa 0,5223",
+   "paper_value": 0.5223,
+   "artifact_value": 0.5223,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V6 lens B kappa 0,3324",
+   "paper_value": 0.3324,
+   "artifact_value": 0.3324,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V7 lens C kappa 0,5147",
+   "paper_value": 0.5147,
+   "artifact_value": 0.5147,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V8 gate 0.80 kappa 0,6005",
+   "paper_value": 0.6005,
+   "artifact_value": 0.6005,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V9 gate 0.60 kappa 0,4907",
+   "paper_value": 0.4907,
+   "artifact_value": 0.4907,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 V10 assume_breach kappa 0,2974",
+   "paper_value": 0.2974,
+   "artifact_value": 0.2974,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 runtime 1.042,4 s",
+   "paper_value": 1042.4,
+   "artifact_value": 1042.4,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "B26 pares 220.400",
+   "paper_value": 220400.0,
+   "artifact_value": 220400,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "manifest 47 artefactos",
+   "paper_value": 47.0,
+   "artifact_value": 47,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "manifest 21 execu\u00e7\u00f5es",
+   "paper_value": 21.0,
+   "artifact_value": 21,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "manifest 65,37 MB",
+   "paper_value": 65.37,
+   "artifact_value": 65.37,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  },
+  {
+   "claim": "autocontagem de afirmaciones rastreadas",
+   "paper_value": 166.0,
+   "artifact_value": 166,
+   "pass": true,
+   "verified_by": "explicit pattern"
+  }
+ ]
+}

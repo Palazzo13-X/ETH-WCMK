@@ -1,0 +1,88 @@
+{
+  "battery": "B3 - perturbation response",
+  "seed": 11,
+  "result": {
+    "directional_tests": {
+      "checks": 16000,
+      "failures": 0,
+      "accuracy_pct": 100.0,
+      "first_failures": []
+    },
+    "severity_ladder": [
+      {
+        "band": "low",
+        "r": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "lambda": [
+          0.2,
+          0.25,
+          0.3,
+          0.25
+        ],
+        "Aa": 0.9395,
+        "R_r": 0.0663,
+        "decision": "allow"
+      },
+      {
+        "band": "medium",
+        "r": [
+          0.2,
+          0.25,
+          0.32,
+          0.23
+        ],
+        "lambda": [
+          0.18,
+          0.25,
+          0.35,
+          0.22
+        ],
+        "Aa": 0.8509,
+        "R_r": 0.1195,
+        "decision": "conditional"
+      },
+      {
+        "band": "high",
+        "r": [
+          0.18,
+          0.24,
+          0.35,
+          0.23
+        ],
+        "lambda": [
+          0.15,
+          0.22,
+          0.4,
+          0.23
+        ],
+        "Aa": 0.7784,
+        "R_r": 0.163,
+        "decision": "conditional"
+      },
+      {
+        "band": "critical",
+        "r": [
+          0.15,
+          0.22,
+          0.38,
+          0.25
+        ],
+        "lambda": [
+          0.12,
+          0.2,
+          0.42,
+          0.26
+        ],
+        "Aa": 0.6938,
+        "R_r": 0.2137,
+        "decision": "review"
+      }
+    ],
+    "severity_monotone_Aa": true,
+    "severity_monotone_Rr": true
+  }
+}

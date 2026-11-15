@@ -1,0 +1,123 @@
+{
+  "declared_agent": {
+    "n": 1520,
+    "kappa_model_vs_gold": 0.2274,
+    "partial_credit_accuracy": 0.6783,
+    "exact_match_rate": 0.4151,
+    "confusion": {
+      "PROHIBIT -> REVIEW_REQUIRED": 583,
+      "PROHIBIT -> PROHIBIT": 254,
+      "REVIEW_REQUIRED -> REVIEW_REQUIRED": 177,
+      "ALLOW -> ALLOW": 134,
+      "ALLOW_WITH_GUARDS -> REVIEW_REQUIRED": 80,
+      "ALLOW_WITH_GUARDS -> ALLOW_WITH_GUARDS": 66,
+      "REVIEW_REQUIRED -> ALLOW_WITH_GUARDS": 62,
+      "PROHIBIT -> ALLOW_WITH_GUARDS": 60,
+      "ALLOW_WITH_GUARDS -> ALLOW": 51,
+      "REVIEW_REQUIRED -> PROHIBIT": 24,
+      "ALLOW_WITH_GUARDS -> PROHIBIT": 23,
+      "PROHIBIT -> ALLOW": 3,
+      "REVIEW_REQUIRED -> ALLOW": 3
+    },
+    "spearman_adequacy_vs_gold_rank": 0.6707
+  },
+  "clear_cases_only": {
+    "n": 1269,
+    "kappa": 0.2597,
+    "exact_match_rate": 0.4389
+  },
+  "contested_cases": {
+    "n": 251,
+    "kappa": 0.0543,
+    "model_stricter_share": 0.6375
+  },
+  "full_grid_48_personas": {
+    "n": 72960,
+    "kappa_model_vs_gold": 0.0092,
+    "partial_credit_accuracy": 0.4861,
+    "mean_decision_rank_model": 1.7261239035087719,
+    "mean_decision_rank_gold": 2.1769736842105263,
+    "stricter_than_gold_rate": 0.5403,
+    "looser_than_gold_rate": 0.2168
+  },
+  "by_archetype": {
+    "PROHIBIT": {
+      "n": 383,
+      "kappa": 0.1055,
+      "exact": 0.47
+    },
+    "REVIEW_REQUIRED": {
+      "n": 578,
+      "kappa": 0.0783,
+      "exact": 0.3772
+    },
+    "ALLOW_WITH_GUARDS": {
+      "n": 367,
+      "kappa": 0.0661,
+      "exact": 0.267
+    },
+    "ALLOW": {
+      "n": 192,
+      "kappa": 0.0244,
+      "exact": 0.7031
+    }
+  },
+  "by_domain": {
+    "GP": {
+      "n": 119,
+      "exact": 0.4874
+    },
+    "PD": {
+      "n": 115,
+      "exact": 0.5217
+    },
+    "ED": {
+      "n": 116,
+      "exact": 0.3103
+    },
+    "SA": {
+      "n": 119,
+      "exact": 0.4874
+    },
+    "JS": {
+      "n": 118,
+      "exact": 0.4576
+    },
+    "RS": {
+      "n": 116,
+      "exact": 0.3017
+    },
+    "IC": {
+      "n": 126,
+      "exact": 0.4524
+    },
+    "TS": {
+      "n": 118,
+      "exact": 0.4492
+    },
+    "TB": {
+      "n": 117,
+      "exact": 0.4615
+    },
+    "IM": {
+      "n": 116,
+      "exact": 0.3879
+    },
+    "MA": {
+      "n": 113,
+      "exact": 0.292
+    },
+    "DS": {
+      "n": 114,
+      "exact": 0.3509
+    },
+    "FI": {
+      "n": 113,
+      "exact": 0.4248
+    }
+  },
+  "target": {
+    "kappa_declared_agent": 0.6,
+    "spearman_adequacy_vs_gold": 0.8
+  }
+}

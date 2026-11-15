@@ -1,0 +1,39 @@
+{
+  "title": "ETH-WCMK: a formally verified core and a SHACL-validated ontology for auditing delegated ethical agency",
+  "description": "ETH-WCMK models an ethical judgement about a delegated AI agent as a computation. The repository contains the arithmetic core with 44 invariants (69 tests), a 33-facet registry, a tetrahedral relation geometry, an RDF/SHACL ontology validated against a 220,400-confrontation corpus, and the manifests that tie every published number to a byte-identical artefact. Corpora are published as compressed release assets and mirrored here for persistent citation.",
+  "creators": [
+    {
+      "name": "Palazzo, Luiz M. M.",
+      "affiliation": "Programa de Pós-Graduação em Engenharia de Gestão e Conhecimento (PPGEGC), Universidade Federal de Santa Catarina, Brazil",
+      "orcid": "https://orcid.org/0009-0008-0833-3463"
+    },
+    {
+      "name": "Vanzin, Tarcísio",
+      "affiliation": "Programa de Pós-Graduação em Engenharia de Gestão e Conhecimento (PPGEGC), Universidade Federal de Santa Catarina, Brazil",
+      "orcid": "https://orcid.org/0000-0001-8121-8398"
+    }
+  ],
+  "keywords": [
+    "AI ethics",
+    "delegated agency",
+    "deontic logic",
+    "SHACL",
+    "RDF",
+    "ontologies",
+    "auditability",
+    "reproducibility",
+    "FAIR",
+    "governance",
+    "formal verification",
+    "algorithmic accountability"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "language": "en",
+  "references": [
+    "UDHR (UN, 1948); GDPR (EU 2016/679); WHO (2021); FAIR Principles (2016); IEEE Ethically Aligned Design (2016); OECD AI Principles (2019); ANPD (Brazil, 2019)."
+  ],
+  "community": [
+    "PPGEGC-UFSC"
+  ],
+  "upload_type": "software"
+}

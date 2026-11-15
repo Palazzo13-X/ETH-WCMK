@@ -1,0 +1,20 @@
+@prefix : <https://eth2.local/ontology/wcmk-assessment#> .
+@prefix instance: <https://eth2.local/ontology/wcmk-instance#> .
+@prefix core: <https://eth2.local/ontology/ethcase-core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://eth2.local/ontology/wcmk-assessment> a owl:Ontology ;
+    rdfs:label "WCMK Assessment" ;
+    rdfs:comment "Case-specific assessment of WCMK agency." .
+
+:WCMKAssessment a owl:Class .
+
+:aboutCase a owl:ObjectProperty ; rdfs:domain :WCMKAssessment ; rdfs:range core:EthicalCase .
+:aboutInstance a owl:ObjectProperty ; rdfs:domain :WCMKAssessment ; rdfs:range instance:WCMKInstance .
+:wantScore a owl:DatatypeProperty ; rdfs:domain :WCMKAssessment ; rdfs:range xsd:decimal .
+:canScore a owl:DatatypeProperty ; rdfs:domain :WCMKAssessment ; rdfs:range xsd:decimal .
+:mustScore a owl:DatatypeProperty ; rdfs:domain :WCMKAssessment ; rdfs:range xsd:decimal .
+:knowScore a owl:DatatypeProperty ; rdfs:domain :WCMKAssessment ; rdfs:range xsd:decimal .
+:assessmentConfidence a owl:DatatypeProperty ; rdfs:domain :WCMKAssessment ; rdfs:range xsd:decimal .

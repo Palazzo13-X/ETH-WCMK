@@ -1,0 +1,56 @@
+{
+  "pairs": 182400,
+  "variants": {
+    "full": {
+      "kappa_vs_gold": 0.1229,
+      "agreement": 0.4311,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 12997,
+        "REVIEW_REQUIRED": 95177,
+        "ALLOW": 89,
+        "ABSTAIN": 8574,
+        "PROHIBIT": 65563
+      },
+      "mean_adequacy": 0.6387
+    },
+    "one_hot_beta": {
+      "kappa_vs_gold": 0.0819,
+      "agreement": 0.3237,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 12889,
+        "REVIEW_REQUIRED": 121492,
+        "ALLOW": 101,
+        "ABSTAIN": 5853,
+        "PROHIBIT": 42065
+      },
+      "mean_adequacy": 0.6844
+    },
+    "critical_floor": {
+      "kappa_vs_gold": 0.1126,
+      "agreement": 0.422,
+      "decisions": {
+        "ALLOW_WITH_GUARDS": 7360,
+        "REVIEW_REQUIRED": 103919,
+        "ALLOW": 74,
+        "ABSTAIN": 7130,
+        "PROHIBIT": 63917
+      },
+      "mean_adequacy": 0.6088
+    },
+    "worst_gap_rule": {
+      "kappa_vs_gold": 0.0482,
+      "agreement": 0.6998,
+      "decisions": {
+        "ALLOW": 6080,
+        "ALLOW_WITH_GUARDS": 10647,
+        "REVIEW_REQUIRED": 12153,
+        "PROHIBIT": 153520
+      }
+    }
+  },
+  "three_band_kappa": {
+    "full": NaN,
+    "one_hot_beta": NaN,
+    "critical_floor": NaN
+  }
+}
